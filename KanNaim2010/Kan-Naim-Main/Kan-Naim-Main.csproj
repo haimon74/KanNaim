@@ -1,0 +1,899 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kan_Naim_Main</RootNamespace>
+    <AssemblyName>Kan-Naim-Main</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="HtmlRichTextBox, Version=1.0.2165.30472, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\Kan-Naim\RTF-2-HTML\HtmlRichTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.0.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\Kan-Naim\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.v9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Tools.Word.v9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Tools.Applications.Runtime.v9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZetaHtmlEditControl, Version=1.1.0.2, Culture=neutral, PublicKeyToken=2e2e5ba5da72b6c0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\Kan-Naim\Zeta HTML Edit Control\bin\ZetaHtmlEditControl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassGlobals.cs" />
+    <Compile Include="FormAddNewPhotos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddNewPhotos.Designer.cs">
+      <DependentUpon>FormAddNewPhotos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddNewVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddNewVideo.Designer.cs">
+      <DependentUpon>FormAddNewVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManageIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageIndex.Designer.cs">
+      <DependentUpon>FormManageIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManageRightSideMenuLinks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageRightSideMenuLinks.Designer.cs">
+      <DependentUpon>FormManageRightSideMenuLinks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Lookup.cs" />
+    <Compile Include="DataAccess\Filter.cs" />
+    <Compile Include="DataClassesKanNaimDataContext.designer.cs" />
+    <Compile Include="FormAddNewPreferedLink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddNewPreferedLink.Designer.cs">
+      <DependentUpon>FormAddNewPreferedLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddNewUser.Designer.cs">
+      <DependentUpon>FormAddNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditUserDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditUserDetails.Designer.cs">
+      <DependentUpon>FormEditUserDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormArticleRichTextBoxEditorPlusRtfTextDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormArticleRichTextBoxEditorPlusRtfTextDialog.Designer.cs">
+      <DependentUpon>FormArticleRichTextBoxEditorPlusRtfTextDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataClassesKanNaim.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesKanNaim.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="FormArticleRichTextBoxEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormArticleRichTextBoxEditor.Designer.cs">
+      <DependentUpon>FormArticleRichTextBoxEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormArchiveBanners.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormArchiveBanners.Designer.cs">
+      <DependentUpon>FormArchiveBanners.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormArchiveRSS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormArchiveRSS.Designer.cs">
+      <DependentUpon>FormArchiveRSS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormArchiveVideos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormArchiveVideos.Designer.cs">
+      <DependentUpon>FormArchiveVideos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormArchivePhotos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormArchivePhotos.Designer.cs">
+      <DependentUpon>FormArchivePhotos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormArchiveArticles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormArchiveArticles.Designer.cs">
+      <DependentUpon>FormArchiveArticles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormArchive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormArchive.Designer.cs">
+      <DependentUpon>FormArchive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditArtical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditArtical.Designer.cs">
+      <DependentUpon>FormEditArtical.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHyperlinkData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHyperlinkData.Designer.cs">
+      <DependentUpon>FormHyperlinkData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManageBottomPageLinks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageBottomPageLinks.Designer.cs">
+      <DependentUpon>FormManageBottomPageLinks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManagePreferedLinks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManagePreferedLinks.Designer.cs">
+      <DependentUpon>FormManagePreferedLinks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManageTopMenuLinks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageTopMenuLinks.Designer.cs">
+      <DependentUpon>FormManageTopMenuLinks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPreferedLinkArticleSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPreferedLinkArticleSelector.Designer.cs">
+      <DependentUpon>FormPreferedLinkArticleSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPreviewArticleAndTaksOnBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPreviewArticleAndTaksOnBrowser.Designer.cs">
+      <DependentUpon>FormPreviewArticleAndTaksOnBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRemindPasswordByUserNameOrPhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRemindPasswordByUserNameOrPhone.Designer.cs">
+      <DependentUpon>FormRemindPasswordByUserNameOrPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTest.Designer.cs">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Administrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Administrator.Designer.cs">
+      <DependentUpon>Form_Administrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CategoriesManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_CategoriesManager.Designer.cs">
+      <DependentUpon>Form_CategoriesManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="app.config" />
+    <None Include="DataClassesKanNaim.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesKanNaim.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataClassesKanNaim.dbml.layout">
+      <DependentUpon>DataClassesKanNaim.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="FormAddNewPhotos.resx">
+      <DependentUpon>FormAddNewPhotos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddNewVideo.resx">
+      <DependentUpon>FormAddNewVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageIndex.resx">
+      <DependentUpon>FormManageIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageRightSideMenuLinks.resx">
+      <DependentUpon>FormManageRightSideMenuLinks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddNewPreferedLink.resx">
+      <DependentUpon>FormAddNewPreferedLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddNewUser.resx">
+      <DependentUpon>FormAddNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditUserDetails.resx">
+      <DependentUpon>FormEditUserDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormArticleRichTextBoxEditorPlusRtfTextDialog.resx">
+      <DependentUpon>FormArticleRichTextBoxEditorPlusRtfTextDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormArticleRichTextBoxEditor.resx">
+      <DependentUpon>FormArticleRichTextBoxEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormArchiveBanners.resx">
+      <DependentUpon>FormArchiveBanners.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormArchiveRSS.resx">
+      <DependentUpon>FormArchiveRSS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormArchiveVideos.resx">
+      <DependentUpon>FormArchiveVideos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormArchivePhotos.resx">
+      <DependentUpon>FormArchivePhotos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormArchiveArticles.resx">
+      <DependentUpon>FormArchiveArticles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormArchive.resx">
+      <DependentUpon>FormArchive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditArtical.resx">
+      <DependentUpon>FormEditArtical.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHyperlinkData.resx">
+      <DependentUpon>FormHyperlinkData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageBottomPageLinks.resx">
+      <DependentUpon>FormManageBottomPageLinks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManagePreferedLinks.resx">
+      <DependentUpon>FormManagePreferedLinks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageTopMenuLinks.resx">
+      <DependentUpon>FormManageTopMenuLinks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPreferedLinkArticleSelector.resx">
+      <DependentUpon>FormPreferedLinkArticleSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPreviewArticleAndTaksOnBrowser.resx">
+      <DependentUpon>FormPreviewArticleAndTaksOnBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRemindPasswordByUserNameOrPhone.resx">
+      <DependentUpon>FormRemindPasswordByUserNameOrPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTest.resx">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Administrator.he-IL.resx">
+      <DependentUpon>Form_Administrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Administrator.resx">
+      <DependentUpon>Form_Administrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_CategoriesManager.resx">
+      <DependentUpon>Form_CategoriesManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="img\Thumbs.db" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="_10infoDataSet.xsc">
+      <DependentUpon>_10infoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_10infoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_10infoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_10infoDataSet.xss">
+      <DependentUpon>_10infoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_10infoDataSetIndexes.xsc">
+      <DependentUpon>_10infoDataSetIndexes.xsd</DependentUpon>
+    </None>
+    <None Include="_10infoDataSetIndexes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_10infoDataSetIndexes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_10infoDataSetIndexes.xss">
+      <DependentUpon>_10infoDataSetIndexes.xsd</DependentUpon>
+    </None>
+    <None Include="_10infoDataSetLookupCategories.xsc">
+      <DependentUpon>_10infoDataSetLookupCategories.xsd</DependentUpon>
+    </None>
+    <None Include="_10infoDataSetLookupCategories.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_10infoDataSetLookupCategories.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_10infoDataSetLookupCategories.xss">
+      <DependentUpon>_10infoDataSetLookupCategories.xsd</DependentUpon>
+    </None>
+    <None Include="_10infoDataSetLookupIndex.xsc">
+      <DependentUpon>_10infoDataSetLookupIndex.xsd</DependentUpon>
+    </None>
+    <None Include="_10infoDataSetLookupIndex.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_10infoDataSetLookupIndex.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_10infoDataSetLookupIndex.xss">
+      <DependentUpon>_10infoDataSetLookupIndex.xsd</DependentUpon>
+    </None>
+    <None Include="_10infoDataSetMenuRightSide.xsc">
+      <DependentUpon>_10infoDataSetMenuRightSide.xsd</DependentUpon>
+    </None>
+    <None Include="_10infoDataSetMenuRightSide.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_10infoDataSetMenuRightSide.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_10infoDataSetMenuRightSide.xss">
+      <DependentUpon>_10infoDataSetMenuRightSide.xsd</DependentUpon>
+    </None>
+    <None Include="_10infoDataSetMenuTop.xsc">
+      <DependentUpon>_10infoDataSetMenuTop.xsd</DependentUpon>
+    </None>
+    <None Include="_10infoDataSetMenuTop.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_10infoDataSetMenuTop.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_10infoDataSetMenuTop.xss">
+      <DependentUpon>_10infoDataSetMenuTop.xsd</DependentUpon>
+    </None>
+    <None Include="_10infoDataSetPreferedLinks.xsc">
+      <DependentUpon>_10infoDataSetPreferedLinks.xsd</DependentUpon>
+    </None>
+    <None Include="_10infoDataSetPreferedLinks.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_10infoDataSetPreferedLinks.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_10infoDataSetPreferedLinks.xss">
+      <DependentUpon>_10infoDataSetPreferedLinks.xsd</DependentUpon>
+    </None>
+    <None Include="_10infoDataSetRoles.xsc">
+      <DependentUpon>_10infoDataSetRoles.xsd</DependentUpon>
+    </None>
+    <None Include="_10infoDataSetRoles.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_10infoDataSetRoles.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_10infoDataSetRoles.xss">
+      <DependentUpon>_10infoDataSetRoles.xsd</DependentUpon>
+    </None>
+    <None Include="_10infoDataSetUsers.xsc">
+      <DependentUpon>_10infoDataSetUsers.xsd</DependentUpon>
+    </None>
+    <None Include="_10infoDataSetUsers.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_10infoDataSetUsers.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_10infoDataSetUsers.xss">
+      <DependentUpon>_10infoDataSetUsers.xsd</DependentUpon>
+    </None>
+    <None Include="_Kan_NaimDataSet.xsc">
+      <DependentUpon>_Kan_NaimDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_Kan_NaimDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Kan_NaimDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Kan_NaimDataSet.xss">
+      <DependentUpon>_Kan_NaimDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_Kan_NaimDataSet1.xsc">
+      <DependentUpon>_Kan_NaimDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_Kan_NaimDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Kan_NaimDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Kan_NaimDataSet1.xss">
+      <DependentUpon>_Kan_NaimDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_Kan_NaimDataSet2.xsc">
+      <DependentUpon>_Kan_NaimDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="_Kan_NaimDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Kan_NaimDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Kan_NaimDataSet2.xss">
+      <DependentUpon>_Kan_NaimDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="_Kan_NaimDataSetCategories.xsc">
+      <DependentUpon>_Kan_NaimDataSetCategories.xsd</DependentUpon>
+    </None>
+    <None Include="_Kan_NaimDataSetCategories.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Kan_NaimDataSetCategories.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Kan_NaimDataSetCategories.xss">
+      <DependentUpon>_Kan_NaimDataSetCategories.xsd</DependentUpon>
+    </None>
+    <None Include="_Kan_NaimDataSetReporters.xsc">
+      <DependentUpon>_Kan_NaimDataSetReporters.xsd</DependentUpon>
+    </None>
+    <None Include="_Kan_NaimDataSetReporters.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Kan_NaimDataSetReporters.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Kan_NaimDataSetReporters.xss">
+      <DependentUpon>_Kan_NaimDataSetReporters.xsd</DependentUpon>
+    </None>
+    <None Include="_Kan_NaimDataSetReportersNames.xsc">
+      <DependentUpon>_Kan_NaimDataSetReportersNames.xsd</DependentUpon>
+    </None>
+    <None Include="_Kan_NaimDataSetReportersNames.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Kan_NaimDataSetReportersNames.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Kan_NaimDataSetReportersNames.xss">
+      <DependentUpon>_Kan_NaimDataSetReportersNames.xsd</DependentUpon>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Table_Article.designer.cs" />
+    <Compile Include="Table_LinksPageBottom.designer.cs" />
+    <Compile Include="Table_LinksPrefered.designer.cs" />
+    <Compile Include="Table_LookupArticleStatus.designer.cs" />
+    <Compile Include="Table_LookupCategory.designer.cs" />
+    <Compile Include="Table_LookupPhotoType.designer.cs" />
+    <Compile Include="Table_LookupReporter.designer.cs" />
+    <Compile Include="Table_LookupRole.designer.cs" />
+    <Compile Include="Table_MenuRightSide.designer.cs" />
+    <Compile Include="Table_MenuTop.designer.cs" />
+    <Compile Include="Table_OriginalPhotosArchive.designer.cs" />
+    <Compile Include="Table_PhotosArchive.designer.cs" />
+    <Compile Include="Table_Taktzirim.designer.cs" />
+    <Compile Include="Table_User.designer.cs" />
+    <Compile Include="Table_VideosArchive.designer.cs" />
+    <Compile Include="_10infoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_10infoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_10infoDataSetIndexes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_10infoDataSetIndexes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_10infoDataSetLookupCategories.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_10infoDataSetLookupCategories.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_10infoDataSetLookupIndex.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_10infoDataSetLookupIndex.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_10infoDataSetMenuRightSide.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_10infoDataSetMenuRightSide.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_10infoDataSetMenuTop.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_10infoDataSetMenuTop.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_10infoDataSetPreferedLinks.cs">
+      <DependentUpon>_10infoDataSetPreferedLinks.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_10infoDataSetPreferedLinks.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_10infoDataSetPreferedLinks.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_10infoDataSetRoles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_10infoDataSetRoles.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_10infoDataSetUsers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_10infoDataSetUsers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Kan_NaimDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Kan_NaimDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Kan_NaimDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Kan_NaimDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Kan_NaimDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Kan_NaimDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Kan_NaimDataSetCategories.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Kan_NaimDataSetCategories.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Kan_NaimDataSetReporters.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Kan_NaimDataSetReporters.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Kan_NaimDataSetReportersNames.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Kan_NaimDataSetReportersNames.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="ADODB">
+      <Guid>{00000205-0000-0010-8000-00AA006D2EA4}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxMediaPlayer">
+      <Guid>{22D6F304-B0F6-11D0-94AB-0080C74C7E95}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxMSACAL">
+      <Guid>{8E27C92E-1264-101C-8A2F-040224009C02}</Guid>
+      <VersionMajor>7</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxMSComCtl2">
+      <Guid>{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxMSComctlLib">
+      <Guid>{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxMSHelpControls">
+      <Guid>{314111BA-A502-11D2-BBCA-00C04F8EC294}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxOWC11">
+      <Guid>{0002E558-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxQTActiveXPluginCtrlLib">
+      <Guid>{02BF25D2-8C17-4B23-BC80-D3488ABDDC6B}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxSHDocVw">
+      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxSKYPE4COMLib">
+      <Guid>{03282B5D-B38F-469D-849A-09B0A7F4881B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxVisioViewer">
+      <Guid>{BA35B84E-A623-471B-8B09-6D72DD072F25}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MediaPlayer">
+      <Guid>{22D6F304-B0F6-11D0-94AB-0080C74C7E95}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MSACAL">
+      <Guid>{8E27C92E-1264-101C-8A2F-040224009C02}</Guid>
+      <VersionMajor>7</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MSComCtl2">
+      <Guid>{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MSComctlLib">
+      <Guid>{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MSDATASRC">
+      <Guid>{7C0FFAB0-CD84-11D0-949A-00A0C91110ED}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MSHelpControls">
+      <Guid>{314111BA-A502-11D2-BBCA-00C04F8EC294}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MSHelpServices">
+      <Guid>{31411197-A502-11D2-BBCA-00C04F8EC294}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="OWC11">
+      <Guid>{0002E558-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="QTActiveXPluginCtrlLib">
+      <Guid>{02BF25D2-8C17-4B23-BC80-D3488ABDDC6B}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="SHDocVw">
+      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="ShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="SKYPE4COMLib">
+      <Guid>{03282B5D-B38F-469D-849A-09B0A7F4881B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="VisioViewer">
+      <Guid>{BA35B84E-A623-471B-8B09-6D72DD072F25}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HaimDLL\HaimDLL.csproj">
+      <Project>{697ECEA6-B4D5-430F-8355-977D96DF74C5}</Project>
+      <Name>HaimDLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\BgColorBtnImg.JPG" />
+    <Content Include="img\BoldBtnImg.JPG" />
+    <Content Include="img\DecreaseIdentBtnImg.JPG" />
+    <Content Include="img\hyperlinkBtnImg.JPG" />
+    <Content Include="img\IncreaseIdentBtnImg.JPG" />
+    <Content Include="img\ItalicBtnImg.JPG" />
+    <Content Include="img\OrderedListBtnImg.JPG" />
+    <Content Include="img\TextColorBtnImg.JPG" />
+    <Content Include="img\UnderlineBtnImg.JPG" />
+    <Content Include="img\UnorderedListBtnImg.JPG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

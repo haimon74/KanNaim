@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Kan-Naim" Class="DataClassesEditArticleDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=PRIVATE-DCB1672;Initial Catalog=Kan-Naim;Integrated Security=True" SettingsObjectName="Kan_Naim_Main.Properties.Settings" SettingsPropertyName="Kan_NaimConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Table_LookupArticleStatus" Member="Table_LookupArticleStatus">
+    <Type Name="Table_LookupArticleStatus">
+      <Column Name="StatusId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StatusDescription" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Table_Article_Table_LookupArticleStatus" Member="Table_Article" ThisKey="StatusId" OtherKey="StatusId" Type="Table_Article" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_LookupCategories" Member="Table_LookupCategories">
+    <Type Name="Table_LookupCategory">
+      <Column Name="CatId" AutoSync="Never" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParentCatId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatHebrewName" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="CatEnglishName" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Tags" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="RelatedCatIds" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="PhotoId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RssId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MetaTags" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="Table_Article_Table_LookupCategory" Member="Table_Article" ThisKey="CatId" OtherKey="CategoryId" Type="Table_Article" IsForeignKey="true" />
+      <Association Name="Table_Article_Table_LookupCategory1" Member="Table_Article1" ThisKey="CatId" OtherKey="CategoryId" Type="Table_Article" IsForeignKey="true" />
+      <Association Name="Table_OriginalPhotosArchive_Table_LookupCategory" Member="Table_OriginalPhotosArchive" ThisKey="CatId" OtherKey="CategoryId" Type="Table_OriginalPhotosArchive" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_LookupPhotoTypes" Member="Table_LookupPhotoTypes">
+    <Type Name="Table_LookupPhotoType">
+      <Column Name="PhotoTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypeDescription" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Width" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Height" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxSize" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Table_PhotosArchive_Table_LookupPhotoType" Member="Table_PhotosArchive" ThisKey="PhotoTypeId" OtherKey="PhotoTypeId" Type="Table_PhotosArchive" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_VideosArchive" Member="Table_VideosArchives">
+    <Type Name="Table_VideosArchive">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EmbedUrl" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Caption" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="CssClass" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="AlternateText" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UrlLink" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastTakId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastArticleId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GalleryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Table_Article_Table_VideosArchive" Member="Table_Article" ThisKey="Id" OtherKey="EmbedObjId" Type="Table_Article" IsForeignKey="true" />
+      <Association Name="Table_Taktzirim_Table_VideosArchive" Member="Table_Taktzirim" ThisKey="Id" OtherKey="EmbedObjId" Type="Table_Taktzirim" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_PhotosArchive" Member="Table_PhotosArchives">
+    <Type Name="Table_PhotosArchive">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PhotoTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="CssClass" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="UrlLink" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastTakId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastArticleId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GalleryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Width" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Height" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OriginalPhotoId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Table_PhotosArchive_Table_LookupPhotoType" Member="Table_LookupPhotoTypes" ThisKey="PhotoTypeId" OtherKey="PhotoTypeId" Type="Table_LookupPhotoType" />
+      <Association Name="Table_PhotosArchive_Table_OriginalPhotosArchive" Member="Table_OriginalPhotosArchives" ThisKey="OriginalPhotoId" OtherKey="PhotoId" Type="Table_OriginalPhotosArchive" />
+      <Association Name="Table_Article_Table_PhotosArchive" Member="Table_Article" ThisKey="Id" OtherKey="ImageId" Type="Table_Article" IsForeignKey="true" />
+      <Association Name="Table_Taktzirim_Table_PhotosArchive" Member="Table_Taktzirim" ThisKey="Id" OtherKey="PhotoId" Type="Table_Taktzirim" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_Articles" Member="Table_Articles">
+    <Type Name="Table_Article">
+      <Column Name="ArticleId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsPublished" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="StatusId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SubTitle" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="ArticleContent" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UpdatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FlagShowDateTime" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FlagActiveRSS" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FlagActiveMivzak" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FlagTak3ColPicTxt" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FlagTak3ColPic" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FlagTak3ColTxt" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FlagTak2ColPicTxt" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FlagTak2ColPic" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FlagTak2ColTxt" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FlagTak1ColPicTxt" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FlagTak1ColPic" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FlagTak1ColTxt" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FlagTakSmallPicTxt" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FlagTakSmallPic" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FlagTakSmallTxt" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FlagTakLineFeeds" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CountViews" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Summery" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CountComments" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImageId" Type="System.Int32" DbType="Int" CanBeNull="false" />
+      <Column Name="EmbedObjId" Type="System.Int32" DbType="Int" CanBeNull="false" />
+      <Column Name="MetaTags" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="KeysLookup" Type="System.String" DbType="NVarChar(90)" CanBeNull="true" />
+      <Column Name="KeysAssociated" Type="System.String" DbType="NVarChar(90)" CanBeNull="true" />
+      <Association Name="Table_Article_Table_LookupArticleStatus" Member="Table_LookupArticleStatus" ThisKey="StatusId" OtherKey="StatusId" Type="Table_LookupArticleStatus" />
+      <Association Name="Table_Article_Table_LookupCategory" Member="Table_LookupCategories" ThisKey="CategoryId" OtherKey="CatId" Type="Table_LookupCategory" />
+      <Association Name="Table_Article_Table_LookupCategory1" Member="Table_LookupCategories1" ThisKey="CategoryId" OtherKey="CatId" Type="Table_LookupCategory" />
+      <Association Name="Table_Article_Table_VideosArchive" Member="Table_VideosArchives" ThisKey="EmbedObjId" OtherKey="Id" Type="Table_VideosArchive" />
+      <Association Name="Table_Article_Table_PhotosArchive" Member="Table_PhotosArchives" ThisKey="ImageId" OtherKey="Id" Type="Table_PhotosArchive" />
+      <Association Name="Table_Taktzirim_Table_Article" Member="Table_Taktzirim" ThisKey="ArticleId" OtherKey="ArticleId" Type="Table_Taktzirim" IsForeignKey="true" />
+      <Association Name="Table_LookupReporter_Table_Article" Member="Table_LookupReporter" ThisKey="UpdatedBy" OtherKey="UserId" Type="Table_LookupReporter" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_Taktzirim" Member="Table_Taktzirims">
+    <Type Name="Table_Taktzirim">
+      <Column Name="TakId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ArticleId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TakTitle" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TakContent" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="TakTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PhotoId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EmbedObjId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ScheduleId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Table_Taktzirim_Table_VideosArchive" Member="Table_VideosArchives" ThisKey="EmbedObjId" OtherKey="Id" Type="Table_VideosArchive" />
+      <Association Name="Table_Taktzirim_Table_PhotosArchive" Member="Table_PhotosArchives" ThisKey="PhotoId" OtherKey="Id" Type="Table_PhotosArchive" />
+      <Association Name="Table_Taktzirim_Table_Article" Member="Table_Articles" ThisKey="ArticleId" OtherKey="ArticleId" Type="Table_Article" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_LookupReporters" Member="Table_LookupReporters">
+    <Type Name="Table_LookupReporter">
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PublishNameShort" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="PublishNameLong" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="MobilePhone" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Column Name="OtherPhone" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Table_LookupReporter_Table_Article" Member="Table_Articles" ThisKey="UserId" OtherKey="UpdatedBy" Type="Table_Article" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_OriginalPhotosArchive" Member="Table_OriginalPhotosArchives">
+    <Type Name="Table_OriginalPhotosArchive">
+      <Column Name="PhotoId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ImageData" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CategoryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Caption" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="AlternateText" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Width" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Height" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Table_OriginalPhotosArchive_Table_LookupCategory" Member="Table_LookupCategories" ThisKey="CategoryId" OtherKey="CatId" Type="Table_LookupCategory" />
+      <Association Name="Table_PhotosArchive_Table_OriginalPhotosArchive" Member="Table_PhotosArchive" ThisKey="PhotoId" OtherKey="OriginalPhotoId" Type="Table_PhotosArchive" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
