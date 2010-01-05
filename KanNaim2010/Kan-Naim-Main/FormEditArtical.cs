@@ -32,7 +32,7 @@ namespace Kan_Naim_Main
 
         private static void InitializeForm(string category, string username)
         {
-            InitializeComponent();
+            Singleton.InitializeComponent();
             Singleton._tableLookupCategoriesTableAdapter.Fill(Singleton._kanNaimDataSetCategories.Table_LookupCategories);
             Singleton._comboBoxArticleCategory.SelectedIndex = Singleton._comboBoxArticleCategory.FindString(category);
             Singleton._tableLookupReportersTableAdapter1.Fill(Singleton._kanNaimDataSetReportersNames.Table_LookupReporters);

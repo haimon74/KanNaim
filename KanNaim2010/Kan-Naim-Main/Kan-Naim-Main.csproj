@@ -874,12 +874,6 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HaimDLL\HaimDLL.csproj">
-      <Project>{697ECEA6-B4D5-430F-8355-977D96DF74C5}</Project>
-      <Name>HaimDLL</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="img\BgColorBtnImg.JPG" />
     <Content Include="img\BoldBtnImg.JPG" />
     <Content Include="img\DecreaseIdentBtnImg.JPG" />
@@ -890,6 +884,12 @@
     <Content Include="img\TextColorBtnImg.JPG" />
     <Content Include="img\UnderlineBtnImg.JPG" />
     <Content Include="img\UnorderedListBtnImg.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HaimDLL\HaimDLL.csproj">
+      <Project>{697ECEA6-B4D5-430F-8355-977D96DF74C5}</Project>
+      <Name>HaimDLL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
