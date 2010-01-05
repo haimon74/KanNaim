@@ -67,8 +67,8 @@ namespace Kan_Naim_Main
             this._Table_PhotosArchive = default(EntityRef<Table_PhotosArchive>);
             OnCreated();
         }
-		
-        [Column(Storage="_PhotoId", DbType="Int NOT NULL", IsPrimaryKey=true)]
+
+        [Column(Storage = "_PhotoId", DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
         public int PhotoId
         {
             get
@@ -152,7 +152,7 @@ namespace Kan_Naim_Main
             }
         }
 		
-        [Column(Storage="_Date", DbType="Date NOT NULL")]
+        [Column(Storage="_Date", DbType="DateTime NOT NULL")]
         public System.DateTime Date
         {
             get

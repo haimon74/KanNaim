@@ -2747,8 +2747,8 @@ namespace DbSql
 		{
 			OnCreated();
 		}
-		
-		[Column(Storage="_PhotoId", DbType="Int NOT NULL", IsPrimaryKey=true)]
+
+        [Column(Storage = "_PhotoId", DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
 		public int PhotoId
 		{
 			get

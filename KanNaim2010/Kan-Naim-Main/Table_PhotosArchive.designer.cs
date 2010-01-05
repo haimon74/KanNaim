@@ -143,7 +143,7 @@ namespace Kan_Naim_Main
             }
         }
 		
-        [Column(Storage="_Date", DbType="Date NOT NULL")]
+        [Column(Storage="_Date", DbType="DateTime NOT NULL")]
         public System.DateTime Date
         {
             get

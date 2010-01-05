@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -12,6 +13,8 @@ namespace HaimDLL
         public delegate void EventFunctionCallback(object sender, EventArgs e);
 
         private EventFunctionCallback _buttonSaveClickCallback;
+
+        public  readonly IDictionary<string, CheckBox> SizeSelectCollection = new Dictionary<string, CheckBox>();
 
         public enum UploadState
         {
@@ -44,6 +47,14 @@ namespace HaimDLL
             InitializeComponent();
 
             SetPhotoFormState(UploadState.FileNotSelected);
+
+            SizeSelectCollection.Clear();
+            SizeSelectCollection.Add("W230", checkBoxSize230w);
+            SizeSelectCollection.Add("W208", checkBoxSize208w);
+            SizeSelectCollection.Add("W165", checkBoxSize165w);
+            SizeSelectCollection.Add("W125", checkBoxSize125w);
+            SizeSelectCollection.Add("100", checkBoxSize100w);
+            SizeSelectCollection.Add("W80", checkBoxSize80w);
         }
 
         public void Clear()
@@ -121,13 +132,17 @@ namespace HaimDLL
 
         private void buttonSelectFile_Click(object sender, EventArgs e)
         {
+            //var place = new FileDialogCustomPlace("D:\\Pictures\\");
+            
             var openFileDialog = new OpenFileDialog
             {
                 Title = "Insert an image ",
-                InitialDirectory = "c:",
+                //InitialDirectory = "D:\\Pictures\\",
                 FileName = "",
                 Filter = "JPEG Image|*.jpg|GIF Image|*.gif|PNG Image|*.png"
             };
+            //openFileDialog.CustomPlaces.Add(place);
+            
             //string chosen_file = "";
 
 

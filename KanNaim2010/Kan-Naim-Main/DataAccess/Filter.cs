@@ -10,10 +10,21 @@ namespace Kan_Naim_Main.DataAccess
         public static IQueryable<Table_OriginalPhotosArchive> GetOriginalPhotosByCategoryName(string catName)
         {
             int catId = Lookup.GetLookupCategoryIdFromName(catName);
+            return GetOriginalPhotosByCategoryId(catId);
+        }
 
+        public static IQueryable<Table_OriginalPhotosArchive> GetOriginalPhotosByCategoryId(int catId)
+        {
             return from c in Db.Table_OriginalPhotosArchives
                    where c.CategoryId == catId
                    select c;
+        }
+
+        public static IQueryable<string> GetOriginalPhotosNamesByCategoryId(int catId)
+        {
+            return from c in Db.Table_OriginalPhotosArchives
+                   where c.CategoryId == catId
+                   select c.Name;
         }
 
         public static IQueryable<Table_PhotosArchive> GetPhotosArchiveByOriginalPhotoId(int originalPhotoId)

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.IO;
 using HaimDLL;
+
 
 namespace Kan_Naim_Main
 {
@@ -23,7 +25,7 @@ namespace Kan_Naim_Main
         public static readonly Dictionary<string, string>[] StylesCollection = new Dictionary<string, string>[6];
         public static readonly Dictionary<string, string>[] HyperlinksCollection = new Dictionary<string, string>[6];
         
-        private static readonly FormEditArtical Singleton = new FormEditArtical();
+        private static FormEditArtical Singleton = new FormEditArtical();
 
         private FormEditArtical()
         {
@@ -32,31 +34,21 @@ namespace Kan_Naim_Main
 
         private static void InitializeForm(string category, string username)
         {
+            if (Singleton == null)
+                Singleton = new FormEditArtical();
+            
             Singleton.InitializeComponent();
             Singleton._tableLookupCategoriesTableAdapter.Fill(Singleton._kanNaimDataSetCategories.Table_LookupCategories);
             Singleton._comboBoxArticleCategory.SelectedIndex = Singleton._comboBoxArticleCategory.FindString(category);
             Singleton._tableLookupReportersTableAdapter1.Fill(Singleton._kanNaimDataSetReportersNames.Table_LookupReporters);
             Singleton._comboBoxEditor.SelectedIndex = Singleton._comboBoxEditor.FindString(username);
 
+            UcTakFillCollection.Clear();
             UcTakFillCollection.Add("takMedium",Singleton._userControlTakFillSizeMedium);
             UcTakFillCollection.Add("takSmall",Singleton._userControlTakFillSizeSmall);
             UcTakFillCollection.Add("takX1",Singleton._userControlTakFillSizeX1);
             UcTakFillCollection.Add("takX2",Singleton._userControlTakFillSizeX2);
             UcTakFillCollection.Add("takX3",Singleton._userControlTakFillSizeX3);
-        }
-        private static int GetCetegoryIdFromName(string hebrewName)
-        {
-            try
-            {
-                int catId = (from c in Db.Table_LookupCategories
-                             where c.CatHebrewName.Trim() == hebrewName.Trim()
-                             select c.CatId).Single();
-                return catId;
-            }
-            catch 
-            {
-                return -1;
-            }
         }
 
         public static FormEditArtical GetFormEditNewArtical(string category, string username)
@@ -91,6 +83,9 @@ namespace Kan_Naim_Main
 
         public static FormEditArtical GetFormEditArtical(int articleId)
         {
+            if (Singleton == null)
+                Singleton = new FormEditArtical();
+
             try
             {
                 _tblArticle = (Db.Table_Articles
@@ -190,9 +185,9 @@ namespace Kan_Naim_Main
             comboBoxArticlePhoto_SelectedIndexChanged(Singleton._comboBoxArticleCategory, new EventArgs());
         }
 
-        private static void FillTablesOriginalPhotosRecord(FileInfo info)
+        private static bool FillTablesOriginalPhotosRecord(FileInfo info)
         { // use only with original photos
-
+            
             byte[] imageData = UserControlUploadPhoto.GetFileContentFromInfo(info);
             
             // original photos table
@@ -200,7 +195,7 @@ namespace Kan_Naim_Main
                                      {
                                          AlternateText = Singleton._ucUploadPhoto1.textBoxPhotoDescription.Text,
                                          Caption = Singleton._ucUploadPhoto1.textBoxPhotoCaption.Text,
-                                         CategoryId = GetCetegoryIdFromName(Singleton._comboBoxArticleCategory.SelectedText),
+                                         CategoryId = DataAccess.Lookup.GetLookupCategoryIdFromName((Singleton._comboBoxArticleCategory.Text)),
                                          Date = DateTime.Now,
                                          Description = Singleton._ucUploadPhoto1.textBoxPhotoDescription.Text
                                      };
@@ -219,11 +214,11 @@ namespace Kan_Naim_Main
                              {
                                  LastTakId = 0,
                                  LastArticleId = 0,
-                                 CssClass = "OriginalPhotoView",
+                                 CssClass = "ArchivePhotoView",
                                  Date = DateTime.Now,
-                                 ImageUrl =
-                                     String.Format("~\\Photos\\Originals\\{0}\\{1}.jpg", _tblOriginalPhotos.CategoryId,
-                                                   Singleton._ucUploadPhoto1.textBoxPhotoCaption.Text),
+                                 ImageUrl = String.Format("~\\Photos\\Originals\\{0}\\{1}.jpg", 
+                                                    _tblOriginalPhotos.CategoryId,
+                                                   _tblOriginalPhotos.Name),
                                  OriginalPhotoId = _tblOriginalPhotos.PhotoId,
                                  GalleryId = null,
                                  PhotoTypeId = 1
@@ -231,14 +226,30 @@ namespace Kan_Naim_Main
             _tblPhotos.UrlLink = _tblPhotos.ImageUrl;
             _tblPhotos.Width = _tblOriginalPhotos.Width;
             _tblPhotos.Height = _tblOriginalPhotos.Height;
+
+            bool returnValue = 
+                (_tblOriginalPhotos.Name != "") &&
+                (_tblOriginalPhotos.ImageData.Length > 0) &&
+                (_tblOriginalPhotos.Height > 0) &&
+                (_tblOriginalPhotos.Width > 0) &&
+                (_tblOriginalPhotos.CategoryId > 0) &&
+                (_tblPhotos.ImageUrl.Length > 20);
+
+            return returnValue;
         }
         
         private static void UpLoadImageFileAndSaveToDatabase(FileInfo info)
         {
+            if (FillTablesOriginalPhotosRecord(info) == false)
+            {
+                Messages.ExceptionMessage(new Exception(), " נתונים שגויים");
+                return;
+            }
+
             try
             {
-                FillTablesOriginalPhotosRecord(info);
                 Db.Table_OriginalPhotosArchives.InsertOnSubmit(_tblOriginalPhotos);
+                Db.SubmitChanges();
                 Db.Table_PhotosArchives.InsertOnSubmit(_tblPhotos);
                 Db.SubmitChanges();
                 MessageBox.Show("תמונה מקורית נשמרה בבסיס הנתונים בהצלחה", "הודעת - הצלחה", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
@@ -258,40 +269,69 @@ namespace Kan_Naim_Main
             }
         }
 
+        private static void PopulateArticlePhotosComboBox(string photoName)
+        {
+            var photosByCategory =
+                        DataAccess.Filter.GetOriginalPhotosNamesByCategoryId((_tblOriginalPhotos.CategoryId));
+
+            Singleton._comboBoxArticlePhoto.DataSource = photosByCategory;
+            
+            if (photoName != String.Empty)
+                Singleton._comboBoxArticlePhoto.SelectedText = photoName;
+        }
+
         // saving in both (localy and archive)
         private static void SaveNewPhotosClick(object sender, EventArgs e)
-        {     
+        {
+            if (Singleton._ucUploadPhoto1._photoPath == String.Empty)
+                return;
+            
             Singleton._ucUploadPhoto1.SavePhotosLocally(); // saving locally
 
-            if ( ! Singleton._ucUploadPhoto1.IsStateEqual(UserControlUploadPhoto.UploadState.SavedLocalyOk))
+            if (!Singleton._ucUploadPhoto1.IsStateEqual(UserControlUploadPhoto.UploadState.SavedLocalyOk))
                 return;
 
             if (Singleton._ucUploadPhoto1.radioButtonSavePhotosToArchive.Checked)
             {
                 // saving in SQL Server Table_Photos
+
                 var imageInfo = new FileInfo(Singleton._ucUploadPhoto1._photoPath);
                 // var myBitmap = new Bitmap(_ucUploadPhoto1._photoPath);
                 // var rd = new StreamReader(imageInfo.FullName);
                 // string content = rd.ReadToEnd();
+                
                 UpLoadImageFileAndSaveToDatabase(imageInfo);
 
-                // getting the file from SQL , browse it (--> saves small copies)
-                var wb = new WebBrowser();
-                //string filePath = FormEditArtical._photoPath;
-                const int fileId = 2;
-                string url = String.Format("http://www.kan-naim.co.il/SavingPhoto.aspx?id={0}", fileId);
-                wb.Navigate(url);
-                wb.Show(); wb.Visible = true;
-                //wb.Document.Write("Please Wait...");
-
                 // updating the images combobox 
-                var photosByCategory = DataAccess.Filter.GetOriginalPhotosByCategoryName(Singleton._comboBoxArticleCategory.SelectedText.Trim());
-                var photosNames = (from c in photosByCategory
-                                   where Singleton._ucUploadPhoto1.textBoxPhotoPath.Text.Contains(c.Name)
-                                   orderby c.Date descending
-                                   select c.Name);
-                Singleton._comboBoxArticlePhoto.Items.Insert(0, photosNames.First());
-                Singleton._comboBoxArticlePhoto.SelectedIndex = 0;
+                //string photoName = (from c in photosByCategory
+                //                    where Singleton._ucUploadPhoto1.textBoxPhotoPath.Text.Contains(c.Name.Trim())
+                //                    orderby c.PhotoId descending
+                //                    select c.Name).First();
+                //Singleton._comboBoxArticlePhoto.Items.Insert(0, photoName);
+                //Singleton._comboBoxArticlePhoto.SelectedIndex = 0;
+
+                string[] pathParts = Singleton._ucUploadPhoto1.textBoxPhotoPath.Text.Split('\\', '/', '.');
+                string photoName = pathParts[pathParts.Length - 2].Trim('\\', '/', '.', ' ');
+                
+                try
+                {
+                    PopulateArticlePhotosComboBox(photoName);
+
+                    // SavePhotosCopiesAtDomainDirectory();
+
+                    foreach (CheckBox checkBox in Singleton._ucUploadPhoto1.SizeSelectCollection.Values)
+                    {
+                        if (checkBox.Checked)
+                        {
+                            SaveSmallPhotoCopyToPhotoArchive(checkBox.Text);
+                        }
+                    }
+                }
+                catch(Exception ex)
+                {
+                    Messages.ExceptionMessage(ex);
+                }
+
                 /*
                 var photosByCategory = DataAccess.Filter.GetOriginalPhotosByCategoryName("");
                 var photosNames = (from c in photosByCategory
@@ -304,10 +344,69 @@ namespace Kan_Naim_Main
                     if (ucUploadPhoto1.textBoxPhotoPath.Text.Contains(s))
                         toSelect = s;
                 }
-                
+            
                 comboBoxArticlePhoto.SelectedText = toSelect;
                 */
             }
+        }
+
+        private static bool GetThumbnailCallback()
+        {
+            return false;
+        }
+
+        
+        private static void SaveSmallPhotoCopyToPhotoArchive(string photoSizeAsString)
+        {
+            string[] splitStrings = {"x","גודל "};
+            string[] sizes = photoSizeAsString.Split(splitStrings, StringSplitOptions.RemoveEmptyEntries);
+
+            int width = int.Parse(sizes[0]);
+            int height = int.Parse(sizes[1]);
+
+            //MessageBox.Show("width = " + width + "  height = " + height);
+            
+            DateTime now = DateTime.Now;
+            int typeId = DataAccess.Lookup.GetLookupPhotoTypeIdFromPhotoWidth(width);
+            string url = String.Format("~\\Photos\\Thumbnail\\{0}\\{1}_{2}x{3}_KanNaim_{4}-{5}-{6}_{7}.jpg",
+                                       _tblOriginalPhotos.CategoryId, _tblOriginalPhotos.Name,
+                                       width, height, now.Day, now.Month, now.Year, typeId);
+            var copyData = _tblPhotos;
+
+            _tblPhotos = new Table_PhotosArchive
+                             {
+                                 PhotoTypeId = typeId,
+                                 OriginalPhotoId = copyData.OriginalPhotoId,
+                                 ImageUrl = url,
+                                 Width = width,
+                                 Height = height,
+                                 CssClass = copyData.CssClass,
+                                 Date = DateTime.Now,
+                                 GalleryId=null,
+                                 LastArticleId = null
+                             };
+            try
+            {
+                Db.Table_PhotosArchives.InsertOnSubmit(_tblPhotos);
+                Db.SubmitChanges();
+            }
+            catch(Exception exception)
+            {
+                Messages.ExceptionMessage(exception);
+            }
+        }
+
+        private static void SavePhotosCopiesAtDomainDirectory()
+        {
+            var wb = new WebBrowser();
+            //string filePath = FormEditArtical._photoPath;
+            const int fileId = 2;
+            string url = String.Format("http://www.kan-naim.co.il/SavingPhoto.aspx?id={0}", fileId);
+            //byte[] imageData = _tblOriginalPhotos.ImageData.ToArray();
+            //Image image = Conversions.ByteArrayToImage(imageData).GetThumbnailImage(width, height, GetThumbnailCallback, IntPtr.Zero);
+            //imageData = Conversions.ImageToByteArray(image);
+            wb.Navigate(url);
+            wb.Show(); wb.Visible = true;
         }
 
         private static void FormEditArtical_Load(object sender, EventArgs e)
@@ -1020,16 +1119,16 @@ namespace Kan_Naim_Main
                 }
                 Db.SubmitChanges();
                 _tblArticle = (from c in Db.Table_Articles
-                               where c.CreateDate == now
-                               select c).Single();
+                               orderby c.ArticleId descending 
+                               select c).First();
                 _isNewArticle = false;
 
                 // saving taktzirim
                 // TODO !
             }
-            catch
+            catch(Exception exception)
             {
-                
+                Messages.ExceptionMessage(exception, "פעולה נכשלה");
             }
         }
 

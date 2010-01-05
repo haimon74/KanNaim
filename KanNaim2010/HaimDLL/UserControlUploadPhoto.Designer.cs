@@ -87,12 +87,14 @@
             // 
             this.groupBoxSavePictureSelection.Controls.Add(this.radioButtonSavePhotosLocally);
             this.groupBoxSavePictureSelection.Controls.Add(this.radioButtonSavePhotosToArchive);
+            this.groupBoxSavePictureSelection.Enabled = false;
             this.groupBoxSavePictureSelection.Location = new System.Drawing.Point(275, 305);
             this.groupBoxSavePictureSelection.Name = "groupBoxSavePictureSelection";
             this.groupBoxSavePictureSelection.Size = new System.Drawing.Size(244, 50);
             this.groupBoxSavePictureSelection.TabIndex = 36;
             this.groupBoxSavePictureSelection.TabStop = false;
             this.groupBoxSavePictureSelection.Text = "בחר שמירת תמונות לארכיון או מקומי בלבד";
+            this.groupBoxSavePictureSelection.Visible = false;
             // 
             // radioButtonSavePhotosLocally
             // 
@@ -162,6 +164,7 @@
             this.checkBoxSize125w.AutoSize = true;
             this.checkBoxSize125w.Checked = true;
             this.checkBoxSize125w.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxSize125w.Enabled = false;
             this.checkBoxSize125w.Location = new System.Drawing.Point(303, 245);
             this.checkBoxSize125w.Name = "checkBoxSize125w";
             this.checkBoxSize125w.Size = new System.Drawing.Size(95, 17);
@@ -267,6 +270,7 @@
             this.checkBoxSize80w.AutoSize = true;
             this.checkBoxSize80w.Checked = true;
             this.checkBoxSize80w.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxSize80w.Enabled = false;
             this.checkBoxSize80w.Location = new System.Drawing.Point(316, 268);
             this.checkBoxSize80w.Name = "checkBoxSize80w";
             this.checkBoxSize80w.Size = new System.Drawing.Size(83, 17);
@@ -279,6 +283,7 @@
             this.checkBoxSize100w.AutoSize = true;
             this.checkBoxSize100w.Checked = true;
             this.checkBoxSize100w.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxSize100w.Enabled = false;
             this.checkBoxSize100w.Location = new System.Drawing.Point(430, 264);
             this.checkBoxSize100w.Name = "checkBoxSize100w";
             this.checkBoxSize100w.Size = new System.Drawing.Size(89, 17);
@@ -291,6 +296,7 @@
             this.checkBoxSize165w.AutoSize = true;
             this.checkBoxSize165w.Checked = true;
             this.checkBoxSize165w.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxSize165w.Enabled = false;
             this.checkBoxSize165w.Location = new System.Drawing.Point(424, 241);
             this.checkBoxSize165w.Name = "checkBoxSize165w";
             this.checkBoxSize165w.Size = new System.Drawing.Size(95, 17);
@@ -303,6 +309,7 @@
             this.checkBoxSize208w.AutoSize = true;
             this.checkBoxSize208w.Checked = true;
             this.checkBoxSize208w.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxSize208w.Enabled = false;
             this.checkBoxSize208w.Location = new System.Drawing.Point(301, 222);
             this.checkBoxSize208w.Name = "checkBoxSize208w";
             this.checkBoxSize208w.Size = new System.Drawing.Size(95, 17);
@@ -324,6 +331,7 @@
             this.checkBoxSize230w.AutoSize = true;
             this.checkBoxSize230w.Checked = true;
             this.checkBoxSize230w.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxSize230w.Enabled = false;
             this.checkBoxSize230w.Location = new System.Drawing.Point(424, 218);
             this.checkBoxSize230w.Name = "checkBoxSize230w";
             this.checkBoxSize230w.Size = new System.Drawing.Size(95, 17);

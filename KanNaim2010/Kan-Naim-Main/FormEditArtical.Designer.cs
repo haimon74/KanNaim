@@ -97,6 +97,7 @@ namespace Kan_Naim_Main
             _buttonRemoveSelectedCategory = new System.Windows.Forms.Button();
             _tabPagePhotos = new System.Windows.Forms.TabPage();
             _ucUploadPhoto1 = new HaimDLL.UserControlUploadPhoto();
+            _ucUploadPhoto1.SetSaveButtonCallbackFunction(SaveNewPhotosClick);
             _tabPageVideo = new System.Windows.Forms.TabPage();
             _ucUploadVideo1 = new HaimDLL.UserControlUploadVideo();
             _tabPageAutoPublish = new System.Windows.Forms.TabPage();

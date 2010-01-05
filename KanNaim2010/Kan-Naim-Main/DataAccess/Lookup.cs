@@ -15,6 +15,13 @@ namespace Kan_Naim_Main.DataAccess
                    select c;
         }
 
+        public static int GetLookupPhotoTypeIdFromPhotoWidth(int width)
+        {
+            return (from c in Db.Table_LookupPhotoTypes
+                   where c.Width == width
+                   select c.PhotoTypeId).Single();
+        }
+
         public static int GetLookupCategoryIdFromName(string name)
         {
             try
