@@ -147,7 +147,7 @@ namespace Kan_Naim_Main
             ((System.ComponentModel.ISupportInitialize)(_kanNaimDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(_spGetAllPhotosByOriginIdBindingSource)).BeginInit();
             _groupBox1.SuspendLayout();
-            Singl.SuspendLayout();
+            Singleton.SuspendLayout();
             // 
             // _tabControl1
             // 
@@ -1081,22 +1081,22 @@ namespace Kan_Naim_Main
             // 
             // FormEditArtical
             // 
-            Singl.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            Singl.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            Singl.AutoSize = true;
-            Singl.ClientSize = new System.Drawing.Size(781, 604);
-            Singl.Controls.Add(_groupBox1);
-            Singl.Controls.Add(_buttonSaveArticle);
-            Singl.Controls.Add(_tabControl1);
-            Singl.Controls.Add(_buttonArticlePreview);
-            Singl.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            Singl.MaximizeBox = false;
-            Singl.Name = "FormEditArtical";
-            Singl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            Singl.RightToLeftLayout = true;
-            Singl.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            Singl.Text = "עריכת כתבה";
-            Singl.Load += new System.EventHandler(FormEditArtical_Load);
+            Singleton.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            Singleton.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Singleton.AutoSize = true;
+            Singleton.ClientSize = new System.Drawing.Size(781, 604);
+            Singleton.Controls.Add(_groupBox1);
+            Singleton.Controls.Add(_buttonSaveArticle);
+            Singleton.Controls.Add(_tabControl1);
+            Singleton.Controls.Add(_buttonArticlePreview);
+            Singleton.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            Singleton.MaximizeBox = false;
+            Singleton.Name = "FormEditArtical";
+            Singleton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            Singleton.RightToLeftLayout = true;
+            Singleton.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            Singleton.Text = "עריכת כתבה";
+            Singleton.Load += new System.EventHandler(FormEditArtical_Load);
             _tabControl1.ResumeLayout(false);
             _tabPageArticle.ResumeLayout(false);
             _groupBox8.ResumeLayout(false);
@@ -1130,7 +1130,7 @@ namespace Kan_Naim_Main
             ((System.ComponentModel.ISupportInitialize)(_spGetAllPhotosByOriginIdBindingSource)).EndInit();
             _groupBox1.ResumeLayout(false);
             _groupBox1.PerformLayout();
-            Singl.ResumeLayout(false);
+            Singleton.ResumeLayout(false);
 
         }
 

@@ -17,39 +17,14 @@ namespace Kan_Naim_Main
         private static Table_OriginalPhotosArchive _tblOriginalPhotos = new Table_OriginalPhotosArchive();
         private static Table_Article _tblArticle = new Table_Article();
         private static Table_LookupCategory _tblLookupCategories = new Table_LookupCategory();
-        //private static IDictionary<string, UserControlTakFill> _ucTakFillCollection =
-        //        new Dictionary<string, UserControlTakFill>
-        //            {
-        //                {
-        //                    "takMedium",
-        //                    _userControlTakFillSizeMedium.ucTakContent1
-        //                    },
-        //                {
-        //                    "takSmall",
-        //                    _userControlTakFillSizeSmall.ucTakContent1.
-        //                    comboBoxTakPhoto
-        //                    },
-        //                {
-        //                    "takX1",
-        //                    _userControlTakFillSizeX1.ucTakContent1.
-        //                    comboBoxTakPhoto
-        //                    },
-        //                {
-        //                    "takX2",
-        //                    _userControlTakFillSizeX2.ucTakContent1.
-        //                    comboBoxTakPhoto
-        //                    },
-        //                {
-        //                    "takX3",
-        //                    _userControlTakFillSizeX3.ucTakContent1.
-        //                    comboBoxTakPhoto
-        //                    }
-        //            };
+
+        private static IDictionary<string, UserControlTakFill> _ucTakFillCollection =
+            new Dictionary<string, UserControlTakFill>();
 
         public static readonly Dictionary<string, string>[] StylesCollection = new Dictionary<string, string>[6];
         public static readonly Dictionary<string, string>[] HyperlinksCollection = new Dictionary<string, string>[6];
         
-        private static readonly FormEditArtical Singl = new FormEditArtical();
+        private static readonly FormEditArtical Singleton = new FormEditArtical();
 
         private FormEditArtical()
         {
@@ -63,6 +38,12 @@ namespace Kan_Naim_Main
             _comboBoxArticleCategory.SelectedIndex = _comboBoxArticleCategory.FindString(category);
             _tableLookupReportersTableAdapter1.Fill(_kanNaimDataSetReportersNames.Table_LookupReporters);
             _comboBoxEditor.SelectedIndex = _comboBoxEditor.FindString(username);
+
+            _ucTakFillCollection.Add("takMedium",_userControlTakFillSizeMedium);
+            _ucTakFillCollection.Add("takSmall",_userControlTakFillSizeSmall);
+            _ucTakFillCollection.Add("takX1",_userControlTakFillSizeX1);
+            _ucTakFillCollection.Add("takX2",_userControlTakFillSizeX2);
+            _ucTakFillCollection.Add("takX3",_userControlTakFillSizeX3);
         }
         private static int GetCetegoryIdFromName(string hebrewName)
         {
@@ -85,7 +66,7 @@ namespace Kan_Naim_Main
 
             _tblArticle = CreateNewArticleInArchive();
 
-            return Singl;
+            return Singleton;
         }
         
 
@@ -119,7 +100,7 @@ namespace Kan_Naim_Main
 
                 PopulateFromArticle();
                 _isNewArticle = false;
-                return Singl;
+                return Singleton;
             }
             catch
             {
@@ -357,11 +338,10 @@ namespace Kan_Naim_Main
 
         private static void RemoveItemTakCatTreeSelectorAt(int idx)
         {
-            _userControlTakFillSizeX3.ucTakBroadcastCmd1.treeViewTakBroadcastCatSelector.Nodes.RemoveAt(idx);
-            _userControlTakFillSizeX2.ucTakBroadcastCmd1.treeViewTakBroadcastCatSelector.Nodes.RemoveAt(idx);
-            _userControlTakFillSizeX1.ucTakBroadcastCmd1.treeViewTakBroadcastCatSelector.Nodes.RemoveAt(idx);
-            _userControlTakFillSizeMedium.ucTakBroadcastCmd1.treeViewTakBroadcastCatSelector.Nodes.RemoveAt(idx);
-            _userControlTakFillSizeSmall.ucTakBroadcastCmd1.treeViewTakBroadcastCatSelector.Nodes.RemoveAt(idx);
+            foreach (UserControlTakFill userControlTakFill in _ucTakFillCollection.Values)
+            {
+                userControlTakFill.ucTakBroadcastCmd1.treeViewTakBroadcastCatSelector.Nodes.RemoveAt(idx);
+            }
         }
 
         private static void buttonRemoveSelectedCategory_Click(object sender, EventArgs e)
@@ -491,11 +471,10 @@ namespace Kan_Naim_Main
 
         private static void AddItemToTakCatTreeSelector(string newItem)
         {
-            _userControlTakFillSizeX3.ucTakBroadcastCmd1.treeViewTakBroadcastCatSelector.Nodes.Add(newItem);
-            _userControlTakFillSizeX2.ucTakBroadcastCmd1.treeViewTakBroadcastCatSelector.Nodes.Add(newItem);
-            _userControlTakFillSizeX1.ucTakBroadcastCmd1.treeViewTakBroadcastCatSelector.Nodes.Add(newItem);
-            _userControlTakFillSizeMedium.ucTakBroadcastCmd1.treeViewTakBroadcastCatSelector.Nodes.Add(newItem);
-            _userControlTakFillSizeSmall.ucTakBroadcastCmd1.treeViewTakBroadcastCatSelector.Nodes.Add(newItem);
+            foreach (UserControlTakFill userControlTakFill in _ucTakFillCollection.Values)
+            {
+                userControlTakFill.ucTakBroadcastCmd1.treeViewTakBroadcastCatSelector.Nodes.Add(newItem);
+            }
         }
 
         private static void AddSelectedTreeNodesToList(bool isNotConditional, TreeNode node)
@@ -576,39 +555,10 @@ namespace Kan_Naim_Main
 
         private static void comboBoxArticlePhoto_SelectedIndexChanged(object sender, EventArgs e)
         {
-            IDictionary<string, ComboBox> comboCollection =
-                new Dictionary<string, ComboBox>
-                    {
-                        {
-                            "takMedium",
-                            _userControlTakFillSizeMedium.ucTakContent1.
-                            comboBoxTakPhoto
-                            },
-                        {
-                            "takSmall",
-                            _userControlTakFillSizeSmall.ucTakContent1.
-                            comboBoxTakPhoto
-                            },
-                        {
-                            "takX1",
-                            _userControlTakFillSizeX1.ucTakContent1.
-                            comboBoxTakPhoto
-                            },
-                        {
-                            "takX2",
-                            _userControlTakFillSizeX2.ucTakContent1.
-                            comboBoxTakPhoto
-                            },
-                        {
-                            "takX3",
-                            _userControlTakFillSizeX3.ucTakContent1.
-                            comboBoxTakPhoto
-                            }
-                    };
-
-            foreach (KeyValuePair<string, ComboBox> keyValuePair in comboCollection)
+            foreach (UserControlTakFill userControlTakFill in _ucTakFillCollection.Values)
             {
-                comboCollection[keyValuePair.Key] = FillComboBoxWithPhotosArchive(keyValuePair.Value);
+                ComboBox combo = userControlTakFill.ucTakContent1.comboBoxTakPhoto;
+                userControlTakFill.ucTakContent1.comboBoxTakPhoto = FillComboBoxWithPhotosArchive(combo);
             }
         }
 
