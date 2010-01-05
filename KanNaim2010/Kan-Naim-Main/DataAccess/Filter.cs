@@ -27,6 +27,13 @@ namespace Kan_Naim_Main.DataAccess
                    select c.Name;
         }
 
+        public static IQueryable<string> GetArchivePhotosNamesByOriginalPhotoId(int originalPhotoId)
+        {
+            return from c in Db.Table_PhotosArchives
+                   where c.OriginalPhotoId == originalPhotoId
+                   select c.ImageUrl;
+        }
+
         public static IQueryable<Table_PhotosArchive> GetPhotosArchiveByOriginalPhotoId(int originalPhotoId)
         {
             return from c in Db.Table_PhotosArchives
@@ -107,6 +114,20 @@ namespace Kan_Naim_Main.DataAccess
             {
                 return null;
             }
+        }
+
+        public static IQueryable<string> GetVideosNamesByCategoryId(int id)
+        {
+            return from c in Db.Table_VideosArchives
+                   where c.CategoryId == id
+                   select c.Caption;
+        }
+
+        public static string GetOriginalPhotoNameFromPhotoId(int photoId)
+        {
+            return (from c in Db.Table_OriginalPhotosArchives
+                    where c.PhotoId == photoId
+                    select c.Name).Single();
         }
     }
 }

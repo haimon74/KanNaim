@@ -181,7 +181,9 @@ namespace Kan_Naim_Main
             //DateTime now = DateTime.Now;
             //_tblArticle.CreateDate = now;
             //_tblArticle.UpdateDate = now;
-            Singleton._comboBoxArticlePhoto = FillComboBoxWithPhotosArchive(Singleton._comboBoxArticlePhoto);
+            ////Singleton._comboBoxArticlePhoto = FillComboBoxWithPhotosArchive(Singleton._comboBoxArticlePhoto);
+            _tblOriginalPhotos.Name = DataAccess.Filter.GetOriginalPhotoNameFromPhotoId(_tblArticle.ImageId);
+            PopulateArticlePhotosComboBox(_tblOriginalPhotos.Name);
             comboBoxArticlePhoto_SelectedIndexChanged(Singleton._comboBoxArticleCategory, new EventArgs());
         }
 
@@ -195,7 +197,7 @@ namespace Kan_Naim_Main
                                      {
                                          AlternateText = Singleton._ucUploadPhoto1.textBoxPhotoDescription.Text,
                                          Caption = Singleton._ucUploadPhoto1.textBoxPhotoCaption.Text,
-                                         CategoryId = DataAccess.Lookup.GetLookupCategoryIdFromName((Singleton._comboBoxArticleCategory.Text)),
+                                         CategoryId = _tblArticle.CategoryId,
                                          Date = DateTime.Now,
                                          Description = Singleton._ucUploadPhoto1.textBoxPhotoDescription.Text
                                      };
@@ -272,7 +274,7 @@ namespace Kan_Naim_Main
         private static void PopulateArticlePhotosComboBox(string photoName)
         {
             var photosByCategory =
-                        DataAccess.Filter.GetOriginalPhotosNamesByCategoryId((_tblOriginalPhotos.CategoryId));
+                        DataAccess.Filter.GetOriginalPhotosNamesByCategoryId(_tblOriginalPhotos.CategoryId);
 
             Singleton._comboBoxArticlePhoto.DataSource = photosByCategory;
             
@@ -601,19 +603,34 @@ namespace Kan_Naim_Main
 
         private static void comboBoxArticleCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // TODO: bind videos list in drop down list
+            string categoryName = Singleton._comboBoxArticleCategory.Text.Trim();
+            _tblArticle.CategoryId = DataAccess.Lookup.GetLookupCategoryIdFromName(categoryName);
+            _tblOriginalPhotos.CategoryId = _tblArticle.CategoryId;
 
-            var photos = DataAccess.Filter.GetOriginalPhotosByCategoryName(Singleton._comboBoxArticleCategory.SelectedText);
-
-            // TODO - bind photos in drop down list
-            //_comboBoxArticlePhoto.Items.Clear();
-
-            //foreach (Table_OriginalPhotosArchive tableOriginalPhotosArchive in photos)
-            //{
-            //    _comboBoxArticlePhoto.Items.Add(tableOriginalPhotosArchive.Name);
-            //}
+            PopulateArticlePhotosComboBox(_tblOriginalPhotos.Name);
+            //PopulateArticleVideosComboBox(Singleton._ucUploadVideo1._textBoxVideoCaption.Text);
         }
 
+        private static void PopulateArticleVideosComboBox(string videoName)
+        {
+            var videosByCategory =
+                        DataAccess.Filter.GetVideosNamesByCategoryId((_tblOriginalPhotos.CategoryId));
+
+            Singleton._comboBoxArticleVideo.DataSource = videosByCategory;
+
+            if (videoName != String.Empty)
+                Singleton._comboBoxArticleVideo.SelectedText = videoName;
+        }
+
+        private static void PopulateTaksPhotosComboBoxes()
+        {
+            var photos = DataAccess.Filter.GetArchivePhotosNamesByOriginalPhotoId(_tblOriginalPhotos.PhotoId);
+            foreach (UserControlTakFill uc in UcTakFillCollection.Values)
+            {
+                uc.ucTakContent1.comboBoxTakPhoto.DataSource = photos;
+            }
+
+        }
         private static ComboBox FillComboBoxWithPhotosArchive(ComboBox comboBox)
         {
             int originalPhotoId;
@@ -651,11 +668,12 @@ namespace Kan_Naim_Main
 
         private static void comboBoxArticlePhoto_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (UserControlTakFill userControlTakFill in UcTakFillCollection.Values)
-            {
-                ComboBox combo = userControlTakFill.ucTakContent1.comboBoxTakPhoto;
-                userControlTakFill.ucTakContent1.comboBoxTakPhoto = FillComboBoxWithPhotosArchive(combo);
-            }
+            PopulateTaksPhotosComboBoxes();
+            //foreach (UserControlTakFill userControlTakFill in UcTakFillCollection.Values)
+            //{
+            //    ComboBox combo = userControlTakFill.ucTakContent1.comboBoxTakPhoto;
+            //    userControlTakFill.ucTakContent1.comboBoxTakPhoto = FillComboBoxWithPhotosArchive(combo);
+            //}
         }
 
         public static void UpdateHtmlTextIntoArticleContentTextBox(string rtfContent)

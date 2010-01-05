@@ -20,6 +20,20 @@ namespace DbSql
                    select c;
         }
 
+        public static IQueryable<string> GetOriginalPhotosNamesByCategoryId(int catId)
+        {
+            return from c in Db.Table_OriginalPhotosArchives
+                   where c.CategoryId == catId
+                   select c.Name;
+        }
+
+        public static IQueryable<string> GetArchivePhotosNamesByOriginalPhotoId(int originalPhotoId)
+        {
+            return from c in Db.Table_PhotosArchives
+                   where c.OriginalPhotoId == originalPhotoId
+                   select c.ImageUrl;
+        }
+
         public static IQueryable<Table_PhotosArchive> GetPhotosArchiveByOriginalPhotoId(int originalPhotoId)
         {
             return from c in Db.Table_PhotosArchives
@@ -56,6 +70,13 @@ namespace DbSql
             }
         }
 
+        public static IQueryable<string> GetVideosNamesByCategoryId(int id)
+        {
+            return from c in Db.Table_VideosArchives
+                   where c.CategoryId == id
+                   select c.Caption;
+        }
+        
         public static IQueryable<Table_User> GetUserByUserNameOrPhone(string str)
         {
             return (from c in Db.Table_Users
