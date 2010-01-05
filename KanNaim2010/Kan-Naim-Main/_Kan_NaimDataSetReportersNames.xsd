@@ -29,14 +29,14 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="_Kan_NaimDataSetReportersNames" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="_Kan_NaimDataSetReportersNames" msprop:Generator_UserDSName="_Kan_NaimDataSetReportersNames" msprop:EnableTableAdapterManager="True">
+  <xs:element name="_Kan_NaimDataSetReportersNames" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="_Kan_NaimDataSetReportersNames" msprop:Generator_DataSetName="_Kan_NaimDataSetReportersNames" msprop:EnableTableAdapterManager="True">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Table_LookupReporters" msprop:Generator_UserTableName="Table_LookupReporters" msprop:Generator_RowDeletedName="Table_LookupReportersRowDeleted" msprop:Generator_TableClassName="Table_LookupReportersDataTable" msprop:Generator_RowChangedName="Table_LookupReportersRowChanged" msprop:Generator_RowClassName="Table_LookupReportersRow" msprop:Generator_RowChangingName="Table_LookupReportersRowChanging" msprop:Generator_RowEvArgName="Table_LookupReportersRowChangeEvent" msprop:Generator_RowEvHandlerName="Table_LookupReportersRowChangeEventHandler" msprop:Generator_TablePropName="Table_LookupReporters" msprop:Generator_TableVarName="tableTable_LookupReporters" msprop:Generator_RowDeletingName="Table_LookupReportersRowDeleting">
+        <xs:element name="Table_LookupReporters" msprop:Generator_UserTableName="Table_LookupReporters" msprop:Generator_RowDeletedName="Table_LookupReportersRowDeleted" msprop:Generator_RowChangedName="Table_LookupReportersRowChanged" msprop:Generator_RowClassName="Table_LookupReportersRow" msprop:Generator_RowChangingName="Table_LookupReportersRowChanging" msprop:Generator_RowEvArgName="Table_LookupReportersRowChangeEvent" msprop:Generator_RowEvHandlerName="Table_LookupReportersRowChangeEventHandler" msprop:Generator_TableClassName="Table_LookupReportersDataTable" msprop:Generator_TableVarName="tableTable_LookupReporters" msprop:Generator_RowDeletingName="Table_LookupReportersRowDeleting" msprop:Generator_TablePropName="Table_LookupReporters">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="UserId" msprop:Generator_UserColumnName="UserId" msprop:Generator_ColumnPropNameInRow="UserId" msprop:Generator_ColumnVarNameInTable="columnUserId" msprop:Generator_ColumnPropNameInTable="UserIdColumn" type="xs:int" />
-              <xs:element name="PublishNameShort" msprop:Generator_UserColumnName="PublishNameShort" msprop:Generator_ColumnPropNameInRow="PublishNameShort" msprop:Generator_ColumnVarNameInTable="columnPublishNameShort" msprop:Generator_ColumnPropNameInTable="PublishNameShortColumn">
+              <xs:element name="UserId" msprop:Generator_UserColumnName="UserId" msprop:Generator_ColumnVarNameInTable="columnUserId" msprop:Generator_ColumnPropNameInRow="UserId" msprop:Generator_ColumnPropNameInTable="UserIdColumn" type="xs:int" />
+              <xs:element name="PublishNameShort" msprop:Generator_UserColumnName="PublishNameShort" msprop:Generator_ColumnVarNameInTable="columnPublishNameShort" msprop:Generator_ColumnPropNameInRow="PublishNameShort" msprop:Generator_ColumnPropNameInTable="PublishNameShortColumn">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="15" />

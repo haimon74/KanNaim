@@ -57,8 +57,8 @@ SELECT CatId, CatHebrewName FROM Table_LookupCategories WHERE (CatId = @CatId)</
         <xs:element name="Table_LookupCategories" msprop:Generator_UserTableName="Table_LookupCategories" msprop:Generator_RowDeletedName="Table_LookupCategoriesRowDeleted" msprop:Generator_RowChangedName="Table_LookupCategoriesRowChanged" msprop:Generator_RowClassName="Table_LookupCategoriesRow" msprop:Generator_RowChangingName="Table_LookupCategoriesRowChanging" msprop:Generator_RowEvArgName="Table_LookupCategoriesRowChangeEvent" msprop:Generator_RowEvHandlerName="Table_LookupCategoriesRowChangeEventHandler" msprop:Generator_TableClassName="Table_LookupCategoriesDataTable" msprop:Generator_TableVarName="tableTable_LookupCategories" msprop:Generator_RowDeletingName="Table_LookupCategoriesRowDeleting" msprop:Generator_TablePropName="Table_LookupCategories">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="CatId" msprop:Generator_UserColumnName="CatId" msprop:Generator_ColumnVarNameInTable="columnCatId" msprop:Generator_ColumnPropNameInRow="CatId" msprop:Generator_ColumnPropNameInTable="CatIdColumn" type="xs:int" />
-              <xs:element name="CatHebrewName" msprop:Generator_UserColumnName="CatHebrewName" msprop:Generator_ColumnVarNameInTable="columnCatHebrewName" msprop:Generator_ColumnPropNameInRow="CatHebrewName" msprop:Generator_ColumnPropNameInTable="CatHebrewNameColumn">
+              <xs:element name="CatId" msprop:Generator_UserColumnName="CatId" msprop:Generator_ColumnPropNameInRow="CatId" msprop:Generator_ColumnVarNameInTable="columnCatId" msprop:Generator_ColumnPropNameInTable="CatIdColumn" type="xs:int" />
+              <xs:element name="CatHebrewName" msprop:Generator_UserColumnName="CatHebrewName" msprop:Generator_ColumnPropNameInRow="CatHebrewName" msprop:Generator_ColumnVarNameInTable="columnCatHebrewName" msprop:Generator_ColumnPropNameInTable="CatHebrewNameColumn">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />

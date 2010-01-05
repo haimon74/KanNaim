@@ -33,15 +33,15 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="_Kan_NaimDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="_Kan_NaimDataSet2" msprop:Generator_UserDSName="_Kan_NaimDataSet2" msprop:EnableTableAdapterManager="True">
+  <xs:element name="_Kan_NaimDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="_Kan_NaimDataSet2" msprop:Generator_DataSetName="_Kan_NaimDataSet2" msprop:EnableTableAdapterManager="True">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="sp_GetAllPhotosByOriginId" msprop:Generator_UserTableName="sp_GetAllPhotosByOriginId" msprop:Generator_RowDeletedName="sp_GetAllPhotosByOriginIdRowDeleted" msprop:Generator_TableClassName="sp_GetAllPhotosByOriginIdDataTable" msprop:Generator_RowChangedName="sp_GetAllPhotosByOriginIdRowChanged" msprop:Generator_RowClassName="sp_GetAllPhotosByOriginIdRow" msprop:Generator_RowChangingName="sp_GetAllPhotosByOriginIdRowChanging" msprop:Generator_RowEvArgName="sp_GetAllPhotosByOriginIdRowChangeEvent" msprop:Generator_RowEvHandlerName="sp_GetAllPhotosByOriginIdRowChangeEventHandler" msprop:Generator_TablePropName="sp_GetAllPhotosByOriginId" msprop:Generator_TableVarName="tablesp_GetAllPhotosByOriginId" msprop:Generator_RowDeletingName="sp_GetAllPhotosByOriginIdRowDeleting">
+        <xs:element name="sp_GetAllPhotosByOriginId" msprop:Generator_UserTableName="sp_GetAllPhotosByOriginId" msprop:Generator_RowDeletedName="sp_GetAllPhotosByOriginIdRowDeleted" msprop:Generator_RowChangedName="sp_GetAllPhotosByOriginIdRowChanged" msprop:Generator_RowClassName="sp_GetAllPhotosByOriginIdRow" msprop:Generator_RowChangingName="sp_GetAllPhotosByOriginIdRowChanging" msprop:Generator_RowEvArgName="sp_GetAllPhotosByOriginIdRowChangeEvent" msprop:Generator_RowEvHandlerName="sp_GetAllPhotosByOriginIdRowChangeEventHandler" msprop:Generator_TableClassName="sp_GetAllPhotosByOriginIdDataTable" msprop:Generator_TableVarName="tablesp_GetAllPhotosByOriginId" msprop:Generator_RowDeletingName="sp_GetAllPhotosByOriginIdRowDeleting" msprop:Generator_TablePropName="sp_GetAllPhotosByOriginId">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
-              <xs:element name="PhotoTypeId" msprop:Generator_UserColumnName="PhotoTypeId" msprop:Generator_ColumnPropNameInRow="PhotoTypeId" msprop:Generator_ColumnVarNameInTable="columnPhotoTypeId" msprop:Generator_ColumnPropNameInTable="PhotoTypeIdColumn" type="xs:int" />
-              <xs:element name="ImageUrl" msprop:Generator_UserColumnName="ImageUrl" msprop:Generator_ColumnPropNameInRow="ImageUrl" msprop:Generator_ColumnVarNameInTable="columnImageUrl" msprop:Generator_ColumnPropNameInTable="ImageUrlColumn">
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
+              <xs:element name="PhotoTypeId" msprop:Generator_UserColumnName="PhotoTypeId" msprop:Generator_ColumnVarNameInTable="columnPhotoTypeId" msprop:Generator_ColumnPropNameInRow="PhotoTypeId" msprop:Generator_ColumnPropNameInTable="PhotoTypeIdColumn" type="xs:int" />
+              <xs:element name="ImageUrl" msprop:Generator_UserColumnName="ImageUrl" msprop:Generator_ColumnVarNameInTable="columnImageUrl" msprop:Generator_ColumnPropNameInRow="ImageUrl" msprop:Generator_ColumnPropNameInTable="ImageUrlColumn">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />

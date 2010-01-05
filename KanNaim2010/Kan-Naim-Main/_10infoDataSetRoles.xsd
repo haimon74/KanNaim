@@ -59,10 +59,10 @@ SELECT RoleId, RoleDescription FROM Table_LookupRoles WHERE (RoleId = @RoleId)</
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="_10infoDataSetRoles" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="_10infoDataSetRoles" msprop:Generator_UserDSName="_10infoDataSetRoles" msprop:EnableTableAdapterManager="True">
+  <xs:element name="_10infoDataSetRoles" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="_10infoDataSetRoles" msprop:Generator_DataSetName="_10infoDataSetRoles" msprop:EnableTableAdapterManager="True">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Table_LookupRoles" msprop:Generator_UserTableName="Table_LookupRoles" msprop:Generator_RowDeletedName="Table_LookupRolesRowDeleted" msprop:Generator_TableClassName="Table_LookupRolesDataTable" msprop:Generator_RowChangedName="Table_LookupRolesRowChanged" msprop:Generator_RowClassName="Table_LookupRolesRow" msprop:Generator_RowChangingName="Table_LookupRolesRowChanging" msprop:Generator_RowEvArgName="Table_LookupRolesRowChangeEvent" msprop:Generator_RowEvHandlerName="Table_LookupRolesRowChangeEventHandler" msprop:Generator_TablePropName="Table_LookupRoles" msprop:Generator_TableVarName="tableTable_LookupRoles" msprop:Generator_RowDeletingName="Table_LookupRolesRowDeleting">
+        <xs:element name="Table_LookupRoles" msprop:Generator_UserTableName="Table_LookupRoles" msprop:Generator_RowDeletedName="Table_LookupRolesRowDeleted" msprop:Generator_RowChangedName="Table_LookupRolesRowChanged" msprop:Generator_RowClassName="Table_LookupRolesRow" msprop:Generator_RowChangingName="Table_LookupRolesRowChanging" msprop:Generator_RowEvArgName="Table_LookupRolesRowChangeEvent" msprop:Generator_RowEvHandlerName="Table_LookupRolesRowChangeEventHandler" msprop:Generator_TableClassName="Table_LookupRolesDataTable" msprop:Generator_TableVarName="tableTable_LookupRoles" msprop:Generator_RowDeletingName="Table_LookupRolesRowDeleting" msprop:Generator_TablePropName="Table_LookupRoles">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RoleId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="RoleId" msprop:Generator_ColumnPropNameInRow="RoleId" msprop:Generator_ColumnVarNameInTable="columnRoleId" msprop:Generator_ColumnPropNameInTable="RoleIdColumn" type="xs:int" />

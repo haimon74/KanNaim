@@ -59,7 +59,7 @@
         <classShapeMoniker Id="f27b18cc-e26a-4ec9-90a0-30a48da39787" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.5 : 3.725); (3.875 : 3.725)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.5 : 3.725); (3.875 : 3.725)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesKanNaimDataContext/Table_Article/Table_Article_Table_VideosArchive" />
       <nodes>
         <classShapeMoniker Id="3082c8bf-c135-4a3c-94bd-6758a42f27cc" />
@@ -93,7 +93,7 @@
         <classShapeMoniker Id="d4f56813-a486-4fad-8f2b-9a53f57a9192" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(4.875 : 4.75); (4.875 : 3.95)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(4.875 : 4.75); (4.875 : 3.95)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesKanNaimDataContext/Table_Taktzirim/Table_Taktzirim_Table_VideosArchive" />
       <nodes>
         <classShapeMoniker Id="d1f700c6-ab72-4947-ba91-c7c17d0d7e0c" />

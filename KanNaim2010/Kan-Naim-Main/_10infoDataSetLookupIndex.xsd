@@ -65,10 +65,10 @@ SELECT Id, IndexName, GroupNameId FROM Table_LookupIndexes WHERE (Id = @Id)</Com
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="_10infoDataSetLookupIndex" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="_10infoDataSetLookupIndex" msprop:Generator_UserDSName="_10infoDataSetLookupIndex" msprop:EnableTableAdapterManager="True">
+  <xs:element name="_10infoDataSetLookupIndex" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="_10infoDataSetLookupIndex" msprop:Generator_DataSetName="_10infoDataSetLookupIndex" msprop:EnableTableAdapterManager="True">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Table_LookupIndexes" msprop:Generator_UserTableName="Table_LookupIndexes" msprop:Generator_RowDeletedName="Table_LookupIndexesRowDeleted" msprop:Generator_TableClassName="Table_LookupIndexesDataTable" msprop:Generator_RowChangedName="Table_LookupIndexesRowChanged" msprop:Generator_RowClassName="Table_LookupIndexesRow" msprop:Generator_RowChangingName="Table_LookupIndexesRowChanging" msprop:Generator_RowEvArgName="Table_LookupIndexesRowChangeEvent" msprop:Generator_RowEvHandlerName="Table_LookupIndexesRowChangeEventHandler" msprop:Generator_TablePropName="Table_LookupIndexes" msprop:Generator_TableVarName="tableTable_LookupIndexes" msprop:Generator_RowDeletingName="Table_LookupIndexesRowDeleting">
+        <xs:element name="Table_LookupIndexes" msprop:Generator_UserTableName="Table_LookupIndexes" msprop:Generator_RowDeletedName="Table_LookupIndexesRowDeleted" msprop:Generator_RowChangedName="Table_LookupIndexesRowChanged" msprop:Generator_RowClassName="Table_LookupIndexesRow" msprop:Generator_RowChangingName="Table_LookupIndexesRowChanging" msprop:Generator_RowEvArgName="Table_LookupIndexesRowChangeEvent" msprop:Generator_RowEvHandlerName="Table_LookupIndexesRowChangeEventHandler" msprop:Generator_TableClassName="Table_LookupIndexesDataTable" msprop:Generator_TableVarName="tableTable_LookupIndexes" msprop:Generator_RowDeletingName="Table_LookupIndexesRowDeleting" msprop:Generator_TablePropName="Table_LookupIndexes">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />

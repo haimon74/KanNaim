@@ -232,85 +232,85 @@ SELECT LinkId, PhotoId, ArticleId, Url, OrderPlace, AltText FROM Table_LinksPref
         <xs:element name="Table_PhotosArchive" msprop:Generator_UserTableName="Table_PhotosArchive" msprop:Generator_RowDeletedName="Table_PhotosArchiveRowDeleted" msprop:Generator_RowChangedName="Table_PhotosArchiveRowChanged" msprop:Generator_RowClassName="Table_PhotosArchiveRow" msprop:Generator_RowChangingName="Table_PhotosArchiveRowChanging" msprop:Generator_RowEvArgName="Table_PhotosArchiveRowChangeEvent" msprop:Generator_RowEvHandlerName="Table_PhotosArchiveRowChangeEventHandler" msprop:Generator_TableClassName="Table_PhotosArchiveDataTable" msprop:Generator_TableVarName="tableTable_PhotosArchive" msprop:Generator_RowDeletingName="Table_PhotosArchiveRowDeleting" msprop:Generator_TablePropName="Table_PhotosArchive">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
-              <xs:element name="ImageUrl" msprop:Generator_UserColumnName="ImageUrl" msprop:Generator_ColumnVarNameInTable="columnImageUrl" msprop:Generator_ColumnPropNameInRow="ImageUrl" msprop:Generator_ColumnPropNameInTable="ImageUrlColumn">
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
+              <xs:element name="ImageUrl" msprop:Generator_UserColumnName="ImageUrl" msprop:Generator_ColumnPropNameInRow="ImageUrl" msprop:Generator_ColumnVarNameInTable="columnImageUrl" msprop:Generator_ColumnPropNameInTable="ImageUrlColumn">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="PhotoTypeId" msprop:Generator_UserColumnName="PhotoTypeId" msprop:Generator_ColumnVarNameInTable="columnPhotoTypeId" msprop:Generator_ColumnPropNameInRow="PhotoTypeId" msprop:Generator_ColumnPropNameInTable="PhotoTypeIdColumn" type="xs:int" />
-              <xs:element name="Date" msprop:Generator_UserColumnName="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" type="xs:dateTime" />
-              <xs:element name="CssClass" msprop:Generator_UserColumnName="CssClass" msprop:Generator_ColumnVarNameInTable="columnCssClass" msprop:Generator_ColumnPropNameInRow="CssClass" msprop:Generator_ColumnPropNameInTable="CssClassColumn" minOccurs="0">
+              <xs:element name="PhotoTypeId" msprop:Generator_UserColumnName="PhotoTypeId" msprop:Generator_ColumnPropNameInRow="PhotoTypeId" msprop:Generator_ColumnVarNameInTable="columnPhotoTypeId" msprop:Generator_ColumnPropNameInTable="PhotoTypeIdColumn" type="xs:int" />
+              <xs:element name="Date" msprop:Generator_UserColumnName="Date" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInTable="DateColumn" type="xs:dateTime" />
+              <xs:element name="CssClass" msprop:Generator_UserColumnName="CssClass" msprop:Generator_ColumnPropNameInRow="CssClass" msprop:Generator_ColumnVarNameInTable="columnCssClass" msprop:Generator_ColumnPropNameInTable="CssClassColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="UrlLink" msprop:Generator_UserColumnName="UrlLink" msprop:Generator_ColumnVarNameInTable="columnUrlLink" msprop:Generator_ColumnPropNameInRow="UrlLink" msprop:Generator_ColumnPropNameInTable="UrlLinkColumn" minOccurs="0">
+              <xs:element name="UrlLink" msprop:Generator_UserColumnName="UrlLink" msprop:Generator_ColumnPropNameInRow="UrlLink" msprop:Generator_ColumnVarNameInTable="columnUrlLink" msprop:Generator_ColumnPropNameInTable="UrlLinkColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="LastTakId" msprop:Generator_UserColumnName="LastTakId" msprop:Generator_ColumnVarNameInTable="columnLastTakId" msprop:Generator_ColumnPropNameInRow="LastTakId" msprop:Generator_ColumnPropNameInTable="LastTakIdColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="LastArticleId" msprop:Generator_UserColumnName="LastArticleId" msprop:Generator_ColumnVarNameInTable="columnLastArticleId" msprop:Generator_ColumnPropNameInRow="LastArticleId" msprop:Generator_ColumnPropNameInTable="LastArticleIdColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="GalleryId" msprop:Generator_UserColumnName="GalleryId" msprop:Generator_ColumnVarNameInTable="columnGalleryId" msprop:Generator_ColumnPropNameInRow="GalleryId" msprop:Generator_ColumnPropNameInTable="GalleryIdColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="Width" msprop:Generator_UserColumnName="Width" msprop:Generator_ColumnVarNameInTable="columnWidth" msprop:Generator_ColumnPropNameInRow="Width" msprop:Generator_ColumnPropNameInTable="WidthColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="Height" msprop:Generator_UserColumnName="Height" msprop:Generator_ColumnVarNameInTable="columnHeight" msprop:Generator_ColumnPropNameInRow="Height" msprop:Generator_ColumnPropNameInTable="HeightColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="OriginalPhotoId" msprop:Generator_UserColumnName="OriginalPhotoId" msprop:Generator_ColumnVarNameInTable="columnOriginalPhotoId" msprop:Generator_ColumnPropNameInRow="OriginalPhotoId" msprop:Generator_ColumnPropNameInTable="OriginalPhotoIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="LastTakId" msprop:Generator_UserColumnName="LastTakId" msprop:Generator_ColumnPropNameInRow="LastTakId" msprop:Generator_ColumnVarNameInTable="columnLastTakId" msprop:Generator_ColumnPropNameInTable="LastTakIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="LastArticleId" msprop:Generator_UserColumnName="LastArticleId" msprop:Generator_ColumnPropNameInRow="LastArticleId" msprop:Generator_ColumnVarNameInTable="columnLastArticleId" msprop:Generator_ColumnPropNameInTable="LastArticleIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="GalleryId" msprop:Generator_UserColumnName="GalleryId" msprop:Generator_ColumnPropNameInRow="GalleryId" msprop:Generator_ColumnVarNameInTable="columnGalleryId" msprop:Generator_ColumnPropNameInTable="GalleryIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Width" msprop:Generator_UserColumnName="Width" msprop:Generator_ColumnPropNameInRow="Width" msprop:Generator_ColumnVarNameInTable="columnWidth" msprop:Generator_ColumnPropNameInTable="WidthColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Height" msprop:Generator_UserColumnName="Height" msprop:Generator_ColumnPropNameInRow="Height" msprop:Generator_ColumnVarNameInTable="columnHeight" msprop:Generator_ColumnPropNameInTable="HeightColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="OriginalPhotoId" msprop:Generator_UserColumnName="OriginalPhotoId" msprop:Generator_ColumnPropNameInRow="OriginalPhotoId" msprop:Generator_ColumnVarNameInTable="columnOriginalPhotoId" msprop:Generator_ColumnPropNameInTable="OriginalPhotoIdColumn" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
         <xs:element name="DataTablePreferedLinks" msprop:Generator_UserTableName="DataTablePreferedLinks" msprop:Generator_RowDeletedName="DataTablePreferedLinksRowDeleted" msprop:Generator_RowChangedName="DataTablePreferedLinksRowChanged" msprop:Generator_RowClassName="DataTablePreferedLinksRow" msprop:Generator_RowChangingName="DataTablePreferedLinksRowChanging" msprop:Generator_RowEvArgName="DataTablePreferedLinksRowChangeEvent" msprop:Generator_RowEvHandlerName="DataTablePreferedLinksRowChangeEventHandler" msprop:Generator_TableClassName="DataTablePreferedLinksDataTable" msprop:Generator_TableVarName="tableDataTablePreferedLinks" msprop:Generator_RowDeletingName="DataTablePreferedLinksRowDeleting" msprop:Generator_TablePropName="DataTablePreferedLinks">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ImageUrl" msprop:Generator_UserColumnName="ImageUrl" msprop:Generator_ColumnVarNameInTable="columnImageUrl" msprop:Generator_ColumnPropNameInRow="ImageUrl" msprop:Generator_ColumnPropNameInTable="ImageUrlColumn">
+              <xs:element name="ImageUrl" msprop:Generator_UserColumnName="ImageUrl" msprop:Generator_ColumnPropNameInRow="ImageUrl" msprop:Generator_ColumnVarNameInTable="columnImageUrl" msprop:Generator_ColumnPropNameInTable="ImageUrlColumn">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="PhotoId" msprop:Generator_UserColumnName="PhotoId" msprop:Generator_ColumnVarNameInTable="columnPhotoId" msprop:Generator_ColumnPropNameInRow="PhotoId" msprop:Generator_ColumnPropNameInTable="PhotoIdColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="ArticleId" msprop:Generator_UserColumnName="ArticleId" msprop:Generator_ColumnVarNameInTable="columnArticleId" msprop:Generator_ColumnPropNameInRow="ArticleId" msprop:Generator_ColumnPropNameInTable="ArticleIdColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="Url" msprop:Generator_UserColumnName="Url" msprop:Generator_ColumnVarNameInTable="columnUrl" msprop:Generator_ColumnPropNameInRow="Url" msprop:Generator_ColumnPropNameInTable="UrlColumn" minOccurs="0">
+              <xs:element name="PhotoId" msprop:Generator_UserColumnName="PhotoId" msprop:Generator_ColumnPropNameInRow="PhotoId" msprop:Generator_ColumnVarNameInTable="columnPhotoId" msprop:Generator_ColumnPropNameInTable="PhotoIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ArticleId" msprop:Generator_UserColumnName="ArticleId" msprop:Generator_ColumnPropNameInRow="ArticleId" msprop:Generator_ColumnVarNameInTable="columnArticleId" msprop:Generator_ColumnPropNameInTable="ArticleIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Url" msprop:Generator_UserColumnName="Url" msprop:Generator_ColumnPropNameInRow="Url" msprop:Generator_ColumnVarNameInTable="columnUrl" msprop:Generator_ColumnPropNameInTable="UrlColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="OrderPlace" msprop:Generator_UserColumnName="OrderPlace" msprop:Generator_ColumnVarNameInTable="columnOrderPlace" msprop:Generator_ColumnPropNameInRow="OrderPlace" msprop:Generator_ColumnPropNameInTable="OrderPlaceColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="AltText" msprop:Generator_UserColumnName="AltText" msprop:Generator_ColumnVarNameInTable="columnAltText" msprop:Generator_ColumnPropNameInRow="AltText" msprop:Generator_ColumnPropNameInTable="AltTextColumn">
+              <xs:element name="OrderPlace" msprop:Generator_UserColumnName="OrderPlace" msprop:Generator_ColumnPropNameInRow="OrderPlace" msprop:Generator_ColumnVarNameInTable="columnOrderPlace" msprop:Generator_ColumnPropNameInTable="OrderPlaceColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="AltText" msprop:Generator_UserColumnName="AltText" msprop:Generator_ColumnPropNameInRow="AltText" msprop:Generator_ColumnVarNameInTable="columnAltText" msprop:Generator_ColumnPropNameInTable="AltTextColumn">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="LinkId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="LinkId" msprop:Generator_ColumnVarNameInTable="columnLinkId" msprop:Generator_ColumnPropNameInRow="LinkId" msprop:Generator_ColumnPropNameInTable="LinkIdColumn" type="xs:int" />
+              <xs:element name="LinkId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="LinkId" msprop:Generator_ColumnPropNameInRow="LinkId" msprop:Generator_ColumnVarNameInTable="columnLinkId" msprop:Generator_ColumnPropNameInTable="LinkIdColumn" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
         <xs:element name="Table_LinksPrefered" msprop:Generator_UserTableName="Table_LinksPrefered" msprop:Generator_RowDeletedName="Table_LinksPreferedRowDeleted" msprop:Generator_RowChangedName="Table_LinksPreferedRowChanged" msprop:Generator_RowClassName="Table_LinksPreferedRow" msprop:Generator_RowChangingName="Table_LinksPreferedRowChanging" msprop:Generator_RowEvArgName="Table_LinksPreferedRowChangeEvent" msprop:Generator_RowEvHandlerName="Table_LinksPreferedRowChangeEventHandler" msprop:Generator_TableClassName="Table_LinksPreferedDataTable" msprop:Generator_TableVarName="tableTable_LinksPrefered" msprop:Generator_RowDeletingName="Table_LinksPreferedRowDeleting" msprop:Generator_TablePropName="Table_LinksPrefered">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="LinkId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="LinkId" msprop:Generator_ColumnVarNameInTable="columnLinkId" msprop:Generator_ColumnPropNameInRow="LinkId" msprop:Generator_ColumnPropNameInTable="LinkIdColumn" type="xs:int" />
-              <xs:element name="PhotoId" msprop:Generator_UserColumnName="PhotoId" msprop:Generator_ColumnVarNameInTable="columnPhotoId" msprop:Generator_ColumnPropNameInRow="PhotoId" msprop:Generator_ColumnPropNameInTable="PhotoIdColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="ArticleId" msprop:Generator_UserColumnName="ArticleId" msprop:Generator_ColumnVarNameInTable="columnArticleId" msprop:Generator_ColumnPropNameInRow="ArticleId" msprop:Generator_ColumnPropNameInTable="ArticleIdColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="Url" msprop:Generator_UserColumnName="Url" msprop:Generator_ColumnVarNameInTable="columnUrl" msprop:Generator_ColumnPropNameInRow="Url" msprop:Generator_ColumnPropNameInTable="UrlColumn" minOccurs="0">
+              <xs:element name="LinkId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="LinkId" msprop:Generator_ColumnPropNameInRow="LinkId" msprop:Generator_ColumnVarNameInTable="columnLinkId" msprop:Generator_ColumnPropNameInTable="LinkIdColumn" type="xs:int" />
+              <xs:element name="PhotoId" msprop:Generator_UserColumnName="PhotoId" msprop:Generator_ColumnPropNameInRow="PhotoId" msprop:Generator_ColumnVarNameInTable="columnPhotoId" msprop:Generator_ColumnPropNameInTable="PhotoIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ArticleId" msprop:Generator_UserColumnName="ArticleId" msprop:Generator_ColumnPropNameInRow="ArticleId" msprop:Generator_ColumnVarNameInTable="columnArticleId" msprop:Generator_ColumnPropNameInTable="ArticleIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Url" msprop:Generator_UserColumnName="Url" msprop:Generator_ColumnPropNameInRow="Url" msprop:Generator_ColumnVarNameInTable="columnUrl" msprop:Generator_ColumnPropNameInTable="UrlColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="OrderPlace" msprop:Generator_UserColumnName="OrderPlace" msprop:Generator_ColumnVarNameInTable="columnOrderPlace" msprop:Generator_ColumnPropNameInRow="OrderPlace" msprop:Generator_ColumnPropNameInTable="OrderPlaceColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="AltText" msprop:Generator_UserColumnName="AltText" msprop:Generator_ColumnVarNameInTable="columnAltText" msprop:Generator_ColumnPropNameInRow="AltText" msprop:Generator_ColumnPropNameInTable="AltTextColumn">
+              <xs:element name="OrderPlace" msprop:Generator_UserColumnName="OrderPlace" msprop:Generator_ColumnPropNameInRow="OrderPlace" msprop:Generator_ColumnVarNameInTable="columnOrderPlace" msprop:Generator_ColumnPropNameInTable="OrderPlaceColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="AltText" msprop:Generator_UserColumnName="AltText" msprop:Generator_ColumnPropNameInRow="AltText" msprop:Generator_ColumnVarNameInTable="columnAltText" msprop:Generator_ColumnPropNameInTable="AltTextColumn">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />

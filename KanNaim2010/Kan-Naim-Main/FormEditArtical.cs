@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.IO;
@@ -18,7 +17,7 @@ namespace Kan_Naim_Main
         private static Table_Article _tblArticle = new Table_Article();
         private static Table_LookupCategory _tblLookupCategories = new Table_LookupCategory();
 
-        private static IDictionary<string, UserControlTakFill> _ucTakFillCollection =
+        private static readonly IDictionary<string, UserControlTakFill> UcTakFillCollection =
             new Dictionary<string, UserControlTakFill>();
 
         public static readonly Dictionary<string, string>[] StylesCollection = new Dictionary<string, string>[6];
@@ -34,16 +33,16 @@ namespace Kan_Naim_Main
         private static void InitializeForm(string category, string username)
         {
             InitializeComponent();
-            _tableLookupCategoriesTableAdapter.Fill(_kanNaimDataSetCategories.Table_LookupCategories);
-            _comboBoxArticleCategory.SelectedIndex = _comboBoxArticleCategory.FindString(category);
-            _tableLookupReportersTableAdapter1.Fill(_kanNaimDataSetReportersNames.Table_LookupReporters);
-            _comboBoxEditor.SelectedIndex = _comboBoxEditor.FindString(username);
+            Singleton._tableLookupCategoriesTableAdapter.Fill(Singleton._kanNaimDataSetCategories.Table_LookupCategories);
+            Singleton._comboBoxArticleCategory.SelectedIndex = Singleton._comboBoxArticleCategory.FindString(category);
+            Singleton._tableLookupReportersTableAdapter1.Fill(Singleton._kanNaimDataSetReportersNames.Table_LookupReporters);
+            Singleton._comboBoxEditor.SelectedIndex = Singleton._comboBoxEditor.FindString(username);
 
-            _ucTakFillCollection.Add("takMedium",_userControlTakFillSizeMedium);
-            _ucTakFillCollection.Add("takSmall",_userControlTakFillSizeSmall);
-            _ucTakFillCollection.Add("takX1",_userControlTakFillSizeX1);
-            _ucTakFillCollection.Add("takX2",_userControlTakFillSizeX2);
-            _ucTakFillCollection.Add("takX3",_userControlTakFillSizeX3);
+            UcTakFillCollection.Add("takMedium",Singleton._userControlTakFillSizeMedium);
+            UcTakFillCollection.Add("takSmall",Singleton._userControlTakFillSizeSmall);
+            UcTakFillCollection.Add("takX1",Singleton._userControlTakFillSizeX1);
+            UcTakFillCollection.Add("takX2",Singleton._userControlTakFillSizeX2);
+            UcTakFillCollection.Add("takX3",Singleton._userControlTakFillSizeX3);
         }
         private static int GetCetegoryIdFromName(string hebrewName)
         {
@@ -164,31 +163,31 @@ namespace Kan_Naim_Main
 
         private static void PopulateFromArticle()
         {
-            _comboBoxArticleCategory.SelectedText =
+            Singleton._comboBoxArticleCategory.SelectedText =
                 DataAccess.Lookup.GetLookupCategoryNameFromId(_tblArticle.CategoryId);
-            _richTextBoxArticleContent.Rtf = _tblArticle.ArticleContent;
-            _comboBoxEditor.SelectedText =
+            Singleton._richTextBoxArticleContent.Rtf = _tblArticle.ArticleContent;
+            Singleton._comboBoxEditor.SelectedText =
                 DataAccess.Lookup.GetLookupReporterFromUserId(_tblArticle.UpdatedBy).PublishNameShort;
-            _ucUploadVideo1.PopulateByVideoId(_tblArticle.EmbedObjId);
-            _ucUploadPhoto1.PopulateByOriginalPhotoId(_tblArticle.ImageId);
-            _checkBoxPublish.Checked = _tblArticle.IsPublished;
-            _textBoxKeyWords.Text = _tblArticle.KeysAssociated;
-            _textBoxTags.Text = _tblArticle.MetaTags;
-            _textBoxArticleTitle.Text = _tblArticle.Title;
-            _textBoxArticleSubtitle.Text = _tblArticle.SubTitle;
+            Singleton._ucUploadVideo1.PopulateByVideoId(_tblArticle.EmbedObjId);
+            Singleton._ucUploadPhoto1.PopulateByOriginalPhotoId(_tblArticle.ImageId);
+            Singleton._checkBoxPublish.Checked = _tblArticle.IsPublished;
+            Singleton._textBoxKeyWords.Text = _tblArticle.KeysAssociated;
+            Singleton._textBoxTags.Text = _tblArticle.MetaTags;
+            Singleton._textBoxArticleTitle.Text = _tblArticle.Title;
+            Singleton._textBoxArticleSubtitle.Text = _tblArticle.SubTitle;
             char[] splitChars = {'|'};
             string[] keysLookup = _tblArticle.KeysLookup.Split(splitChars, StringSplitOptions.RemoveEmptyEntries);
-            _listBoxSelectedCategories.Items.Clear();
+            Singleton._listBoxSelectedCategories.Items.Clear();
             foreach (string key in keysLookup)
             {
-                _listBoxSelectedCategories.Items.Add(key.Trim());
+                Singleton._listBoxSelectedCategories.Items.Add(key.Trim());
             }
             // change date to 'Now' only when saving 
             //DateTime now = DateTime.Now;
             //_tblArticle.CreateDate = now;
             //_tblArticle.UpdateDate = now;
-            _comboBoxArticlePhoto = FillComboBoxWithPhotosArchive(_comboBoxArticlePhoto);
-            comboBoxArticlePhoto_SelectedIndexChanged(_comboBoxArticleCategory, new EventArgs());
+            Singleton._comboBoxArticlePhoto = FillComboBoxWithPhotosArchive(Singleton._comboBoxArticlePhoto);
+            comboBoxArticlePhoto_SelectedIndexChanged(Singleton._comboBoxArticleCategory, new EventArgs());
         }
 
         private static void FillTablesOriginalPhotosRecord(FileInfo info)
@@ -199,18 +198,18 @@ namespace Kan_Naim_Main
             // original photos table
             _tblOriginalPhotos = new Table_OriginalPhotosArchive
                                      {
-                                         AlternateText = _ucUploadPhoto1.textBoxPhotoDescription.Text,
-                                         Caption = _ucUploadPhoto1.textBoxPhotoCaption.Text,
-                                         CategoryId = GetCetegoryIdFromName(_comboBoxArticleCategory.SelectedText),
+                                         AlternateText = Singleton._ucUploadPhoto1.textBoxPhotoDescription.Text,
+                                         Caption = Singleton._ucUploadPhoto1.textBoxPhotoCaption.Text,
+                                         CategoryId = GetCetegoryIdFromName(Singleton._comboBoxArticleCategory.SelectedText),
                                          Date = DateTime.Now,
-                                         Description = _ucUploadPhoto1.textBoxPhotoDescription.Text
+                                         Description = Singleton._ucUploadPhoto1.textBoxPhotoDescription.Text
                                      };
             var pb = new PictureBox
                          {
                              Image = UserControlUploadPhoto.GetImageFromFileInfo(info)
                          };
             _tblOriginalPhotos.ImageData = imageData;
-            string[] pathParts = _ucUploadPhoto1.textBoxPhotoPath.Text.Split('\\', '/', '.');
+            string[] pathParts = Singleton._ucUploadPhoto1.textBoxPhotoPath.Text.Split('\\', '/', '.');
             _tblOriginalPhotos.Name = pathParts[pathParts.Length - 2].Trim('\\', '/', '.', ' ');
             _tblOriginalPhotos.Width = pb.Image.Width;
             _tblOriginalPhotos.Height = pb.Image.Height; 
@@ -224,7 +223,7 @@ namespace Kan_Naim_Main
                                  Date = DateTime.Now,
                                  ImageUrl =
                                      String.Format("~\\Photos\\Originals\\{0}\\{1}.jpg", _tblOriginalPhotos.CategoryId,
-                                                   _ucUploadPhoto1.textBoxPhotoCaption.Text),
+                                                   Singleton._ucUploadPhoto1.textBoxPhotoCaption.Text),
                                  OriginalPhotoId = _tblOriginalPhotos.PhotoId,
                                  GalleryId = null,
                                  PhotoTypeId = 1
@@ -262,15 +261,15 @@ namespace Kan_Naim_Main
         // saving in both (localy and archive)
         private static void SaveNewPhotosClick(object sender, EventArgs e)
         {     
-            _ucUploadPhoto1.SavePhotosLocally(); // saving locally
+            Singleton._ucUploadPhoto1.SavePhotosLocally(); // saving locally
 
-            if ( ! _ucUploadPhoto1.IsStateEqual(UserControlUploadPhoto.UploadState.SavedLocalyOk))
+            if ( ! Singleton._ucUploadPhoto1.IsStateEqual(UserControlUploadPhoto.UploadState.SavedLocalyOk))
                 return;
 
-            if (_ucUploadPhoto1.radioButtonSavePhotosToArchive.Checked)
+            if (Singleton._ucUploadPhoto1.radioButtonSavePhotosToArchive.Checked)
             {
                 // saving in SQL Server Table_Photos
-                var imageInfo = new FileInfo(_ucUploadPhoto1._photoPath);
+                var imageInfo = new FileInfo(Singleton._ucUploadPhoto1._photoPath);
                 // var myBitmap = new Bitmap(_ucUploadPhoto1._photoPath);
                 // var rd = new StreamReader(imageInfo.FullName);
                 // string content = rd.ReadToEnd();
@@ -286,13 +285,13 @@ namespace Kan_Naim_Main
                 //wb.Document.Write("Please Wait...");
 
                 // updating the images combobox 
-                var photosByCategory = DataAccess.Filter.GetOriginalPhotosByCategoryName(_comboBoxArticleCategory.SelectedText.Trim());
+                var photosByCategory = DataAccess.Filter.GetOriginalPhotosByCategoryName(Singleton._comboBoxArticleCategory.SelectedText.Trim());
                 var photosNames = (from c in photosByCategory
-                                   where _ucUploadPhoto1.textBoxPhotoPath.Text.Contains(c.Name)
+                                   where Singleton._ucUploadPhoto1.textBoxPhotoPath.Text.Contains(c.Name)
                                    orderby c.Date descending
                                    select c.Name);
-                _comboBoxArticlePhoto.Items.Insert(0, photosNames.First());
-                _comboBoxArticlePhoto.SelectedIndex = 0;
+                Singleton._comboBoxArticlePhoto.Items.Insert(0, photosNames.First());
+                Singleton._comboBoxArticlePhoto.SelectedIndex = 0;
                 /*
                 var photosByCategory = DataAccess.Filter.GetOriginalPhotosByCategoryName("");
                 var photosNames = (from c in photosByCategory
@@ -313,21 +312,19 @@ namespace Kan_Naim_Main
 
         private static void FormEditArtical_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_Kan_NaimDataSet1.Table_PhotosArchive' table. You can move, or remove it, as needed.
-            _tablePhotosArchiveTableAdapter.Fill(_kanNaimDataSet1.Table_PhotosArchive);
-            
-            // TODO: This line of code loads data into the '_Kan_NaimDataSet.Table_LookupArticleStatus' table. You can move, or remove it, as needed.
-            _tableLookupArticleStatusTableAdapter.Fill(_kanNaimDataSet.Table_LookupArticleStatus);
+            Singleton._tablePhotosArchiveTableAdapter.Fill(Singleton._kanNaimDataSet1.Table_PhotosArchive);
+            Singleton._tableLookupArticleStatusTableAdapter.Fill(Singleton._kanNaimDataSet.Table_LookupArticleStatus);
+            //_comboBoxArticleCategory.DataSource = DataAccess.Filter.Get
 
         }
 
         private static void buttonClearCategoriesList_Click(object sender, EventArgs e)
         {
-            for (int i = _listBoxSelectedCategories.Items.Count; i > 0; i--)
+            for (int i = Singleton._listBoxSelectedCategories.Items.Count; i > 0; i--)
             {
                 RemoveItemTakCatTreeSelectorAt(i - 1);
             }
-            _listBoxSelectedCategories.Items.Clear();
+            Singleton._listBoxSelectedCategories.Items.Clear();
         }
         private static void buttonManageCategories_Cilck(object sender, EventArgs e)
         {
@@ -338,7 +335,7 @@ namespace Kan_Naim_Main
 
         private static void RemoveItemTakCatTreeSelectorAt(int idx)
         {
-            foreach (UserControlTakFill userControlTakFill in _ucTakFillCollection.Values)
+            foreach (UserControlTakFill userControlTakFill in UcTakFillCollection.Values)
             {
                 userControlTakFill.ucTakBroadcastCmd1.treeViewTakBroadcastCatSelector.Nodes.RemoveAt(idx);
             }
@@ -346,15 +343,15 @@ namespace Kan_Naim_Main
 
         private static void buttonRemoveSelectedCategory_Click(object sender, EventArgs e)
         {
-            int length = _listBoxSelectedCategories.Items.Count;
+            int length = Singleton._listBoxSelectedCategories.Items.Count;
 
             for (int i = length-1 ; i >= 0; i--)
 			{
-			    var catItem = (string)_listBoxSelectedCategories.Items[i];
+			    var catItem = (string)Singleton._listBoxSelectedCategories.Items[i];
                 //string catName = catItem.Split('#')[0].Trim('#', ' ');
-                if (_listBoxSelectedCategories.SelectedItems.Contains(catItem))
+                if (Singleton._listBoxSelectedCategories.SelectedItems.Contains(catItem))
                 {
-                    _listBoxSelectedCategories.Items.RemoveAt(i);
+                    Singleton._listBoxSelectedCategories.Items.RemoveAt(i);
                     RemoveItemTakCatTreeSelectorAt(i);
                     return;
                 }		        
@@ -363,7 +360,7 @@ namespace Kan_Naim_Main
 
         private static void buttonAddSelectedCategories_Click(object sender, EventArgs e)
         {
-            foreach (TreeNode siblingNode in _userControlTreeView1.Nodes)
+            foreach (TreeNode siblingNode in Singleton._userControlTreeView1.Nodes)
             {
                 AddSelectedTreeNodesToList(false, siblingNode);
             }
@@ -399,7 +396,7 @@ namespace Kan_Naim_Main
 
         private static void ToolStripMenuItemAddCategory_Click(object sender, EventArgs e)
         {
-            TreeNode node = _userControlTreeView1.SelectedNode;
+            TreeNode node = Singleton._userControlTreeView1.SelectedNode;
 
             if (node == null)
                 return;
@@ -428,7 +425,7 @@ namespace Kan_Naim_Main
 
         private static void ToolStripMenuItemDeleteCategory_Click(object sender, EventArgs e)
         {
-            TreeNode node = _userControlTreeView1.SelectedNode;
+            TreeNode node = Singleton._userControlTreeView1.SelectedNode;
 
             if (node == null)
                 return;
@@ -453,17 +450,17 @@ namespace Kan_Naim_Main
 
         private static string GetSelectedCategoryHebrewName()
         {
-            return (string)((DataRowView)_comboBoxArticleCategory.SelectedItem)["CatHebrewName"];
+            return (string)((DataRowView)Singleton._comboBoxArticleCategory.SelectedItem)["CatHebrewName"];
         }
         private static void RefreshCategoryComboByValue(string value)
         {
-            _tableLookupCategoriesTableAdapter.Fill(_kanNaimDataSetCategories.Table_LookupCategories);
-            _comboBoxArticleCategory.SelectedIndex = _comboBoxArticleCategory.FindString(value);
+            Singleton._tableLookupCategoriesTableAdapter.Fill(Singleton._kanNaimDataSetCategories.Table_LookupCategories);
+            Singleton._comboBoxArticleCategory.SelectedIndex = Singleton._comboBoxArticleCategory.FindString(value);
         }
 
         private static void buttonReloadCategoryTree_Click(object sender, EventArgs e)
         {
-            _userControlTreeView1.PopulateRootLevel("Table_LookupCategories", "ParentCatId");
+            Singleton._userControlTreeView1.PopulateRootLevel("Table_LookupCategories", "ParentCatId");
 
             string categoryName = GetSelectedCategoryHebrewName();
             RefreshCategoryComboByValue(categoryName);
@@ -471,7 +468,7 @@ namespace Kan_Naim_Main
 
         private static void AddItemToTakCatTreeSelector(string newItem)
         {
-            foreach (UserControlTakFill userControlTakFill in _ucTakFillCollection.Values)
+            foreach (UserControlTakFill userControlTakFill in UcTakFillCollection.Values)
             {
                 userControlTakFill.ucTakBroadcastCmd1.treeViewTakBroadcastCatSelector.Nodes.Add(newItem);
             }
@@ -486,7 +483,7 @@ namespace Kan_Naim_Main
                                         select c.CatId).Single().ToString();
                     
                     string newItem = String.Format("{1} # {0}", node.Text, node.ToolTipText);
-                    _listBoxSelectedCategories.Items.Add(newItem);
+                    Singleton._listBoxSelectedCategories.Items.Add(newItem);
                     AddItemToTakCatTreeSelector(newItem);                    
                 }
 
@@ -497,7 +494,7 @@ namespace Kan_Naim_Main
         }
         private static void buttonAddAllCategories_Click(object sender, EventArgs e)
         {
-            foreach (TreeNode siblingNode in _userControlTreeView1.Nodes)
+            foreach (TreeNode siblingNode in Singleton._userControlTreeView1.Nodes)
             {
                 AddSelectedTreeNodesToList(true, siblingNode);
             }
@@ -507,7 +504,7 @@ namespace Kan_Naim_Main
         {
             // TODO: bind videos list in drop down list
 
-            var photos = DataAccess.Filter.GetOriginalPhotosByCategoryName(_comboBoxArticleCategory.SelectedText);
+            var photos = DataAccess.Filter.GetOriginalPhotosByCategoryName(Singleton._comboBoxArticleCategory.SelectedText);
 
             // TODO - bind photos in drop down list
             //_comboBoxArticlePhoto.Items.Clear();
@@ -526,7 +523,7 @@ namespace Kan_Naim_Main
             {
                 originalPhotoId =
                     DataAccess.Filter.
-                    GetOriginalPhotoIdByPhotoName(_comboBoxArticlePhoto.SelectedText);
+                    GetOriginalPhotoIdByPhotoName(Singleton._comboBoxArticlePhoto.SelectedText);
             }
             catch
             {
@@ -547,7 +544,7 @@ namespace Kan_Naim_Main
                 string photoTypeDescription = (from c in types
                                                where c.PhotoTypeId == photoTypeId
                                                select c.TypeDescription).Single();
-                string itemText = String.Format("{0} - {1}", _comboBoxArticlePhoto.SelectedText, photoTypeDescription);
+                string itemText = String.Format("{0} - {1}", Singleton._comboBoxArticlePhoto.SelectedText, photoTypeDescription);
                 comboBox.Items.Add(itemText);
             }
             return comboBox;
@@ -555,7 +552,7 @@ namespace Kan_Naim_Main
 
         private static void comboBoxArticlePhoto_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (UserControlTakFill userControlTakFill in _ucTakFillCollection.Values)
+            foreach (UserControlTakFill userControlTakFill in UcTakFillCollection.Values)
             {
                 ComboBox combo = userControlTakFill.ucTakContent1.comboBoxTakPhoto;
                 userControlTakFill.ucTakContent1.comboBoxTakPhoto = FillComboBoxWithPhotosArchive(combo);
@@ -564,15 +561,15 @@ namespace Kan_Naim_Main
 
         public static void UpdateHtmlTextIntoArticleContentTextBox(string rtfContent)
         {
-            _richTextBoxArticleContent.Rtf = rtfContent;
+            Singleton._richTextBoxArticleContent.Rtf = rtfContent;
         }
 
         private static void buttonOpenEditor_Click(object sender, EventArgs e)
         {
-            _richTextBoxArticleContent.Enabled = !_richTextBoxArticleContent.Enabled;
+            Singleton._richTextBoxArticleContent.Enabled = !Singleton._richTextBoxArticleContent.Enabled;
             var updateFunctionCallback = new FormArticleRichTextBoxEditor.ReturnHtmlTextCallbackType(UpdateHtmlTextIntoArticleContentTextBox);
 
-            var articleEditorForm = new FormArticleRichTextBoxEditor(_richTextBoxArticleContent.Rtf, updateFunctionCallback);
+            var articleEditorForm = new FormArticleRichTextBoxEditor(Singleton._richTextBoxArticleContent.Rtf, updateFunctionCallback);
 
             articleEditorForm.Show();
 
@@ -914,8 +911,8 @@ namespace Kan_Naim_Main
 
         private static void buttonTitlesH1andH2_Click(object sender, EventArgs e)
         {
-            int selectedStart = _richTextBoxArticleContent.SelectionStart;
-            int selectedLength = _richTextBoxArticleContent.SelectionLength;
+            int selectedStart = Singleton._richTextBoxArticleContent.SelectionStart;
+            int selectedLength = Singleton._richTextBoxArticleContent.SelectionLength;
 
             string tagName = ((Button)sender).Text;
             string tagBefore = String.Format("\\{0}", tagName);
@@ -934,9 +931,9 @@ namespace Kan_Naim_Main
             */
             // updating the title textbox
             if (tagName == "H1") // h1 --> title
-                _textBoxArticleTitle.Text = _richTextBoxArticleContent.SelectedText;
+                Singleton._textBoxArticleTitle.Text = Singleton._richTextBoxArticleContent.SelectedText;
             else // h2 --> subtitle
-                _textBoxArticleSubtitle.Text = _richTextBoxArticleContent.SelectedText;
+                Singleton._textBoxArticleSubtitle.Text = Singleton._richTextBoxArticleContent.SelectedText;
             /*
             _richTextBoxArticleContent.SelectionColor = Color.Black;
             _richTextBoxArticleContent.SelectionAlignment = HorizontalAlignment.Right;
@@ -962,7 +959,7 @@ namespace Kan_Naim_Main
             var browserAsForm = new FormPreviewArticleAndTaksOnBrowser();
             var browser = browserAsForm.WebBrowser1;
 
-            browser.DocumentText = _richTextBoxArticleContent.Text;
+            browser.DocumentText = Singleton._richTextBoxArticleContent.Text;
             browserAsForm.Show();
         }
 
@@ -977,40 +974,40 @@ namespace Kan_Naim_Main
             SaveNewPhotosClick(sender, e);
 
             // saving the artical
-            _tblArticle.CategoryId = DataAccess.Lookup.GetLookupCategoryIdFromName(_comboBoxArticleCategory.SelectedText.Trim());
-            _tblArticle.ArticleContent = _richTextBoxArticleContent.Rtf;
-            _tblArticle.CreatedBy = DataAccess.Lookup.GetLookupReporterIdFromName(_comboBoxEditor.SelectedText.Trim());
+            _tblArticle.CategoryId = DataAccess.Lookup.GetLookupCategoryIdFromName(Singleton._comboBoxArticleCategory.SelectedText.Trim());
+            _tblArticle.ArticleContent = Singleton._richTextBoxArticleContent.Rtf;
+            _tblArticle.CreatedBy = DataAccess.Lookup.GetLookupReporterIdFromName(Singleton._comboBoxEditor.SelectedText.Trim());
             //_tblArticle.EmbedObjId = -1;
-            _tblArticle.FlagActiveMivzak = _checkBoxMivzak.Checked;
-            _tblArticle.FlagActiveRSS = _checkBoxRss.Checked;
-            _tblArticle.FlagShowDateTime = _checkBoxDateTime.Checked;
-            _tblArticle.FlagTak1ColPic = _userControlTakFillSizeX1.ucTakContent1.checkBoxTakPhoto.Checked; 
+            _tblArticle.FlagActiveMivzak = Singleton._checkBoxMivzak.Checked;
+            _tblArticle.FlagActiveRSS = Singleton._checkBoxRss.Checked;
+            _tblArticle.FlagShowDateTime = Singleton._checkBoxDateTime.Checked;
+            _tblArticle.FlagTak1ColPic = Singleton._userControlTakFillSizeX1.ucTakContent1.checkBoxTakPhoto.Checked; 
             //_tblArticle.FlagTak1ColPicTxt = false;
             _tblArticle.FlagTak1ColTxt = false;
-            _tblArticle.FlagTak2ColPic = _userControlTakFillSizeX2.ucTakContent1.checkBoxTakPhoto.Checked; 
+            _tblArticle.FlagTak2ColPic = Singleton._userControlTakFillSizeX2.ucTakContent1.checkBoxTakPhoto.Checked; 
             //_tblArticle.FlagTak2ColPicTxt = false;
             _tblArticle.FlagTak2ColTxt = false;
-            _tblArticle.FlagTak3ColPic = _userControlTakFillSizeX3.ucTakContent1.checkBoxTakPhoto.Checked; 
+            _tblArticle.FlagTak3ColPic = Singleton._userControlTakFillSizeX3.ucTakContent1.checkBoxTakPhoto.Checked; 
             //_tblArticle.FlagTak3ColPicTxt = false;
             _tblArticle.FlagTak3ColTxt = false;
-            _tblArticle.FlagTakLineFeeds = _checkBoxMivzak.Checked; //TODO - maybe other aditional checkbox
-            _tblArticle.FlagTakSmallPic = _userControlTakFillSizeSmall.ucTakContent1.checkBoxTakPhoto.Checked; 
+            _tblArticle.FlagTakLineFeeds = Singleton._checkBoxMivzak.Checked; //TODO - maybe other aditional checkbox
+            _tblArticle.FlagTakSmallPic = Singleton._userControlTakFillSizeSmall.ucTakContent1.checkBoxTakPhoto.Checked; 
             //_tblArticle.FlagTakSmallPicTxt = false;
             _tblArticle.FlagTakSmallTxt = false;
-            _tblArticle.ImageId = DataAccess.Filter.GetOriginalPhotoIdByPhotoName(_comboBoxArticlePhoto.SelectedText.Trim());
-            _tblArticle.IsPublished = _checkBoxPublish.Checked;
+            _tblArticle.ImageId = DataAccess.Filter.GetOriginalPhotoIdByPhotoName(Singleton._comboBoxArticlePhoto.SelectedText.Trim());
+            _tblArticle.IsPublished = Singleton._checkBoxPublish.Checked;
             _tblArticle.KeysAssociated = "";
-            _tblArticle.KeysLookup = _textBoxKeyWords.Text;
-            foreach (object obj in _listBoxSelectedCategories.Items)
+            _tblArticle.KeysLookup = Singleton._textBoxKeyWords.Text;
+            foreach (object obj in Singleton._listBoxSelectedCategories.Items)
             {
                 _tblArticle.KeysLookup += String.Format(" | {0}", (string) obj);
             }
-            _tblArticle.MetaTags = _textBoxTags.Text;
+            _tblArticle.MetaTags = Singleton._textBoxTags.Text;
             _tblArticle.StatusId = 0; //TODO - TBD...
-            _tblArticle.SubTitle = _textBoxArticleSubtitle.Text;
+            _tblArticle.SubTitle = Singleton._textBoxArticleSubtitle.Text;
             _tblArticle.Summery = "";
-            _tblArticle.Title = _textBoxArticleTitle.Text;
-            _tblArticle.UpdatedBy = DataAccess.Lookup.GetLookupReporterIdFromName(_comboBoxEditor.SelectedText.Trim());
+            _tblArticle.Title = Singleton._textBoxArticleTitle.Text;
+            _tblArticle.UpdatedBy = DataAccess.Lookup.GetLookupReporterIdFromName(Singleton._comboBoxEditor.SelectedText.Trim());
             // specific values
             DateTime now = DateTime.Now;
             _tblArticle.UpdateDate = now;
@@ -1040,13 +1037,13 @@ namespace Kan_Naim_Main
         {
             var newRow = new Table_VideosArchive
                              {
-                                 AlternateText = _ucUploadVideo1._textBoxVideoAlternateText.Text,
-                                 Caption = _ucUploadVideo1._textBoxVideoCaption.Text,
-                                 Description = _ucUploadVideo1._textBoxVideoDescription.Text,
-                                 EmbedUrl = _ucUploadVideo1._textBoxVideoEmbedUrl.Text,
+                                 AlternateText = Singleton._ucUploadVideo1._textBoxVideoAlternateText.Text,
+                                 Caption = Singleton._ucUploadVideo1._textBoxVideoCaption.Text,
+                                 Description = Singleton._ucUploadVideo1._textBoxVideoDescription.Text,
+                                 EmbedUrl = Singleton._ucUploadVideo1._textBoxVideoEmbedUrl.Text,
                                  CategoryId =
                                      DataAccess.Lookup.GetLookupCategoryIdFromName(
-                                     _comboBoxArticleCategory.SelectedText.Trim()),
+                                     Singleton._comboBoxArticleCategory.SelectedText.Trim()),
                                  Date = DateTime.Now,
                                  UrlLink = "",
                                  CssClass = "EmbedVideo"
@@ -1059,7 +1056,7 @@ namespace Kan_Naim_Main
 
         private static void userControlUploadVideo1_Load(object sender, EventArgs e)
         {
-            _ucUploadVideo1.SetCallbackFunction(ButtonSaveVideoToArchiveClick);
+            Singleton._ucUploadVideo1.SetCallbackFunction(ButtonSaveVideoToArchiveClick);
         }
     }
 }

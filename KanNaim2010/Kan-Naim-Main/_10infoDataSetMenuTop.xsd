@@ -50,10 +50,10 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="_10infoDataSetMenuTop" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="_10infoDataSetMenuTop" msprop:Generator_UserDSName="_10infoDataSetMenuTop" msprop:EnableTableAdapterManager="True">
+  <xs:element name="_10infoDataSetMenuTop" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="_10infoDataSetMenuTop" msprop:Generator_DataSetName="_10infoDataSetMenuTop" msprop:EnableTableAdapterManager="True">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Table_MenuTop" msprop:Generator_UserTableName="Table_MenuTop" msprop:Generator_RowDeletedName="Table_MenuTopRowDeleted" msprop:Generator_TableClassName="Table_MenuTopDataTable" msprop:Generator_RowChangedName="Table_MenuTopRowChanged" msprop:Generator_RowClassName="Table_MenuTopRow" msprop:Generator_RowChangingName="Table_MenuTopRowChanging" msprop:Generator_RowEvArgName="Table_MenuTopRowChangeEvent" msprop:Generator_RowEvHandlerName="Table_MenuTopRowChangeEventHandler" msprop:Generator_TablePropName="Table_MenuTop" msprop:Generator_TableVarName="tableTable_MenuTop" msprop:Generator_RowDeletingName="Table_MenuTopRowDeleting">
+        <xs:element name="Table_MenuTop" msprop:Generator_UserTableName="Table_MenuTop" msprop:Generator_RowDeletedName="Table_MenuTopRowDeleted" msprop:Generator_RowChangedName="Table_MenuTopRowChanged" msprop:Generator_RowClassName="Table_MenuTopRow" msprop:Generator_RowChangingName="Table_MenuTopRowChanging" msprop:Generator_RowEvArgName="Table_MenuTopRowChangeEvent" msprop:Generator_RowEvHandlerName="Table_MenuTopRowChangeEventHandler" msprop:Generator_TableClassName="Table_MenuTopDataTable" msprop:Generator_TableVarName="tableTable_MenuTop" msprop:Generator_RowDeletingName="Table_MenuTopRowDeleting" msprop:Generator_TablePropName="Table_MenuTop">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ItemId" msprop:Generator_UserColumnName="ItemId" msprop:Generator_ColumnPropNameInRow="ItemId" msprop:Generator_ColumnVarNameInTable="columnItemId" msprop:Generator_ColumnPropNameInTable="ItemIdColumn" type="xs:int" />
