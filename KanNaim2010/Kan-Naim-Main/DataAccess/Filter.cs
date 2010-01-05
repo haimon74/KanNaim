@@ -5,7 +5,7 @@ namespace Kan_Naim_Main.DataAccess
 {
     class Filter
     {
-        private static readonly DataClassesKanNaimDataContext Db = new DataClassesKanNaimDataContext();
+        public static readonly DataClassesKanNaimDataContext Db = new DataClassesKanNaimDataContext();
 
         public static IQueryable<Table_OriginalPhotosArchive> GetOriginalPhotosByCategoryName(string catName)
         {
@@ -63,7 +63,39 @@ namespace Kan_Naim_Main.DataAccess
                 return "";
             }
         }
-
-        
+        public static Table_VideosArchive GetVideoFromId(int id)
+        {
+            var result = from c in Db.Table_VideosArchives
+                         where c.Id == id
+                         select c;
+            try
+            {
+                return result.First();
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        public static Table_LinksPageBottom GetPageBottomLinkByLinkId(int id)
+        {
+            return (from c in Db.Table_LinksPageBottoms
+                    where c.LinkId == id
+                    select c).Single();
+        }
+        public static Table_LinksPrefered GetPreferedLinkByLinkId(int id)
+        {
+            var result = from c in Db.Table_LinksPrefereds
+                         where c.LinkId == id
+                         select c;
+            try
+            {
+                return result.First();
+            }
+            catch
+            {
+                return null;
+            }
+        }
     }
 }

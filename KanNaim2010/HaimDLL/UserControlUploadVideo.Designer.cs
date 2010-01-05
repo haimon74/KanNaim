@@ -38,11 +38,13 @@
             this._labelVideoCaption = new System.Windows.Forms.Label();
             this._textBoxVideoCaption = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonLoadFromArchive = new System.Windows.Forms.Button();
+            this.buttonClearForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // _buttonSaveVideoToArchive
             // 
-            this._buttonSaveVideoToArchive.Location = new System.Drawing.Point(249, 336);
+            this._buttonSaveVideoToArchive.Location = new System.Drawing.Point(356, 330);
             this._buttonSaveVideoToArchive.Name = "_buttonSaveVideoToArchive";
             this._buttonSaveVideoToArchive.Size = new System.Drawing.Size(117, 44);
             this._buttonSaveVideoToArchive.TabIndex = 17;
@@ -62,6 +64,7 @@
             // _textBoxVideoAlternateText
             // 
             this._textBoxVideoAlternateText.Location = new System.Drawing.Point(3, 268);
+            this._textBoxVideoAlternateText.MaxLength = 300;
             this._textBoxVideoAlternateText.Multiline = true;
             this._textBoxVideoAlternateText.Name = "_textBoxVideoAlternateText";
             this._textBoxVideoAlternateText.Size = new System.Drawing.Size(470, 45);
@@ -80,6 +83,7 @@
             // _textBoxVideoDescription
             // 
             this._textBoxVideoDescription.Location = new System.Drawing.Point(3, 185);
+            this._textBoxVideoDescription.MaxLength = 500;
             this._textBoxVideoDescription.Multiline = true;
             this._textBoxVideoDescription.Name = "_textBoxVideoDescription";
             this._textBoxVideoDescription.Size = new System.Drawing.Size(470, 68);
@@ -98,6 +102,7 @@
             // _textBoxVideoEmbedUrl
             // 
             this._textBoxVideoEmbedUrl.Location = new System.Drawing.Point(3, 72);
+            this._textBoxVideoEmbedUrl.MaxLength = 1000;
             this._textBoxVideoEmbedUrl.Multiline = true;
             this._textBoxVideoEmbedUrl.Name = "_textBoxVideoEmbedUrl";
             this._textBoxVideoEmbedUrl.Size = new System.Drawing.Size(470, 95);
@@ -115,6 +120,7 @@
             // _textBoxVideoCaption
             // 
             this._textBoxVideoCaption.Location = new System.Drawing.Point(3, 36);
+            this._textBoxVideoCaption.MaxLength = 150;
             this._textBoxVideoCaption.Name = "_textBoxVideoCaption";
             this._textBoxVideoCaption.Size = new System.Drawing.Size(470, 20);
             this._textBoxVideoCaption.TabIndex = 9;
@@ -130,10 +136,32 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "מלא פירטי הוידאו";
             // 
+            // buttonLoadFromArchive
+            // 
+            this.buttonLoadFromArchive.Location = new System.Drawing.Point(189, 330);
+            this.buttonLoadFromArchive.Name = "buttonLoadFromArchive";
+            this.buttonLoadFromArchive.Size = new System.Drawing.Size(117, 44);
+            this.buttonLoadFromArchive.TabIndex = 19;
+            this.buttonLoadFromArchive.Text = "ייבא מארכיון";
+            this.buttonLoadFromArchive.UseVisualStyleBackColor = true;
+            this.buttonLoadFromArchive.Click += new System.EventHandler(this.buttonLoadFromArchive_Click);
+            // 
+            // buttonClearForm
+            // 
+            this.buttonClearForm.Location = new System.Drawing.Point(22, 330);
+            this.buttonClearForm.Name = "buttonClearForm";
+            this.buttonClearForm.Size = new System.Drawing.Size(117, 44);
+            this.buttonClearForm.TabIndex = 20;
+            this.buttonClearForm.Text = "נקה טופס";
+            this.buttonClearForm.UseVisualStyleBackColor = true;
+            this.buttonClearForm.Click += new System.EventHandler(this.buttonClearForm_Click);
+            // 
             // UserControlUploadVideo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonClearForm);
+            this.Controls.Add(this.buttonLoadFromArchive);
             this.Controls.Add(this.label1);
             this.Controls.Add(this._buttonSaveVideoToArchive);
             this.Controls.Add(this._labelVideoAlternateText);
@@ -163,5 +191,7 @@
         private System.Windows.Forms.Label _labelVideoCaption;
         public System.Windows.Forms.TextBox _textBoxVideoCaption;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonLoadFromArchive;
+        private System.Windows.Forms.Button buttonClearForm;
     }
 }

@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Drawing;
+using System.IO;
 
 
 namespace HaimDLL
@@ -44,7 +43,28 @@ namespace HaimDLL
             else
                 return nstr;
         }
-        
+        public static int? FromStringToNint(string txt)
+        {
+            int result;
+            bool parsedOK = int.TryParse(txt.Trim(), out result);
+
+            if (parsedOK)
+                return result;
+            //else
+            return null;
+        }
+        public static Image ByteArrayToImage(byte[] byteArrayIn)
+        {
+            var ms = new MemoryStream(byteArrayIn);
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
+        }
+        public static byte[] ImageToByteArray(Image imageIn)
+        {
+            var ms = new MemoryStream();
+            imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+            return ms.ToArray();
+        }
     }
 
     public class Is

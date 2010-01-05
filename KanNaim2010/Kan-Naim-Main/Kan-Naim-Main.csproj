@@ -72,6 +72,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassGlobals.cs" />
+    <Compile Include="DataAccess\Filter.cs" />
+    <Compile Include="DataAccess\Lookup.cs" />
     <Compile Include="FormAddNewPhotos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,8 +98,6 @@
     <Compile Include="FormManageRightSideMenuLinks.Designer.cs">
       <DependentUpon>FormManageRightSideMenuLinks.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\Lookup.cs" />
-    <Compile Include="DataAccess\Filter.cs" />
     <Compile Include="DataClassesKanNaimDataContext.designer.cs" />
     <Compile Include="FormAddNewPreferedLink.cs">
       <SubType>Form</SubType>
@@ -351,16 +351,16 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="_10infoDataSet.xsc">
-      <DependentUpon>_10infoDataSet.xsd</DependentUpon>
+    <None Include="_10infoDataSetLinksPageBottom.xsc">
+      <DependentUpon>_10infoDataSetLinksPageBottom.xsd</DependentUpon>
     </None>
-    <None Include="_10infoDataSet.xsd">
+    <None Include="_10infoDataSetLinksPageBottom.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_10infoDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>_10infoDataSetLinksPageBottom.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="_10infoDataSet.xss">
-      <DependentUpon>_10infoDataSet.xsd</DependentUpon>
+    <None Include="_10infoDataSetLinksPageBottom.xss">
+      <DependentUpon>_10infoDataSetLinksPageBottom.xsd</DependentUpon>
     </None>
     <None Include="_10infoDataSetIndexes.xsc">
       <DependentUpon>_10infoDataSetIndexes.xsd</DependentUpon>
@@ -522,10 +522,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Table_Article.designer.cs" />
+    <Compile Include="Table_Index.designer.cs" />
     <Compile Include="Table_LinksPageBottom.designer.cs" />
     <Compile Include="Table_LinksPrefered.designer.cs" />
     <Compile Include="Table_LookupArticleStatus.designer.cs" />
     <Compile Include="Table_LookupCategory.designer.cs" />
+    <Compile Include="Table_LookupIndex.designer.cs" />
     <Compile Include="Table_LookupPhotoType.designer.cs" />
     <Compile Include="Table_LookupReporter.designer.cs" />
     <Compile Include="Table_LookupRole.designer.cs" />
@@ -536,10 +538,10 @@
     <Compile Include="Table_Taktzirim.designer.cs" />
     <Compile Include="Table_User.designer.cs" />
     <Compile Include="Table_VideosArchive.designer.cs" />
-    <Compile Include="_10infoDataSet.Designer.cs">
+    <Compile Include="_10infoDataSetLinksPageBottom.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>_10infoDataSet.xsd</DependentUpon>
+      <DependentUpon>_10infoDataSetLinksPageBottom.xsd</DependentUpon>
     </Compile>
     <Compile Include="_10infoDataSetIndexes.Designer.cs">
       <AutoGen>True</AutoGen>

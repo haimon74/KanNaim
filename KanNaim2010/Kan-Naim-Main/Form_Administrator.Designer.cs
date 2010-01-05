@@ -31,11 +31,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelCategory = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxDataType = new System.Windows.Forms.ComboBox();
             this.groupBoxObjectStatus = new System.Windows.Forms.GroupBox();
             this.radioButtonArchive = new System.Windows.Forms.RadioButton();
             this.radioButtonBroadcast = new System.Windows.Forms.RadioButton();
             this.radioButtonActive = new System.Windows.Forms.RadioButton();
+            this.userControlTreeView1 = new HaimDLL.UserControlTreeView();
             this.buttonShowResults = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,8 +48,8 @@
             this.ToolStripMenuItemPasswordReminder = new System.Windows.Forms.ToolStripMenuItem();
             this.כתבותToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.הוסףחדשהToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.עריכתכתבהציבוריתToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.עריכתכתבהפרטיתToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemEditPublicArticle = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemEditPrivateArticle = new System.Windows.Forms.ToolStripMenuItem();
             this.אינדקסיםToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.מודיעינעיםToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.עסקיםToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,11 +61,11 @@
             this.אחרToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemTopMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemRightMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemCategories = new System.Windows.Forms.ToolStripMenuItem();
             this.מולטימדיהToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemAddNewPhoto = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemAddNewVideo = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemAddNewBanner = new System.Windows.Forms.ToolStripMenuItem();
-            this.userControlTreeView1 = new HaimDLL.UserControlTreeView();
             this.groupBox1.SuspendLayout();
             this.groupBoxObjectStatus.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -74,7 +75,7 @@
             // 
             this.groupBox1.Controls.Add(this.labelCategory);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.comboBoxDataType);
             this.groupBox1.Controls.Add(this.groupBoxObjectStatus);
             this.groupBox1.Controls.Add(this.userControlTreeView1);
             this.groupBox1.Controls.Add(this.buttonShowResults);
@@ -108,19 +109,20 @@
             this.label3.TabIndex = 43;
             this.label3.Text = "סוג רשימה";
             // 
-            // comboBox1
+            // comboBoxDataType
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxDataType.FormattingEnabled = true;
+            this.comboBoxDataType.Items.AddRange(new object[] {
             "כתבות",
             "תקצירים",
             "תמונות",
             "ווידאו",
-            "RSS"});
-            this.comboBox1.Location = new System.Drawing.Point(418, 242);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(188, 21);
-            this.comboBox1.TabIndex = 42;
+            "RSS",
+            "באנרים"});
+            this.comboBoxDataType.Location = new System.Drawing.Point(418, 242);
+            this.comboBoxDataType.Name = "comboBoxDataType";
+            this.comboBoxDataType.Size = new System.Drawing.Size(188, 21);
+            this.comboBoxDataType.TabIndex = 42;
             // 
             // groupBoxObjectStatus
             // 
@@ -166,6 +168,21 @@
             this.radioButtonActive.Text = "פעילים";
             this.radioButtonActive.UseVisualStyleBackColor = true;
             // 
+            // userControlTreeView1
+            // 
+            this.userControlTreeView1.IdColumnName = "CatId";
+            this.userControlTreeView1.Location = new System.Drawing.Point(37, 39);
+            this.userControlTreeView1.LookupTableName = null;
+            this.userControlTreeView1.MyQry = "select * FROM Table_LookupCategories WHERE ParentCatId=\'-1\'";
+            this.userControlTreeView1.Name = "userControlTreeView1";
+            this.userControlTreeView1.ParentIdColumnName = null;
+            this.userControlTreeView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.userControlTreeView1.RootNodeId = "1";
+            this.userControlTreeView1.RootNodeName = "עמוד ראשי";
+            this.userControlTreeView1.Size = new System.Drawing.Size(337, 397);
+            this.userControlTreeView1.TabIndex = 8;
+            this.userControlTreeView1.TextColumnName = "CatHebrewName";
+            // 
             // buttonShowResults
             // 
             this.buttonShowResults.Location = new System.Drawing.Point(409, 326);
@@ -174,6 +191,7 @@
             this.buttonShowResults.TabIndex = 41;
             this.buttonShowResults.Text = "לחץ כאן להצגת תוצאות חיפוש";
             this.buttonShowResults.UseVisualStyleBackColor = true;
+            this.buttonShowResults.Click += new System.EventHandler(this.buttonShowResults_Click);
             // 
             // label2
             // 
@@ -256,8 +274,8 @@
             // 
             this.כתבותToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.הוסףחדשהToolStripMenuItem,
-            this.עריכתכתבהציבוריתToolStripMenuItem,
-            this.עריכתכתבהפרטיתToolStripMenuItem});
+            this.ToolStripMenuItemEditPublicArticle,
+            this.ToolStripMenuItemEditPrivateArticle});
             this.כתבותToolStripMenuItem1.Name = "כתבותToolStripMenuItem1";
             this.כתבותToolStripMenuItem1.Size = new System.Drawing.Size(55, 20);
             this.כתבותToolStripMenuItem1.Text = "כתבות";
@@ -269,17 +287,18 @@
             this.הוסףחדשהToolStripMenuItem.Text = "הוסף חדשה";
             this.הוסףחדשהToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItemAddArticle_Click);
             // 
-            // עריכתכתבהציבוריתToolStripMenuItem
+            // ToolStripMenuItemEditPublicArticle
             // 
-            this.עריכתכתבהציבוריתToolStripMenuItem.Name = "עריכתכתבהציבוריתToolStripMenuItem";
-            this.עריכתכתבהציבוריתToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.עריכתכתבהציבוריתToolStripMenuItem.Text = "עריכת כתבה ציבורית";
+            this.ToolStripMenuItemEditPublicArticle.Name = "ToolStripMenuItemEditPublicArticle";
+            this.ToolStripMenuItemEditPublicArticle.Size = new System.Drawing.Size(185, 22);
+            this.ToolStripMenuItemEditPublicArticle.Text = "עריכת כתבה ציבורית";
+            this.ToolStripMenuItemEditPublicArticle.Click += new System.EventHandler(this.ToolStripMenuItemEditPublicArticle_Click);
             // 
-            // עריכתכתבהפרטיתToolStripMenuItem
+            // ToolStripMenuItemEditPrivateArticle
             // 
-            this.עריכתכתבהפרטיתToolStripMenuItem.Name = "עריכתכתבהפרטיתToolStripMenuItem";
-            this.עריכתכתבהפרטיתToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.עריכתכתבהפרטיתToolStripMenuItem.Text = "עריכת כתבה פרטית";
+            this.ToolStripMenuItemEditPrivateArticle.Name = "ToolStripMenuItemEditPrivateArticle";
+            this.ToolStripMenuItemEditPrivateArticle.Size = new System.Drawing.Size(185, 22);
+            this.ToolStripMenuItemEditPrivateArticle.Text = "עריכת כתבה פרטית";
             // 
             // אינדקסיםToolStripMenuItem
             // 
@@ -347,7 +366,8 @@
             // 
             this.אחרToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItemTopMenu,
-            this.ToolStripMenuItemRightMenu});
+            this.ToolStripMenuItemRightMenu,
+            this.ToolStripMenuItemCategories});
             this.אחרToolStripMenuItem.Name = "אחרToolStripMenuItem";
             this.אחרToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.אחרToolStripMenuItem.Text = "תפריטים";
@@ -355,16 +375,23 @@
             // ToolStripMenuItemTopMenu
             // 
             this.ToolStripMenuItemTopMenu.Name = "ToolStripMenuItemTopMenu";
-            this.ToolStripMenuItemTopMenu.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItemTopMenu.Size = new System.Drawing.Size(120, 22);
             this.ToolStripMenuItemTopMenu.Text = "עליון";
             this.ToolStripMenuItemTopMenu.Click += new System.EventHandler(this.ToolStripMenuItemTopMenu_Click);
             // 
             // ToolStripMenuItemRightMenu
             // 
             this.ToolStripMenuItemRightMenu.Name = "ToolStripMenuItemRightMenu";
-            this.ToolStripMenuItemRightMenu.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItemRightMenu.Size = new System.Drawing.Size(120, 22);
             this.ToolStripMenuItemRightMenu.Text = "ימין";
             this.ToolStripMenuItemRightMenu.Click += new System.EventHandler(this.ToolStripMenuItemRightMenu_Click);
+            // 
+            // ToolStripMenuItemCategories
+            // 
+            this.ToolStripMenuItemCategories.Name = "ToolStripMenuItemCategories";
+            this.ToolStripMenuItemCategories.Size = new System.Drawing.Size(120, 22);
+            this.ToolStripMenuItemCategories.Text = "קטגוריות";
+            this.ToolStripMenuItemCategories.Click += new System.EventHandler(this.ToolStripMenuItemCategories_Click);
             // 
             // מולטימדיהToolStripMenuItem
             // 
@@ -379,38 +406,23 @@
             // ToolStripMenuItemAddNewPhoto
             // 
             this.ToolStripMenuItemAddNewPhoto.Name = "ToolStripMenuItemAddNewPhoto";
-            this.ToolStripMenuItemAddNewPhoto.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItemAddNewPhoto.Size = new System.Drawing.Size(151, 22);
             this.ToolStripMenuItemAddNewPhoto.Text = "הוספת תמונות";
             this.ToolStripMenuItemAddNewPhoto.Click += new System.EventHandler(this.ToolStripMenuItemAddNewPhoto_Click);
             // 
             // ToolStripMenuItemAddNewVideo
             // 
             this.ToolStripMenuItemAddNewVideo.Name = "ToolStripMenuItemAddNewVideo";
-            this.ToolStripMenuItemAddNewVideo.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItemAddNewVideo.Size = new System.Drawing.Size(151, 22);
             this.ToolStripMenuItemAddNewVideo.Text = "הוספת וידאו";
             this.ToolStripMenuItemAddNewVideo.Click += new System.EventHandler(this.ToolStripMenuItemAddNewVideo_Click);
             // 
             // ToolStripMenuItemAddNewBanner
             // 
             this.ToolStripMenuItemAddNewBanner.Name = "ToolStripMenuItemAddNewBanner";
-            this.ToolStripMenuItemAddNewBanner.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItemAddNewBanner.Size = new System.Drawing.Size(151, 22);
             this.ToolStripMenuItemAddNewBanner.Text = "הוספת באנרים";
             this.ToolStripMenuItemAddNewBanner.Click += new System.EventHandler(this.ToolStripMenuItemAddNewBanner_Click);
-            // 
-            // userControlTreeView1
-            // 
-            this.userControlTreeView1.IdColumnName = "CatId";
-            this.userControlTreeView1.Location = new System.Drawing.Point(37, 39);
-            this.userControlTreeView1.LookupTableName = null;
-            this.userControlTreeView1.MyQry = "select * FROM Table_LookupCategories WHERE ParentCatId=\'-1\'";
-            this.userControlTreeView1.Name = "userControlTreeView1";
-            this.userControlTreeView1.ParentIdColumnName = null;
-            this.userControlTreeView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.userControlTreeView1.RootNodeId = "1";
-            this.userControlTreeView1.RootNodeName = "עמוד ראשי";
-            this.userControlTreeView1.Size = new System.Drawing.Size(337, 397);
-            this.userControlTreeView1.TabIndex = 8;
-            this.userControlTreeView1.TextColumnName = "CatHebrewName";
             // 
             // FormAdministrator
             // 
@@ -462,10 +474,10 @@
         private System.Windows.Forms.RadioButton radioButtonActive;
         private System.Windows.Forms.RadioButton radioButtonArchive;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxDataType;
         private System.Windows.Forms.Label labelCategory;
-        private System.Windows.Forms.ToolStripMenuItem עריכתכתבהציבוריתToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem עריכתכתבהפרטיתToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemEditPublicArticle;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemEditPrivateArticle;
         private System.Windows.Forms.ToolStripMenuItem אינדקסיםToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem מודיעינעיםToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem עסקיםToolStripMenuItem;
@@ -479,5 +491,6 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemAddNewPhoto;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemAddNewVideo;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemAddNewBanner;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemCategories;
     }
 }

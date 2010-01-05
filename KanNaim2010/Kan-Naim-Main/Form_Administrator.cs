@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using HaimDLL;
 
 namespace Kan_Naim_Main
 {
@@ -50,6 +51,13 @@ namespace Kan_Naim_Main
 
         }
 
+        private void EditPublicArticleCallback(int articleId)
+        {
+            FormEditArtical newArt = FormEditArtical.GetFormEditArtical(articleId);
+            newArt.Show();
+            newArt.Focus();
+        }
+
         private void ToolStripMenuItemAddArticle_Click(object sender, EventArgs e)
         {
             if (userControlTreeView1.SelectedNode == null)
@@ -58,7 +66,7 @@ namespace Kan_Naim_Main
             string category = userControlTreeView1.SelectedNode.Text;
             FormEditArtical newArt = FormEditArtical.GetFormEditNewArtical(category, "משה נעים");
             newArt.Show();
-            newArt.Focus();            
+            newArt.Focus();
         }
 
         private void ToolStripMenuItemActiveCategories_Click(object sender, EventArgs e)
@@ -142,6 +150,68 @@ namespace Kan_Naim_Main
         private void ToolStripMenuItemAddNewBanner_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ToolStripMenuItemCategories_Click(object sender, EventArgs e)
+        {
+            var form1 = new Form_CategoriesManager();
+            form1.Show();
+            form1.Focus();
+        }
+        private void ShowForm(Form form)
+        {
+            form.Show();
+            form.Focus();
+        }
+        private void ShowUserControl(UserControl userControl)
+        {
+            var form = new Form
+            {
+                Width = userControl.Width,
+                Height = userControl.Height,
+                RightToLeft = RightToLeft.Yes,
+                RightToLeftLayout = true,
+                MaximizeBox = false,
+                MinimizeBox = false,
+                Name = "הזנת פרטי לינקים מועדפים",
+                SizeGripStyle = SizeGripStyle.Hide
+            };
+            userControl.Dock = DockStyle.Fill;
+            form.Controls.Add(userControl);
+            form.Show();
+            form.Focus();
+        }
+        private void buttonShowResults_Click(object sender, EventArgs e)
+        {
+            switch (comboBoxDataType.SelectedIndex)
+            {
+                //case 0: // articles
+                //    ShowUserControl(new UserControlManageArticle());
+                //    break;
+                case 1: // taktzirim
+                    ShowUserControl(new UserControlManageTaktzirim(EditPublicArticleCallback));
+                    break;
+                //case 2: // images
+                //    ShowUserControl(new UserControlManageImages());
+                //    break;
+                //case 3: // videos
+                //    ShowUserControl(new UserControlManageVideos());
+                //    break;
+                //case 4: //rss
+                //    ShowUserControl(new UserControlManageRSS());
+                //    break;
+                //case 5: //banners
+                //    ShowUserControl(new UserControlManageBanners());
+                //    break;
+                default:
+                    break;
+                
+            }
+        }
+
+        private void ToolStripMenuItemEditPublicArticle_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

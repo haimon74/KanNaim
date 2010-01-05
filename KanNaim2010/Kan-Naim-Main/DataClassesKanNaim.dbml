@@ -232,4 +232,27 @@
       <Column Name="CssHover" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.Table_LookupIndexes" Member="Table_LookupIndexes">
+    <Type Name="Table_LookupIndex">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IndexName" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="GroupNameId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Table_Index_Table_LookupIndex" Member="Table_Index" ThisKey="Id" OtherKey="CategoryId" Type="Table_Index" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_Indexes" Member="Table_Indexes">
+    <Type Name="Table_Index">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BusinessName" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="HomePageUrl" Type="System.String" DbType="NChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="MobilePhone" Type="System.String" DbType="NChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="OtherPhone" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NChar(500)" CanBeNull="true" />
+      <Column Name="IndexType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Table_Index_Table_LookupIndex" Member="Table_LookupIndexes" ThisKey="CategoryId" OtherKey="Id" Type="Table_LookupIndex" />
+    </Type>
+  </Table>
 </Database>

@@ -98,6 +98,7 @@ namespace Kan_Naim_Main
             this._tabPagePhotos = new System.Windows.Forms.TabPage();
             this._ucUploadPhoto1 = new HaimDLL.UserControlUploadPhoto();
             this._tabPageVideo = new System.Windows.Forms.TabPage();
+            this.ucUploadVideo1 = new HaimDLL.UserControlUploadVideo();
             this._tabPageAutoPublish = new System.Windows.Forms.TabPage();
             this._buttonArticlePreview = new System.Windows.Forms.Button();
             this._contextMenuStripTreeNode = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -120,7 +121,6 @@ namespace Kan_Naim_Main
             this._groupBox1 = new System.Windows.Forms.GroupBox();
             this._radioButtonSaveAsPrivate = new System.Windows.Forms.RadioButton();
             this._radioButtonSaveAsPublic = new System.Windows.Forms.RadioButton();
-            this.ucUploadVideo1 = new HaimDLL.UserControlUploadVideo();
             this._tabControl1.SuspendLayout();
             this._tabPageArticle.SuspendLayout();
             this._groupBox8.SuspendLayout();
@@ -225,6 +225,7 @@ namespace Kan_Naim_Main
             // 
             this._richTextBoxArticleContent.Enabled = false;
             this._richTextBoxArticleContent.Location = new System.Drawing.Point(19, 264);
+            this._richTextBoxArticleContent.MaxLength = 10000;
             this._richTextBoxArticleContent.Name = "_richTextBoxArticleContent";
             this._richTextBoxArticleContent.Size = new System.Drawing.Size(541, 165);
             this._richTextBoxArticleContent.TabIndex = 85;
@@ -444,6 +445,7 @@ namespace Kan_Naim_Main
             // _textBoxKeyWords
             // 
             this._textBoxKeyWords.Location = new System.Drawing.Point(19, 225);
+            this._textBoxKeyWords.MaxLength = 200;
             this._textBoxKeyWords.Name = "_textBoxKeyWords";
             this._textBoxKeyWords.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._textBoxKeyWords.Size = new System.Drawing.Size(541, 20);
@@ -463,6 +465,7 @@ namespace Kan_Naim_Main
             // _textBoxTags
             // 
             this._textBoxTags.Location = new System.Drawing.Point(19, 199);
+            this._textBoxTags.MaxLength = 200;
             this._textBoxTags.Name = "_textBoxTags";
             this._textBoxTags.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._textBoxTags.Size = new System.Drawing.Size(541, 20);
@@ -490,8 +493,8 @@ namespace Kan_Naim_Main
             // 
             // _textBoxArticleTitle
             // 
-            this._textBoxArticleTitle.Enabled = false;
             this._textBoxArticleTitle.Location = new System.Drawing.Point(17, 16);
+            this._textBoxArticleTitle.MaxLength = 150;
             this._textBoxArticleTitle.Name = "_textBoxArticleTitle";
             this._textBoxArticleTitle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._textBoxArticleTitle.Size = new System.Drawing.Size(541, 20);
@@ -611,8 +614,8 @@ namespace Kan_Naim_Main
             // 
             // _textBoxArticleSubtitle
             // 
-            this._textBoxArticleSubtitle.Enabled = false;
             this._textBoxArticleSubtitle.Location = new System.Drawing.Point(17, 49);
+            this._textBoxArticleSubtitle.MaxLength = 300;
             this._textBoxArticleSubtitle.Multiline = true;
             this._textBoxArticleSubtitle.Name = "_textBoxArticleSubtitle";
             this._textBoxArticleSubtitle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -928,6 +931,14 @@ namespace Kan_Naim_Main
             this._tabPageVideo.Text = "ווידאו";
             this._tabPageVideo.UseVisualStyleBackColor = true;
             // 
+            // ucUploadVideo1
+            // 
+            this.ucUploadVideo1.Location = new System.Drawing.Point(52, 29);
+            this.ucUploadVideo1.Name = "ucUploadVideo1";
+            this.ucUploadVideo1.Size = new System.Drawing.Size(601, 398);
+            this.ucUploadVideo1.TabIndex = 0;
+            this.ucUploadVideo1.Load += new System.EventHandler(this.userControlUploadVideo1_Load);
+            // 
             // _tabPageAutoPublish
             // 
             this._tabPageAutoPublish.Location = new System.Drawing.Point(4, 22);
@@ -1077,14 +1088,6 @@ namespace Kan_Naim_Main
             this._radioButtonSaveAsPublic.TabStop = true;
             this._radioButtonSaveAsPublic.Text = "ציבורי";
             this._radioButtonSaveAsPublic.UseVisualStyleBackColor = true;
-            // 
-            // ucUploadVideo1
-            // 
-            this.ucUploadVideo1.Location = new System.Drawing.Point(52, 29);
-            this.ucUploadVideo1.Name = "userControlUploadVideo1";
-            this.ucUploadVideo1.Size = new System.Drawing.Size(601, 398);
-            this.ucUploadVideo1.TabIndex = 0;
-            this.ucUploadVideo1.Load += new System.EventHandler(this.userControlUploadVideo1_Load);
             // 
             // FormEditArtical
             // 

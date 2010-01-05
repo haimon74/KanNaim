@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
+using DbSql;
 
 namespace HaimDLL
 {
@@ -59,6 +61,27 @@ namespace HaimDLL
             _buttonSaveClickCallback = eventSaveCallback;
         }
 
+        public void PopulateByOriginalPhotoId(int photoId)
+        {
+            try
+            {
+                var originalPhoto = (from c in Lookup.Db.Table_OriginalPhotosArchives
+                                     where c.PhotoId == photoId
+                                     select c).Single();
+                _uploadState = UploadState.SavedOnlineOk;
+                textBoxPhotoCaption.Text = originalPhoto.Caption;
+                textBoxPhotoDescription.Text = originalPhoto.Description;
+                textBoxPhotoHeight.Text = originalPhoto.Height.ToString();
+                textBoxPhotoWidth.Text = originalPhoto.Width.ToString();
+                textBoxPhotoPath.Text = "מארכיון";
+                Image img = Conversions.ByteArrayToImage(originalPhoto.ImageData.ToArray()); // TODO: need to confirm retrieving well...
+                pictureBoxPreview.Image = img.GetThumbnailImage(Sizes[2, 0], Sizes[2, 1], ThumbnailCallback, IntPtr.Zero);
+            }
+            catch
+            {
+            }
+        }
+        
         private void SetPhotoFormState(UploadState theState)
         {
             _uploadState = theState;
@@ -240,9 +263,114 @@ namespace HaimDLL
 
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void SelectPhotoDoubleClick(object sender, EventArgs e)
         {
+            try
+            {
+                int photoId = int.Parse(((ListView)sender).SelectedItems[0].SubItems[0].Text);
 
+                var photo = Filter.GetOriginalPhotoFromId(photoId);
+
+                textBoxPhotoWidth.Text = photo.Width.ToString();
+                textBoxPhotoPath.Text = "מארכיון";
+                textBoxPhotoPath.Enabled = false;
+                textBoxPhotoHeight.Text = photo.Height.ToString();
+                textBoxPhotoDescription.Text = photo.Description;
+                textBoxPhotoCaption.Text = photo.Caption;
+                checkBoxSize80w.Checked = false;
+                checkBoxSize80w.Enabled = false;
+                checkBoxSize100w.Checked = false;
+                checkBoxSize100w.Enabled = false;
+                checkBoxSize125w.Checked = false;
+                checkBoxSize125w.Enabled = false;
+                checkBoxSize165w.Checked = false;
+                checkBoxSize165w.Enabled = false;
+                checkBoxSize208w.Checked = false;
+                checkBoxSize208w.Enabled = false;
+                checkBoxSize230w.Checked = false;
+                checkBoxSize230w.Enabled = false;
+                button15.Enabled = false;
+                radioButtonSavePhotosToArchive.Enabled = false;
+                radioButtonSavePhotosLocally.Enabled = false;
+                
+            }
+            catch
+            {
+
+            }
+        }
+        private void buttonLoadFromArchive_Click(object sender, EventArgs e)
+        {
+            var form1 = new Form()
+                            {
+                                RightToLeft = RightToLeft.Yes,
+                                RightToLeftLayout = true,
+                                Height = 500,
+                                Width = 700,
+                                Name = String.Format(comboBox1.SelectedText + "רשימת תמונות מקטגוריה")
+            };
+            var listView = new ListView
+            {
+                View = View.Details,
+                GridLines = true,
+                FullRowSelect = true,
+                CheckBoxes = false,
+                AllowColumnReorder = true,
+                LabelEdit = false,
+                RightToLeftLayout = true,
+                MultiSelect = false,
+                Dock = DockStyle.Fill,
+                Visible = true
+            };
+
+            listView.DoubleClick += SelectPhotoDoubleClick;
+
+            listView.Columns.Add("מספר", 50, HorizontalAlignment.Center);
+            listView.Columns.Add("שם התמונה", 650, HorizontalAlignment.Center);
+            //listView.Columns.Add("שם הווידאו", 600, HorizontalAlignment.Center);
+
+            var itemCollection = new ListView.ListViewItemCollection(listView);
+
+            var photos = from c in Lookup.Db.Table_OriginalPhotosArchives
+                         select c;
+            foreach (Table_OriginalPhotosArchive photo in photos)
+            {
+                var item = new ListViewItem();
+                item.SubItems.Add(photo.PhotoId.ToString());
+                item.SubItems.Add(photo.Caption);
+                itemCollection.Add(item);
+            }
+            
+            form1.Controls.Add(listView);
+            listView.Refresh();
+
+            form1.Show();
+
+        }
+
+        private void buttonClearForm_Click(object sender, EventArgs e)
+        {
+            checkBoxSize80w.Checked = true;
+            checkBoxSize80w.Enabled = true;
+            checkBoxSize100w.Checked = true;
+            checkBoxSize100w.Enabled = true;
+            checkBoxSize125w.Checked = true;
+            checkBoxSize125w.Enabled = true;
+            checkBoxSize165w.Checked = true;
+            checkBoxSize165w.Enabled = true;
+            checkBoxSize208w.Checked = true;
+            checkBoxSize208w.Enabled = true;
+            checkBoxSize230w.Checked = true;
+            checkBoxSize230w.Enabled = true;
+            textBoxPhotoCaption.Enabled = true;
+            textBoxPhotoCaption.Text = "";
+            textBoxPhotoDescription.Enabled = true;
+            textBoxPhotoDescription.Text = "";
+            textBoxPhotoHeight.Text = "";
+            textBoxPhotoWidth.Text = "";
+            textBoxPhotoPath.Enabled = true;
+            textBoxPhotoPath.Text = "";
+            button15.Enabled = true;
         }
 
 

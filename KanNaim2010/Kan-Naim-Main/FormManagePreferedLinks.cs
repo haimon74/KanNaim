@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Kan_Naim_Main
@@ -18,18 +13,58 @@ namespace Kan_Naim_Main
 
         private void FormManagePreferedLinks_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_10infoDataSetPreferedLinks.DataTablePreferedLinks' table. You can move, or remove it, as needed.
-            this.dataTablePreferedLinksTableAdapter.FillPreferedLinks(this._10infoDataSetPreferedLinks.DataTablePreferedLinks);
-            // TODO: This line of code loads data into the '_10infoDataSetPreferedLinks.DataTablePreferedLinks' table. You can move, or remove it, as needed.
-            this.dataTablePreferedLinksTableAdapter.FillPreferedLinks(this._10infoDataSetPreferedLinks.DataTablePreferedLinks);
-            // TODO: This line of code loads data into the '_10infoDataSetPreferedLinks.Table_LinksPrefered' table. You can move, or remove it, as needed.
-            //this.table_LinksPreferedTableAdapter.Fill(this._10infoDataSetPreferedLinks.Table_LinksPrefered);
+            PopulateTable();
 
         }
 
-        private void infoDataSetPreferedLinksBindingSource_CurrentChanged(object sender, EventArgs e)
+        private void PopulateTable()
         {
+            dataTablePreferedLinksTableAdapter.FillPreferedLinks(_10infoDataSetPreferedLinks.DataTablePreferedLinks);
+        }
 
+        private static void OpenEditForm(int id)
+        {
+            var form = new Form
+            {
+                Width = 500,
+                Height = 300,
+                RightToLeft = RightToLeft.Yes,
+                RightToLeftLayout = true,
+                MaximizeBox = false,
+                MinimizeBox = false,
+                MinimumSize = new Size(500, 300),
+                Name = "הזנת פרטי לינקים מועדפים",
+            };
+            var userControl = new HaimDLL.UserControlEditPreferedLinks(id);
+            userControl.Dock = DockStyle.Fill;
+            form.Controls.Add(userControl);
+            form.Show();
+
+        }
+        private void ToolStripMenuItemAddNewRecord_Click(object sender, EventArgs e)
+        {
+            OpenEditForm(-1);
+        }
+
+        private void ToolStripMenuItemEditRecord_Click(object sender, EventArgs e)
+        {
+            int id = (int)dataGridView1.CurrentRow.Cells[6].Value;
+            OpenEditForm(id);
+        }
+
+        private void ToolStripMenuItemDeleteSelected_Click(object sender, EventArgs e)
+        {
+            int id = (int)dataGridView1.CurrentRow.Cells[6].Value;
+            //dataTablePreferedLinksTableAdapter.Delete(id);
+            var link = DataAccess.Filter.GetPreferedLinkByLinkId(id);
+            DataAccess.Lookup.Db.Table_LinksPrefereds.DeleteOnSubmit(link);
+            DataAccess.Lookup.Db.SubmitChanges();
+            PopulateTable();
+        }
+
+        private void ToolStripMenuItemRefresh_Click(object sender, EventArgs e)
+        {
+            PopulateTable();
         }
     }
 }

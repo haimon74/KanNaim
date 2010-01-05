@@ -411,10 +411,10 @@ namespace Kan_Naim_Main {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public Table_IndexesRow AddTable_IndexesRow(int Id, string BusinessName, string HomePageUrl, string MobilePhone, string OtherPhone, string Fax, string Email, string Description, int IndexType, int CategoryId) {
+            public Table_IndexesRow AddTable_IndexesRow(string BusinessName, string HomePageUrl, string MobilePhone, string OtherPhone, string Fax, string Email, string Description, int IndexType, int CategoryId) {
                 Table_IndexesRow rowTable_IndexesRow = ((Table_IndexesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Id,
+                        null,
                         BusinessName,
                         HomePageUrl,
                         MobilePhone,
@@ -477,8 +477,13 @@ namespace Kan_Naim_Main {
                 base.Columns.Add(this.columnIndexType);
                 this.columnCategoryId = new global::System.Data.DataColumn("CategoryId", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCategoryId);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columnBusinessName}, false));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = 1;
                 this.columnId.AllowDBNull = false;
                 this.columnBusinessName.AllowDBNull = false;
+                this.columnBusinessName.Unique = true;
                 this.columnBusinessName.MaxLength = 50;
                 this.columnHomePageUrl.AllowDBNull = false;
                 this.columnHomePageUrl.MaxLength = 200;
@@ -929,20 +934,26 @@ namespace Kan_Naim_Main._10infoDataSetIndexesTableAdapters {
             tableMapping.ColumnMappings.Add("IndexType", "IndexType");
             tableMapping.ColumnMappings.Add("CategoryId", "CategoryId");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM Table_Indexes\r\nWHERE     (BusinessName = @BusinessName)";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BusinessName", global::System.Data.SqlDbType.NChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "BusinessName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Table_Indexes] ([Id], [BusinessName], [HomePageUrl], [MobilePhone], [OtherPhone], [Fax], [Email], [Description], [IndexType], [CategoryId]) VALUES (@Id, @BusinessName, @HomePageUrl, @MobilePhone, @OtherPhone, @Fax, @Email, @Description, @IndexType, @CategoryId)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO Table_Indexes
+                      (BusinessName, HomePageUrl, MobilePhone, OtherPhone, Fax, Email, Description, IndexType, CategoryId)
+VALUES     (@BusinessName,@HomePageUrl,@MobilePhone,@OtherPhone,@Fax,@Email,@Description,@IndexType,@CategoryId)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BusinessName", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BusinessName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HomePageUrl", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HomePageUrl", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MobilePhone", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MobilePhone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OtherPhone", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OtherPhone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fax", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fax", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Description", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IndexType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IndexType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CategoryId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CategoryId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BusinessName", global::System.Data.SqlDbType.NChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "BusinessName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HomePageUrl", global::System.Data.SqlDbType.NChar, 200, global::System.Data.ParameterDirection.Input, 0, 0, "HomePageUrl", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MobilePhone", global::System.Data.SqlDbType.NChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "MobilePhone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OtherPhone", global::System.Data.SqlDbType.NChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "OtherPhone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fax", global::System.Data.SqlDbType.NChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "Fax", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.NChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Description", global::System.Data.SqlDbType.NChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IndexType", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IndexType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CategoryId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CategoryId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1030,53 +1041,78 @@ namespace Kan_Naim_Main._10infoDataSetIndexesTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id, string BusinessName, string HomePageUrl, string MobilePhone, string OtherPhone, string Fax, string Email, string Description, int IndexType, int CategoryId) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(string BusinessName) {
             if ((BusinessName == null)) {
                 throw new global::System.ArgumentNullException("BusinessName");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(BusinessName));
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(BusinessName));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string BusinessName, string HomePageUrl, string MobilePhone, string OtherPhone, string Fax, string Email, string Description, int IndexType, int CategoryId) {
+            if ((BusinessName == null)) {
+                throw new global::System.ArgumentNullException("BusinessName");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(BusinessName));
             }
             if ((HomePageUrl == null)) {
                 throw new global::System.ArgumentNullException("HomePageUrl");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(HomePageUrl));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(HomePageUrl));
             }
             if ((MobilePhone == null)) {
                 throw new global::System.ArgumentNullException("MobilePhone");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(MobilePhone));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(MobilePhone));
             }
             if ((OtherPhone == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(OtherPhone));
+            }
+            if ((Fax == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(OtherPhone));
-            }
-            if ((Fax == null)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Fax));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Fax));
             }
             if ((Email == null)) {
                 throw new global::System.ArgumentNullException("Email");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Email));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Email));
             }
             if ((Description == null)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Description));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Description));
             }
-            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(IndexType));
-            this.Adapter.InsertCommand.Parameters[9].Value = ((int)(CategoryId));
+            this.Adapter.InsertCommand.Parameters[7].Value = ((int)(IndexType));
+            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(CategoryId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

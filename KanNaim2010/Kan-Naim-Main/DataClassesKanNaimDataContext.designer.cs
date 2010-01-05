@@ -190,5 +190,20 @@ namespace Kan_Naim_Main
 				return this.GetTable<Table_MenuTop>();
 			}
 		}
+        public System.Data.Linq.Table<Table_LookupIndex> Table_LookupIndexes
+        {
+            get
+            {
+                return this.GetTable<Table_LookupIndex>();
+            }
+        }
+
+        public System.Data.Linq.Table<Table_Index> Table_Indexes
+        {
+            get
+            {
+                return this.GetTable<Table_Index>();
+            }
+        }
 	}
 }

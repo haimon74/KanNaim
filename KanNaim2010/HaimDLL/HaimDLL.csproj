@@ -36,6 +36,9 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq">
@@ -48,6 +51,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserControlEditVideo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEditVideo.Designer.cs">
+      <DependentUpon>UserControlEditVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlManageTaktzirim.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlManageTaktzirim.Designer.cs">
+      <DependentUpon>UserControlManageTaktzirim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlPreferedLinks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlPreferedLinks.Designer.cs">
+      <DependentUpon>UserControlPreferedLinks.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomCollection\Lookup.cs" />
     <Compile Include="CustomCollection\LookupCollection.cs" />
     <Compile Include="CustomCollection\LookupEnumerator .cs" />
@@ -68,6 +89,12 @@
     <Compile Include="Conversions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TreeViewer.cs" />
+    <Compile Include="UserControlEditBottomPageLink.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEditBottomPageLink.Designer.cs">
+      <DependentUpon>UserControlEditBottomPageLink.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlRichTextBoxEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -112,12 +139,24 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="UserControlEditVideo.resx">
+      <DependentUpon>UserControlEditVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlManageTaktzirim.resx">
+      <DependentUpon>UserControlManageTaktzirim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlPreferedLinks.resx">
+      <DependentUpon>UserControlPreferedLinks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPreviewArticleOnWebBrowser.resx">
       <DependentUpon>FormPreviewArticleOnWebBrowser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEditBottomPageLink.resx">
+      <DependentUpon>UserControlEditBottomPageLink.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlRichTextBoxEditor.resx">
       <DependentUpon>UserControlRichTextBoxEditor.cs</DependentUpon>
@@ -140,6 +179,15 @@
     <EmbeddedResource Include="UserControlUploadVideo.resx">
       <DependentUpon>UserControlUploadVideo.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\DbSql.Table_Taktzirim.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DbSql\DbSql.csproj">
+      <Project>{F83511BE-5507-459A-A809-2A97834A119E}</Project>
+      <Name>DbSql</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

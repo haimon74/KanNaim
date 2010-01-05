@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -33,16 +34,6 @@ namespace Kan_Naim_Main
             SingleFormEditArtical._comboBoxArticleCategory.SelectedIndex = SingleFormEditArtical._comboBoxArticleCategory.FindString(category);
             SingleFormEditArtical._tableLookupReportersTableAdapter1.Fill(SingleFormEditArtical._kanNaimDataSetReportersNames.Table_LookupReporters);
             SingleFormEditArtical._comboBoxEditor.SelectedIndex = SingleFormEditArtical._comboBoxEditor.FindString(username);
-
-            //_singleFormEditArtical.InitializeComponent();
-            //_singleFormEditArtical.SetPhotoFormState(UploadState.FileNotSelected);
-            //_singleFormEditArtical.table_LookupCategoriesTableAdapter.Fill(_singleFormEditArtical._Kan_NaimDataSetCategories.Table_LookupCategories);
-            //string categoryName = CategoryNameFromId(_tblArticle.CategoryId);
-            //_singleFormEditArtical.comboBoxArticleCategory.SelectedIndex = _singleFormEditArtical.comboBoxArticleCategory.FindString(categoryName);
-            //_singleFormEditArtical.table_LookupReportersTableAdapter1.Fill(_singleFormEditArtical._Kan_NaimDataSetReportersNames.Table_LookupReporters);
-            //string reporter = ReporterPublishNameFromId(_tblArticle.UpdatedBy);
-            //_singleFormEditArtical.comboBoxEditor.SelectedIndex = _singleFormEditArtical.comboBoxEditor.FindString(reporter);
-            //FillComboBoxPhotosFromOriginId(_tblArticle.ImageId);
         }
         private static int GetCetegoryIdFromName(string hebrewName)
         {
@@ -67,6 +58,7 @@ namespace Kan_Naim_Main
 
             return SingleFormEditArtical;
         }
+        
 
 /*
         private static void FillComboBoxPhotosFromOriginId(int imgId)
@@ -93,9 +85,13 @@ namespace Kan_Naim_Main
             _tblArticle = (Db.Table_Articles
                 .Where(c => c.ArticleId == articleId))
                 .Single();
+            
+            PopulateFromArticle();
 
             return SingleFormEditArtical;
         }
+
+
 
         private static Table_Article CreateNewArticleInArchive()
         {
@@ -149,6 +145,26 @@ namespace Kan_Naim_Main
             return newArticle;
         }
 
+        private static void PopulateFromArticle()
+        {
+            SingleFormEditArtical._comboBoxArticleCategory.SelectedText =
+                DataAccess.Lookup.GetLookupCategoryNameFromId(_tblArticle.CategoryId);
+            SingleFormEditArtical._richTextBoxArticleContent.Rtf = _tblArticle.ArticleContent;
+            SingleFormEditArtical._comboBoxEditor.SelectedText =
+                DataAccess.Lookup.GetLookupReporterFromUserId(_tblArticle.UpdatedBy).PublishNameShort;
+            SingleFormEditArtical.ucUploadVideo1.PopulateByVideoId(_tblArticle.EmbedObjId);
+            SingleFormEditArtical._ucUploadPhoto1.PopulateByOriginalPhotoId(_tblArticle.ImageId);
+            SingleFormEditArtical._checkBoxPublish.Checked = _tblArticle.IsPublished;
+            SingleFormEditArtical._textBoxKeyWords.Text = _tblArticle.KeysAssociated;
+            SingleFormEditArtical._textBoxTags.Text = _tblArticle.MetaTags;
+            SingleFormEditArtical._textBoxArticleTitle.Text = _tblArticle.Title;
+            SingleFormEditArtical._textBoxArticleSubtitle.Text = _tblArticle.SubTitle;
+            DateTime now = DateTime.Now;
+            _tblArticle.CreateDate = now;
+            _tblArticle.UpdateDate = now;
+            SingleFormEditArtical._comboBoxArticlePhoto = SingleFormEditArtical.FillComboBoxWithPhotosArchive(SingleFormEditArtical._comboBoxArticlePhoto);
+            SingleFormEditArtical.comboBoxArticlePhoto_SelectedIndexChanged(SingleFormEditArtical._comboBoxArticleCategory, new EventArgs());
+        }
         private void tabPagePhotos_Click(object sender, EventArgs e)
         {
 
@@ -425,9 +441,22 @@ namespace Kan_Naim_Main
             
         }
 
+        private string GetSelectedCategoryHebrewName()
+        {
+            return (string)((DataRowView)_comboBoxArticleCategory.SelectedItem)["CatHebrewName"];
+        }
+        private void RefreshCategoryComboByValue(string value)
+        {
+            _tableLookupCategoriesTableAdapter.Fill(_kanNaimDataSetCategories.Table_LookupCategories);
+            _comboBoxArticleCategory.SelectedIndex = _comboBoxArticleCategory.FindString(value);
+        }
+
         private void buttonReloadCategoryTree_Click(object sender, EventArgs e)
         {
             _userControlTreeView1.PopulateRootLevel("Table_LookupCategories", "ParentCatId");
+
+            string categoryName = GetSelectedCategoryHebrewName();
+            RefreshCategoryComboByValue(categoryName);
         }
 
         private void AddItemToTakCatTreeSelector(string newItem)
@@ -938,7 +967,7 @@ namespace Kan_Naim_Main
             string tagAfter = String.Format("\\{0}0", tagName);
             const string strikeTag = "\\strike";
 
-            
+            /*
             // removing old H1 or H2 selections (important to remove first the tagAfter and after that tag Before
             _richTextBoxArticleContent.Rtf = _richTextBoxArticleContent.Rtf.Replace(tagAfter, "");
             _richTextBoxArticleContent.Rtf = _richTextBoxArticleContent.Rtf.Replace(tagBefore, "");
@@ -947,13 +976,13 @@ namespace Kan_Naim_Main
 
             _richTextBoxArticleContent.SelectionStart = selectedStart;
             _richTextBoxArticleContent.SelectionLength = selectedLength;
-
+            */
             // updating the title textbox
             if (tagName == "H1") // h1 --> title
                 _textBoxArticleTitle.Text = _richTextBoxArticleContent.SelectedText;
             else // h2 --> subtitle
                 _textBoxArticleSubtitle.Text = _richTextBoxArticleContent.SelectedText;
-
+            /*
             _richTextBoxArticleContent.SelectionColor = Color.Black;
             _richTextBoxArticleContent.SelectionAlignment = HorizontalAlignment.Right;
             _richTextBoxArticleContent.SelectionFont = new Font("Arial", 17, FontStyle.Strikeout, GraphicsUnit.Point);
@@ -970,6 +999,7 @@ namespace Kan_Naim_Main
             int len = _richTextBoxArticleContent.SelectionLength;
             idx += len;
             _richTextBoxArticleContent.Rtf = _richTextBoxArticleContent.Rtf.Insert(idx, tagAfter);
+             */
         }
 
         private void buttonArticlePreview_Click(object sender, EventArgs e)

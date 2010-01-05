@@ -55,8 +55,10 @@
             this.label15 = new System.Windows.Forms.Label();
             this.checkBoxSize230w = new System.Windows.Forms.CheckBox();
             this.textBoxPhotoPath = new System.Windows.Forms.TextBox();
-            this.buttonSelectFile = new System.Windows.Forms.Button();
+            this.buttonSelectNewFile = new System.Windows.Forms.Button();
             this.buttonSelectCategory = new System.Windows.Forms.Button();
+            this.buttonLoadFromArchive = new System.Windows.Forms.Button();
+            this.buttonClearForm = new System.Windows.Forms.Button();
             this.groupBoxSavePictureSelection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).BeginInit();
             this.SuspendLayout();
@@ -128,7 +130,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.ForeColor = System.Drawing.Color.Red;
-            this.label21.Location = new System.Drawing.Point(218, 396);
+            this.label21.Location = new System.Drawing.Point(191, 396);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(43, 13);
             this.label21.TabIndex = 49;
@@ -138,7 +140,7 @@
             // 
             this.labelResultMsg.AutoSize = true;
             this.labelResultMsg.ForeColor = System.Drawing.Color.Red;
-            this.labelResultMsg.Location = new System.Drawing.Point(10, 396);
+            this.labelResultMsg.Location = new System.Drawing.Point(20, 396);
             this.labelResultMsg.Name = "labelResultMsg";
             this.labelResultMsg.Size = new System.Drawing.Size(112, 13);
             this.labelResultMsg.TabIndex = 48;
@@ -147,9 +149,9 @@
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(338, 378);
+            this.button15.Location = new System.Drawing.Point(355, 378);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(166, 48);
+            this.button15.Size = new System.Drawing.Size(126, 48);
             this.button15.TabIndex = 47;
             this.button15.Text = "שמור תמונות";
             this.button15.UseVisualStyleBackColor = true;
@@ -170,6 +172,7 @@
             // textBoxPhotoDescription
             // 
             this.textBoxPhotoDescription.Location = new System.Drawing.Point(1, 102);
+            this.textBoxPhotoDescription.MaxLength = 500;
             this.textBoxPhotoDescription.Multiline = true;
             this.textBoxPhotoDescription.Name = "textBoxPhotoDescription";
             this.textBoxPhotoDescription.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -199,6 +202,7 @@
             // 
             this.textBoxPhotoWidth.Enabled = false;
             this.textBoxPhotoWidth.Location = new System.Drawing.Point(321, 176);
+            this.textBoxPhotoWidth.MaxLength = 3;
             this.textBoxPhotoWidth.Name = "textBoxPhotoWidth";
             this.textBoxPhotoWidth.Size = new System.Drawing.Size(45, 20);
             this.textBoxPhotoWidth.TabIndex = 42;
@@ -225,6 +229,7 @@
             // 
             this.textBoxPhotoHeight.Enabled = false;
             this.textBoxPhotoHeight.Location = new System.Drawing.Point(430, 176);
+            this.textBoxPhotoHeight.MaxLength = 3;
             this.textBoxPhotoHeight.Name = "textBoxPhotoHeight";
             this.textBoxPhotoHeight.Size = new System.Drawing.Size(51, 20);
             this.textBoxPhotoHeight.TabIndex = 39;
@@ -241,6 +246,7 @@
             // textBoxPhotoCaption
             // 
             this.textBoxPhotoCaption.Location = new System.Drawing.Point(1, 67);
+            this.textBoxPhotoCaption.MaxLength = 200;
             this.textBoxPhotoCaption.Name = "textBoxPhotoCaption";
             this.textBoxPhotoCaption.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBoxPhotoCaption.Size = new System.Drawing.Size(518, 20);
@@ -328,20 +334,21 @@
             // textBoxPhotoPath
             // 
             this.textBoxPhotoPath.Location = new System.Drawing.Point(1, 30);
+            this.textBoxPhotoPath.MaxLength = 300;
             this.textBoxPhotoPath.Name = "textBoxPhotoPath";
             this.textBoxPhotoPath.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textBoxPhotoPath.Size = new System.Drawing.Size(518, 20);
             this.textBoxPhotoPath.TabIndex = 28;
             // 
-            // buttonSelectFile
+            // buttonSelectNewFile
             // 
-            this.buttonSelectFile.Location = new System.Drawing.Point(525, 30);
-            this.buttonSelectFile.Name = "buttonSelectFile";
-            this.buttonSelectFile.Size = new System.Drawing.Size(108, 23);
-            this.buttonSelectFile.TabIndex = 27;
-            this.buttonSelectFile.Text = "בחר תמונה...";
-            this.buttonSelectFile.UseVisualStyleBackColor = true;
-            this.buttonSelectFile.Click += new System.EventHandler(this.buttonSelectFile_Click);
+            this.buttonSelectNewFile.Location = new System.Drawing.Point(525, 27);
+            this.buttonSelectNewFile.Name = "buttonSelectNewFile";
+            this.buttonSelectNewFile.Size = new System.Drawing.Size(108, 23);
+            this.buttonSelectNewFile.TabIndex = 27;
+            this.buttonSelectNewFile.Text = "בחר חדשה...";
+            this.buttonSelectNewFile.UseVisualStyleBackColor = true;
+            this.buttonSelectNewFile.Click += new System.EventHandler(this.buttonSelectFile_Click);
             // 
             // buttonSelectCategory
             // 
@@ -354,10 +361,32 @@
             this.buttonSelectCategory.Visible = false;
             this.buttonSelectCategory.Click += new System.EventHandler(this.buttonSelectCategory_Click);
             // 
+            // buttonLoadFromArchive
+            // 
+            this.buttonLoadFromArchive.Location = new System.Drawing.Point(513, 378);
+            this.buttonLoadFromArchive.Name = "buttonLoadFromArchive";
+            this.buttonLoadFromArchive.Size = new System.Drawing.Size(110, 48);
+            this.buttonLoadFromArchive.TabIndex = 54;
+            this.buttonLoadFromArchive.Text = "ייבא מארכיון...";
+            this.buttonLoadFromArchive.UseVisualStyleBackColor = true;
+            this.buttonLoadFromArchive.Click += new System.EventHandler(this.buttonLoadFromArchive_Click);
+            // 
+            // buttonClearForm
+            // 
+            this.buttonClearForm.Location = new System.Drawing.Point(265, 378);
+            this.buttonClearForm.Name = "buttonClearForm";
+            this.buttonClearForm.Size = new System.Drawing.Size(64, 48);
+            this.buttonClearForm.TabIndex = 55;
+            this.buttonClearForm.Text = "נקה טופס";
+            this.buttonClearForm.UseVisualStyleBackColor = true;
+            this.buttonClearForm.Click += new System.EventHandler(this.buttonClearForm_Click);
+            // 
             // UserControlUploadPhoto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonClearForm);
+            this.Controls.Add(this.buttonLoadFromArchive);
             this.Controls.Add(this.buttonSelectCategory);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label23);
@@ -384,7 +413,7 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.checkBoxSize230w);
             this.Controls.Add(this.textBoxPhotoPath);
-            this.Controls.Add(this.buttonSelectFile);
+            this.Controls.Add(this.buttonSelectNewFile);
             this.Name = "UserControlUploadPhoto";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Size = new System.Drawing.Size(640, 429);
@@ -426,7 +455,9 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.CheckBox checkBoxSize230w;
         public System.Windows.Forms.TextBox textBoxPhotoPath;
-        private System.Windows.Forms.Button buttonSelectFile;
+        private System.Windows.Forms.Button buttonSelectNewFile;
         private System.Windows.Forms.Button buttonSelectCategory;
+        private System.Windows.Forms.Button buttonLoadFromArchive;
+        private System.Windows.Forms.Button buttonClearForm;
     }
 }

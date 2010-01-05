@@ -135,6 +135,7 @@
             this.RichTextBox1.ForeColor = System.Drawing.Color.Black;
             this.RichTextBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.RichTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.RichTextBox1.MaxLength = 10000;
             this.RichTextBox1.Name = "RichTextBox1";
             this.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.RichTextBox1.Size = new System.Drawing.Size(900, 800);
@@ -161,7 +162,7 @@
             this.נקהאובייקטיםToolStripMenuItem});
             this._contextMenuStripRichTextOptions.Name = "contextMenuStripRichTextOptions";
             this._contextMenuStripRichTextOptions.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this._contextMenuStripRichTextOptions.Size = new System.Drawing.Size(153, 334);
+            this._contextMenuStripRichTextOptions.Size = new System.Drawing.Size(153, 312);
             // 
             // _toolStripMenuItemFontAttrib
             // 

@@ -25,11 +25,11 @@ namespace Kan_Naim_Main {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class _10infoDataSetPreferedLinks : global::System.Data.DataSet {
         
-        private Table_LinksPreferedDataTable tableTable_LinksPrefered;
-        
         private Table_PhotosArchiveDataTable tableTable_PhotosArchive;
         
         private DataTablePreferedLinksDataTable tableDataTablePreferedLinks;
+        
+        private Table_LinksPreferedDataTable tableTable_LinksPrefered;
         
         private global::System.Data.DataRelation relationTable_LinksPrefered_Table_PhotosArchive;
         
@@ -59,14 +59,14 @@ namespace Kan_Naim_Main {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Table_LinksPrefered"] != null)) {
-                    base.Tables.Add(new Table_LinksPreferedDataTable(ds.Tables["Table_LinksPrefered"]));
-                }
                 if ((ds.Tables["Table_PhotosArchive"] != null)) {
                     base.Tables.Add(new Table_PhotosArchiveDataTable(ds.Tables["Table_PhotosArchive"]));
                 }
                 if ((ds.Tables["DataTablePreferedLinks"] != null)) {
                     base.Tables.Add(new DataTablePreferedLinksDataTable(ds.Tables["DataTablePreferedLinks"]));
+                }
+                if ((ds.Tables["Table_LinksPrefered"] != null)) {
+                    base.Tables.Add(new Table_LinksPreferedDataTable(ds.Tables["Table_LinksPrefered"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -89,15 +89,6 @@ namespace Kan_Naim_Main {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Table_LinksPreferedDataTable Table_LinksPrefered {
-            get {
-                return this.tableTable_LinksPrefered;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public Table_PhotosArchiveDataTable Table_PhotosArchive {
             get {
                 return this.tableTable_PhotosArchive;
@@ -110,6 +101,15 @@ namespace Kan_Naim_Main {
         public DataTablePreferedLinksDataTable DataTablePreferedLinks {
             get {
                 return this.tableDataTablePreferedLinks;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Table_LinksPreferedDataTable Table_LinksPrefered {
+            get {
+                return this.tableTable_LinksPrefered;
             }
         }
         
@@ -172,14 +172,14 @@ namespace Kan_Naim_Main {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Table_LinksPrefered"] != null)) {
-                    base.Tables.Add(new Table_LinksPreferedDataTable(ds.Tables["Table_LinksPrefered"]));
-                }
                 if ((ds.Tables["Table_PhotosArchive"] != null)) {
                     base.Tables.Add(new Table_PhotosArchiveDataTable(ds.Tables["Table_PhotosArchive"]));
                 }
                 if ((ds.Tables["DataTablePreferedLinks"] != null)) {
                     base.Tables.Add(new DataTablePreferedLinksDataTable(ds.Tables["DataTablePreferedLinks"]));
+                }
+                if ((ds.Tables["Table_LinksPrefered"] != null)) {
+                    base.Tables.Add(new Table_LinksPreferedDataTable(ds.Tables["Table_LinksPrefered"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -211,12 +211,6 @@ namespace Kan_Naim_Main {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         internal void InitVars(bool initTable) {
-            this.tableTable_LinksPrefered = ((Table_LinksPreferedDataTable)(base.Tables["Table_LinksPrefered"]));
-            if ((initTable == true)) {
-                if ((this.tableTable_LinksPrefered != null)) {
-                    this.tableTable_LinksPrefered.InitVars();
-                }
-            }
             this.tableTable_PhotosArchive = ((Table_PhotosArchiveDataTable)(base.Tables["Table_PhotosArchive"]));
             if ((initTable == true)) {
                 if ((this.tableTable_PhotosArchive != null)) {
@@ -229,6 +223,12 @@ namespace Kan_Naim_Main {
                     this.tableDataTablePreferedLinks.InitVars();
                 }
             }
+            this.tableTable_LinksPrefered = ((Table_LinksPreferedDataTable)(base.Tables["Table_LinksPrefered"]));
+            if ((initTable == true)) {
+                if ((this.tableTable_LinksPrefered != null)) {
+                    this.tableTable_LinksPrefered.InitVars();
+                }
+            }
             this.relationTable_LinksPrefered_Table_PhotosArchive = this.Relations["Table_LinksPrefered_Table_PhotosArchive"];
         }
         
@@ -239,21 +239,16 @@ namespace Kan_Naim_Main {
             this.Namespace = "http://tempuri.org/_10infoDataSetPreferedLinks.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableTable_LinksPrefered = new Table_LinksPreferedDataTable();
-            base.Tables.Add(this.tableTable_LinksPrefered);
             this.tableTable_PhotosArchive = new Table_PhotosArchiveDataTable();
             base.Tables.Add(this.tableTable_PhotosArchive);
             this.tableDataTablePreferedLinks = new DataTablePreferedLinksDataTable();
             base.Tables.Add(this.tableDataTablePreferedLinks);
+            this.tableTable_LinksPrefered = new Table_LinksPreferedDataTable();
+            base.Tables.Add(this.tableTable_LinksPrefered);
             this.relationTable_LinksPrefered_Table_PhotosArchive = new global::System.Data.DataRelation("Table_LinksPrefered_Table_PhotosArchive", new global::System.Data.DataColumn[] {
                         this.tableTable_LinksPrefered.PhotoIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableTable_PhotosArchive.IdColumn}, false);
             this.Relations.Add(this.relationTable_LinksPrefered_Table_PhotosArchive);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private bool ShouldSerializeTable_LinksPrefered() {
-            return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -263,6 +258,11 @@ namespace Kan_Naim_Main {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private bool ShouldSerializeDataTablePreferedLinks() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeTable_LinksPrefered() {
             return false;
         }
         
@@ -319,299 +319,11 @@ namespace Kan_Naim_Main {
             return type;
         }
         
-        public delegate void Table_LinksPreferedRowChangeEventHandler(object sender, Table_LinksPreferedRowChangeEvent e);
-        
         public delegate void Table_PhotosArchiveRowChangeEventHandler(object sender, Table_PhotosArchiveRowChangeEvent e);
         
         public delegate void DataTablePreferedLinksRowChangeEventHandler(object sender, DataTablePreferedLinksRowChangeEvent e);
         
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Table_LinksPreferedDataTable : global::System.Data.TypedTableBase<Table_LinksPreferedRow> {
-            
-            private global::System.Data.DataColumn columnPhotoId;
-            
-            private global::System.Data.DataColumn columnArticleId;
-            
-            private global::System.Data.DataColumn columnUrl;
-            
-            private global::System.Data.DataColumn columnOrderPlace;
-            
-            private global::System.Data.DataColumn columnAltText;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public Table_LinksPreferedDataTable() {
-                this.TableName = "Table_LinksPrefered";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal Table_LinksPreferedDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected Table_LinksPreferedDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn PhotoIdColumn {
-                get {
-                    return this.columnPhotoId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn ArticleIdColumn {
-                get {
-                    return this.columnArticleId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn UrlColumn {
-                get {
-                    return this.columnUrl;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn OrderPlaceColumn {
-                get {
-                    return this.columnOrderPlace;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn AltTextColumn {
-                get {
-                    return this.columnAltText;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public Table_LinksPreferedRow this[int index] {
-                get {
-                    return ((Table_LinksPreferedRow)(this.Rows[index]));
-                }
-            }
-            
-            public event Table_LinksPreferedRowChangeEventHandler Table_LinksPreferedRowChanging;
-            
-            public event Table_LinksPreferedRowChangeEventHandler Table_LinksPreferedRowChanged;
-            
-            public event Table_LinksPreferedRowChangeEventHandler Table_LinksPreferedRowDeleting;
-            
-            public event Table_LinksPreferedRowChangeEventHandler Table_LinksPreferedRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void AddTable_LinksPreferedRow(Table_LinksPreferedRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public Table_LinksPreferedRow AddTable_LinksPreferedRow(int PhotoId, int ArticleId, string Url, int OrderPlace, string AltText) {
-                Table_LinksPreferedRow rowTable_LinksPreferedRow = ((Table_LinksPreferedRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        PhotoId,
-                        ArticleId,
-                        Url,
-                        OrderPlace,
-                        AltText};
-                rowTable_LinksPreferedRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTable_LinksPreferedRow);
-                return rowTable_LinksPreferedRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public Table_LinksPreferedRow FindByPhotoId(int PhotoId) {
-                return ((Table_LinksPreferedRow)(this.Rows.Find(new object[] {
-                            PhotoId})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public override global::System.Data.DataTable Clone() {
-                Table_LinksPreferedDataTable cln = ((Table_LinksPreferedDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new Table_LinksPreferedDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal void InitVars() {
-                this.columnPhotoId = base.Columns["PhotoId"];
-                this.columnArticleId = base.Columns["ArticleId"];
-                this.columnUrl = base.Columns["Url"];
-                this.columnOrderPlace = base.Columns["OrderPlace"];
-                this.columnAltText = base.Columns["AltText"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            private void InitClass() {
-                this.columnPhotoId = new global::System.Data.DataColumn("PhotoId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPhotoId);
-                this.columnArticleId = new global::System.Data.DataColumn("ArticleId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnArticleId);
-                this.columnUrl = new global::System.Data.DataColumn("Url", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUrl);
-                this.columnOrderPlace = new global::System.Data.DataColumn("OrderPlace", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOrderPlace);
-                this.columnAltText = new global::System.Data.DataColumn("AltText", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAltText);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnPhotoId}, true));
-                this.columnPhotoId.AllowDBNull = false;
-                this.columnPhotoId.Unique = true;
-                this.columnUrl.MaxLength = 150;
-                this.columnAltText.AllowDBNull = false;
-                this.columnAltText.MaxLength = 100;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public Table_LinksPreferedRow NewTable_LinksPreferedRow() {
-                return ((Table_LinksPreferedRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Table_LinksPreferedRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override global::System.Type GetRowType() {
-                return typeof(Table_LinksPreferedRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.Table_LinksPreferedRowChanged != null)) {
-                    this.Table_LinksPreferedRowChanged(this, new Table_LinksPreferedRowChangeEvent(((Table_LinksPreferedRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.Table_LinksPreferedRowChanging != null)) {
-                    this.Table_LinksPreferedRowChanging(this, new Table_LinksPreferedRowChangeEvent(((Table_LinksPreferedRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.Table_LinksPreferedRowDeleted != null)) {
-                    this.Table_LinksPreferedRowDeleted(this, new Table_LinksPreferedRowChangeEvent(((Table_LinksPreferedRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.Table_LinksPreferedRowDeleting != null)) {
-                    this.Table_LinksPreferedRowDeleting(this, new Table_LinksPreferedRowChangeEvent(((Table_LinksPreferedRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void RemoveTable_LinksPreferedRow(Table_LinksPreferedRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _10infoDataSetPreferedLinks ds = new _10infoDataSetPreferedLinks();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Table_LinksPreferedDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
+        public delegate void Table_LinksPreferedRowChangeEventHandler(object sender, Table_LinksPreferedRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1019,6 +731,8 @@ namespace Kan_Naim_Main {
             
             private global::System.Data.DataColumn columnAltText;
             
+            private global::System.Data.DataColumn columnLinkId;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public DataTablePreferedLinksDataTable() {
                 this.TableName = "DataTablePreferedLinks";
@@ -1092,6 +806,13 @@ namespace Kan_Naim_Main {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn LinkIdColumn {
+                get {
+                    return this.columnLinkId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1128,10 +849,17 @@ namespace Kan_Naim_Main {
                         ArticleId,
                         Url,
                         OrderPlace,
-                        AltText};
+                        AltText,
+                        null};
                 rowDataTablePreferedLinksRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTablePreferedLinksRow);
                 return rowDataTablePreferedLinksRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public DataTablePreferedLinksRow FindByLinkId(int LinkId) {
+                return ((DataTablePreferedLinksRow)(this.Rows.Find(new object[] {
+                            LinkId})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1154,6 +882,7 @@ namespace Kan_Naim_Main {
                 this.columnUrl = base.Columns["Url"];
                 this.columnOrderPlace = base.Columns["OrderPlace"];
                 this.columnAltText = base.Columns["AltText"];
+                this.columnLinkId = base.Columns["LinkId"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1170,11 +899,21 @@ namespace Kan_Naim_Main {
                 base.Columns.Add(this.columnOrderPlace);
                 this.columnAltText = new global::System.Data.DataColumn("AltText", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAltText);
+                this.columnLinkId = new global::System.Data.DataColumn("LinkId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLinkId);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnLinkId}, true));
                 this.columnImageUrl.AllowDBNull = false;
                 this.columnImageUrl.MaxLength = 50;
                 this.columnUrl.MaxLength = 150;
                 this.columnAltText.AllowDBNull = false;
                 this.columnAltText.MaxLength = 100;
+                this.columnLinkId.AutoIncrement = true;
+                this.columnLinkId.AutoIncrementSeed = -1;
+                this.columnLinkId.AutoIncrementStep = -1;
+                this.columnLinkId.AllowDBNull = false;
+                this.columnLinkId.ReadOnly = true;
+                this.columnLinkId.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1293,122 +1032,307 @@ namespace Kan_Naim_Main {
         }
         
         /// <summary>
-        ///Represents strongly named DataRow class.
+        ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public partial class Table_LinksPreferedRow : global::System.Data.DataRow {
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Table_LinksPreferedDataTable : global::System.Data.TypedTableBase<Table_LinksPreferedRow> {
             
-            private Table_LinksPreferedDataTable tableTable_LinksPrefered;
+            private global::System.Data.DataColumn columnLinkId;
+            
+            private global::System.Data.DataColumn columnPhotoId;
+            
+            private global::System.Data.DataColumn columnArticleId;
+            
+            private global::System.Data.DataColumn columnUrl;
+            
+            private global::System.Data.DataColumn columnOrderPlace;
+            
+            private global::System.Data.DataColumn columnAltText;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal Table_LinksPreferedRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableTable_LinksPrefered = ((Table_LinksPreferedDataTable)(this.Table));
+            public Table_LinksPreferedDataTable() {
+                this.TableName = "Table_LinksPrefered";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int PhotoId {
-                get {
-                    return ((int)(this[this.tableTable_LinksPrefered.PhotoIdColumn]));
+            internal Table_LinksPreferedDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
                 }
-                set {
-                    this[this.tableTable_LinksPrefered.PhotoIdColumn] = value;
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected Table_LinksPreferedDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn LinkIdColumn {
+                get {
+                    return this.columnLinkId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int ArticleId {
+            public global::System.Data.DataColumn PhotoIdColumn {
                 get {
+                    return this.columnPhotoId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ArticleIdColumn {
+                get {
+                    return this.columnArticleId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn UrlColumn {
+                get {
+                    return this.columnUrl;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn OrderPlaceColumn {
+                get {
+                    return this.columnOrderPlace;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn AltTextColumn {
+                get {
+                    return this.columnAltText;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Table_LinksPreferedRow this[int index] {
+                get {
+                    return ((Table_LinksPreferedRow)(this.Rows[index]));
+                }
+            }
+            
+            public event Table_LinksPreferedRowChangeEventHandler Table_LinksPreferedRowChanging;
+            
+            public event Table_LinksPreferedRowChangeEventHandler Table_LinksPreferedRowChanged;
+            
+            public event Table_LinksPreferedRowChangeEventHandler Table_LinksPreferedRowDeleting;
+            
+            public event Table_LinksPreferedRowChangeEventHandler Table_LinksPreferedRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddTable_LinksPreferedRow(Table_LinksPreferedRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Table_LinksPreferedRow AddTable_LinksPreferedRow(int PhotoId, int ArticleId, string Url, int OrderPlace, string AltText) {
+                Table_LinksPreferedRow rowTable_LinksPreferedRow = ((Table_LinksPreferedRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        PhotoId,
+                        ArticleId,
+                        Url,
+                        OrderPlace,
+                        AltText};
+                rowTable_LinksPreferedRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTable_LinksPreferedRow);
+                return rowTable_LinksPreferedRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Table_LinksPreferedRow FindByLinkId(int LinkId) {
+                return ((Table_LinksPreferedRow)(this.Rows.Find(new object[] {
+                            LinkId})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                Table_LinksPreferedDataTable cln = ((Table_LinksPreferedDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Table_LinksPreferedDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnLinkId = base.Columns["LinkId"];
+                this.columnPhotoId = base.Columns["PhotoId"];
+                this.columnArticleId = base.Columns["ArticleId"];
+                this.columnUrl = base.Columns["Url"];
+                this.columnOrderPlace = base.Columns["OrderPlace"];
+                this.columnAltText = base.Columns["AltText"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnLinkId = new global::System.Data.DataColumn("LinkId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLinkId);
+                this.columnPhotoId = new global::System.Data.DataColumn("PhotoId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPhotoId);
+                this.columnArticleId = new global::System.Data.DataColumn("ArticleId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnArticleId);
+                this.columnUrl = new global::System.Data.DataColumn("Url", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUrl);
+                this.columnOrderPlace = new global::System.Data.DataColumn("OrderPlace", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOrderPlace);
+                this.columnAltText = new global::System.Data.DataColumn("AltText", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAltText);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnLinkId}, true));
+                this.columnLinkId.AutoIncrement = true;
+                this.columnLinkId.AutoIncrementSeed = -1;
+                this.columnLinkId.AutoIncrementStep = -1;
+                this.columnLinkId.AllowDBNull = false;
+                this.columnLinkId.ReadOnly = true;
+                this.columnLinkId.Unique = true;
+                this.columnUrl.MaxLength = 150;
+                this.columnAltText.AllowDBNull = false;
+                this.columnAltText.MaxLength = 100;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Table_LinksPreferedRow NewTable_LinksPreferedRow() {
+                return ((Table_LinksPreferedRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Table_LinksPreferedRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(Table_LinksPreferedRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Table_LinksPreferedRowChanged != null)) {
+                    this.Table_LinksPreferedRowChanged(this, new Table_LinksPreferedRowChangeEvent(((Table_LinksPreferedRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Table_LinksPreferedRowChanging != null)) {
+                    this.Table_LinksPreferedRowChanging(this, new Table_LinksPreferedRowChangeEvent(((Table_LinksPreferedRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Table_LinksPreferedRowDeleted != null)) {
+                    this.Table_LinksPreferedRowDeleted(this, new Table_LinksPreferedRowChangeEvent(((Table_LinksPreferedRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Table_LinksPreferedRowDeleting != null)) {
+                    this.Table_LinksPreferedRowDeleting(this, new Table_LinksPreferedRowChangeEvent(((Table_LinksPreferedRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveTable_LinksPreferedRow(Table_LinksPreferedRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                _10infoDataSetPreferedLinks ds = new _10infoDataSetPreferedLinks();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Table_LinksPreferedDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
                     try {
-                        return ((int)(this[this.tableTable_LinksPrefered.ArticleIdColumn]));
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ArticleId\' in table \'Table_LinksPrefered\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTable_LinksPrefered.ArticleIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string Url {
-                get {
-                    try {
-                        return ((string)(this[this.tableTable_LinksPrefered.UrlColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Url\' in table \'Table_LinksPrefered\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTable_LinksPrefered.UrlColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int OrderPlace {
-                get {
-                    try {
-                        return ((int)(this[this.tableTable_LinksPrefered.OrderPlaceColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'OrderPlace\' in table \'Table_LinksPrefered\' is DBNull.", e);
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
                     }
                 }
-                set {
-                    this[this.tableTable_LinksPrefered.OrderPlaceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string AltText {
-                get {
-                    return ((string)(this[this.tableTable_LinksPrefered.AltTextColumn]));
-                }
-                set {
-                    this[this.tableTable_LinksPrefered.AltTextColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsArticleIdNull() {
-                return this.IsNull(this.tableTable_LinksPrefered.ArticleIdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetArticleIdNull() {
-                this[this.tableTable_LinksPrefered.ArticleIdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsUrlNull() {
-                return this.IsNull(this.tableTable_LinksPrefered.UrlColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetUrlNull() {
-                this[this.tableTable_LinksPrefered.UrlColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsOrderPlaceNull() {
-                return this.IsNull(this.tableTable_LinksPrefered.OrderPlaceColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetOrderPlaceNull() {
-                this[this.tableTable_LinksPrefered.OrderPlaceColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public Table_PhotosArchiveRow[] GetTable_PhotosArchiveRows() {
-                if ((this.Table.ChildRelations["Table_LinksPrefered_Table_PhotosArchive"] == null)) {
-                    return new Table_PhotosArchiveRow[0];
-                }
-                else {
-                    return ((Table_PhotosArchiveRow[])(base.GetChildRows(this.Table.ChildRelations["Table_LinksPrefered_Table_PhotosArchive"])));
-                }
+                xs.Add(dsSchema);
+                return type;
             }
         }
         
@@ -1772,6 +1696,16 @@ namespace Kan_Naim_Main {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int LinkId {
+                get {
+                    return ((int)(this[this.tableDataTablePreferedLinks.LinkIdColumn]));
+                }
+                set {
+                    this[this.tableDataTablePreferedLinks.LinkIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public bool IsPhotoIdNull() {
                 return this.IsNull(this.tableDataTablePreferedLinks.PhotoIdColumn);
             }
@@ -1813,32 +1747,146 @@ namespace Kan_Naim_Main {
         }
         
         /// <summary>
-        ///Row event argument class
+        ///Represents strongly named DataRow class.
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public class Table_LinksPreferedRowChangeEvent : global::System.EventArgs {
+        public partial class Table_LinksPreferedRow : global::System.Data.DataRow {
             
-            private Table_LinksPreferedRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
+            private Table_LinksPreferedDataTable tableTable_LinksPrefered;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public Table_LinksPreferedRowChangeEvent(Table_LinksPreferedRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
+            internal Table_LinksPreferedRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableTable_LinksPrefered = ((Table_LinksPreferedDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public Table_LinksPreferedRow Row {
+            public int LinkId {
                 get {
-                    return this.eventRow;
+                    return ((int)(this[this.tableTable_LinksPrefered.LinkIdColumn]));
+                }
+                set {
+                    this[this.tableTable_LinksPrefered.LinkIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataRowAction Action {
+            public int PhotoId {
                 get {
-                    return this.eventAction;
+                    try {
+                        return ((int)(this[this.tableTable_LinksPrefered.PhotoIdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PhotoId\' in table \'Table_LinksPrefered\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTable_LinksPrefered.PhotoIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int ArticleId {
+                get {
+                    try {
+                        return ((int)(this[this.tableTable_LinksPrefered.ArticleIdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ArticleId\' in table \'Table_LinksPrefered\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTable_LinksPrefered.ArticleIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string Url {
+                get {
+                    try {
+                        return ((string)(this[this.tableTable_LinksPrefered.UrlColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Url\' in table \'Table_LinksPrefered\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTable_LinksPrefered.UrlColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int OrderPlace {
+                get {
+                    try {
+                        return ((int)(this[this.tableTable_LinksPrefered.OrderPlaceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OrderPlace\' in table \'Table_LinksPrefered\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTable_LinksPrefered.OrderPlaceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string AltText {
+                get {
+                    return ((string)(this[this.tableTable_LinksPrefered.AltTextColumn]));
+                }
+                set {
+                    this[this.tableTable_LinksPrefered.AltTextColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsPhotoIdNull() {
+                return this.IsNull(this.tableTable_LinksPrefered.PhotoIdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetPhotoIdNull() {
+                this[this.tableTable_LinksPrefered.PhotoIdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsArticleIdNull() {
+                return this.IsNull(this.tableTable_LinksPrefered.ArticleIdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetArticleIdNull() {
+                this[this.tableTable_LinksPrefered.ArticleIdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsUrlNull() {
+                return this.IsNull(this.tableTable_LinksPrefered.UrlColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetUrlNull() {
+                this[this.tableTable_LinksPrefered.UrlColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsOrderPlaceNull() {
+                return this.IsNull(this.tableTable_LinksPrefered.OrderPlaceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetOrderPlaceNull() {
+                this[this.tableTable_LinksPrefered.OrderPlaceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Table_PhotosArchiveRow[] GetTable_PhotosArchiveRows() {
+                if ((this.Table.ChildRelations["Table_LinksPrefered_Table_PhotosArchive"] == null)) {
+                    return new Table_PhotosArchiveRow[0];
+                }
+                else {
+                    return ((Table_PhotosArchiveRow[])(base.GetChildRows(this.Table.ChildRelations["Table_LinksPrefered_Table_PhotosArchive"])));
                 }
             }
         }
@@ -1904,171 +1952,41 @@ namespace Kan_Naim_Main {
                 }
             }
         }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        public class Table_LinksPreferedRowChangeEvent : global::System.EventArgs {
+            
+            private Table_LinksPreferedRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Table_LinksPreferedRowChangeEvent(Table_LinksPreferedRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Table_LinksPreferedRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
     }
 }
 namespace Kan_Naim_Main._10infoDataSetPreferedLinksTableAdapters {
     
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Table_LinksPreferedTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Table_LinksPreferedTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Table_LinksPrefered";
-            tableMapping.ColumnMappings.Add("PhotoId", "PhotoId");
-            tableMapping.ColumnMappings.Add("ArticleId", "ArticleId");
-            tableMapping.ColumnMappings.Add("Url", "Url");
-            tableMapping.ColumnMappings.Add("OrderPlace", "OrderPlace");
-            tableMapping.ColumnMappings.Add("AltText", "AltText");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Kan_Naim_Main.Properties.Settings.Default._10infoConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT PhotoId, ArticleId, Url, OrderPlace, AltText FROM dbo.Table_LinksPrefered";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_10infoDataSetPreferedLinks.Table_LinksPreferedDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _10infoDataSetPreferedLinks.Table_LinksPreferedDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            _10infoDataSetPreferedLinks.Table_LinksPreferedDataTable dataTable = new _10infoDataSetPreferedLinks.Table_LinksPreferedDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
     
     /// <summary>
     ///Represents the connection and commands used to retrieve and save data.
@@ -2835,7 +2753,13 @@ SELECT Id, ImageUrl, PhotoTypeId, Date, CssClass, UrlLink, LastTakId, LastArticl
             tableMapping.ColumnMappings.Add("Url", "Url");
             tableMapping.ColumnMappings.Add("OrderPlace", "OrderPlace");
             tableMapping.ColumnMappings.Add("AltText", "AltText");
+            tableMapping.ColumnMappings.Add("LinkId", "LinkId");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM Table_LinksPrefered\r\nWHERE     (LinkId = @LinkId)";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LinkId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LinkId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2850,7 +2774,7 @@ SELECT Id, ImageUrl, PhotoTypeId, Date, CssClass, UrlLink, LastTakId, LastArticl
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT     Table_PhotosArchive.ImageUrl, Table_LinksPrefered.PhotoId, Table_LinksPrefered.ArticleId, Table_LinksPrefered.Url, Table_LinksPrefered.OrderPlace,
-                       Table_LinksPrefered.AltText
+                       Table_LinksPrefered.AltText, Table_LinksPrefered.LinkId
 FROM         Table_LinksPrefered INNER JOIN
                       Table_PhotosArchive ON Table_LinksPrefered.PhotoId = Table_PhotosArchive.Id";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
@@ -2877,6 +2801,423 @@ FROM         Table_LinksPrefered INNER JOIN
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(_10infoDataSetPreferedLinks.DataTablePreferedLinksDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(_10infoDataSetPreferedLinks dataSet) {
+            return this.Adapter.Update(dataSet, "DataTablePreferedLinks");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Table_LinksPreferedTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Table_LinksPreferedTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Table_LinksPrefered";
+            tableMapping.ColumnMappings.Add("LinkId", "LinkId");
+            tableMapping.ColumnMappings.Add("PhotoId", "PhotoId");
+            tableMapping.ColumnMappings.Add("ArticleId", "ArticleId");
+            tableMapping.ColumnMappings.Add("Url", "Url");
+            tableMapping.ColumnMappings.Add("OrderPlace", "OrderPlace");
+            tableMapping.ColumnMappings.Add("AltText", "AltText");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM Table_LinksPrefered\r\nWHERE     (LinkId = @LinkId)";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LinkId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LinkId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Table_LinksPrefered] ([PhotoId], [ArticleId], [Url], [OrderPlace], [AltText]) VALUES (@PhotoId, @ArticleId, @Url, @OrderPlace, @AltText);
+SELECT LinkId, PhotoId, ArticleId, Url, OrderPlace, AltText FROM Table_LinksPrefered WHERE (LinkId = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PhotoId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhotoId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ArticleId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ArticleId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Url", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Url", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OrderPlace", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OrderPlace", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AltText", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AltText", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Table_LinksPrefered] SET [PhotoId] = @PhotoId, [ArticleId] = @ArticleId, [Url] = @Url, [OrderPlace] = @OrderPlace, [AltText] = @AltText WHERE (([LinkId] = @Original_LinkId) AND ((@IsNull_PhotoId = 1 AND [PhotoId] IS NULL) OR ([PhotoId] = @Original_PhotoId)) AND ((@IsNull_ArticleId = 1 AND [ArticleId] IS NULL) OR ([ArticleId] = @Original_ArticleId)) AND ((@IsNull_Url = 1 AND [Url] IS NULL) OR ([Url] = @Original_Url)) AND ((@IsNull_OrderPlace = 1 AND [OrderPlace] IS NULL) OR ([OrderPlace] = @Original_OrderPlace)) AND ([AltText] = @Original_AltText));
+SELECT LinkId, PhotoId, ArticleId, Url, OrderPlace, AltText FROM Table_LinksPrefered WHERE (LinkId = @LinkId)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PhotoId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhotoId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ArticleId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ArticleId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Url", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Url", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OrderPlace", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OrderPlace", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AltText", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AltText", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LinkId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LinkId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PhotoId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhotoId", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PhotoId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhotoId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ArticleId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ArticleId", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ArticleId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ArticleId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Url", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Url", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Url", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Url", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_OrderPlace", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OrderPlace", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OrderPlace", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OrderPlace", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AltText", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AltText", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LinkId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LinkId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Kan_Naim_Main.Properties.Settings.Default._10infoConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT LinkId, PhotoId, ArticleId, Url, OrderPlace, AltText FROM dbo.Table_LinksP" +
+                "refered";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(_10infoDataSetPreferedLinks.Table_LinksPreferedDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual _10infoDataSetPreferedLinks.Table_LinksPreferedDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            _10infoDataSetPreferedLinks.Table_LinksPreferedDataTable dataTable = new _10infoDataSetPreferedLinks.Table_LinksPreferedDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(_10infoDataSetPreferedLinks.Table_LinksPreferedDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(_10infoDataSetPreferedLinks dataSet) {
+            return this.Adapter.Update(dataSet, "Table_LinksPrefered");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int LinkId) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(LinkId));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(global::System.Nullable<int> PhotoId, global::System.Nullable<int> ArticleId, string Url, global::System.Nullable<int> OrderPlace, string AltText) {
+            if ((PhotoId.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(PhotoId.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((ArticleId.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(ArticleId.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Url == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Url));
+            }
+            if ((OrderPlace.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(OrderPlace.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((AltText == null)) {
+                throw new global::System.ArgumentNullException("AltText");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(AltText));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<int> PhotoId, global::System.Nullable<int> ArticleId, string Url, global::System.Nullable<int> OrderPlace, string AltText, int Original_LinkId, global::System.Nullable<int> Original_PhotoId, global::System.Nullable<int> Original_ArticleId, string Original_Url, global::System.Nullable<int> Original_OrderPlace, string Original_AltText, int LinkId) {
+            if ((PhotoId.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(PhotoId.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((ArticleId.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(ArticleId.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Url == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Url));
+            }
+            if ((OrderPlace.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(OrderPlace.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((AltText == null)) {
+                throw new global::System.ArgumentNullException("AltText");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(AltText));
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_LinkId));
+            if ((Original_PhotoId.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_PhotoId.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ArticleId.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_ArticleId.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Url == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Url));
+            }
+            if ((Original_OrderPlace.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_OrderPlace.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Original_AltText == null)) {
+                throw new global::System.ArgumentNullException("Original_AltText");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_AltText));
+            }
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(LinkId));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<int> PhotoId, global::System.Nullable<int> ArticleId, string Url, global::System.Nullable<int> OrderPlace, string AltText, int Original_LinkId, global::System.Nullable<int> Original_PhotoId, global::System.Nullable<int> Original_ArticleId, string Original_Url, global::System.Nullable<int> Original_OrderPlace, string Original_AltText) {
+            return this.Update(PhotoId, ArticleId, Url, OrderPlace, AltText, Original_LinkId, Original_PhotoId, Original_ArticleId, Original_Url, Original_OrderPlace, Original_AltText, Original_LinkId);
+        }
     }
     
     /// <summary>
@@ -2893,6 +3234,10 @@ FROM         Table_LinksPrefered INNER JOIN
         private UpdateOrderOption _updateOrder;
         
         private Table_PhotosArchiveTableAdapter _table_PhotosArchiveTableAdapter;
+        
+        private DataTablePreferedLinksTableAdapter _dataTablePreferedLinksTableAdapter;
+        
+        private Table_LinksPreferedTableAdapter _table_LinksPreferedTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -2922,6 +3267,32 @@ FROM         Table_LinksPrefered INNER JOIN
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" +
+            "", "System.Drawing.Design.UITypeEditor")]
+        public DataTablePreferedLinksTableAdapter DataTablePreferedLinksTableAdapter {
+            get {
+                return this._dataTablePreferedLinksTableAdapter;
+            }
+            set {
+                this._dataTablePreferedLinksTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" +
+            "", "System.Drawing.Design.UITypeEditor")]
+        public Table_LinksPreferedTableAdapter Table_LinksPreferedTableAdapter {
+            get {
+                return this._table_LinksPreferedTableAdapter;
+            }
+            set {
+                this._table_LinksPreferedTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -2942,6 +3313,14 @@ FROM         Table_LinksPrefered INNER JOIN
                             && (this._table_PhotosArchiveTableAdapter.Connection != null))) {
                     return this._table_PhotosArchiveTableAdapter.Connection;
                 }
+                if (((this._dataTablePreferedLinksTableAdapter != null) 
+                            && (this._dataTablePreferedLinksTableAdapter.Connection != null))) {
+                    return this._dataTablePreferedLinksTableAdapter.Connection;
+                }
+                if (((this._table_LinksPreferedTableAdapter != null) 
+                            && (this._table_LinksPreferedTableAdapter.Connection != null))) {
+                    return this._table_LinksPreferedTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -2957,6 +3336,12 @@ FROM         Table_LinksPrefered INNER JOIN
                 if ((this._table_PhotosArchiveTableAdapter != null)) {
                     count = (count + 1);
                 }
+                if ((this._dataTablePreferedLinksTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._table_LinksPreferedTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -2967,12 +3352,30 @@ FROM         Table_LinksPrefered INNER JOIN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private int UpdateUpdatedRows(_10infoDataSetPreferedLinks dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._table_LinksPreferedTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Table_LinksPrefered.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._table_LinksPreferedTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._table_PhotosArchiveTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Table_PhotosArchive.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._table_PhotosArchiveTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._dataTablePreferedLinksTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.DataTablePreferedLinks.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._dataTablePreferedLinksTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -2985,11 +3388,27 @@ FROM         Table_LinksPrefered INNER JOIN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private int UpdateInsertedRows(_10infoDataSetPreferedLinks dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._table_LinksPreferedTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Table_LinksPrefered.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._table_LinksPreferedTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._table_PhotosArchiveTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Table_PhotosArchive.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._table_PhotosArchiveTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._dataTablePreferedLinksTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.DataTablePreferedLinks.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._dataTablePreferedLinksTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -3002,11 +3421,27 @@ FROM         Table_LinksPrefered INNER JOIN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private int UpdateDeletedRows(_10infoDataSetPreferedLinks dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._dataTablePreferedLinksTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.DataTablePreferedLinks.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._dataTablePreferedLinksTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._table_PhotosArchiveTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Table_PhotosArchive.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._table_PhotosArchiveTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._table_LinksPreferedTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Table_LinksPrefered.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._table_LinksPreferedTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -3052,6 +3487,16 @@ FROM         Table_LinksPrefered INNER JOIN
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
+            if (((this._dataTablePreferedLinksTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._dataTablePreferedLinksTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._table_LinksPreferedTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._table_LinksPreferedTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -3091,6 +3536,24 @@ FROM         Table_LinksPrefered INNER JOIN
                     if (this._table_PhotosArchiveTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._table_PhotosArchiveTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._table_PhotosArchiveTableAdapter.Adapter);
+                    }
+                }
+                if ((this._dataTablePreferedLinksTableAdapter != null)) {
+                    revertConnections.Add(this._dataTablePreferedLinksTableAdapter, this._dataTablePreferedLinksTableAdapter.Connection);
+                    this._dataTablePreferedLinksTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._dataTablePreferedLinksTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._dataTablePreferedLinksTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._dataTablePreferedLinksTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._dataTablePreferedLinksTableAdapter.Adapter);
+                    }
+                }
+                if ((this._table_LinksPreferedTableAdapter != null)) {
+                    revertConnections.Add(this._table_LinksPreferedTableAdapter, this._table_LinksPreferedTableAdapter.Connection);
+                    this._table_LinksPreferedTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._table_LinksPreferedTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._table_LinksPreferedTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._table_LinksPreferedTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._table_LinksPreferedTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -3154,6 +3617,14 @@ FROM         Table_LinksPrefered INNER JOIN
                 if ((this._table_PhotosArchiveTableAdapter != null)) {
                     this._table_PhotosArchiveTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._table_PhotosArchiveTableAdapter]));
                     this._table_PhotosArchiveTableAdapter.Transaction = null;
+                }
+                if ((this._dataTablePreferedLinksTableAdapter != null)) {
+                    this._dataTablePreferedLinksTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._dataTablePreferedLinksTableAdapter]));
+                    this._dataTablePreferedLinksTableAdapter.Transaction = null;
+                }
+                if ((this._table_LinksPreferedTableAdapter != null)) {
+                    this._table_LinksPreferedTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._table_LinksPreferedTableAdapter]));
+                    this._table_LinksPreferedTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
