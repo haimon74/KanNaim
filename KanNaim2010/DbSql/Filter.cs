@@ -95,7 +95,14 @@ namespace DbSql
                    where c.ArticleId == id
                    select c;
         }
-        
+        public static IQueryable<Table_Taktzirim> GetTaktzirimByBroadcast()
+        {
+            return from c in Db.Table_Taktzirims
+                   where c.ScheduleId > 0
+                   orderby c.ScheduleId descending 
+                   select c;
+        }
+
         public static Table_VideosArchive GetVideoFromId(int id)
         {
             var result = from c in Db.Table_VideosArchives

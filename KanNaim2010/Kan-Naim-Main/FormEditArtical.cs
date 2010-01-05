@@ -11,15 +11,44 @@ namespace Kan_Naim_Main
 {
     public partial class FormEditArtical : Form
     {
+        private static bool _isNewArticle = true;
         private static readonly DataClassesKanNaimDataContext Db = new DataClassesKanNaimDataContext();
         private static Table_PhotosArchive _tblPhotos = new Table_PhotosArchive();
         private static Table_OriginalPhotosArchive _tblOriginalPhotos = new Table_OriginalPhotosArchive();
         private static Table_Article _tblArticle = new Table_Article();
         private static Table_LookupCategory _tblLookupCategories = new Table_LookupCategory();
+        //private static IDictionary<string, UserControlTakFill> _ucTakFillCollection =
+        //        new Dictionary<string, UserControlTakFill>
+        //            {
+        //                {
+        //                    "takMedium",
+        //                    _userControlTakFillSizeMedium.ucTakContent1
+        //                    },
+        //                {
+        //                    "takSmall",
+        //                    _userControlTakFillSizeSmall.ucTakContent1.
+        //                    comboBoxTakPhoto
+        //                    },
+        //                {
+        //                    "takX1",
+        //                    _userControlTakFillSizeX1.ucTakContent1.
+        //                    comboBoxTakPhoto
+        //                    },
+        //                {
+        //                    "takX2",
+        //                    _userControlTakFillSizeX2.ucTakContent1.
+        //                    comboBoxTakPhoto
+        //                    },
+        //                {
+        //                    "takX3",
+        //                    _userControlTakFillSizeX3.ucTakContent1.
+        //                    comboBoxTakPhoto
+        //                    }
+        //            };
 
         public static readonly Dictionary<string, string>[] StylesCollection = new Dictionary<string, string>[6];
         public static readonly Dictionary<string, string>[] HyperlinksCollection = new Dictionary<string, string>[6];
-
+        
         private static readonly FormEditArtical SingleFormEditArtical = new FormEditArtical();
 
         private FormEditArtical()
@@ -82,13 +111,21 @@ namespace Kan_Naim_Main
 
         public static FormEditArtical GetFormEditArtical(int articleId)
         {
-            _tblArticle = (Db.Table_Articles
-                .Where(c => c.ArticleId == articleId))
-                .Single();
-            
-            PopulateFromArticle();
+            try
+            {
+                _tblArticle = (Db.Table_Articles
+                    .Where(c => c.ArticleId == articleId))
+                    .Single();
 
-            return SingleFormEditArtical;
+                PopulateFromArticle();
+                _isNewArticle = false;
+                return SingleFormEditArtical;
+            }
+            catch
+            {
+                _isNewArticle = true;
+                return GetFormEditNewArtical("חדשות", "משה נעים");
+            }
         }
 
 
@@ -137,12 +174,11 @@ namespace Kan_Naim_Main
             _tblArticle.CreateDate = now;
             _tblArticle.UpdateDate = now;
             //FormEditArtical._tblArticle.CategoryId = (int)singleFormEditArtical.comboBoxArticleCategory.SelectedValue;
-            Db.Table_Articles.InsertOnSubmit(_tblArticle);
-            Db.SubmitChanges();
-            var newArticle = (from c in Db.Table_Articles
-                             where (c.CreateDate == now)
-                             select c).Single();
-            return newArticle;
+            //Db.SubmitChanges();
+            //var newArticle = (from c in Db.Table_Articles
+            //                 where (c.CreateDate == now)
+            //                 select c).Single();
+            return _tblArticle;
         }
 
         private static void PopulateFromArticle()
@@ -159,9 +195,17 @@ namespace Kan_Naim_Main
             SingleFormEditArtical._textBoxTags.Text = _tblArticle.MetaTags;
             SingleFormEditArtical._textBoxArticleTitle.Text = _tblArticle.Title;
             SingleFormEditArtical._textBoxArticleSubtitle.Text = _tblArticle.SubTitle;
-            DateTime now = DateTime.Now;
-            _tblArticle.CreateDate = now;
-            _tblArticle.UpdateDate = now;
+            char[] splitChars = {'|'};
+            string[] keysLookup = _tblArticle.KeysLookup.Split(splitChars, StringSplitOptions.RemoveEmptyEntries);
+            SingleFormEditArtical._listBoxSelectedCategories.Items.Clear();
+            foreach (string key in keysLookup)
+            {
+                SingleFormEditArtical._listBoxSelectedCategories.Items.Add(key.Trim());
+            }
+            // change date to 'Now' only when saving 
+            //DateTime now = DateTime.Now;
+            //_tblArticle.CreateDate = now;
+            //_tblArticle.UpdateDate = now;
             SingleFormEditArtical._comboBoxArticlePhoto = SingleFormEditArtical.FillComboBoxWithPhotosArchive(SingleFormEditArtical._comboBoxArticlePhoto);
             SingleFormEditArtical.comboBoxArticlePhoto_SelectedIndexChanged(SingleFormEditArtical._comboBoxArticleCategory, new EventArgs());
         }
@@ -1065,10 +1109,25 @@ namespace Kan_Naim_Main
             DateTime now = DateTime.Now;
             _tblArticle.UpdateDate = now;
 
-            Db.SubmitChanges();
+            try
+            {
+                if (_isNewArticle)
+                {
+                    Db.Table_Articles.InsertOnSubmit(_tblArticle);
+                }
+                Db.SubmitChanges();
+                _tblArticle = (from c in Db.Table_Articles
+                               where c.CreateDate == now
+                               select c).Single();
+                _isNewArticle = false;
 
-            // saving taktzirim
-            // TODO !
+                // saving taktzirim
+                // TODO !
+            }
+            catch
+            {
+                
+            }
         }
 
         private void buttonSaveVideoToArchive_Click(object sender, EventArgs e)
