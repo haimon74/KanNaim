@@ -186,8 +186,6 @@ namespace Kan_Naim_Main
             this._groupBox8.Controls.Add(this._richTextBoxArticleContent);
             this._groupBox8.Controls.Add(this._comboBoxVideoPos);
             this._groupBox8.Controls.Add(this._comboBoxImgPos);
-            this._groupBox8.Controls.Add(this._buttonSubTitleH2);
-            this._groupBox8.Controls.Add(this._buttonTitleH1);
             this._groupBox8.Controls.Add(this._buttonOpenEditor);
             this._groupBox8.Controls.Add(this._labelOriginPhotoId);
             this._groupBox8.Controls.Add(this._comboBoxArticleCategory);
@@ -213,6 +211,8 @@ namespace Kan_Naim_Main
             this._groupBox8.Controls.Add(this._labelTitle);
             this._groupBox8.Controls.Add(this._labelSubtitle);
             this._groupBox8.Controls.Add(this._textBoxArticleSubtitle);
+            this._groupBox8.Controls.Add(this._buttonTitleH1);
+            this._groupBox8.Controls.Add(this._buttonSubTitleH2);
             this._groupBox8.Location = new System.Drawing.Point(15, 6);
             this._groupBox8.Name = "_groupBox8";
             this._groupBox8.Size = new System.Drawing.Size(675, 447);
@@ -255,7 +255,7 @@ namespace Kan_Naim_Main
             "180",
             "190",
             "200"});
-            this._comboBoxVideoPos.Location = new System.Drawing.Point(19, 171);
+            this._comboBoxVideoPos.Location = new System.Drawing.Point(19, 184);
             this._comboBoxVideoPos.Name = "_comboBoxVideoPos";
             this._comboBoxVideoPos.Size = new System.Drawing.Size(70, 21);
             this._comboBoxVideoPos.TabIndex = 84;
@@ -287,7 +287,7 @@ namespace Kan_Naim_Main
             "180",
             "190",
             "200"});
-            this._comboBoxImgPos.Location = new System.Drawing.Point(19, 144);
+            this._comboBoxImgPos.Location = new System.Drawing.Point(19, 157);
             this._comboBoxImgPos.Name = "_comboBoxImgPos";
             this._comboBoxImgPos.Size = new System.Drawing.Size(70, 21);
             this._comboBoxImgPos.TabIndex = 83;
@@ -296,9 +296,9 @@ namespace Kan_Naim_Main
             // 
             // _buttonSubTitleH2
             // 
-            this._buttonSubTitleH2.Location = new System.Drawing.Point(573, 344);
+            this._buttonSubTitleH2.Location = new System.Drawing.Point(564, 75);
             this._buttonSubTitleH2.Name = "_buttonSubTitleH2";
-            this._buttonSubTitleH2.Size = new System.Drawing.Size(59, 23);
+            this._buttonSubTitleH2.Size = new System.Drawing.Size(84, 23);
             this._buttonSubTitleH2.TabIndex = 79;
             this._buttonSubTitleH2.Text = "H2";
             this._buttonSubTitleH2.UseVisualStyleBackColor = true;
@@ -307,9 +307,9 @@ namespace Kan_Naim_Main
             // _buttonTitleH1
             // 
             this._buttonTitleH1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._buttonTitleH1.Location = new System.Drawing.Point(573, 315);
+            this._buttonTitleH1.Location = new System.Drawing.Point(564, 32);
             this._buttonTitleH1.Name = "_buttonTitleH1";
-            this._buttonTitleH1.Size = new System.Drawing.Size(59, 23);
+            this._buttonTitleH1.Size = new System.Drawing.Size(84, 20);
             this._buttonTitleH1.TabIndex = 78;
             this._buttonTitleH1.Text = "H1";
             this._buttonTitleH1.UseVisualStyleBackColor = true;
@@ -340,7 +340,7 @@ namespace Kan_Naim_Main
             this._comboBoxArticleCategory.DataSource = this._tableLookupCategoriesBindingSource;
             this._comboBoxArticleCategory.DisplayMember = "CatHebrewName";
             this._comboBoxArticleCategory.FormattingEnabled = true;
-            this._comboBoxArticleCategory.Location = new System.Drawing.Point(19, 117);
+            this._comboBoxArticleCategory.Location = new System.Drawing.Point(19, 130);
             this._comboBoxArticleCategory.Name = "_comboBoxArticleCategory";
             this._comboBoxArticleCategory.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._comboBoxArticleCategory.Size = new System.Drawing.Size(193, 21);
@@ -361,7 +361,7 @@ namespace Kan_Naim_Main
             // _label22
             // 
             this._label22.AutoSize = true;
-            this._label22.Location = new System.Drawing.Point(218, 121);
+            this._label22.Location = new System.Drawing.Point(218, 133);
             this._label22.Name = "_label22";
             this._label22.Size = new System.Drawing.Size(50, 13);
             this._label22.TabIndex = 60;
@@ -370,7 +370,7 @@ namespace Kan_Naim_Main
             // _buttonSearchVideosArchive
             // 
             this._buttonSearchVideosArchive.Enabled = false;
-            this._buttonSearchVideosArchive.Location = new System.Drawing.Point(577, 169);
+            this._buttonSearchVideosArchive.Location = new System.Drawing.Point(568, 182);
             this._buttonSearchVideosArchive.Name = "_buttonSearchVideosArchive";
             this._buttonSearchVideosArchive.Size = new System.Drawing.Size(75, 23);
             this._buttonSearchVideosArchive.TabIndex = 59;
@@ -380,7 +380,7 @@ namespace Kan_Naim_Main
             // _buttonSearchPhotosArchive
             // 
             this._buttonSearchPhotosArchive.Enabled = false;
-            this._buttonSearchPhotosArchive.Location = new System.Drawing.Point(577, 142);
+            this._buttonSearchPhotosArchive.Location = new System.Drawing.Point(568, 155);
             this._buttonSearchPhotosArchive.Name = "_buttonSearchPhotosArchive";
             this._buttonSearchPhotosArchive.Size = new System.Drawing.Size(75, 23);
             this._buttonSearchPhotosArchive.TabIndex = 58;
@@ -392,7 +392,7 @@ namespace Kan_Naim_Main
             this._comboBoxArticlePhoto.DataSource = this._tablePhotosArchiveBindingSource;
             this._comboBoxArticlePhoto.DisplayMember = "ImageUrl";
             this._comboBoxArticlePhoto.FormattingEnabled = true;
-            this._comboBoxArticlePhoto.Location = new System.Drawing.Point(95, 144);
+            this._comboBoxArticlePhoto.Location = new System.Drawing.Point(95, 157);
             this._comboBoxArticlePhoto.Name = "_comboBoxArticlePhoto";
             this._comboBoxArticlePhoto.Size = new System.Drawing.Size(465, 21);
             this._comboBoxArticlePhoto.TabIndex = 57;
@@ -413,7 +413,7 @@ namespace Kan_Naim_Main
             // 
             this._comboBoxArticleVideo.Enabled = false;
             this._comboBoxArticleVideo.FormattingEnabled = true;
-            this._comboBoxArticleVideo.Location = new System.Drawing.Point(95, 171);
+            this._comboBoxArticleVideo.Location = new System.Drawing.Point(95, 184);
             this._comboBoxArticleVideo.Name = "_comboBoxArticleVideo";
             this._comboBoxArticleVideo.Size = new System.Drawing.Size(465, 21);
             this._comboBoxArticleVideo.TabIndex = 56;
@@ -423,7 +423,7 @@ namespace Kan_Naim_Main
             // 
             this._dateTimePicker22.Enabled = false;
             this._dateTimePicker22.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this._dateTimePicker22.Location = new System.Drawing.Point(19, 91);
+            this._dateTimePicker22.Location = new System.Drawing.Point(19, 104);
             this._dateTimePicker22.Name = "_dateTimePicker22";
             this._dateTimePicker22.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._dateTimePicker22.RightToLeftLayout = true;
@@ -442,7 +442,7 @@ namespace Kan_Naim_Main
             // 
             // _textBoxKeyWords
             // 
-            this._textBoxKeyWords.Location = new System.Drawing.Point(19, 225);
+            this._textBoxKeyWords.Location = new System.Drawing.Point(19, 238);
             this._textBoxKeyWords.MaxLength = 200;
             this._textBoxKeyWords.Name = "_textBoxKeyWords";
             this._textBoxKeyWords.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -452,7 +452,7 @@ namespace Kan_Naim_Main
             // _labelKeyWords
             // 
             this._labelKeyWords.AutoSize = true;
-            this._labelKeyWords.Location = new System.Drawing.Point(577, 228);
+            this._labelKeyWords.Location = new System.Drawing.Point(573, 241);
             this._labelKeyWords.Name = "_labelKeyWords";
             this._labelKeyWords.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._labelKeyWords.Size = new System.Drawing.Size(74, 13);
@@ -461,7 +461,7 @@ namespace Kan_Naim_Main
             // 
             // _textBoxTags
             // 
-            this._textBoxTags.Location = new System.Drawing.Point(19, 199);
+            this._textBoxTags.Location = new System.Drawing.Point(19, 211);
             this._textBoxTags.MaxLength = 200;
             this._textBoxTags.Name = "_textBoxTags";
             this._textBoxTags.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -471,7 +471,7 @@ namespace Kan_Naim_Main
             // _labelTags
             // 
             this._labelTags.AutoSize = true;
-            this._labelTags.Location = new System.Drawing.Point(577, 202);
+            this._labelTags.Location = new System.Drawing.Point(573, 218);
             this._labelTags.Name = "_labelTags";
             this._labelTags.Size = new System.Drawing.Size(37, 13);
             this._labelTags.TabIndex = 20;
@@ -480,7 +480,7 @@ namespace Kan_Naim_Main
             // _labelEditor
             // 
             this._labelEditor.AutoSize = true;
-            this._labelEditor.Location = new System.Drawing.Point(577, 121);
+            this._labelEditor.Location = new System.Drawing.Point(573, 133);
             this._labelEditor.Name = "_labelEditor";
             this._labelEditor.Size = new System.Drawing.Size(32, 13);
             this._labelEditor.TabIndex = 18;
@@ -488,10 +488,12 @@ namespace Kan_Naim_Main
             // 
             // _textBoxArticleTitle
             // 
-            this._textBoxArticleTitle.Location = new System.Drawing.Point(17, 16);
+            this._textBoxArticleTitle.Location = new System.Drawing.Point(17, 20);
             this._textBoxArticleTitle.MaxLength = 150;
+            this._textBoxArticleTitle.Multiline = true;
             this._textBoxArticleTitle.Name = "_textBoxArticleTitle";
-            this._textBoxArticleTitle.Size = new System.Drawing.Size(541, 20);
+            this._textBoxArticleTitle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this._textBoxArticleTitle.Size = new System.Drawing.Size(541, 36);
             this._textBoxArticleTitle.TabIndex = 15;
             // 
             // _comboBoxEditor
@@ -499,7 +501,7 @@ namespace Kan_Naim_Main
             this._comboBoxEditor.DataSource = this._tableLookupReportersBindingSource1;
             this._comboBoxEditor.DisplayMember = "PublishNameShort";
             this._comboBoxEditor.FormattingEnabled = true;
-            this._comboBoxEditor.Location = new System.Drawing.Point(291, 118);
+            this._comboBoxEditor.Location = new System.Drawing.Point(291, 130);
             this._comboBoxEditor.Name = "_comboBoxEditor";
             this._comboBoxEditor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._comboBoxEditor.Size = new System.Drawing.Size(269, 21);
@@ -520,7 +522,7 @@ namespace Kan_Naim_Main
             // 
             this._dateTimePicker21.Enabled = false;
             this._dateTimePicker21.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this._dateTimePicker21.Location = new System.Drawing.Point(125, 91);
+            this._dateTimePicker21.Location = new System.Drawing.Point(125, 104);
             this._dateTimePicker21.MaxDate = new System.DateTime(2015, 12, 31, 0, 0, 0, 0);
             this._dateTimePicker21.MinDate = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
             this._dateTimePicker21.Name = "_dateTimePicker21";
@@ -535,7 +537,7 @@ namespace Kan_Naim_Main
             this._checkBoxMivzak.AutoSize = true;
             this._checkBoxMivzak.Checked = true;
             this._checkBoxMivzak.CheckState = System.Windows.Forms.CheckState.Checked;
-            this._checkBoxMivzak.Location = new System.Drawing.Point(428, 94);
+            this._checkBoxMivzak.Location = new System.Drawing.Point(422, 107);
             this._checkBoxMivzak.Name = "_checkBoxMivzak";
             this._checkBoxMivzak.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._checkBoxMivzak.Size = new System.Drawing.Size(52, 17);
@@ -549,7 +551,7 @@ namespace Kan_Naim_Main
             this._checkBoxDateTime.AutoSize = true;
             this._checkBoxDateTime.Checked = true;
             this._checkBoxDateTime.CheckState = System.Windows.Forms.CheckState.Checked;
-            this._checkBoxDateTime.Location = new System.Drawing.Point(231, 94);
+            this._checkBoxDateTime.Location = new System.Drawing.Point(218, 107);
             this._checkBoxDateTime.Name = "_checkBoxDateTime";
             this._checkBoxDateTime.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._checkBoxDateTime.Size = new System.Drawing.Size(90, 17);
@@ -563,7 +565,7 @@ namespace Kan_Naim_Main
             this._checkBoxRss.AutoSize = true;
             this._checkBoxRss.Checked = true;
             this._checkBoxRss.CheckState = System.Windows.Forms.CheckState.Checked;
-            this._checkBoxRss.Location = new System.Drawing.Point(348, 94);
+            this._checkBoxRss.Location = new System.Drawing.Point(348, 107);
             this._checkBoxRss.Name = "_checkBoxRss";
             this._checkBoxRss.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._checkBoxRss.Size = new System.Drawing.Size(48, 17);
@@ -577,7 +579,7 @@ namespace Kan_Naim_Main
             this._checkBoxPublish.AutoSize = true;
             this._checkBoxPublish.Checked = true;
             this._checkBoxPublish.CheckState = System.Windows.Forms.CheckState.Checked;
-            this._checkBoxPublish.Location = new System.Drawing.Point(505, 95);
+            this._checkBoxPublish.Location = new System.Drawing.Point(494, 107);
             this._checkBoxPublish.Name = "_checkBoxPublish";
             this._checkBoxPublish.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._checkBoxPublish.Size = new System.Drawing.Size(53, 17);
@@ -589,7 +591,7 @@ namespace Kan_Naim_Main
             // _labelTitle
             // 
             this._labelTitle.AutoSize = true;
-            this._labelTitle.Location = new System.Drawing.Point(571, 19);
+            this._labelTitle.Location = new System.Drawing.Point(564, 19);
             this._labelTitle.Name = "_labelTitle";
             this._labelTitle.Size = new System.Drawing.Size(77, 13);
             this._labelTitle.TabIndex = 3;
@@ -598,7 +600,7 @@ namespace Kan_Naim_Main
             // _labelSubtitle
             // 
             this._labelSubtitle.AutoSize = true;
-            this._labelSubtitle.Location = new System.Drawing.Point(571, 52);
+            this._labelSubtitle.Location = new System.Drawing.Point(571, 59);
             this._labelSubtitle.Name = "_labelSubtitle";
             this._labelSubtitle.Size = new System.Drawing.Size(75, 13);
             this._labelSubtitle.TabIndex = 0;
@@ -606,7 +608,7 @@ namespace Kan_Naim_Main
             // 
             // _textBoxArticleSubtitle
             // 
-            this._textBoxArticleSubtitle.Location = new System.Drawing.Point(17, 49);
+            this._textBoxArticleSubtitle.Location = new System.Drawing.Point(17, 62);
             this._textBoxArticleSubtitle.MaxLength = 300;
             this._textBoxArticleSubtitle.Multiline = true;
             this._textBoxArticleSubtitle.Name = "_textBoxArticleSubtitle";

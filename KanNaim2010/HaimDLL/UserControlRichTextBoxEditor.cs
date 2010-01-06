@@ -603,18 +603,36 @@ namespace HaimDLL
         //var d2 = new Del<int, int>(Notify2);
 
         private void RtfTagUntagEvent(string startTag, string endTag)
-        {    
+        {
             ReselectingAsFullWordsBeforeAndAfterSelection();
 
             int rtfSelectionStart = GetRtfSelectionStartFromTextSelectionStart();
             int rtfSelectionLength = GetRtfSelectionLength();
-            
+            if (rtfSelectionStart < 0)
+            {
+                MessageBox.Show("ארעה שגיאה");
+                return;
+            }
             string newRtfContent = RichTextBox1.Rtf;
             newRtfContent = newRtfContent.Insert(rtfSelectionStart + rtfSelectionLength, endTag);
             newRtfContent = newRtfContent.Insert(rtfSelectionStart - 1, startTag);
             RichTextBox1.Rtf = newRtfContent;
         }
-        
+
+        private static RichTextBox _lastRichTextBox = new RichTextBox();
+
+        private void PushSlecetedTextState(RichTextBox richTextBox)
+        {
+            _lastRichTextBox.SelectionStart = richTextBox.SelectionStart;
+            _lastRichTextBox.SelectionLength = richTextBox.SelectionLength;
+            _lastRichTextBox.SelectedText = richTextBox.SelectedText;
+        }
+        private void PopSlecetedTextState(ref RichTextBox richTextBox)
+        {
+            richTextBox.SelectionStart = _lastRichTextBox.SelectionStart;
+            richTextBox.SelectionLength = _lastRichTextBox.SelectionLength;
+            richTextBox.SelectedText = _lastRichTextBox.SelectedText;
+        }
         private void ToolStripMenuItemFontBold_Click(object sender, EventArgs e)
         {
             //var msg = String.Format("SelectedText: {0}\nSelectionAlignment: {1}\nSelectionBackColor: {2}\nSelectionColor: {3}\nSelectionBullet: {4}\n",
@@ -623,7 +641,8 @@ namespace HaimDLL
             //    RichTextBox1.SelectionFont, RichTextBox1.SelectionRightIndent, RichTextBox1.SelectionStart, RichTextBox1.SelectionLength, RichTextBox1.SelectionCharOffset);
             //msg += String.Format("RTF: {0}\n\nSelectedRTF:{1}", RichTextBox1.Rtf, RichTextBox1.SelectedRtf);
 
-            bool state = RichTextBox1.SelectionFont.Bold;
+            Font font = GetFirstSelectedCharFont(RichTextBox1);
+            bool state = font.Bold;
             string startTag, endTag;
             ResolveStartEndTags4FontFormat(sender, state, out startTag, out endTag);
             RtfTagUntagEvent(startTag, endTag);
@@ -633,9 +652,29 @@ namespace HaimDLL
             //MessageBox.Show(msg);
         }
 
+        private Font GetFirstSelectedCharFont(RichTextBox richTextBox)
+        {
+            Font font = richTextBox.SelectionFont;
+            if (font != null)
+                return font;
+
+            //else
+            PushSlecetedTextState(richTextBox);
+            richTextBox.SelectionLength = 1;
+            font = richTextBox.SelectionFont;
+            PopSlecetedTextState(ref richTextBox);
+
+            if (font != null)
+                return font;
+
+            //else
+            return new Font(FontFamily.GenericSansSerif, 12, FontStyle.Regular, GraphicsUnit.Point);
+        }
+
         private void _toolStripMenuItemFontItalic_Click(object sender, EventArgs e)
         {
-            bool state = RichTextBox1.SelectionFont.Italic;
+            Font font = GetFirstSelectedCharFont(RichTextBox1);
+            bool state = font.Italic;
 
             string startTag, endTag;
             ResolveStartEndTags4FontFormat(sender, state, out startTag, out endTag);
@@ -644,7 +683,8 @@ namespace HaimDLL
 
         private void _toolStripMenuItemFontUnderlined_Click(object sender, EventArgs e)
         {
-            bool state = RichTextBox1.SelectionFont.Underline;
+            Font font = GetFirstSelectedCharFont(RichTextBox1);
+            bool state = font.Underline;
             string startTag, endTag;
             ResolveStartEndTags4FontFormat(sender, state, out startTag, out endTag);
             RtfTagUntagEvent(startTag, endTag);
@@ -652,7 +692,8 @@ namespace HaimDLL
 
         private void _toolStripMenuItemFontSup_Click(object sender, EventArgs e)
         {
-            bool state = RichTextBox1.SelectionFont.Underline && RichTextBox1.SelectionFont.Italic && RichTextBox1.SelectionFont.Bold;
+            Font font = GetFirstSelectedCharFont(RichTextBox1);
+            bool state = font.Underline && font.Italic && font.Bold;
             string startTag, endTag;
             ResolveStartEndTags4FontFormat(sender, state, out startTag, out endTag);
             RtfTagUntagEvent(startTag, endTag);
@@ -660,7 +701,8 @@ namespace HaimDLL
 
         private void _toolStripMenuItemFontSub_Click(object sender, EventArgs e)
         {
-            bool state = RichTextBox1.SelectionFont.Underline && RichTextBox1.SelectionFont.Italic && RichTextBox1.SelectionFont.Bold;
+            Font font = GetFirstSelectedCharFont(RichTextBox1);
+            bool state = font.Underline && font.Italic && font.Bold;
             string startTag, endTag;
             ResolveStartEndTags4FontFormat(sender, state, out startTag, out endTag);
             RtfTagUntagEvent(startTag, endTag);
@@ -670,7 +712,8 @@ namespace HaimDLL
         {
             ReselectingAsFullWordsBeforeAndAfterSelection();
 
-            Font font = GetSelectedFont();
+            //Font font = GetSelectedFont();
+            Font font = GetFirstSelectedCharFont(RichTextBox1);
             FontFamily fontFamily = font.FontFamily;
             
             int newSize;

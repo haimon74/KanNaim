@@ -695,7 +695,8 @@ namespace Kan_Naim_Main
 
         private void buttonOpenEditor_Click(object sender, EventArgs e)
         {
-            _singleton._richTextBoxArticleContent.Enabled = !_singleton._richTextBoxArticleContent.Enabled;
+            //_singleton._richTextBoxArticleContent.Enabled = !_singleton._richTextBoxArticleContent.Enabled;
+
             var updateFunctionCallback = new FormArticleRichTextBoxEditor.ReturnHtmlTextCallbackType(UpdateHtmlTextIntoArticleContentTextBox);
 
             var articleEditorForm = new FormArticleRichTextBoxEditor(_singleton._richTextBoxArticleContent.Rtf, updateFunctionCallback);
@@ -1218,7 +1219,6 @@ namespace Kan_Naim_Main
                     return false;
                 }
             }
-
 
             return true;
         }
