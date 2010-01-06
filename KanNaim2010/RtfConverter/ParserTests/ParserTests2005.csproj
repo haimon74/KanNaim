@@ -1,0 +1,110 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3BEABD02-78EC-4644-9BDD-5D3793F720F8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Itenso.Rtf.ParserTests</RootNamespace>
+    <AssemblyName>RtfParserTests</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=b32731d11ce58905">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ext\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit-console-runner, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ext\nunit-console-runner.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.core, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ext\nunit.core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ext\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.util, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ext\nunit.util.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\VersionInfo.cs" />
+    <Compile Include="RtfParserTest.cs" />
+    <Compile Include="Strings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Parser\Parser2005.csproj">
+      <Project>{6FA3F1A8-4E10-459C-A8DC-C40A90D627B0}</Project>
+      <Name>Parser2005</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys\Sys2005.csproj">
+      <Project>{0F203536-FF4F-4783-992D-1DE210C3C485}</Project>
+      <Name>Sys2005</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <EmbeddedResource Include="RtfParserTest\minimal.rtf" />
+    <EmbeddedResource Include="RtfParserTest\RtfParserTest_0.rtf" />
+    <EmbeddedResource Include="RtfParserTest\RtfParserTest_1.rtf" />
+    <EmbeddedResource Include="RtfParserTest\RtfParserTest_2.rtf" />
+    <EmbeddedResource Include="RtfParserTest\RtfParserTest_3.rtf" />
+    <EmbeddedResource Include="RtfParserTest\RtfParserTest_4.rtf" />
+    <EmbeddedResource Include="RtfParserTest\RtfParserTest_5.rtf" />
+    <EmbeddedResource Include="RtfParserTest\RtfParserTest_6.rtf" />
+    <EmbeddedResource Include="RtfParserTest\RtfParserTest_7.rtf" />
+    <EmbeddedResource Include="RtfParserTest\RtfParserTest_8.rtf" />
+    <EmbeddedResource Include="RtfParserTest\RtfParserTest_fail_0.rtf" />
+    <EmbeddedResource Include="RtfParserTest\RtfParserTest_fail_1.rtf" />
+    <EmbeddedResource Include="RtfParserTest\RtfParserTest_fail_2.rtf" />
+    <EmbeddedResource Include="RtfParserTest\RtfParserTest_fail_3.rtf" />
+    <EmbeddedResource Include="RtfParserTest\RtfParserTest_fail_4.rtf" />
+    <EmbeddedResource Include="RtfParserTest\RtfParserTest_fail_5.rtf" />
+    <EmbeddedResource Include="RtfParserTest\RtfParserTest_fail_6.rtf" />
+    <EmbeddedResource Include="Strings.resx">
+      <DependentUpon>Strings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

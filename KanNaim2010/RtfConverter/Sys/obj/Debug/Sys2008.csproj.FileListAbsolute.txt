@@ -1,0 +1,7 @@
+D:\Documents and Settings\Haim\Desktop\Kan-Naim\RtfConverter\bin\Debug\Itenso.Sys.dll
+D:\Documents and Settings\Haim\Desktop\Kan-Naim\RtfConverter\bin\Debug\Itenso.Sys.pdb
+D:\Documents and Settings\Haim\Desktop\Kan-Naim\RtfConverter\Sys\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Haim\Desktop\Kan-Naim\RtfConverter\Sys\obj\Debug\Itenso.Sys.Strings.resources
+D:\Documents and Settings\Haim\Desktop\Kan-Naim\RtfConverter\Sys\obj\Debug\Sys2008.csproj.GenerateResource.Cache
+D:\Documents and Settings\Haim\Desktop\Kan-Naim\RtfConverter\Sys\obj\Debug\Itenso.Sys.dll
+D:\Documents and Settings\Haim\Desktop\Kan-Naim\RtfConverter\Sys\obj\Debug\Itenso.Sys.pdb

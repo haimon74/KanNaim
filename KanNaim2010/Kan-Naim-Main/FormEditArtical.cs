@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 using System.IO;
@@ -1086,10 +1087,66 @@ namespace Kan_Naim_Main
 
         private void buttonArticlePreview_Click(object sender, EventArgs e)
         {
-            var browserAsForm = new FormPreviewArticleAndTaksOnBrowser();
-            var browser = browserAsForm.WebBrowser1;
+            string winpath = Environment.GetEnvironmentVariable("windir");
+            string path = System.IO.Path.GetDirectoryName(
+                              System.Windows.Forms.Application.ExecutablePath);
 
-            browser.DocumentText = _singleton._richTextBoxArticleContent.Text;
+            string absPath = "C:\\KanNaim\\";
+            string rtfFileName = "temp.rtf";
+            string tmp = "Temp\\";
+            var fileStream = new FileStream( 
+                                absPath + tmp + rtfFileName, 
+                                FileMode.OpenOrCreate,
+                                FileAccess.Write);
+            char[] chars = (@_richTextBoxArticleContent.Rtf).ToCharArray();
+            byte[] buffer = new byte[chars.Length];
+            int idx = 0;
+            foreach (var c in chars)
+            {
+                buffer[idx] = Convert.ToByte(c);
+                idx++;
+            }
+            fileStream.Write(buffer, 0, buffer.Length);
+            fileStream.Flush();
+            fileStream.Close();
+
+            string tag = "";// "/o";
+            string exeFileName = "Rtf2Html.exe";
+            //Documents and Settings\Haim\Desktop\Kan-Naim\Release\KN20100106\";
+            Process p = new Process();
+            p.StartInfo.WorkingDirectory = absPath;
+            p.StartInfo.FileName = exeFileName;
+            p.StartInfo.Arguments = @String.Format("{0}{1}{2} {3}{4} {5}",
+                                        absPath, tmp, rtfFileName, absPath, tmp, tag);
+            p.Start();
+            p.WaitForExit();
+
+            string htmlFileName = "temp.html";
+            fileStream = new FileStream(
+                absPath + tmp + htmlFileName,
+                FileMode.Open,
+                FileAccess.Read);
+            long length = fileStream.Length;
+            buffer = new byte[length];
+            fileStream.Read(buffer, 0, (int)length);
+            fileStream.Close();
+
+            var browserAsForm = new FormPreviewArticleAndTaksOnBrowser
+            {
+                Text = "תצוגת דפדפן",
+                RightToLeftLayout = true,
+                RightToLeft = RightToLeft.Yes
+            };
+            
+            var browser = browserAsForm.WebBrowser1;
+            
+            string result = "";
+            
+            foreach (var b in buffer)
+            {
+                result = String.Format("{0}{1}",result, Convert.ToChar(b));
+            }
+            browser.DocumentText = result;
             browserAsForm.Show();
         }
 

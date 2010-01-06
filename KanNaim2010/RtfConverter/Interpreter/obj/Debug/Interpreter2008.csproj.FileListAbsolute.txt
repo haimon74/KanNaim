@@ -1,0 +1,7 @@
+D:\Documents and Settings\Haim\Desktop\Kan-Naim\RtfConverter\bin\Debug\Itenso.Rtf.Interpreter.dll
+D:\Documents and Settings\Haim\Desktop\Kan-Naim\RtfConverter\bin\Debug\Itenso.Rtf.Interpreter.pdb
+D:\Documents and Settings\Haim\Desktop\Kan-Naim\RtfConverter\Interpreter\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Haim\Desktop\Kan-Naim\RtfConverter\Interpreter\obj\Debug\Itenso.Rtf.Strings.resources
+D:\Documents and Settings\Haim\Desktop\Kan-Naim\RtfConverter\Interpreter\obj\Debug\Interpreter2008.csproj.GenerateResource.Cache
+D:\Documents and Settings\Haim\Desktop\Kan-Naim\RtfConverter\Interpreter\obj\Debug\Itenso.Rtf.Interpreter.dll
+D:\Documents and Settings\Haim\Desktop\Kan-Naim\RtfConverter\Interpreter\obj\Debug\Itenso.Rtf.Interpreter.pdb

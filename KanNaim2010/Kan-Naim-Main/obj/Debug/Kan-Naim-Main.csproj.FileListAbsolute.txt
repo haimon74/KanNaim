@@ -168,3 +168,12 @@ D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepos
 D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\Kan-Naim-Main\bin\Debug\DbSql.pdb
 D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\Kan-Naim-Main\obj\Debug\Interop.OWC11.dll
 D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\Kan-Naim-Main\bin\Debug\Interop.OWC11.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\Kan-Naim-Main\bin\Debug\Itenso.Rtf.Converter.Html.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\Kan-Naim-Main\bin\Debug\Itenso.Rtf.Converter.Xml.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\Kan-Naim-Main\bin\Debug\Itenso.Rtf.Interpreter.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\Kan-Naim-Main\bin\Debug\Itenso.Rtf.Parser.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\Kan-Naim-Main\bin\Debug\Itenso.Sys.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\Kan-Naim-Main\bin\Debug\log4net.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\Kan-Naim-Main\bin\Debug\nunit.util.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\Kan-Naim-Main\bin\Debug\nunit-console-runner.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\Kan-Naim-Main\bin\Debug\nunit.core.dll
