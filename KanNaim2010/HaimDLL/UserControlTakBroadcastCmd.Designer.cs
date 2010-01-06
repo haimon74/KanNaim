@@ -224,6 +224,7 @@
             this.checkBoxTakBroadcastAllCatSelector.Tag = "";
             this.checkBoxTakBroadcastAllCatSelector.Text = "בחר כל הקטגוריות";
             this.checkBoxTakBroadcastAllCatSelector.UseVisualStyleBackColor = true;
+            this.checkBoxTakBroadcastAllCatSelector.Visible = false;
             // 
             // groupBoxRecursiveCmd
             // 
@@ -264,6 +265,7 @@
             // radioButtonTakRepeatWeekly
             // 
             this.radioButtonTakRepeatWeekly.AutoSize = true;
+            this.radioButtonTakRepeatWeekly.Checked = true;
             this.radioButtonTakRepeatWeekly.Location = new System.Drawing.Point(144, 19);
             this.radioButtonTakRepeatWeekly.Name = "radioButtonTakRepeatWeekly";
             this.radioButtonTakRepeatWeekly.Size = new System.Drawing.Size(58, 17);

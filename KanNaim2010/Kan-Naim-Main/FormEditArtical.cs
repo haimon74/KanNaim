@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using System.IO;
@@ -291,9 +290,12 @@ namespace Kan_Naim_Main
         // saving in both (localy and archive)
         private void SaveNewPhotosClick(object sender, EventArgs e)
         {
-            if (_singleton._ucUploadPhoto1._photoPath == String.Empty)
+            if (_singleton._ucUploadPhoto1._photoPath == null)
                 return;
-            
+
+            if (_singleton._ucUploadPhoto1._photoPath.Length < 5)
+                return;
+
             _singleton._ucUploadPhoto1.SavePhotosLocally(); // saving locally
 
             if (!_singleton._ucUploadPhoto1.IsStateEqual(UserControlUploadPhoto.UploadState.SavedLocalyOk))
@@ -1097,6 +1099,9 @@ namespace Kan_Naim_Main
 
         private void buttonSaveArticle_Click(object sender, EventArgs e)
         {
+            if ( ! ValidateFormBeforeSavingArticle())
+                return;
+
             // saving photos in both (localy and archive)
             SaveNewPhotosClick(sender, e);
 
@@ -1127,8 +1132,9 @@ namespace Kan_Naim_Main
             _tblArticle.KeysLookup = _singleton._textBoxKeyWords.Text;
             foreach (object obj in _singleton._listBoxSelectedCategories.Items)
             {
-                _tblArticle.KeysLookup += String.Format(" | {0}", (string) obj);
+                _tblArticle.KeysAssociated += String.Format(" | {0}", (string) obj);
             }
+            _tblArticle.KeysLookup += _tblArticle.KeysAssociated;
             _tblArticle.MetaTags = _singleton._textBoxTags.Text;
             _tblArticle.StatusId = 0; //TODO - TBD...
             _tblArticle.SubTitle = _singleton._textBoxArticleSubtitle.Text;
@@ -1155,15 +1161,66 @@ namespace Kan_Naim_Main
                 // saving taktzirim
                 foreach (UserControlTakFill userControlTakFill in UcTakFillCollection.Values)
                 {
-                    int newTakId = userControlTakFill.SaveToDatabase(_tblArticle.ArticleId, -1);
-                    if (newTakId > 0)
-                        MessageBox.Show("נשמר תקציר מספר פנימי " + newTakId, "הצלחה");
+                    if (userControlTakFill.IsEnabled() &&
+                        userControlTakFill.ValidateValuesBeforeSave())
+                    {
+                        int newTakId = userControlTakFill.SaveToDatabase(_tblArticle.ArticleId, -1);
+                        if (newTakId > 0)
+                            MessageBox.Show("נשמר תקציר מספר פנימי " + newTakId, "הצלחה");
+                    }
                 }
             }
             catch(Exception exception)
             {
                 Messages.ExceptionMessage(exception, "שמירת תקציר נכשלה");
             }
+        }
+
+        private bool ValidateFormBeforeSavingArticle()
+        {
+            if (_singleton._comboBoxArticleCategory.SelectedIndex < 0)
+            {
+                MessageBox.Show("לא נבחרה קטגוריה !!!");
+                return false;
+            }
+            if (_singleton._comboBoxArticlePhoto.SelectedIndex < 0)
+            {
+                MessageBox.Show("לא נבחרה תמונה לכתבה !!!");
+                return false;
+            }
+            if (_singleton._textBoxArticleTitle.TextLength < 5)
+            {
+                MessageBox.Show("כותרת הכתבה קצרה מדי !!!");
+                return false;
+            }
+            if (_singleton._textBoxArticleSubtitle.TextLength < 5)
+            {
+                MessageBox.Show("כותרת משנית של הכתבה קצרה מדי !!!");
+                return false;
+            }
+            if (_singleton._richTextBoxArticleContent.TextLength < 10)
+            {
+                MessageBox.Show("תוכן הכתבה קצרה מדי !!!");
+                return false;
+            } 
+            if (_singleton._comboBoxEditor.SelectedIndex < 0)
+            {
+                MessageBox.Show("לא נבחר כתב !!!");
+                return false;
+            }
+
+            foreach (var userControlTakFill in UcTakFillCollection.Values)
+            {
+                if (userControlTakFill.IsEnabled() &&
+                    ( ! userControlTakFill.ValidateValuesBeforeSave()))
+                {
+                    MessageBox.Show("תקציר לא מולא כראוי !!!");
+                    return false;
+                }
+            }
+
+
+            return true;
         }
 
         private void ButtonSaveVideoToArchiveClick(object sender, EventArgs e)

@@ -19,12 +19,12 @@ namespace HaimDLL
 
         private void checkBoxTakPhoto_CheckedChanged(object sender, EventArgs e)
         {
-            this.comboBoxTakPhoto.Enabled = this.checkBoxTakPhoto.Checked;
+            comboBoxTakPhoto.Enabled = checkBoxTakPhoto.Checked;
         }
 
         private void checkBoxEnableContent_CheckedChanged(object sender, EventArgs e)
         {
-            textBoxTakContent.Enabled = !textBoxTakContent.Enabled;
+            textBoxTakContent.Enabled = checkBoxEnableContent.Checked;
         }
 
         public int SaveToDatabase(int articleId, int embedObjId, int takType)
@@ -43,6 +43,22 @@ namespace HaimDLL
             tak = Insert.TableTaktzirim(tak);
             
             return (tak == null) ? -1 : tak.TakId;
+        }
+
+        public bool ValidateValuesBeforeSave()
+        {
+
+            bool contentOK = (textBoxTakContent.TextLength > 5);
+            bool titleOK = (textBoxTakTitle.TextLength > 5);
+            if ((( ! contentOK) || ( ! titleOK)) && checkBoxEnableContent.Checked)
+                return false;
+
+            return true;
+        }
+
+        public bool IsEnabled()
+        {
+            return (checkBoxTakPhoto.Checked || checkBoxEnableContent.Checked);
         }
     }
 }

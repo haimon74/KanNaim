@@ -31,5 +31,15 @@ namespace HaimDLL
 
             return returnValue;
         }
+
+        public bool ValidateValuesBeforeSave()
+        {
+            return ucTakContent1.ValidateValuesBeforeSave();
+        }
+
+        public bool IsEnabled()
+        {
+            return ucTakContent1.IsEnabled();
+        }
     }
 }

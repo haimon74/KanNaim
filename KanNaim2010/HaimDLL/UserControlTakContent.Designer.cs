@@ -56,8 +56,6 @@
             // checkBoxEnableContent
             // 
             this.checkBoxEnableContent.AutoSize = true;
-            this.checkBoxEnableContent.Checked = true;
-            this.checkBoxEnableContent.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxEnableContent.Location = new System.Drawing.Point(521, 51);
             this.checkBoxEnableContent.Name = "checkBoxEnableContent";
             this.checkBoxEnableContent.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -111,6 +109,7 @@
             // 
             // textBoxTakContent
             // 
+            this.textBoxTakContent.Enabled = false;
             this.textBoxTakContent.Location = new System.Drawing.Point(18, 49);
             this.textBoxTakContent.MaxLength = 1000;
             this.textBoxTakContent.Multiline = true;
