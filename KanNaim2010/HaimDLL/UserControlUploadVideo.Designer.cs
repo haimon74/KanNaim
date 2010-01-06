@@ -67,9 +67,9 @@
             this._textBoxVideoAlternateText.MaxLength = 300;
             this._textBoxVideoAlternateText.Multiline = true;
             this._textBoxVideoAlternateText.Name = "_textBoxVideoAlternateText";
+            this._textBoxVideoAlternateText.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._textBoxVideoAlternateText.Size = new System.Drawing.Size(470, 45);
             this._textBoxVideoAlternateText.TabIndex = 15;
-            this._textBoxVideoAlternateText.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // _labelVideoDescription
             // 
@@ -86,9 +86,9 @@
             this._textBoxVideoDescription.MaxLength = 500;
             this._textBoxVideoDescription.Multiline = true;
             this._textBoxVideoDescription.Name = "_textBoxVideoDescription";
+            this._textBoxVideoDescription.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._textBoxVideoDescription.Size = new System.Drawing.Size(470, 68);
             this._textBoxVideoDescription.TabIndex = 13;
-            this._textBoxVideoDescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // _labelEmbedVideoText
             // 
@@ -122,9 +122,9 @@
             this._textBoxVideoCaption.Location = new System.Drawing.Point(3, 36);
             this._textBoxVideoCaption.MaxLength = 150;
             this._textBoxVideoCaption.Name = "_textBoxVideoCaption";
+            this._textBoxVideoCaption.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._textBoxVideoCaption.Size = new System.Drawing.Size(470, 20);
             this._textBoxVideoCaption.TabIndex = 9;
-            this._textBoxVideoCaption.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 

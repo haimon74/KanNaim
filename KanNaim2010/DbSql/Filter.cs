@@ -170,6 +170,13 @@ namespace DbSql
                 return null;
             }
         }
-        
+
+        public static IQueryable<Table_Broadcast> GetBroadcastByTakId(int takId)
+        {
+            return from c in Db.Table_Broadcasts
+                   where c.TakId == takId
+                   orderby c.Id descending 
+                   select c;
+        }
     }
 }

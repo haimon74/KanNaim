@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
+using DbSql;
 
 namespace HaimDLL
 {
@@ -18,27 +13,56 @@ namespace HaimDLL
 
         private void checkBoxTakStart_CheckedChanged(object sender, EventArgs e)
         {
-            bool isEnabled = this.checkBoxTakStart.Checked;
+            bool isEnabled = checkBoxTakStart.Checked;
             
-            this.datePickerTakStart.Enabled = isEnabled;
-            this.timePickerTakStart.Enabled = isEnabled;
+            datePickerTakStart.Enabled = isEnabled;
+            timePickerTakStart.Enabled = isEnabled;
 
-            isEnabled |= this.checkBoxTakRecursive.Checked;
+            isEnabled |= checkBoxTakRecursive.Checked;
 
-            this.checkBoxTakBroadcastAllCatSelector.Enabled = isEnabled;
-            this.treeViewTakBroadcastCatSelector.Enabled = isEnabled;
+            checkBoxTakBroadcastAllCatSelector.Enabled = isEnabled;
+            treeViewTakBroadcastCatSelector.Enabled = isEnabled;
         }
 
         private void checkBoxTakRecursive_CheckedChanged(object sender, EventArgs e)
         {
-            bool isEnabled = this.checkBoxTakRecursive.Checked;
+            bool isEnabled = checkBoxTakRecursive.Checked;
 
-            this.groupBoxRecursiveCmd.Enabled = isEnabled;
+            groupBoxRecursiveCmd.Enabled = isEnabled;
 
-            isEnabled |= this.checkBoxTakStart.Checked;
+            isEnabled |= checkBoxTakStart.Checked;
 
-            this.checkBoxTakBroadcastAllCatSelector.Enabled = isEnabled;
-            this.treeViewTakBroadcastCatSelector.Enabled = isEnabled;
+            checkBoxTakBroadcastAllCatSelector.Enabled = isEnabled;
+            treeViewTakBroadcastCatSelector.Enabled = isEnabled;
+        }
+
+        public int SaveToDatabase(int takId)
+        {
+            int days;
+            if (!int.TryParse(comboBoxTakRecDurationDays.Text, out days))
+                days = 0;
+            
+            int hours;
+            if (!int.TryParse(comboBoxTakRecDurationHours.Text, out hours))
+                hours = 0;
+            
+            hours += 24 * days;
+            
+            var broadcast = new Table_Broadcast
+            {
+                DurationHours = hours,
+                isRecursive = checkBoxTakRecursive.Checked,
+                isDaily = radioButtonTakRepeatDaily.Checked,
+                isWeekly = radioButtonTakRepeatWeekly.Checked,
+                isMonthly = radioButtonTakRepeatWeekly.Checked,
+                isYearly = radioButtonTakRepeatYearly.Checked,
+                TakId = takId,
+                StartDateTime = datePickerTakStart.Value
+            };
+
+            broadcast = Insert.TableBroadcast(broadcast);
+
+            return (broadcast == null) ? -1 : broadcast.Id;
         }
     }
 }

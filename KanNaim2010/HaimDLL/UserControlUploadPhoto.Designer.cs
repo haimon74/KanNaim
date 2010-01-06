@@ -181,7 +181,6 @@
             this.textBoxPhotoDescription.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBoxPhotoDescription.Size = new System.Drawing.Size(518, 63);
             this.textBoxPhotoDescription.TabIndex = 45;
-            this.textBoxPhotoDescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label20
             // 
@@ -254,7 +253,6 @@
             this.textBoxPhotoCaption.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBoxPhotoCaption.Size = new System.Drawing.Size(518, 20);
             this.textBoxPhotoCaption.TabIndex = 37;
-            this.textBoxPhotoCaption.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label16
             // 

@@ -29,21 +29,18 @@
         private void InitializeComponent()
         {
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.labelTakRecDurationHours = new System.Windows.Forms.Label();
+            this.comboBoxTakRecDurationHours = new System.Windows.Forms.ComboBox();
+            this.comboBoxTakRecDurationDays = new System.Windows.Forms.ComboBox();
             this.treeViewTakBroadcastCatSelector = new System.Windows.Forms.TreeView();
+            this.labelTakRecDurationDays = new System.Windows.Forms.Label();
             this.buttonSaveBroadcastCmd = new System.Windows.Forms.Button();
             this.checkBoxTakBroadcastAllCatSelector = new System.Windows.Forms.CheckBox();
             this.groupBoxRecursiveCmd = new System.Windows.Forms.GroupBox();
-            this.comboBoxTakRecDurationHours = new System.Windows.Forms.ComboBox();
-            this.comboBoxTakRecDurationDays = new System.Windows.Forms.ComboBox();
-            this.labelTakRecDurationHours = new System.Windows.Forms.Label();
-            this.labelTakRecDurationDays = new System.Windows.Forms.Label();
-            this.labelTakRepeatStart = new System.Windows.Forms.Label();
             this.radioButtonTakRepeatYearly = new System.Windows.Forms.RadioButton();
             this.radioButtonTakRepeatMonthly = new System.Windows.Forms.RadioButton();
             this.radioButtonTakRepeatWeekly = new System.Windows.Forms.RadioButton();
             this.radioButtonTakRepeatDaily = new System.Windows.Forms.RadioButton();
-            this.datePickerTakRecurentStart = new System.Windows.Forms.DateTimePicker();
-            this.timePickerTakRecurentStart = new System.Windows.Forms.DateTimePicker();
             this.checkBoxTakStart = new System.Windows.Forms.CheckBox();
             this.checkBoxTakRecursive = new System.Windows.Forms.CheckBox();
             this.timePickerTakStart = new System.Windows.Forms.DateTimePicker();
@@ -54,7 +51,11 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.labelTakRecDurationHours);
+            this.groupBox10.Controls.Add(this.comboBoxTakRecDurationHours);
+            this.groupBox10.Controls.Add(this.comboBoxTakRecDurationDays);
             this.groupBox10.Controls.Add(this.treeViewTakBroadcastCatSelector);
+            this.groupBox10.Controls.Add(this.labelTakRecDurationDays);
             this.groupBox10.Controls.Add(this.buttonSaveBroadcastCmd);
             this.groupBox10.Controls.Add(this.checkBoxTakBroadcastAllCatSelector);
             this.groupBox10.Controls.Add(this.groupBoxRecursiveCmd);
@@ -69,60 +70,14 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "פקודות לשידור";
             // 
-            // treeViewTakBroadcastCatSelector
+            // labelTakRecDurationHours
             // 
-            this.treeViewTakBroadcastCatSelector.CheckBoxes = true;
-            this.treeViewTakBroadcastCatSelector.Enabled = false;
-            this.treeViewTakBroadcastCatSelector.Location = new System.Drawing.Point(18, 42);
-            this.treeViewTakBroadcastCatSelector.Name = "treeViewTakBroadcastCatSelector";
-            this.treeViewTakBroadcastCatSelector.RightToLeftLayout = true;
-            this.treeViewTakBroadcastCatSelector.ShowNodeToolTips = true;
-            this.treeViewTakBroadcastCatSelector.Size = new System.Drawing.Size(178, 164);
-            this.treeViewTakBroadcastCatSelector.TabIndex = 62;
-            // 
-            // buttonSaveBroadcastCmd
-            // 
-            this.buttonSaveBroadcastCmd.Location = new System.Drawing.Point(263, 183);
-            this.buttonSaveBroadcastCmd.Name = "buttonSaveBroadcastCmd";
-            this.buttonSaveBroadcastCmd.Size = new System.Drawing.Size(159, 23);
-            this.buttonSaveBroadcastCmd.TabIndex = 61;
-            this.buttonSaveBroadcastCmd.Text = "שמור פקודות שידור";
-            this.buttonSaveBroadcastCmd.UseVisualStyleBackColor = true;
-            this.buttonSaveBroadcastCmd.Visible = false;
-            // 
-            // checkBoxTakBroadcastAllCatSelector
-            // 
-            this.checkBoxTakBroadcastAllCatSelector.AutoSize = true;
-            this.checkBoxTakBroadcastAllCatSelector.Enabled = false;
-            this.checkBoxTakBroadcastAllCatSelector.Location = new System.Drawing.Point(75, 19);
-            this.checkBoxTakBroadcastAllCatSelector.Name = "checkBoxTakBroadcastAllCatSelector";
-            this.checkBoxTakBroadcastAllCatSelector.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBoxTakBroadcastAllCatSelector.Size = new System.Drawing.Size(121, 17);
-            this.checkBoxTakBroadcastAllCatSelector.TabIndex = 60;
-            this.checkBoxTakBroadcastAllCatSelector.Tag = "";
-            this.checkBoxTakBroadcastAllCatSelector.Text = "בחר כל הקטגוריות";
-            this.checkBoxTakBroadcastAllCatSelector.UseVisualStyleBackColor = true;
-            // 
-            // groupBoxRecursiveCmd
-            // 
-            this.groupBoxRecursiveCmd.Controls.Add(this.comboBoxTakRecDurationHours);
-            this.groupBoxRecursiveCmd.Controls.Add(this.comboBoxTakRecDurationDays);
-            this.groupBoxRecursiveCmd.Controls.Add(this.labelTakRecDurationHours);
-            this.groupBoxRecursiveCmd.Controls.Add(this.labelTakRecDurationDays);
-            this.groupBoxRecursiveCmd.Controls.Add(this.labelTakRepeatStart);
-            this.groupBoxRecursiveCmd.Controls.Add(this.radioButtonTakRepeatYearly);
-            this.groupBoxRecursiveCmd.Controls.Add(this.radioButtonTakRepeatMonthly);
-            this.groupBoxRecursiveCmd.Controls.Add(this.radioButtonTakRepeatWeekly);
-            this.groupBoxRecursiveCmd.Controls.Add(this.radioButtonTakRepeatDaily);
-            this.groupBoxRecursiveCmd.Controls.Add(this.datePickerTakRecurentStart);
-            this.groupBoxRecursiveCmd.Controls.Add(this.timePickerTakRecurentStart);
-            this.groupBoxRecursiveCmd.Enabled = false;
-            this.groupBoxRecursiveCmd.Location = new System.Drawing.Point(211, 66);
-            this.groupBoxRecursiveCmd.Name = "groupBoxRecursiveCmd";
-            this.groupBoxRecursiveCmd.Size = new System.Drawing.Size(283, 111);
-            this.groupBoxRecursiveCmd.TabIndex = 59;
-            this.groupBoxRecursiveCmd.TabStop = false;
-            this.groupBoxRecursiveCmd.Text = "הגדרת השידור המחזורי";
+            this.labelTakRecDurationHours.AutoSize = true;
+            this.labelTakRecDurationHours.Location = new System.Drawing.Point(374, 138);
+            this.labelTakRecDurationHours.Name = "labelTakRecDurationHours";
+            this.labelTakRecDurationHours.Size = new System.Drawing.Size(42, 13);
+            this.labelTakRecDurationHours.TabIndex = 66;
+            this.labelTakRecDurationHours.Text = "בשעות";
             // 
             // comboBoxTakRecDurationHours
             // 
@@ -153,7 +108,7 @@
             "22",
             "23",
             "24"});
-            this.comboBoxTakRecDurationHours.Location = new System.Drawing.Point(34, 83);
+            this.comboBoxTakRecDurationHours.Location = new System.Drawing.Point(317, 135);
             this.comboBoxTakRecDurationHours.Name = "comboBoxTakRecDurationHours";
             this.comboBoxTakRecDurationHours.Size = new System.Drawing.Size(51, 21);
             this.comboBoxTakRecDurationHours.TabIndex = 68;
@@ -223,37 +178,66 @@
             "58",
             "59",
             "60"});
-            this.comboBoxTakRecDurationDays.Location = new System.Drawing.Point(151, 83);
+            this.comboBoxTakRecDurationDays.Location = new System.Drawing.Point(443, 135);
             this.comboBoxTakRecDurationDays.Name = "comboBoxTakRecDurationDays";
             this.comboBoxTakRecDurationDays.Size = new System.Drawing.Size(51, 21);
             this.comboBoxTakRecDurationDays.TabIndex = 67;
             // 
-            // labelTakRecDurationHours
+            // treeViewTakBroadcastCatSelector
             // 
-            this.labelTakRecDurationHours.AutoSize = true;
-            this.labelTakRecDurationHours.Location = new System.Drawing.Point(91, 86);
-            this.labelTakRecDurationHours.Name = "labelTakRecDurationHours";
-            this.labelTakRecDurationHours.Size = new System.Drawing.Size(42, 13);
-            this.labelTakRecDurationHours.TabIndex = 66;
-            this.labelTakRecDurationHours.Text = "בשעות";
+            this.treeViewTakBroadcastCatSelector.CheckBoxes = true;
+            this.treeViewTakBroadcastCatSelector.Location = new System.Drawing.Point(18, 42);
+            this.treeViewTakBroadcastCatSelector.Name = "treeViewTakBroadcastCatSelector";
+            this.treeViewTakBroadcastCatSelector.RightToLeftLayout = true;
+            this.treeViewTakBroadcastCatSelector.ShowNodeToolTips = true;
+            this.treeViewTakBroadcastCatSelector.Size = new System.Drawing.Size(178, 164);
+            this.treeViewTakBroadcastCatSelector.TabIndex = 62;
             // 
             // labelTakRecDurationDays
             // 
             this.labelTakRecDurationDays.AutoSize = true;
-            this.labelTakRecDurationDays.Location = new System.Drawing.Point(204, 86);
+            this.labelTakRecDurationDays.Location = new System.Drawing.Point(500, 138);
             this.labelTakRecDurationDays.Name = "labelTakRecDurationDays";
-            this.labelTakRecDurationDays.Size = new System.Drawing.Size(64, 13);
+            this.labelTakRecDurationDays.Size = new System.Drawing.Size(99, 13);
             this.labelTakRecDurationDays.TabIndex = 64;
-            this.labelTakRecDurationDays.Text = "משך בימים";
+            this.labelTakRecDurationDays.Text = "משך שידור בימים";
             // 
-            // labelTakRepeatStart
+            // buttonSaveBroadcastCmd
             // 
-            this.labelTakRepeatStart.AutoSize = true;
-            this.labelTakRepeatStart.Location = new System.Drawing.Point(226, 51);
-            this.labelTakRepeatStart.Name = "labelTakRepeatStart";
-            this.labelTakRepeatStart.Size = new System.Drawing.Size(42, 13);
-            this.labelTakRepeatStart.TabIndex = 60;
-            this.labelTakRepeatStart.Text = "התחלה";
+            this.buttonSaveBroadcastCmd.Location = new System.Drawing.Point(317, 181);
+            this.buttonSaveBroadcastCmd.Name = "buttonSaveBroadcastCmd";
+            this.buttonSaveBroadcastCmd.Size = new System.Drawing.Size(159, 23);
+            this.buttonSaveBroadcastCmd.TabIndex = 61;
+            this.buttonSaveBroadcastCmd.Text = "שמור פקודות שידור";
+            this.buttonSaveBroadcastCmd.UseVisualStyleBackColor = true;
+            this.buttonSaveBroadcastCmd.Visible = false;
+            // 
+            // checkBoxTakBroadcastAllCatSelector
+            // 
+            this.checkBoxTakBroadcastAllCatSelector.AutoSize = true;
+            this.checkBoxTakBroadcastAllCatSelector.Enabled = false;
+            this.checkBoxTakBroadcastAllCatSelector.Location = new System.Drawing.Point(75, 19);
+            this.checkBoxTakBroadcastAllCatSelector.Name = "checkBoxTakBroadcastAllCatSelector";
+            this.checkBoxTakBroadcastAllCatSelector.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.checkBoxTakBroadcastAllCatSelector.Size = new System.Drawing.Size(121, 17);
+            this.checkBoxTakBroadcastAllCatSelector.TabIndex = 60;
+            this.checkBoxTakBroadcastAllCatSelector.Tag = "";
+            this.checkBoxTakBroadcastAllCatSelector.Text = "בחר כל הקטגוריות";
+            this.checkBoxTakBroadcastAllCatSelector.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxRecursiveCmd
+            // 
+            this.groupBoxRecursiveCmd.Controls.Add(this.radioButtonTakRepeatYearly);
+            this.groupBoxRecursiveCmd.Controls.Add(this.radioButtonTakRepeatMonthly);
+            this.groupBoxRecursiveCmd.Controls.Add(this.radioButtonTakRepeatWeekly);
+            this.groupBoxRecursiveCmd.Controls.Add(this.radioButtonTakRepeatDaily);
+            this.groupBoxRecursiveCmd.Enabled = false;
+            this.groupBoxRecursiveCmd.Location = new System.Drawing.Point(211, 66);
+            this.groupBoxRecursiveCmd.Name = "groupBoxRecursiveCmd";
+            this.groupBoxRecursiveCmd.Size = new System.Drawing.Size(283, 49);
+            this.groupBoxRecursiveCmd.TabIndex = 59;
+            this.groupBoxRecursiveCmd.TabStop = false;
+            this.groupBoxRecursiveCmd.Text = "הגדרת השידור המחזורי";
             // 
             // radioButtonTakRepeatYearly
             // 
@@ -299,32 +283,13 @@
             this.radioButtonTakRepeatDaily.Text = "יומי";
             this.radioButtonTakRepeatDaily.UseVisualStyleBackColor = true;
             // 
-            // datePickerTakRecurentStart
-            // 
-            this.datePickerTakRecurentStart.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.datePickerTakRecurentStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePickerTakRecurentStart.Location = new System.Drawing.Point(128, 51);
-            this.datePickerTakRecurentStart.Name = "datePickerTakRecurentStart";
-            this.datePickerTakRecurentStart.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.datePickerTakRecurentStart.RightToLeftLayout = true;
-            this.datePickerTakRecurentStart.Size = new System.Drawing.Size(83, 20);
-            this.datePickerTakRecurentStart.TabIndex = 45;
-            // 
-            // timePickerTakRecurentStart
-            // 
-            this.timePickerTakRecurentStart.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.timePickerTakRecurentStart.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.timePickerTakRecurentStart.Location = new System.Drawing.Point(34, 51);
-            this.timePickerTakRecurentStart.Name = "timePickerTakRecurentStart";
-            this.timePickerTakRecurentStart.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.timePickerTakRecurentStart.RightToLeftLayout = true;
-            this.timePickerTakRecurentStart.Size = new System.Drawing.Size(88, 20);
-            this.timePickerTakRecurentStart.TabIndex = 45;
-            // 
             // checkBoxTakStart
             // 
             this.checkBoxTakStart.AutoSize = true;
-            this.checkBoxTakStart.Location = new System.Drawing.Point(501, 33);
+            this.checkBoxTakStart.Checked = true;
+            this.checkBoxTakStart.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxTakStart.Enabled = false;
+            this.checkBoxTakStart.Location = new System.Drawing.Point(505, 33);
             this.checkBoxTakStart.Name = "checkBoxTakStart";
             this.checkBoxTakStart.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBoxTakStart.Size = new System.Drawing.Size(94, 17);
@@ -337,7 +302,7 @@
             // checkBoxTakRecursive
             // 
             this.checkBoxTakRecursive.AutoSize = true;
-            this.checkBoxTakRecursive.Location = new System.Drawing.Point(499, 66);
+            this.checkBoxTakRecursive.Location = new System.Drawing.Point(505, 66);
             this.checkBoxTakRecursive.Name = "checkBoxTakRecursive";
             this.checkBoxTakRecursive.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBoxTakRecursive.Size = new System.Drawing.Size(96, 17);
@@ -350,24 +315,24 @@
             // timePickerTakStart
             // 
             this.timePickerTakStart.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.timePickerTakStart.Enabled = false;
             this.timePickerTakStart.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.timePickerTakStart.Location = new System.Drawing.Point(317, 30);
             this.timePickerTakStart.Name = "timePickerTakStart";
             this.timePickerTakStart.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.timePickerTakStart.RightToLeftLayout = true;
+            this.timePickerTakStart.ShowUpDown = true;
             this.timePickerTakStart.Size = new System.Drawing.Size(88, 20);
             this.timePickerTakStart.TabIndex = 45;
             // 
             // datePickerTakStart
             // 
             this.datePickerTakStart.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.datePickerTakStart.Enabled = false;
             this.datePickerTakStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datePickerTakStart.Location = new System.Drawing.Point(411, 30);
             this.datePickerTakStart.Name = "datePickerTakStart";
             this.datePickerTakStart.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.datePickerTakStart.RightToLeftLayout = true;
+            this.datePickerTakStart.ShowUpDown = true;
             this.datePickerTakStart.Size = new System.Drawing.Size(83, 20);
             this.datePickerTakStart.TabIndex = 45;
             // 
@@ -398,13 +363,10 @@
         private System.Windows.Forms.ComboBox comboBoxTakRecDurationDays;
         private System.Windows.Forms.Label labelTakRecDurationHours;
         private System.Windows.Forms.Label labelTakRecDurationDays;
-        private System.Windows.Forms.Label labelTakRepeatStart;
         private System.Windows.Forms.RadioButton radioButtonTakRepeatYearly;
         private System.Windows.Forms.RadioButton radioButtonTakRepeatMonthly;
         private System.Windows.Forms.RadioButton radioButtonTakRepeatWeekly;
         private System.Windows.Forms.RadioButton radioButtonTakRepeatDaily;
-        private System.Windows.Forms.DateTimePicker datePickerTakRecurentStart;
-        private System.Windows.Forms.DateTimePicker timePickerTakRecurentStart;
         private System.Windows.Forms.CheckBox checkBoxTakStart;
         private System.Windows.Forms.CheckBox checkBoxTakRecursive;
         private System.Windows.Forms.DateTimePicker timePickerTakStart;

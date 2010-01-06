@@ -85,7 +85,6 @@
             this.textBoxTakTitle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBoxTakTitle.Size = new System.Drawing.Size(476, 20);
             this.textBoxTakTitle.TabIndex = 36;
-            this.textBoxTakTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // buttonTitleFromContent
             // 
@@ -120,7 +119,6 @@
             this.textBoxTakContent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxTakContent.Size = new System.Drawing.Size(476, 96);
             this.textBoxTakContent.TabIndex = 35;
-            this.textBoxTakContent.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // UserControlTakContent
             // 

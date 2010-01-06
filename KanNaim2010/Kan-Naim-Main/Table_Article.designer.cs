@@ -257,7 +257,7 @@ namespace Kan_Naim_Main
             }
         }
 		
-        [Column(Storage="_Title", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+        [Column(Storage="_Title", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
         public string Title
         {
             get

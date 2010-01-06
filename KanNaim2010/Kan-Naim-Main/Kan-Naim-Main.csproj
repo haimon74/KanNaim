@@ -31,11 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="HtmlRichTextBox, Version=1.0.2165.30472, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\Desktop\Kan-Naim\RTF-2-HTML\HtmlRichTextBox.dll</HintPath>
@@ -73,6 +68,7 @@
   <ItemGroup>
     <Compile Include="ClassGlobals.cs" />
     <Compile Include="DataAccess\Filter.cs" />
+    <Compile Include="DataAccess\Insert.cs" />
     <Compile Include="DataAccess\Lookup.cs" />
     <Compile Include="FormAddNewPhotos.cs">
       <SubType>Form</SubType>
@@ -648,22 +644,6 @@
       <WrapperTool>aximp</WrapperTool>
       <Isolated>False</Isolated>
     </COMReference>
-    <COMReference Include="AxMediaPlayer">
-      <Guid>{22D6F304-B0F6-11D0-94AB-0080C74C7E95}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>aximp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
-    <COMReference Include="AxMSACAL">
-      <Guid>{8E27C92E-1264-101C-8A2F-040224009C02}</Guid>
-      <VersionMajor>7</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>aximp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
     <COMReference Include="AxMSComCtl2">
       <Guid>{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}</Guid>
       <VersionMajor>2</VersionMajor>
@@ -675,14 +655,6 @@
     <COMReference Include="AxMSComctlLib">
       <Guid>{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}</Guid>
       <VersionMajor>2</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>aximp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
-    <COMReference Include="AxMSHelpControls">
-      <Guid>{314111BA-A502-11D2-BBCA-00C04F8EC294}</Guid>
-      <VersionMajor>1</VersionMajor>
       <VersionMinor>0</VersionMinor>
       <Lcid>0</Lcid>
       <WrapperTool>aximp</WrapperTool>
@@ -716,22 +688,6 @@
       <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
       <VersionMajor>1</VersionMajor>
       <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>aximp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
-    <COMReference Include="AxSKYPE4COMLib">
-      <Guid>{03282B5D-B38F-469D-849A-09B0A7F4881B}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>aximp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
-    <COMReference Include="AxVisioViewer">
-      <Guid>{BA35B84E-A623-471B-8B09-6D72DD072F25}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>2</VersionMinor>
       <Lcid>0</Lcid>
       <WrapperTool>aximp</WrapperTool>
       <Isolated>False</Isolated>
@@ -792,30 +748,6 @@
       <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>
     </COMReference>
-    <COMReference Include="MSHelpControls">
-      <Guid>{314111BA-A502-11D2-BBCA-00C04F8EC294}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
-    <COMReference Include="MSHelpServices">
-      <Guid>{31411197-A502-11D2-BBCA-00C04F8EC294}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
-    <COMReference Include="OWC11">
-      <Guid>{0002E558-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
     <COMReference Include="QTActiveXPluginCtrlLib">
       <Guid>{02BF25D2-8C17-4B23-BC80-D3488ABDDC6B}</Guid>
       <VersionMajor>2</VersionMajor>
@@ -864,14 +796,6 @@
       <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>
     </COMReference>
-    <COMReference Include="VisioViewer">
-      <Guid>{BA35B84E-A623-471B-8B09-6D72DD072F25}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>2</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="img\BgColorBtnImg.JPG" />
@@ -890,6 +814,9 @@
       <Project>{697ECEA6-B4D5-430F-8355-977D96DF74C5}</Project>
       <Name>HaimDLL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="EventHandler\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

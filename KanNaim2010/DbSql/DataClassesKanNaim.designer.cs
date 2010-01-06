@@ -75,6 +75,12 @@ namespace DbSql
     partial void InsertTable_Taktzirim(Table_Taktzirim instance);
     partial void UpdateTable_Taktzirim(Table_Taktzirim instance);
     partial void DeleteTable_Taktzirim(Table_Taktzirim instance);
+    partial void InsertTable_Broadcast(Table_Broadcast instance);
+    partial void UpdateTable_Broadcast(Table_Broadcast instance);
+    partial void DeleteTable_Broadcast(Table_Broadcast instance);
+    partial void InsertTable_LookupTakType(Table_LookupTakType instance);
+    partial void UpdateTable_LookupTakType(Table_LookupTakType instance);
+    partial void DeleteTable_LookupTakType(Table_LookupTakType instance);
     #endregion
 		
 		public DataClassesKanNaimDataContext() : 
@@ -256,6 +262,22 @@ namespace DbSql
 			get
 			{
 				return this.GetTable<Table_Taktzirim>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Table_Broadcast> Table_Broadcasts
+		{
+			get
+			{
+				return this.GetTable<Table_Broadcast>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Table_LookupTakType> Table_LookupTakTypes
+		{
+			get
+			{
+				return this.GetTable<Table_LookupTakType>();
 			}
 		}
 	}
@@ -2050,7 +2072,7 @@ namespace DbSql
 			}
 		}
 		
-		[Column(Storage="_Title", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		[Column(Storage="_Title", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
 		public string Title
 		{
 			get
@@ -2747,8 +2769,8 @@ namespace DbSql
 		{
 			OnCreated();
 		}
-
-        [Column(Storage = "_PhotoId", DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
+		
+		[Column(Storage="_PhotoId", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int PhotoId
 		{
 			get
@@ -4415,7 +4437,7 @@ namespace DbSql
 			}
 		}
 		
-		[Column(Storage="_TakTitle", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		[Column(Storage="_TakTitle", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
 		public string TakTitle
 		{
 			get
@@ -4531,6 +4553,394 @@ namespace DbSql
 					this._ScheduleId = value;
 					this.SendPropertyChanged("ScheduleId");
 					this.OnScheduleIdChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[Table(Name="dbo.Table_Broadcast")]
+	public partial class Table_Broadcast : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private System.DateTime _StartDateTime;
+		
+		private bool _isRecursive;
+		
+		private bool _isDaily;
+		
+		private bool _isWeekly;
+		
+		private bool _isMonthly;
+		
+		private bool _isYearly;
+		
+		private int _DurationHours;
+		
+		private int _TakId;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnStartDateTimeChanging(System.DateTime value);
+    partial void OnStartDateTimeChanged();
+    partial void OnisRecursiveChanging(bool value);
+    partial void OnisRecursiveChanged();
+    partial void OnisDailyChanging(bool value);
+    partial void OnisDailyChanged();
+    partial void OnisWeeklyChanging(bool value);
+    partial void OnisWeeklyChanged();
+    partial void OnisMonthlyChanging(bool value);
+    partial void OnisMonthlyChanged();
+    partial void OnisYearlyChanging(bool value);
+    partial void OnisYearlyChanged();
+    partial void OnDurationHoursChanging(int value);
+    partial void OnDurationHoursChanged();
+    partial void OnTakIdChanging(int value);
+    partial void OnTakIdChanged();
+    #endregion
+		
+		public Table_Broadcast()
+		{
+			OnCreated();
+		}
+		
+		[Column(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[Column(Storage="_StartDateTime", DbType="DateTime NOT NULL")]
+		public System.DateTime StartDateTime
+		{
+			get
+			{
+				return this._StartDateTime;
+			}
+			set
+			{
+				if ((this._StartDateTime != value))
+				{
+					this.OnStartDateTimeChanging(value);
+					this.SendPropertyChanging();
+					this._StartDateTime = value;
+					this.SendPropertyChanged("StartDateTime");
+					this.OnStartDateTimeChanged();
+				}
+			}
+		}
+		
+		[Column(Storage="_isRecursive", DbType="Bit NOT NULL")]
+		public bool isRecursive
+		{
+			get
+			{
+				return this._isRecursive;
+			}
+			set
+			{
+				if ((this._isRecursive != value))
+				{
+					this.OnisRecursiveChanging(value);
+					this.SendPropertyChanging();
+					this._isRecursive = value;
+					this.SendPropertyChanged("isRecursive");
+					this.OnisRecursiveChanged();
+				}
+			}
+		}
+		
+		[Column(Storage="_isDaily", DbType="Bit NOT NULL")]
+		public bool isDaily
+		{
+			get
+			{
+				return this._isDaily;
+			}
+			set
+			{
+				if ((this._isDaily != value))
+				{
+					this.OnisDailyChanging(value);
+					this.SendPropertyChanging();
+					this._isDaily = value;
+					this.SendPropertyChanged("isDaily");
+					this.OnisDailyChanged();
+				}
+			}
+		}
+		
+		[Column(Storage="_isWeekly", DbType="Bit NOT NULL")]
+		public bool isWeekly
+		{
+			get
+			{
+				return this._isWeekly;
+			}
+			set
+			{
+				if ((this._isWeekly != value))
+				{
+					this.OnisWeeklyChanging(value);
+					this.SendPropertyChanging();
+					this._isWeekly = value;
+					this.SendPropertyChanged("isWeekly");
+					this.OnisWeeklyChanged();
+				}
+			}
+		}
+		
+		[Column(Storage="_isMonthly", DbType="Bit NOT NULL")]
+		public bool isMonthly
+		{
+			get
+			{
+				return this._isMonthly;
+			}
+			set
+			{
+				if ((this._isMonthly != value))
+				{
+					this.OnisMonthlyChanging(value);
+					this.SendPropertyChanging();
+					this._isMonthly = value;
+					this.SendPropertyChanged("isMonthly");
+					this.OnisMonthlyChanged();
+				}
+			}
+		}
+		
+		[Column(Storage="_isYearly", DbType="Bit NOT NULL")]
+		public bool isYearly
+		{
+			get
+			{
+				return this._isYearly;
+			}
+			set
+			{
+				if ((this._isYearly != value))
+				{
+					this.OnisYearlyChanging(value);
+					this.SendPropertyChanging();
+					this._isYearly = value;
+					this.SendPropertyChanged("isYearly");
+					this.OnisYearlyChanged();
+				}
+			}
+		}
+		
+		[Column(Storage="_DurationHours", DbType="Int NOT NULL")]
+		public int DurationHours
+		{
+			get
+			{
+				return this._DurationHours;
+			}
+			set
+			{
+				if ((this._DurationHours != value))
+				{
+					this.OnDurationHoursChanging(value);
+					this.SendPropertyChanging();
+					this._DurationHours = value;
+					this.SendPropertyChanged("DurationHours");
+					this.OnDurationHoursChanged();
+				}
+			}
+		}
+		
+		[Column(Storage="_TakId", DbType="Int NOT NULL")]
+		public int TakId
+		{
+			get
+			{
+				return this._TakId;
+			}
+			set
+			{
+				if ((this._TakId != value))
+				{
+					this.OnTakIdChanging(value);
+					this.SendPropertyChanging();
+					this._TakId = value;
+					this.SendPropertyChanged("TakId");
+					this.OnTakIdChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[Table(Name="dbo.Table_LookupTakTypes")]
+	public partial class Table_LookupTakType : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _Description;
+		
+		private System.Nullable<int> _Width;
+		
+		private System.Nullable<int> _Height;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnDescriptionChanging(string value);
+    partial void OnDescriptionChanged();
+    partial void OnWidthChanging(System.Nullable<int> value);
+    partial void OnWidthChanged();
+    partial void OnHeightChanging(System.Nullable<int> value);
+    partial void OnHeightChanged();
+    #endregion
+		
+		public Table_LookupTakType()
+		{
+			OnCreated();
+		}
+		
+		[Column(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[Column(Storage="_Description", DbType="NChar(30) NOT NULL", CanBeNull=false)]
+		public string Description
+		{
+			get
+			{
+				return this._Description;
+			}
+			set
+			{
+				if ((this._Description != value))
+				{
+					this.OnDescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._Description = value;
+					this.SendPropertyChanged("Description");
+					this.OnDescriptionChanged();
+				}
+			}
+		}
+		
+		[Column(Storage="_Width", DbType="Int")]
+		public System.Nullable<int> Width
+		{
+			get
+			{
+				return this._Width;
+			}
+			set
+			{
+				if ((this._Width != value))
+				{
+					this.OnWidthChanging(value);
+					this.SendPropertyChanging();
+					this._Width = value;
+					this.SendPropertyChanged("Width");
+					this.OnWidthChanged();
+				}
+			}
+		}
+		
+		[Column(Storage="_Height", DbType="Int")]
+		public System.Nullable<int> Height
+		{
+			get
+			{
+				return this._Height;
+			}
+			set
+			{
+				if ((this._Height != value))
+				{
+					this.OnHeightChanging(value);
+					this.SendPropertyChanging();
+					this._Height = value;
+					this.SendPropertyChanged("Height");
+					this.OnHeightChanged();
 				}
 			}
 		}
