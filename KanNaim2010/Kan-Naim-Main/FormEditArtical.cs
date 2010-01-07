@@ -1310,5 +1310,21 @@ namespace Kan_Naim_Main
         {
             buttonReloadCategoryTree_Click(_singleton._buttonReloadCategoryTree, e);
         }
+
+        private void buttonCopyTitleToTak_Click(object sender, EventArgs e)
+        {
+            foreach (var userControlTakFill in UcTakFillCollection.Values)
+            {
+                userControlTakFill.SetTitleText(_textBoxArticleTitle.Text);
+            }
+        }
+
+        private void buttonCopySubtitelToTak_Click(object sender, EventArgs e)
+        {
+            foreach (var userControlTakFill in UcTakFillCollection.Values)
+            {
+                userControlTakFill.SetContentText(_textBoxArticleSubtitle.Text);
+            }
+        }
     }
 }

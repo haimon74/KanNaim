@@ -11,7 +11,6 @@ namespace HaimDLL
         {
             InitializeComponent();
             _nodes = treeView1.Nodes;
-            _conStr = Constants.My10InfoConnectionString;
         }
 
         private void UserControlTreeView_Load(object sender, EventArgs e)
@@ -19,7 +18,7 @@ namespace HaimDLL
             treeView1.Nodes.Clear();
         }
 
-        private static string _conStr;
+        private static string _conStr = Constants.My10InfoConnectionString;
 
         private SqlConnection _objConn = new SqlConnection(_conStr);
         public SqlConnection ObjConn

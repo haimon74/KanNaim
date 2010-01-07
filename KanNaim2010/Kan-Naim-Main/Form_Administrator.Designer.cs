@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.labelCategory = new System.Windows.Forms.Label();
+            this.checkBoxSelectCategory = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxDataType = new System.Windows.Forms.ComboBox();
             this.groupBoxObjectStatus = new System.Windows.Forms.GroupBox();
             this.radioButtonArchive = new System.Windows.Forms.RadioButton();
             this.radioButtonBroadcast = new System.Windows.Forms.RadioButton();
             this.radioButtonActive = new System.Windows.Forms.RadioButton();
-            this.userControlTreeView1 = new HaimDLL.UserControlTreeView();
             this.buttonShowResults = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,14 +66,20 @@
             this.ToolStripMenuItemAddNewPhoto = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemAddNewVideo = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemAddNewBanner = new System.Windows.Forms.ToolStripMenuItem();
+            this._tableLookupCategoriesTableAdapter = new Kan_Naim_Main._Kan_NaimDataSetCategoriesTableAdapters.Table_LookupCategoriesTableAdapter();
+            this._tableLookupCategoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._kanNaimDataSetCategories = new Kan_Naim_Main._Kan_NaimDataSetCategories();
+            this.userControlTreeView1 = new HaimDLL.UserControlTreeView();
             this.groupBox1.SuspendLayout();
             this.groupBoxObjectStatus.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._tableLookupCategoriesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._kanNaimDataSetCategories)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.labelCategory);
+            this.groupBox1.Controls.Add(this.checkBoxSelectCategory);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.comboBoxDataType);
             this.groupBox1.Controls.Add(this.groupBoxObjectStatus);
@@ -91,14 +97,17 @@
             this.groupBox1.Text = "סינן רשימות לפי תאריכים וקטגוריות";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // labelCategory
+            // checkBoxSelectCategory
             // 
-            this.labelCategory.AutoSize = true;
-            this.labelCategory.Location = new System.Drawing.Point(257, 23);
-            this.labelCategory.Name = "labelCategory";
-            this.labelCategory.Size = new System.Drawing.Size(110, 13);
-            this.labelCategory.TabIndex = 44;
-            this.labelCategory.Text = "בחר קטגוריה לסינון";
+            this.checkBoxSelectCategory.AutoSize = true;
+            this.checkBoxSelectCategory.Enabled = false;
+            this.checkBoxSelectCategory.Location = new System.Drawing.Point(245, 13);
+            this.checkBoxSelectCategory.Name = "checkBoxSelectCategory";
+            this.checkBoxSelectCategory.Size = new System.Drawing.Size(129, 17);
+            this.checkBoxSelectCategory.TabIndex = 45;
+            this.checkBoxSelectCategory.Text = "בחר קטגוריה לסינון";
+            this.checkBoxSelectCategory.UseVisualStyleBackColor = true;
+            this.checkBoxSelectCategory.CheckedChanged += new System.EventHandler(this.checkBoxSelectCategory_CheckedChanged);
             // 
             // label3
             // 
@@ -114,7 +123,7 @@
             this.comboBoxDataType.FormattingEnabled = true;
             this.comboBoxDataType.Items.AddRange(new object[] {
             "כתבות",
-            "תקצירים",
+            "שידורים",
             "תמונות",
             "ווידאו",
             "RSS",
@@ -135,6 +144,7 @@
             this.groupBoxObjectStatus.TabIndex = 8;
             this.groupBoxObjectStatus.TabStop = false;
             this.groupBoxObjectStatus.Text = "בחר סטטוס לסינון";
+            this.groupBoxObjectStatus.Visible = false;
             // 
             // radioButtonArchive
             // 
@@ -168,21 +178,6 @@
             this.radioButtonActive.Text = "פעילים";
             this.radioButtonActive.UseVisualStyleBackColor = true;
             // 
-            // userControlTreeView1
-            // 
-            this.userControlTreeView1.IdColumnName = "CatId";
-            this.userControlTreeView1.Location = new System.Drawing.Point(37, 39);
-            this.userControlTreeView1.LookupTableName = null;
-            this.userControlTreeView1.MyQry = "select * FROM Table_LookupCategories WHERE ParentCatId=\'-1\'";
-            this.userControlTreeView1.Name = "userControlTreeView1";
-            this.userControlTreeView1.ParentIdColumnName = null;
-            this.userControlTreeView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.userControlTreeView1.RootNodeId = "1";
-            this.userControlTreeView1.RootNodeName = "עמוד ראשי";
-            this.userControlTreeView1.Size = new System.Drawing.Size(337, 397);
-            this.userControlTreeView1.TabIndex = 8;
-            this.userControlTreeView1.TextColumnName = "CatHebrewName";
-            // 
             // buttonShowResults
             // 
             this.buttonShowResults.Location = new System.Drawing.Point(409, 326);
@@ -213,21 +208,25 @@
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Enabled = false;
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(518, 96);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dateTimePicker2.RightToLeftLayout = true;
+            this.dateTimePicker2.ShowUpDown = true;
             this.dateTimePicker2.Size = new System.Drawing.Size(88, 20);
             this.dateTimePicker2.TabIndex = 37;
             // 
             // dateTimePicker21
             // 
+            this.dateTimePicker21.Enabled = false;
             this.dateTimePicker21.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker21.Location = new System.Drawing.Point(518, 50);
             this.dateTimePicker21.Name = "dateTimePicker21";
             this.dateTimePicker21.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dateTimePicker21.RightToLeftLayout = true;
+            this.dateTimePicker21.ShowUpDown = true;
             this.dateTimePicker21.Size = new System.Drawing.Size(88, 20);
             this.dateTimePicker21.TabIndex = 35;
             // 
@@ -424,6 +423,36 @@
             this.ToolStripMenuItemAddNewBanner.Text = "הוספת באנרים";
             this.ToolStripMenuItemAddNewBanner.Click += new System.EventHandler(this.ToolStripMenuItemAddNewBanner_Click);
             // 
+            // _tableLookupCategoriesTableAdapter
+            // 
+            this._tableLookupCategoriesTableAdapter.ClearBeforeFill = true;
+            // 
+            // _tableLookupCategoriesBindingSource
+            // 
+            this._tableLookupCategoriesBindingSource.DataMember = "Table_LookupCategories";
+            this._tableLookupCategoriesBindingSource.DataSource = this._kanNaimDataSetCategories;
+            // 
+            // _kanNaimDataSetCategories
+            // 
+            this._kanNaimDataSetCategories.DataSetName = "_Kan_NaimDataSetCategories";
+            this._kanNaimDataSetCategories.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // userControlTreeView1
+            // 
+            this.userControlTreeView1.Enabled = false;
+            this.userControlTreeView1.IdColumnName = "CatId";
+            this.userControlTreeView1.Location = new System.Drawing.Point(37, 39);
+            this.userControlTreeView1.LookupTableName = null;
+            this.userControlTreeView1.MyQry = "select * FROM Table_LookupCategories WHERE ParentCatId=\'-1\'";
+            this.userControlTreeView1.Name = "userControlTreeView1";
+            this.userControlTreeView1.ParentIdColumnName = null;
+            this.userControlTreeView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.userControlTreeView1.RootNodeId = "1";
+            this.userControlTreeView1.RootNodeName = "עמוד ראשי";
+            this.userControlTreeView1.Size = new System.Drawing.Size(337, 397);
+            this.userControlTreeView1.TabIndex = 8;
+            this.userControlTreeView1.TextColumnName = "CatHebrewName";
+            // 
             // FormAdministrator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -447,6 +476,8 @@
             this.groupBoxObjectStatus.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._tableLookupCategoriesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._kanNaimDataSetCategories)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -475,7 +506,6 @@
         private System.Windows.Forms.RadioButton radioButtonArchive;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBoxDataType;
-        private System.Windows.Forms.Label labelCategory;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemEditPublicArticle;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemEditPrivateArticle;
         private System.Windows.Forms.ToolStripMenuItem אינדקסיםToolStripMenuItem;
@@ -492,5 +522,9 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemAddNewVideo;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemAddNewBanner;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemCategories;
+        private System.Windows.Forms.CheckBox checkBoxSelectCategory;
+        private Kan_Naim_Main._Kan_NaimDataSetCategoriesTableAdapters.Table_LookupCategoriesTableAdapter _tableLookupCategoriesTableAdapter;
+        private System.Windows.Forms.BindingSource _tableLookupCategoriesBindingSource;
+        private _Kan_NaimDataSetCategories _kanNaimDataSetCategories;
     }
 }

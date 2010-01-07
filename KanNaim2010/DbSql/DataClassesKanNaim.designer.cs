@@ -2152,6 +2152,14 @@ namespace DbSql
 			}
 		}
 		
+	    public long UpdateTicks
+	    {
+	        get
+	        {
+	            return _UpdateDate.Ticks;
+	        }
+	    }
+
 		[Column(Storage="_CreateDate", DbType="DateTime NOT NULL")]
 		public System.DateTime CreateDate
 		{
@@ -2869,7 +2877,15 @@ namespace DbSql
 				}
 			}
 		}
-		
+
+        public long DateTicks
+        {
+            get
+            {
+                return _Date.Ticks;
+            }
+        }
+
 		[Column(Storage="_Name", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
 		public string Name
 		{
@@ -3798,7 +3814,15 @@ namespace DbSql
 				}
 			}
 		}
-		
+
+        public long DateTicks
+        {
+            get
+            {
+                return _Date.Ticks;
+            }
+        }
+
 		[Column(Storage="_CssClass", DbType="NChar(20)")]
 		public string CssClass
 		{
@@ -4670,7 +4694,15 @@ namespace DbSql
 				}
 			}
 		}
-		
+
+        public long StartTicks
+        {
+            get
+            {
+                return _StartDateTime.Ticks;
+            }
+        }
+
 		[Column(Storage="_isRecursive", DbType="Bit NOT NULL")]
 		public bool isRecursive
 		{

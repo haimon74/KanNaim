@@ -34,11 +34,11 @@ namespace Kan_Naim_Main
             this._tabControl1 = new System.Windows.Forms.TabControl();
             this._tabPageArticle = new System.Windows.Forms.TabPage();
             this._groupBox8 = new System.Windows.Forms.GroupBox();
+            this.buttonCopySubtitelToTak = new System.Windows.Forms.Button();
+            this.buttonCopyTitleToTak = new System.Windows.Forms.Button();
             this._richTextBoxArticleContent = new System.Windows.Forms.RichTextBox();
             this._comboBoxVideoPos = new System.Windows.Forms.ComboBox();
             this._comboBoxImgPos = new System.Windows.Forms.ComboBox();
-            this._buttonSubTitleH2 = new System.Windows.Forms.Button();
-            this._buttonTitleH1 = new System.Windows.Forms.Button();
             this._buttonOpenEditor = new System.Windows.Forms.Button();
             this._labelOriginPhotoId = new System.Windows.Forms.Label();
             this._comboBoxArticleCategory = new System.Windows.Forms.ComboBox();
@@ -70,6 +70,8 @@ namespace Kan_Naim_Main
             this._labelTitle = new System.Windows.Forms.Label();
             this._labelSubtitle = new System.Windows.Forms.Label();
             this._textBoxArticleSubtitle = new System.Windows.Forms.TextBox();
+            this._buttonTitleH1 = new System.Windows.Forms.Button();
+            this._buttonSubTitleH2 = new System.Windows.Forms.Button();
             this._tabPageTak3X = new System.Windows.Forms.TabPage();
             this._label5 = new System.Windows.Forms.Label();
             this._userControlTakFillSizeX3 = new HaimDLL.UserControlTakFill();
@@ -167,7 +169,7 @@ namespace Kan_Naim_Main
             this._tabControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._tabControl1.RightToLeftLayout = true;
             this._tabControl1.SelectedIndex = 0;
-            this._tabControl1.Size = new System.Drawing.Size(713, 485);
+            this._tabControl1.Size = new System.Drawing.Size(716, 485);
             this._tabControl1.TabIndex = 4;
             // 
             // _tabPageArticle
@@ -176,13 +178,15 @@ namespace Kan_Naim_Main
             this._tabPageArticle.Location = new System.Drawing.Point(4, 22);
             this._tabPageArticle.Name = "_tabPageArticle";
             this._tabPageArticle.Padding = new System.Windows.Forms.Padding(3);
-            this._tabPageArticle.Size = new System.Drawing.Size(705, 459);
+            this._tabPageArticle.Size = new System.Drawing.Size(708, 459);
             this._tabPageArticle.TabIndex = 0;
             this._tabPageArticle.Text = "כתבה";
             this._tabPageArticle.UseVisualStyleBackColor = true;
             // 
             // _groupBox8
             // 
+            this._groupBox8.Controls.Add(this.buttonCopySubtitelToTak);
+            this._groupBox8.Controls.Add(this.buttonCopyTitleToTak);
             this._groupBox8.Controls.Add(this._richTextBoxArticleContent);
             this._groupBox8.Controls.Add(this._comboBoxVideoPos);
             this._groupBox8.Controls.Add(this._comboBoxImgPos);
@@ -220,13 +224,33 @@ namespace Kan_Naim_Main
             this._groupBox8.TabStop = false;
             this._groupBox8.Text = "הזנת תוכן ומאפייני הכתבה";
             // 
+            // buttonCopySubtitelToTak
+            // 
+            this.buttonCopySubtitelToTak.Location = new System.Drawing.Point(568, 100);
+            this.buttonCopySubtitelToTak.Name = "buttonCopySubtitelToTak";
+            this.buttonCopySubtitelToTak.Size = new System.Drawing.Size(75, 23);
+            this.buttonCopySubtitelToTak.TabIndex = 87;
+            this.buttonCopySubtitelToTak.Text = "לתקצירים";
+            this.buttonCopySubtitelToTak.UseVisualStyleBackColor = true;
+            this.buttonCopySubtitelToTak.Click += new System.EventHandler(this.buttonCopySubtitelToTak_Click);
+            // 
+            // buttonCopyTitleToTak
+            // 
+            this.buttonCopyTitleToTak.Location = new System.Drawing.Point(565, 35);
+            this.buttonCopyTitleToTak.Name = "buttonCopyTitleToTak";
+            this.buttonCopyTitleToTak.Size = new System.Drawing.Size(75, 23);
+            this.buttonCopyTitleToTak.TabIndex = 86;
+            this.buttonCopyTitleToTak.Text = "לתקצירים";
+            this.buttonCopyTitleToTak.UseVisualStyleBackColor = true;
+            this.buttonCopyTitleToTak.Click += new System.EventHandler(this.buttonCopyTitleToTak_Click);
+            // 
             // _richTextBoxArticleContent
             // 
             this._richTextBoxArticleContent.Enabled = false;
-            this._richTextBoxArticleContent.Location = new System.Drawing.Point(19, 264);
+            this._richTextBoxArticleContent.Location = new System.Drawing.Point(19, 306);
             this._richTextBoxArticleContent.MaxLength = 10000;
             this._richTextBoxArticleContent.Name = "_richTextBoxArticleContent";
-            this._richTextBoxArticleContent.Size = new System.Drawing.Size(541, 165);
+            this._richTextBoxArticleContent.Size = new System.Drawing.Size(541, 123);
             this._richTextBoxArticleContent.TabIndex = 85;
             this._richTextBoxArticleContent.Text = "";
             // 
@@ -255,7 +279,7 @@ namespace Kan_Naim_Main
             "180",
             "190",
             "200"});
-            this._comboBoxVideoPos.Location = new System.Drawing.Point(19, 184);
+            this._comboBoxVideoPos.Location = new System.Drawing.Point(19, 226);
             this._comboBoxVideoPos.Name = "_comboBoxVideoPos";
             this._comboBoxVideoPos.Size = new System.Drawing.Size(70, 21);
             this._comboBoxVideoPos.TabIndex = 84;
@@ -287,37 +311,16 @@ namespace Kan_Naim_Main
             "180",
             "190",
             "200"});
-            this._comboBoxImgPos.Location = new System.Drawing.Point(19, 157);
+            this._comboBoxImgPos.Location = new System.Drawing.Point(19, 199);
             this._comboBoxImgPos.Name = "_comboBoxImgPos";
             this._comboBoxImgPos.Size = new System.Drawing.Size(70, 21);
             this._comboBoxImgPos.TabIndex = 83;
             this._comboBoxImgPos.Text = "  מלמעלה";
             this._comboBoxImgPos.Visible = false;
             // 
-            // _buttonSubTitleH2
-            // 
-            this._buttonSubTitleH2.Location = new System.Drawing.Point(564, 75);
-            this._buttonSubTitleH2.Name = "_buttonSubTitleH2";
-            this._buttonSubTitleH2.Size = new System.Drawing.Size(84, 23);
-            this._buttonSubTitleH2.TabIndex = 79;
-            this._buttonSubTitleH2.Text = "H2";
-            this._buttonSubTitleH2.UseVisualStyleBackColor = true;
-            this._buttonSubTitleH2.Click += new System.EventHandler(this.buttonTitlesH1andH2_Click);
-            // 
-            // _buttonTitleH1
-            // 
-            this._buttonTitleH1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._buttonTitleH1.Location = new System.Drawing.Point(564, 32);
-            this._buttonTitleH1.Name = "_buttonTitleH1";
-            this._buttonTitleH1.Size = new System.Drawing.Size(84, 20);
-            this._buttonTitleH1.TabIndex = 78;
-            this._buttonTitleH1.Text = "H1";
-            this._buttonTitleH1.UseVisualStyleBackColor = true;
-            this._buttonTitleH1.Click += new System.EventHandler(this.buttonTitlesH1andH2_Click);
-            // 
             // _buttonOpenEditor
             // 
-            this._buttonOpenEditor.Location = new System.Drawing.Point(573, 286);
+            this._buttonOpenEditor.Location = new System.Drawing.Point(573, 333);
             this._buttonOpenEditor.Name = "_buttonOpenEditor";
             this._buttonOpenEditor.Size = new System.Drawing.Size(59, 23);
             this._buttonOpenEditor.TabIndex = 76;
@@ -328,7 +331,7 @@ namespace Kan_Naim_Main
             // _labelOriginPhotoId
             // 
             this._labelOriginPhotoId.AutoSize = true;
-            this._labelOriginPhotoId.Location = new System.Drawing.Point(642, 279);
+            this._labelOriginPhotoId.Location = new System.Drawing.Point(642, 321);
             this._labelOriginPhotoId.Name = "_labelOriginPhotoId";
             this._labelOriginPhotoId.Size = new System.Drawing.Size(13, 13);
             this._labelOriginPhotoId.TabIndex = 62;
@@ -340,7 +343,7 @@ namespace Kan_Naim_Main
             this._comboBoxArticleCategory.DataSource = this._tableLookupCategoriesBindingSource;
             this._comboBoxArticleCategory.DisplayMember = "CatHebrewName";
             this._comboBoxArticleCategory.FormattingEnabled = true;
-            this._comboBoxArticleCategory.Location = new System.Drawing.Point(19, 130);
+            this._comboBoxArticleCategory.Location = new System.Drawing.Point(19, 172);
             this._comboBoxArticleCategory.Name = "_comboBoxArticleCategory";
             this._comboBoxArticleCategory.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._comboBoxArticleCategory.Size = new System.Drawing.Size(193, 21);
@@ -361,7 +364,7 @@ namespace Kan_Naim_Main
             // _label22
             // 
             this._label22.AutoSize = true;
-            this._label22.Location = new System.Drawing.Point(218, 133);
+            this._label22.Location = new System.Drawing.Point(218, 175);
             this._label22.Name = "_label22";
             this._label22.Size = new System.Drawing.Size(50, 13);
             this._label22.TabIndex = 60;
@@ -370,7 +373,7 @@ namespace Kan_Naim_Main
             // _buttonSearchVideosArchive
             // 
             this._buttonSearchVideosArchive.Enabled = false;
-            this._buttonSearchVideosArchive.Location = new System.Drawing.Point(568, 182);
+            this._buttonSearchVideosArchive.Location = new System.Drawing.Point(568, 224);
             this._buttonSearchVideosArchive.Name = "_buttonSearchVideosArchive";
             this._buttonSearchVideosArchive.Size = new System.Drawing.Size(75, 23);
             this._buttonSearchVideosArchive.TabIndex = 59;
@@ -380,7 +383,7 @@ namespace Kan_Naim_Main
             // _buttonSearchPhotosArchive
             // 
             this._buttonSearchPhotosArchive.Enabled = false;
-            this._buttonSearchPhotosArchive.Location = new System.Drawing.Point(568, 155);
+            this._buttonSearchPhotosArchive.Location = new System.Drawing.Point(568, 197);
             this._buttonSearchPhotosArchive.Name = "_buttonSearchPhotosArchive";
             this._buttonSearchPhotosArchive.Size = new System.Drawing.Size(75, 23);
             this._buttonSearchPhotosArchive.TabIndex = 58;
@@ -392,7 +395,7 @@ namespace Kan_Naim_Main
             this._comboBoxArticlePhoto.DataSource = this._tablePhotosArchiveBindingSource;
             this._comboBoxArticlePhoto.DisplayMember = "ImageUrl";
             this._comboBoxArticlePhoto.FormattingEnabled = true;
-            this._comboBoxArticlePhoto.Location = new System.Drawing.Point(95, 157);
+            this._comboBoxArticlePhoto.Location = new System.Drawing.Point(95, 199);
             this._comboBoxArticlePhoto.Name = "_comboBoxArticlePhoto";
             this._comboBoxArticlePhoto.Size = new System.Drawing.Size(465, 21);
             this._comboBoxArticlePhoto.TabIndex = 57;
@@ -413,7 +416,7 @@ namespace Kan_Naim_Main
             // 
             this._comboBoxArticleVideo.Enabled = false;
             this._comboBoxArticleVideo.FormattingEnabled = true;
-            this._comboBoxArticleVideo.Location = new System.Drawing.Point(95, 184);
+            this._comboBoxArticleVideo.Location = new System.Drawing.Point(95, 226);
             this._comboBoxArticleVideo.Name = "_comboBoxArticleVideo";
             this._comboBoxArticleVideo.Size = new System.Drawing.Size(465, 21);
             this._comboBoxArticleVideo.TabIndex = 56;
@@ -423,7 +426,7 @@ namespace Kan_Naim_Main
             // 
             this._dateTimePicker22.Enabled = false;
             this._dateTimePicker22.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this._dateTimePicker22.Location = new System.Drawing.Point(19, 104);
+            this._dateTimePicker22.Location = new System.Drawing.Point(19, 146);
             this._dateTimePicker22.Name = "_dateTimePicker22";
             this._dateTimePicker22.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._dateTimePicker22.RightToLeftLayout = true;
@@ -433,7 +436,7 @@ namespace Kan_Naim_Main
             // _labelArtical
             // 
             this._labelArtical.AutoSize = true;
-            this._labelArtical.Location = new System.Drawing.Point(571, 264);
+            this._labelArtical.Location = new System.Drawing.Point(573, 306);
             this._labelArtical.Name = "_labelArtical";
             this._labelArtical.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._labelArtical.Size = new System.Drawing.Size(62, 13);
@@ -442,7 +445,7 @@ namespace Kan_Naim_Main
             // 
             // _textBoxKeyWords
             // 
-            this._textBoxKeyWords.Location = new System.Drawing.Point(19, 238);
+            this._textBoxKeyWords.Location = new System.Drawing.Point(19, 280);
             this._textBoxKeyWords.MaxLength = 200;
             this._textBoxKeyWords.Name = "_textBoxKeyWords";
             this._textBoxKeyWords.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -452,7 +455,7 @@ namespace Kan_Naim_Main
             // _labelKeyWords
             // 
             this._labelKeyWords.AutoSize = true;
-            this._labelKeyWords.Location = new System.Drawing.Point(573, 241);
+            this._labelKeyWords.Location = new System.Drawing.Point(573, 283);
             this._labelKeyWords.Name = "_labelKeyWords";
             this._labelKeyWords.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._labelKeyWords.Size = new System.Drawing.Size(74, 13);
@@ -461,7 +464,7 @@ namespace Kan_Naim_Main
             // 
             // _textBoxTags
             // 
-            this._textBoxTags.Location = new System.Drawing.Point(19, 211);
+            this._textBoxTags.Location = new System.Drawing.Point(19, 253);
             this._textBoxTags.MaxLength = 200;
             this._textBoxTags.Name = "_textBoxTags";
             this._textBoxTags.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -471,7 +474,7 @@ namespace Kan_Naim_Main
             // _labelTags
             // 
             this._labelTags.AutoSize = true;
-            this._labelTags.Location = new System.Drawing.Point(573, 218);
+            this._labelTags.Location = new System.Drawing.Point(573, 260);
             this._labelTags.Name = "_labelTags";
             this._labelTags.Size = new System.Drawing.Size(37, 13);
             this._labelTags.TabIndex = 20;
@@ -480,7 +483,7 @@ namespace Kan_Naim_Main
             // _labelEditor
             // 
             this._labelEditor.AutoSize = true;
-            this._labelEditor.Location = new System.Drawing.Point(573, 133);
+            this._labelEditor.Location = new System.Drawing.Point(573, 175);
             this._labelEditor.Name = "_labelEditor";
             this._labelEditor.Size = new System.Drawing.Size(32, 13);
             this._labelEditor.TabIndex = 18;
@@ -493,7 +496,7 @@ namespace Kan_Naim_Main
             this._textBoxArticleTitle.Multiline = true;
             this._textBoxArticleTitle.Name = "_textBoxArticleTitle";
             this._textBoxArticleTitle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this._textBoxArticleTitle.Size = new System.Drawing.Size(541, 36);
+            this._textBoxArticleTitle.Size = new System.Drawing.Size(541, 42);
             this._textBoxArticleTitle.TabIndex = 15;
             // 
             // _comboBoxEditor
@@ -501,7 +504,7 @@ namespace Kan_Naim_Main
             this._comboBoxEditor.DataSource = this._tableLookupReportersBindingSource1;
             this._comboBoxEditor.DisplayMember = "PublishNameShort";
             this._comboBoxEditor.FormattingEnabled = true;
-            this._comboBoxEditor.Location = new System.Drawing.Point(291, 130);
+            this._comboBoxEditor.Location = new System.Drawing.Point(291, 172);
             this._comboBoxEditor.Name = "_comboBoxEditor";
             this._comboBoxEditor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._comboBoxEditor.Size = new System.Drawing.Size(269, 21);
@@ -522,7 +525,7 @@ namespace Kan_Naim_Main
             // 
             this._dateTimePicker21.Enabled = false;
             this._dateTimePicker21.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this._dateTimePicker21.Location = new System.Drawing.Point(125, 104);
+            this._dateTimePicker21.Location = new System.Drawing.Point(125, 146);
             this._dateTimePicker21.MaxDate = new System.DateTime(2015, 12, 31, 0, 0, 0, 0);
             this._dateTimePicker21.MinDate = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
             this._dateTimePicker21.Name = "_dateTimePicker21";
@@ -537,7 +540,7 @@ namespace Kan_Naim_Main
             this._checkBoxMivzak.AutoSize = true;
             this._checkBoxMivzak.Checked = true;
             this._checkBoxMivzak.CheckState = System.Windows.Forms.CheckState.Checked;
-            this._checkBoxMivzak.Location = new System.Drawing.Point(422, 107);
+            this._checkBoxMivzak.Location = new System.Drawing.Point(422, 149);
             this._checkBoxMivzak.Name = "_checkBoxMivzak";
             this._checkBoxMivzak.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._checkBoxMivzak.Size = new System.Drawing.Size(52, 17);
@@ -551,7 +554,7 @@ namespace Kan_Naim_Main
             this._checkBoxDateTime.AutoSize = true;
             this._checkBoxDateTime.Checked = true;
             this._checkBoxDateTime.CheckState = System.Windows.Forms.CheckState.Checked;
-            this._checkBoxDateTime.Location = new System.Drawing.Point(218, 107);
+            this._checkBoxDateTime.Location = new System.Drawing.Point(218, 149);
             this._checkBoxDateTime.Name = "_checkBoxDateTime";
             this._checkBoxDateTime.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._checkBoxDateTime.Size = new System.Drawing.Size(90, 17);
@@ -565,7 +568,7 @@ namespace Kan_Naim_Main
             this._checkBoxRss.AutoSize = true;
             this._checkBoxRss.Checked = true;
             this._checkBoxRss.CheckState = System.Windows.Forms.CheckState.Checked;
-            this._checkBoxRss.Location = new System.Drawing.Point(348, 107);
+            this._checkBoxRss.Location = new System.Drawing.Point(348, 149);
             this._checkBoxRss.Name = "_checkBoxRss";
             this._checkBoxRss.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._checkBoxRss.Size = new System.Drawing.Size(48, 17);
@@ -579,7 +582,7 @@ namespace Kan_Naim_Main
             this._checkBoxPublish.AutoSize = true;
             this._checkBoxPublish.Checked = true;
             this._checkBoxPublish.CheckState = System.Windows.Forms.CheckState.Checked;
-            this._checkBoxPublish.Location = new System.Drawing.Point(494, 107);
+            this._checkBoxPublish.Location = new System.Drawing.Point(494, 149);
             this._checkBoxPublish.Name = "_checkBoxPublish";
             this._checkBoxPublish.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._checkBoxPublish.Size = new System.Drawing.Size(53, 17);
@@ -600,7 +603,7 @@ namespace Kan_Naim_Main
             // _labelSubtitle
             // 
             this._labelSubtitle.AutoSize = true;
-            this._labelSubtitle.Location = new System.Drawing.Point(571, 59);
+            this._labelSubtitle.Location = new System.Drawing.Point(568, 84);
             this._labelSubtitle.Name = "_labelSubtitle";
             this._labelSubtitle.Size = new System.Drawing.Size(75, 13);
             this._labelSubtitle.TabIndex = 0;
@@ -608,14 +611,39 @@ namespace Kan_Naim_Main
             // 
             // _textBoxArticleSubtitle
             // 
-            this._textBoxArticleSubtitle.Location = new System.Drawing.Point(17, 62);
+            this._textBoxArticleSubtitle.Location = new System.Drawing.Point(17, 68);
             this._textBoxArticleSubtitle.MaxLength = 300;
             this._textBoxArticleSubtitle.Multiline = true;
             this._textBoxArticleSubtitle.Name = "_textBoxArticleSubtitle";
             this._textBoxArticleSubtitle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._textBoxArticleSubtitle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this._textBoxArticleSubtitle.Size = new System.Drawing.Size(541, 36);
+            this._textBoxArticleSubtitle.Size = new System.Drawing.Size(541, 72);
             this._textBoxArticleSubtitle.TabIndex = 14;
+            // 
+            // _buttonTitleH1
+            // 
+            this._buttonTitleH1.Enabled = false;
+            this._buttonTitleH1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._buttonTitleH1.Location = new System.Drawing.Point(573, 380);
+            this._buttonTitleH1.Name = "_buttonTitleH1";
+            this._buttonTitleH1.Size = new System.Drawing.Size(59, 20);
+            this._buttonTitleH1.TabIndex = 78;
+            this._buttonTitleH1.Text = "H1";
+            this._buttonTitleH1.UseVisualStyleBackColor = true;
+            this._buttonTitleH1.Visible = false;
+            this._buttonTitleH1.Click += new System.EventHandler(this.buttonTitlesH1andH2_Click);
+            // 
+            // _buttonSubTitleH2
+            // 
+            this._buttonSubTitleH2.Enabled = false;
+            this._buttonSubTitleH2.Location = new System.Drawing.Point(573, 406);
+            this._buttonSubTitleH2.Name = "_buttonSubTitleH2";
+            this._buttonSubTitleH2.Size = new System.Drawing.Size(59, 23);
+            this._buttonSubTitleH2.TabIndex = 79;
+            this._buttonSubTitleH2.Text = "H2";
+            this._buttonSubTitleH2.UseVisualStyleBackColor = true;
+            this._buttonSubTitleH2.Visible = false;
+            this._buttonSubTitleH2.Click += new System.EventHandler(this.buttonTitlesH1andH2_Click);
             // 
             // _tabPageTak3X
             // 
@@ -624,7 +652,7 @@ namespace Kan_Naim_Main
             this._tabPageTak3X.Location = new System.Drawing.Point(4, 22);
             this._tabPageTak3X.Name = "_tabPageTak3X";
             this._tabPageTak3X.Padding = new System.Windows.Forms.Padding(3);
-            this._tabPageTak3X.Size = new System.Drawing.Size(705, 459);
+            this._tabPageTak3X.Size = new System.Drawing.Size(708, 459);
             this._tabPageTak3X.TabIndex = 1;
             this._tabPageTak3X.Text = "תקציר גדול X3";
             this._tabPageTak3X.UseVisualStyleBackColor = true;
@@ -654,7 +682,7 @@ namespace Kan_Naim_Main
             this._tabPageTak2X.Location = new System.Drawing.Point(4, 22);
             this._tabPageTak2X.Name = "_tabPageTak2X";
             this._tabPageTak2X.Padding = new System.Windows.Forms.Padding(3);
-            this._tabPageTak2X.Size = new System.Drawing.Size(705, 459);
+            this._tabPageTak2X.Size = new System.Drawing.Size(708, 459);
             this._tabPageTak2X.TabIndex = 2;
             this._tabPageTak2X.Text = "תקציר גדול X2";
             this._tabPageTak2X.UseVisualStyleBackColor = true;
@@ -684,7 +712,7 @@ namespace Kan_Naim_Main
             this._tabPageTak1X.Location = new System.Drawing.Point(4, 22);
             this._tabPageTak1X.Name = "_tabPageTak1X";
             this._tabPageTak1X.Padding = new System.Windows.Forms.Padding(3);
-            this._tabPageTak1X.Size = new System.Drawing.Size(705, 459);
+            this._tabPageTak1X.Size = new System.Drawing.Size(708, 459);
             this._tabPageTak1X.TabIndex = 3;
             this._tabPageTak1X.Text = "תקציר גדול X1";
             this._tabPageTak1X.UseVisualStyleBackColor = true;
@@ -714,7 +742,7 @@ namespace Kan_Naim_Main
             this._tabPageTakMedium.Location = new System.Drawing.Point(4, 22);
             this._tabPageTakMedium.Name = "_tabPageTakMedium";
             this._tabPageTakMedium.Padding = new System.Windows.Forms.Padding(3);
-            this._tabPageTakMedium.Size = new System.Drawing.Size(705, 459);
+            this._tabPageTakMedium.Size = new System.Drawing.Size(708, 459);
             this._tabPageTakMedium.TabIndex = 4;
             this._tabPageTakMedium.Text = "תקציר בינוני";
             this._tabPageTakMedium.UseVisualStyleBackColor = true;
@@ -744,7 +772,7 @@ namespace Kan_Naim_Main
             this._tabPageTakSmall.Location = new System.Drawing.Point(4, 22);
             this._tabPageTakSmall.Name = "_tabPageTakSmall";
             this._tabPageTakSmall.Padding = new System.Windows.Forms.Padding(3);
-            this._tabPageTakSmall.Size = new System.Drawing.Size(705, 459);
+            this._tabPageTakSmall.Size = new System.Drawing.Size(708, 459);
             this._tabPageTakSmall.TabIndex = 5;
             this._tabPageTakSmall.Text = "תקציר קטן";
             this._tabPageTakSmall.UseVisualStyleBackColor = true;
@@ -773,7 +801,7 @@ namespace Kan_Naim_Main
             this._tabPageCategories.Location = new System.Drawing.Point(4, 22);
             this._tabPageCategories.Name = "_tabPageCategories";
             this._tabPageCategories.Padding = new System.Windows.Forms.Padding(3);
-            this._tabPageCategories.Size = new System.Drawing.Size(705, 459);
+            this._tabPageCategories.Size = new System.Drawing.Size(708, 459);
             this._tabPageCategories.TabIndex = 6;
             this._tabPageCategories.Text = "קטגוריות";
             this._tabPageCategories.UseVisualStyleBackColor = true;
@@ -896,7 +924,7 @@ namespace Kan_Naim_Main
             this._tabPagePhotos.Location = new System.Drawing.Point(4, 22);
             this._tabPagePhotos.Name = "_tabPagePhotos";
             this._tabPagePhotos.Padding = new System.Windows.Forms.Padding(3);
-            this._tabPagePhotos.Size = new System.Drawing.Size(705, 459);
+            this._tabPagePhotos.Size = new System.Drawing.Size(708, 459);
             this._tabPagePhotos.TabIndex = 7;
             this._tabPagePhotos.Text = "תמונות";
             this._tabPagePhotos.UseVisualStyleBackColor = true;
@@ -915,7 +943,7 @@ namespace Kan_Naim_Main
             this._tabPageVideo.Location = new System.Drawing.Point(4, 22);
             this._tabPageVideo.Name = "_tabPageVideo";
             this._tabPageVideo.Padding = new System.Windows.Forms.Padding(3);
-            this._tabPageVideo.Size = new System.Drawing.Size(705, 459);
+            this._tabPageVideo.Size = new System.Drawing.Size(708, 459);
             this._tabPageVideo.TabIndex = 8;
             this._tabPageVideo.Text = "ווידאו";
             this._tabPageVideo.UseVisualStyleBackColor = true;
@@ -933,7 +961,7 @@ namespace Kan_Naim_Main
             this._tabPageAutoPublish.Location = new System.Drawing.Point(4, 22);
             this._tabPageAutoPublish.Name = "_tabPageAutoPublish";
             this._tabPageAutoPublish.Padding = new System.Windows.Forms.Padding(3);
-            this._tabPageAutoPublish.Size = new System.Drawing.Size(705, 459);
+            this._tabPageAutoPublish.Size = new System.Drawing.Size(708, 459);
             this._tabPageAutoPublish.TabIndex = 9;
             this._tabPageAutoPublish.Text = "שידורים אוטו\'";
             this._tabPageAutoPublish.UseVisualStyleBackColor = true;
@@ -1225,6 +1253,8 @@ namespace Kan_Naim_Main
         private UserControlUploadPhoto _ucUploadPhoto1;
         private UserControlUploadVideo _ucUploadVideo1;
         private System.ComponentModel.IContainer components;
+        private System.Windows.Forms.Button buttonCopySubtitelToTak;
+        private System.Windows.Forms.Button buttonCopyTitleToTak;
     }
 }
 /*

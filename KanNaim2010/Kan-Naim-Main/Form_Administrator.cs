@@ -16,32 +16,7 @@ namespace Kan_Naim_Main
             ToolStripMenuItemAddArticle_Click(sender, e);
         }
 
-        private void כתבותToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBoxPhoto2x_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox8_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPageArticle_Click(object sender, EventArgs e)
         {
 
         }
@@ -163,7 +138,7 @@ namespace Kan_Naim_Main
             form.Show();
             form.Focus();
         }
-        private void ShowUserControl(UserControl userControl)
+        private void ShowUserControl(UserControl userControl, string titleName)
         {
             var form = new Form
             {
@@ -173,7 +148,7 @@ namespace Kan_Naim_Main
                 RightToLeftLayout = true,
                 MaximizeBox = false,
                 MinimizeBox = false,
-                Name = "הזנת פרטי לינקים מועדפים",
+                Name = titleName,
                 SizeGripStyle = SizeGripStyle.Hide
             };
             userControl.Dock = DockStyle.Fill;
@@ -181,19 +156,39 @@ namespace Kan_Naim_Main
             form.Show();
             form.Focus();
         }
+
+        private void EditOriginalImage(int imageId)
+        {
+            var uc = new UserControlEditPhoto(imageId);
+            ShowUserControl(uc, "עריכת תמונה");
+        }
+        private void ViewImageDetails(int imageId)
+        {
+            var uc = new UserControlViewImageDetails(imageId);
+            ShowUserControl(uc, "פרטי תמונות");
+        }
+        private void AddNewImage()
+        {
+            var uc = new UserControlUploadPhoto();
+            ShowUserControl(uc, "הוספת תמונות לארכיון");
+        }
+
+
         private void buttonShowResults_Click(object sender, EventArgs e)
         {
             switch (comboBoxDataType.SelectedIndex)
             {
-                //case 0: // articles
-                //    ShowUserControl(new UserControlManageArticle());
-                //    break;
-                case 1: // taktzirim
-                    ShowUserControl(new UserControlManageTaktzirim(EditPublicArticleCallback));
+                case 0: // articles
+                    var uc0 = new UserControlManageArticles(EditPublicArticleCallback);
+                    ShowUserControl(uc0, "ניהול כתבות");
                     break;
-                //case 2: // images
-                //    ShowUserControl(new UserControlManageImages());
+                //case 1: // taktzirim
+                //    ShowUserControl(new UserControlManageArticles(EditPublicArticleCallback));
                 //    break;
+                case 2: // images
+                    var uc2 = new UserControlManageImages(EditOriginalImage, AddNewImage, ViewImageDetails);
+                    ShowUserControl(uc2, "ניהול תמונות");
+                    break;
                 //case 3: // videos
                 //    ShowUserControl(new UserControlManageVideos());
                 //    break;
@@ -212,6 +207,12 @@ namespace Kan_Naim_Main
         private void ToolStripMenuItemEditPublicArticle_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void checkBoxSelectCategory_CheckedChanged(object sender, EventArgs e)
+        {
+            userControlTreeView1.PopulateRootLevel("Table_LookupCategories", "ParentCatId");
+            userControlTreeView1.Enabled = checkBoxSelectCategory.Checked;
         }
     }
 }

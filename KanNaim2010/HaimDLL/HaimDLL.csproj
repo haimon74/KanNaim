@@ -51,17 +51,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserControlEditPhoto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEditPhoto.Designer.cs">
+      <DependentUpon>UserControlEditPhoto.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlEditVideo.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlEditVideo.Designer.cs">
       <DependentUpon>UserControlEditVideo.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlManageTaktzirim.cs">
+    <Compile Include="UserControlManageImages.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlManageTaktzirim.Designer.cs">
-      <DependentUpon>UserControlManageTaktzirim.cs</DependentUpon>
+    <Compile Include="UserControlManageImages.Designer.cs">
+      <DependentUpon>UserControlManageImages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlManageArticles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlManageArticles.Designer.cs">
+      <DependentUpon>UserControlManageArticles.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlPreferedLinks.cs">
       <SubType>UserControl</SubType>
@@ -137,13 +149,25 @@
     <Compile Include="UserControlUploadVideo.Designer.cs">
       <DependentUpon>UserControlUploadVideo.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlViewImageDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlViewImageDetails.Designer.cs">
+      <DependentUpon>UserControlViewImageDetails.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="UserControlEditPhoto.resx">
+      <DependentUpon>UserControlEditPhoto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlEditVideo.resx">
       <DependentUpon>UserControlEditVideo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlManageTaktzirim.resx">
-      <DependentUpon>UserControlManageTaktzirim.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlManageImages.resx">
+      <DependentUpon>UserControlManageImages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlManageArticles.resx">
+      <DependentUpon>UserControlManageArticles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlPreferedLinks.resx">
       <DependentUpon>UserControlPreferedLinks.cs</DependentUpon>
@@ -179,8 +203,13 @@
     <EmbeddedResource Include="UserControlUploadVideo.resx">
       <DependentUpon>UserControlUploadVideo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlViewImageDetails.resx">
+      <DependentUpon>UserControlViewImageDetails.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\DataSources\DbSql.Table_Article.datasource" />
+    <None Include="Properties\DataSources\DbSql.Table_OriginalPhotosArchive.datasource" />
     <None Include="Properties\DataSources\DbSql.Table_Taktzirim.datasource" />
   </ItemGroup>
   <ItemGroup>

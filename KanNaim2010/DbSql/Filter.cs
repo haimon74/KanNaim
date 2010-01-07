@@ -7,6 +7,12 @@ namespace DbSql
     {
         private static readonly DataClassesKanNaimDataContext Db = new DataClassesKanNaimDataContext();
 
+        public static IQueryable<Table_OriginalPhotosArchive> GetAllOriginalPhotos()
+        {
+            return from c in Db.Table_OriginalPhotosArchives
+                   orderby c.PhotoId descending 
+                   select c;
+        }
         public static IQueryable<Table_OriginalPhotosArchive> GetOriginalPhotosByCategoryName(string catName)
         {
             int catId = Lookup.GetLookupCategoryIdFromName(catName);
@@ -17,6 +23,7 @@ namespace DbSql
         {
             return from c in Db.Table_OriginalPhotosArchives
                    where c.CategoryId == catId
+                   orderby c.PhotoId descending 
                    select c;
         }
 
@@ -57,17 +64,9 @@ namespace DbSql
 
         public static Table_OriginalPhotosArchive GetOriginalPhotoFromId(int id)
         {
-            var result = from c in Db.Table_OriginalPhotosArchives
-                         where c.PhotoId == id
-                         select c;
-            try
-            {
-                return result.First();
-            }
-            catch
-            {
-                return null;
-            }
+            return (from c in Db.Table_OriginalPhotosArchives
+                    where c.PhotoId == id
+                    select c).FirstOrDefault();
         }
 
         public static IQueryable<string> GetVideosNamesByCategoryId(int id)
@@ -86,11 +85,17 @@ namespace DbSql
         public static int GetUserIdFromUserNameOrPhone(string str)
         {
             var result = GetUserByUserNameOrPhone(str);
+            if (result == null)
+                return -1;
+
             return result.First().UserId;
         }
         public static string GetUserRoleIdFromUserNameOrPhone(string str)
         {
             var result = GetUserByUserNameOrPhone(str);
+            if (result == null)
+                return "";
+
             int roleId = result.First().RoleId;
             try
             {
@@ -103,6 +108,20 @@ namespace DbSql
                 return "";
             }
         }
+
+        public static IQueryable<Table_Article> GetAllArticles()
+        {
+            return from c in Db.Table_Articles
+                   orderby c.ArticleId descending 
+                   select c;
+        }
+        public static Table_Article GetArticleByArticleId(int id)
+        {
+            return (from c in Db.Table_Articles
+                    where c.ArticleId == id
+                    select c).SingleOrDefault();
+        }
+        
         public static IQueryable<Table_Taktzirim> GetAllTaktzirim()
         {
             return from c in Db.Table_Taktzirims
@@ -130,45 +149,21 @@ namespace DbSql
 
         public static Table_VideosArchive GetVideoFromId(int id)
         {
-            var result = from c in Db.Table_VideosArchives
-                         where c.Id == id
-                         select c;
-            try
-            {
-                return result.First();
-            }
-            catch
-            {
-                return null;
-            }
+            return (from c in Db.Table_VideosArchives
+                    where c.Id == id
+                    select c).FirstOrDefault();
         }
         public static Table_LinksPageBottom GetPageBottomLinkByLinkId(int id)
         {
-            var result =  from c in Db.Table_LinksPageBottoms
-                           where c.LinkId == id
-                           select c;
-            try
-            {
-                return result.First();
-            }
-            catch
-            {
-                return null;
-            }
+            return  (from c in Db.Table_LinksPageBottoms
+                    where c.LinkId == id
+                    select c).FirstOrDefault();
         }
         public static Table_LinksPrefered GetPreferedLinkByLinkId(int id)
         {
-            var result = from c in Db.Table_LinksPrefereds
-                         where c.LinkId == id
-                         select c;
-            try
-            {
-                return result.First();
-            }
-            catch
-            {
-                return null;
-            }
+            return (from c in Db.Table_LinksPrefereds
+                    where c.LinkId == id
+                    select c).FirstOrDefault();
         }
 
         public static IQueryable<Table_Broadcast> GetBroadcastByTakId(int takId)
@@ -178,5 +173,6 @@ namespace DbSql
                    orderby c.Id descending 
                    select c;
         }
+
     }
 }
