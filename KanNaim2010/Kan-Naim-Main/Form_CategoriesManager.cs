@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 
@@ -18,7 +15,7 @@ namespace Kan_Naim_Main
         //private SqlConnection objConn = new SqlConnection("Data Source=PRIVATE-DCB1672;Initial Catalog=Kan-Naim;Integrated Security=True");
         private SqlConnection objConn = new SqlConnection("Data Source=sql02.intervision.co.il;Initial Catalog=10info;Persist Security Info=True;User ID=10info;Password=4a7RxLszj");
 
-        private static DataClassesKanNaimDataContext _db = new DataClassesKanNaimDataContext();
+        private static readonly DataClassesKanNaimDataContext Db = new DataClassesKanNaimDataContext();
         private static Table_LookupCategory _linqLookupCategoryTableRow = new Table_LookupCategory();
         private static TreeNode selectedTreeNode = new TreeNode();
         private static TreeNode newNode = new TreeNode();
@@ -26,21 +23,21 @@ namespace Kan_Naim_Main
 
         private static Table_LookupCategory GetCategoryDataObjectById(int catId)
         {
-            return (from c in _db.Table_LookupCategories
+            return (from c in Db.Table_LookupCategories
                     where c.CatId == catId
-                    select c).Single();
+                    select c).SingleOrDefault();
         }
         private static void InsertNewCategoryDataObject(Table_LookupCategory catLinqObj)
         {
-            _db.Table_LookupCategories.InsertOnSubmit(catLinqObj);
-            _db.SubmitChanges();
+            Db.Table_LookupCategories.InsertOnSubmit(catLinqObj);
+            Db.SubmitChanges();
         }
         private static void ChangeCategoryParentToGrandParent(int catId)
         {
             Table_LookupCategory catLinqObj = GetCategoryDataObjectById(catId);
             Table_LookupCategory parentLinqObj = GetCategoryDataObjectById(catLinqObj.ParentCatId);
             catLinqObj.ParentCatId = parentLinqObj.ParentCatId;
-            _db.SubmitChanges();
+            Db.SubmitChanges();
         }
         private DataTable GetTableFromQuery(string qry)
         {
@@ -62,8 +59,8 @@ namespace Kan_Naim_Main
                 _linqLookupCategoryTableRow.CatHebrewName = "עמוד ראשי";
                 _linqLookupCategoryTableRow.CatEnglishName = "Main|Home Page";
                 _linqLookupCategoryTableRow.ParentCatId = -1;
-                _db.Table_LookupCategories.InsertOnSubmit(_linqLookupCategoryTableRow);
-                _db.SubmitChanges();
+                Db.Table_LookupCategories.InsertOnSubmit(_linqLookupCategoryTableRow);
+                Db.SubmitChanges();
                 dt = GetTableFromQuery("select * FROM Table_LookupCategories WHERE ParentCatId='-1'");
             }
             PopulateNodes(dt, tv.Nodes);
@@ -276,8 +273,7 @@ namespace Kan_Naim_Main
             // fetching related cats from listbox
             foreach (object item in listBoxRelatedCategories.Items)
             {
-                int idx = this.treeViewCategories.Nodes.IndexOfKey((string)item);
-                int relatedCatId = int.Parse(this.treeViewCategories.Nodes[idx].ToolTipText);
+                int relatedCatId = DataAccess.Lookup.GetLookupCategoryIdFromName((string)item);
                 _linqLookupCategoryTableRow.RelatedCatIds += String.Format("{0}#", relatedCatId);
             }
 
@@ -290,10 +286,10 @@ namespace Kan_Naim_Main
                 {
                     _linqLookupCategoryTableRow.ParentCatId = parentCatId;
                     // inserting the new category into the DB
-                    _db.Table_LookupCategories.InsertOnSubmit(_linqLookupCategoryTableRow);
+                    Db.Table_LookupCategories.InsertOnSubmit(_linqLookupCategoryTableRow);
                 }
                 
-                _db.SubmitChanges();
+                Db.SubmitChanges();
             }
             catch (Exception ex)
             {
@@ -323,7 +319,7 @@ namespace Kan_Naim_Main
                     FillFromFormAndSaveToDB(parentId);
 
                     // fetching the new Category from DB to get its CatId
-                    _linqLookupCategoryTableRow = (from c in _db.Table_LookupCategories
+                    _linqLookupCategoryTableRow = (from c in Db.Table_LookupCategories
                                                    where c.CatHebrewName.Contains(textBoxCategoryNameHebrew.Text)
                                                    select c).Single();
 
@@ -416,8 +412,8 @@ namespace Kan_Naim_Main
                                                                                  //where c.CatId == catId
                                                                                  //select c).Single();
 
-                _db.Table_LookupCategories.DeleteOnSubmit(_linqLookupCategoryTableRow);
-                _db.SubmitChanges();                
+                Db.Table_LookupCategories.DeleteOnSubmit(_linqLookupCategoryTableRow);
+                Db.SubmitChanges();                
             }
             catch (Exception ex)
             {
@@ -575,7 +571,7 @@ namespace Kan_Naim_Main
             for (int i=0 ; i<strParts.Length; i++)
             {
                 catIds[i] = int.Parse(strParts[i].Trim('#', ' '));
-                var category = (from c in _db.Table_LookupCategories
+                var category = (from c in Db.Table_LookupCategories
                                 where c.CatId == catIds[i]
                                 select c).Single();
 
@@ -714,7 +710,7 @@ namespace Kan_Naim_Main
             if (treeViewCategories.SelectedNode == null)
                 return;
 
-            Table_LookupCategory linqCatRow = (from c in _db.Table_LookupCategories 
+            Table_LookupCategory linqCatRow = (from c in Db.Table_LookupCategories 
                                                where c.CatId == int.Parse(treeViewCategories.SelectedNode.ToolTipText)
                                                select c).Single();
             string hebCatName = String.Format(" | {0} ", linqCatRow.CatHebrewName.Trim());

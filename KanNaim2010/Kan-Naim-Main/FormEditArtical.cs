@@ -23,8 +23,8 @@ namespace Kan_Naim_Main
 
         public static readonly Dictionary<string, string>[] StylesCollection = new Dictionary<string, string>[6];
         public static readonly Dictionary<string, string>[] HyperlinksCollection = new Dictionary<string, string>[6];
-        
-        private static FormEditArtical _singleton = new FormEditArtical();
+
+        private static FormEditArtical _singleton;// = new FormEditArtical();
 
         private FormEditArtical()
         {
@@ -1223,6 +1223,7 @@ namespace Kan_Naim_Main
                         userControlTakFill.ValidateValuesBeforeSave())
                     {
                         int newTakId = userControlTakFill.SaveToDatabase(_tblArticle.ArticleId, -1);
+                        
                         if (newTakId > 0)
                             MessageBox.Show("נשמר תקציר מספר פנימי " + newTakId, "הצלחה");
                     }
@@ -1325,6 +1326,11 @@ namespace Kan_Naim_Main
             {
                 userControlTakFill.SetContentText(_textBoxArticleSubtitle.Text);
             }
+        }
+
+        private void FormEditArtical_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _singleton = null;
         }
     }
 }

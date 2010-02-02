@@ -80,6 +80,7 @@
     </Reference>
     <Reference Include="Microsoft.Office.Tools.v9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Office.Tools.Word.v9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualStudio.Tools.Applications.Runtime.v9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -109,6 +110,9 @@
     <Compile Include="DataAccess\Filter.cs" />
     <Compile Include="DataAccess\Insert.cs" />
     <Compile Include="DataAccess\Lookup.cs" />
+    <Compile Include="DataClassesKanNaim.cs">
+      <DependentUpon>DataClassesKanNaim.dbml</DependentUpon>
+    </Compile>
     <Compile Include="FormAddNewPhotos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -265,11 +269,17 @@
     <Compile Include="FormTest.Designer.cs">
       <DependentUpon>FormTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Administrator.cs">
+    <Compile Include="FormVbDevices.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Administrator.Designer.cs">
-      <DependentUpon>Form_Administrator.cs</DependentUpon>
+    <Compile Include="FormVbDevices.Designer.cs">
+      <DependentUpon>FormVbDevices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdministrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdministrator.Designer.cs">
+      <DependentUpon>FormAdministrator.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_CategoriesManager.cs">
       <SubType>Form</SubType>
@@ -363,11 +373,14 @@
     <EmbeddedResource Include="FormTest.resx">
       <DependentUpon>FormTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Administrator.he-IL.resx">
-      <DependentUpon>Form_Administrator.cs</DependentUpon>
+    <EmbeddedResource Include="FormVbDevices.resx">
+      <DependentUpon>FormVbDevices.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Administrator.resx">
-      <DependentUpon>Form_Administrator.cs</DependentUpon>
+    <EmbeddedResource Include="FormAdministrator.he-IL.resx">
+      <DependentUpon>FormAdministrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdministrator.resx">
+      <DependentUpon>FormAdministrator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_CategoriesManager.resx">
       <DependentUpon>Form_CategoriesManager.cs</DependentUpon>
@@ -558,6 +571,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Table_Article.designer.cs" />
+    <Compile Include="Table_Broadcast.designer.cs" />
     <Compile Include="Table_Index.designer.cs" />
     <Compile Include="Table_LinksPageBottom.designer.cs" />
     <Compile Include="Table_LinksPrefered.designer.cs" />
@@ -849,12 +863,6 @@
     <Content Include="img\UnorderedListBtnImg.JPG" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HaimDLL\HaimDLL.csproj">
-      <Project>{697ECEA6-B4D5-430F-8355-977D96DF74C5}</Project>
-      <Name>HaimDLL</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework Client Profile</ProductName>
@@ -885,6 +893,12 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HaimDLL\HaimDLL.csproj">
+      <Project>{697ECEA6-B4D5-430F-8355-977D96DF74C5}</Project>
+      <Name>HaimDLL</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="EventHandler\" />

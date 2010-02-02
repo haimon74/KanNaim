@@ -1,0 +1,6 @@
+<Modules>
+  <Module PersistentId="90331311-9342-4343-9453-40E80A5296F4" ModuleId="Shimanni.Trader.DataStructure" />
+  <Module PersistentId="EC058EF7-C3FB-49FD-BD9C-CC6AEA1FED3A" ModuleId="Shimanni.Trader.BL" />
+  <Module PersistentId="98672E16-97B1-4204-86CC-EA0009CA15F4" ModuleId="Krs.Ats.IBNet" />
+  <Module PersistentId="9BF83B16-1ADE-40FC-8A55-DCFA0FB4D790" ModuleId="Shimanni.Common" />
+</Modules>

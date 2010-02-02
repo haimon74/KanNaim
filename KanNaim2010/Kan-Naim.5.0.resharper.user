@@ -1,0 +1,1783 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="public" priority="54" />
+      <Item value="static" priority="38" />
+      <Item value="Constats" priority="2" />
+      <Item value="private" priority="66" />
+      <Item value="new" priority="113" />
+      <Item value="using" priority="16" />
+      <Item value="Constants`0" priority="23" />
+      <Item value="ConnectionStrings`0" priority="1" />
+      <Item value="null" priority="22" />
+      <Item value="allConst" priority="0" />
+      <Item value="const" priority="9" />
+      <Item value="string" priority="209" />
+      <Item value="char" priority="15" />
+      <Item value="HaimDLL" priority="15" />
+      <Item value="var" priority="67" />
+      <Item value="richTextBox1" priority="4" />
+      <Item value="wordSeperatorChars" priority="0" />
+      <Item value="words" priority="1" />
+      <Item value="Count`1" priority="1" />
+      <Item value="Length" priority="9" />
+      <Item value="lastWord" priority="0" />
+      <Item value="length" priority="14" />
+      <Item value="offsetBefore" priority="1" />
+      <Item value="offsetAfter" priority="0" />
+      <Item value="StringSplitOptions`0" priority="4" />
+      <Item value="return" priority="81" />
+      <Item value="_staticRtfTags" priority="0" />
+      <Item value="this" priority="13" />
+      <Item value="webBrowserPreviewArticle" priority="0" />
+      <Item value="WebBrowser" priority="2" />
+      <Item value="FormArticleRichTextBoxEditor`0" priority="0" />
+      <Item value="id" priority="14" />
+      <Item value="MessageBox`0" priority="8" />
+      <Item value="ex" priority="5" />
+      <Item value="void" priority="35" />
+      <Item value="Messages`0" priority="14" />
+      <Item value="exception" priority="7" />
+      <Item value="enum" priority="1" />
+      <Item value="_stylesCollectioDictionaries" priority="0" />
+      <Item value="WebBrowser`0" priority="1" />
+      <Item value="myWebBrowser" priority="2" />
+      <Item value="false" priority="34" />
+      <Item value="textBox1" priority="5" />
+      <Item value="userControlRichTextBoxEditor1" priority="7" />
+      <Item value="Text" priority="3" />
+      <Item value="String`0" priority="26" />
+      <Item value="testForm" priority="1" />
+      <Item value="if" priority="98" />
+      <Item value="RichTextBox1" priority="91" />
+      <Item value="throw" priority="3" />
+      <Item value="ArgumentNullException`0" priority="3" />
+      <Item value="try" priority="16" />
+      <Item value="msg" priority="6" />
+      <Item value="UserControl`0" priority="2" />
+      <Item value="ScrollStateVScrollVisible" priority="0" />
+      <Item value="foreach" priority="28" />
+      <Item value="rtfSplitOnSpaces" priority="4" />
+      <Item value="rtfSelectedStart" priority="2" />
+      <Item value="bool" priority="31" />
+      <Item value="else" priority="28" />
+      <Item value="args" priority="1" />
+      <Item value="stringLocations" priority="1" />
+      <Item value="for" priority="13" />
+      <Item value="startWithTag" priority="0" />
+      <Item value="rtf" priority="4" />
+      <Item value="rtfTag" priority="0" />
+      <Item value="true" priority="31" />
+      <Item value="ArrayTypeMismatchException`0" priority="0" />
+      <Item value="Array`0" priority="0" />
+      <Item value="arr" priority="0" />
+      <Item value="System" priority="3" />
+      <Item value="Collections" priority="1" />
+      <Item value="arrayList" priority="3" />
+      <Item value="ArrayList" priority="0" />
+      <Item value="idx" priority="25" />
+      <Item value="str" priority="3" />
+      <Item value="int" priority="156" />
+      <Item value="strings" priority="1" />
+      <Item value="FormPreviewArticleOnWebBrowser`0" priority="0" />
+      <Item value="browserAsForm" priority="1" />
+      <Item value="HtmlDocument`0" priority="1" />
+      <Item value="Convert`0" priority="5" />
+      <Item value="RichTextBox`0" priority="2" />
+      <Item value="html" priority="0" />
+      <Item value="optionalStringArrayList" priority="1" />
+      <Item value="returnValue" priority="52" />
+      <Item value="count" priority="2" />
+      <Item value="testedString" priority="2" />
+      <Item value="AssemblyLoadEventArgs`0" priority="0" />
+      <Item value="theString" priority="0" />
+      <Item value="tempValue" priority="5" />
+      <Item value="index" priority="1" />
+      <Item value="rtfString" priority="2" />
+      <Item value="hexStr" priority="3" />
+      <Item value="hexString" priority="2" />
+      <Item value="hexChars" priority="2" />
+      <Item value="ArrayList`0" priority="0" />
+      <Item value="byte" priority="11" />
+      <Item value="hexMsb" priority="0" />
+      <Item value="convertedChar" priority="0" />
+      <Item value="placeHolder" priority="0" />
+      <Item value="toConvert" priority="2" />
+      <Item value="while" priority="8" />
+      <Item value="convertedString" priority="0" />
+      <Item value="intValue" priority="0" />
+      <Item value="CustomCollection" priority="2" />
+      <Item value="Exception`0" priority="8" />
+      <Item value="Exception" priority="5" />
+      <Item value="Lookup`0" priority="20" />
+      <Item value="Lookup" priority="0" />
+      <Item value="object" priority="16" />
+      <Item value="testValue" priority="2" />
+      <Item value="break" priority="8" />
+      <Item value="convertedText" priority="0" />
+      <Item value="substrings" priority="4" />
+      <Item value="i" priority="6" />
+      <Item value="lastOffset" priority="1" />
+      <Item value="rtfContent" priority="2" />
+      <Item value="savedOriginalSelectionStart" priority="2" />
+      <Item value="savedOriginalSelectedText" priority="0" />
+      <Item value="rtfLength" priority="0" />
+      <Item value="savedOriginalSelectionLength" priority="2" />
+      <Item value="rtfSelectionLength" priority="0" />
+      <Item value="newRtfContent" priority="0" />
+      <Item value="idx1" priority="2" />
+      <Item value="idx2" priority="5" />
+      <Item value="tag" priority="5" />
+      <Item value="startTag" priority="4" />
+      <Item value="untag" priority="6" />
+      <Item value="endTag" priority="3" />
+      <Item value="out" priority="13" />
+      <Item value="testStr" priority="1" />
+      <Item value="utStr" priority="3" />
+      <Item value="str2" priority="1" />
+      <Item value="str1" priority="0" />
+      <Item value="lastIsUntag" priority="0" />
+      <Item value="idx3" priority="0" />
+      <Item value="LookupCollection`0" priority="0" />
+      <Item value="ToolStripMenuItem`0" priority="5" />
+      <Item value="IDictionary`0" priority="6" />
+      <Item value="_toolStripMenuItemFontUnderlined" priority="0" />
+      <Item value="_toolStripMenuItemFontItalic" priority="0" />
+      <Item value="_toolStripMenuItemFontSub" priority="0" />
+      <Item value="_toolStripMenuItemFontSup" priority="0" />
+      <Item value="sender" priority="12" />
+      <Item value="tagUntag" priority="0" />
+      <Item value="state" priority="1" />
+      <Item value="Font" priority="10" />
+      <Item value="font" priority="22" />
+      <Item value="delegate" priority="5" />
+      <Item value="T" priority="0" />
+      <Item value="Func" priority="0" />
+      <Item value="func" priority="0" />
+      <Item value="T2`0" priority="0" />
+      <Item value="T3`0" priority="0" />
+      <Item value="T4`0" priority="0" />
+      <Item value="size" priority="4" />
+      <Item value="name" priority="8" />
+      <Item value="newSize" priority="2" />
+      <Item value="ArgumentOutOfRangeException`0" priority="0" />
+      <Item value="CollectionBase`0" priority="0" />
+      <Item value="DivideByZeroException`0" priority="0" />
+      <Item value="ArgumentException`0" priority="1" />
+      <Item value="ApplicationException`0" priority="0" />
+      <Item value="AccessViolationException`0" priority="1" />
+      <Item value="BadImageFormatException`0" priority="0" />
+      <Item value="IndexOutOfRangeException`0" priority="0" />
+      <Item value="InvalidProgramException`0" priority="0" />
+      <Item value="NullReferenceException`0" priority="0" />
+      <Item value="InvalidOperationException`0" priority="0" />
+      <Item value="InsufficientMemoryException`0" priority="1" />
+      <Item value="OutOfMemoryException`0" priority="0" />
+      <Item value="SystemException`0" priority="0" />
+      <Item value="StackOverflowException`0" priority="0" />
+      <Item value="TimeoutException`0" priority="0" />
+      <Item value="UnauthorizedAccessException`0" priority="0" />
+      <Item value="caption" priority="5" />
+      <Item value="ColorByToolStripKeyCollection" priority="0" />
+      <Item value="ColorDialog`0" priority="0" />
+      <Item value="ForeColor" priority="0" />
+      <Item value="_fontColorBlueToolStripMenuItem" priority="0" />
+      <Item value="_fontColorGreenToolStripMenuItem" priority="0" />
+      <Item value="_fontColorGreyToolStripMenuItem1" priority="0" />
+      <Item value="_fontColorNavyToolStripMenuItem" priority="0" />
+      <Item value="_fontColorRedToolStripMenuItem" priority="0" />
+      <Item value="_fontBgBlackToolStripMenuItem1" priority="0" />
+      <Item value="_fontBgAcynToolStripMenuItem" priority="0" />
+      <Item value="senderName" priority="2" />
+      <Item value="isBackgroundColor" priority="0" />
+      <Item value="isForeColor" priority="1" />
+      <Item value="startStr" priority="1" />
+      <Item value="endStr" priority="1" />
+      <Item value="colorName" priority="1" />
+      <Item value="Color" priority="3" />
+      <Item value="clr" priority="0" />
+      <Item value="Color`0" priority="6" />
+      <Item value="GetType`0" priority="0" />
+      <Item value="Type`0" priority="2" />
+      <Item value="fontFamily" priority="0" />
+      <Item value="HorizontalAlignment`0" priority="3" />
+      <Item value="currentState" priority="0" />
+      <Item value="currentValue" priority="2" />
+      <Item value="Font`0" priority="4" />
+      <Item value="GetSelectedFont`0" priority="0" />
+      <Item value="ReselectingAsFullWordsBeforeAndAfterSelection`0" priority="0" />
+      <Item value="float" priority="1" />
+      <Item value="idxSelectionStart" priority="0" />
+      <Item value="testIdxBefore" priority="0" />
+      <Item value="struct" priority="1" />
+      <Item value="ref" priority="5" />
+      <Item value="itsBackColor" priority="2" />
+      <Item value="itsIndent" priority="0" />
+      <Item value="itsAlignment" priority="0" />
+      <Item value="itsFont" priority="0" />
+      <Item value="itsColor" priority="0" />
+      <Item value="itsBullet" priority="0" />
+      <Item value="SelectedRtfAttributes" priority="4" />
+      <Item value="previousIndex" priority="0" />
+      <Item value="currentIndex" priority="8" />
+      <Item value="previousRtfCharAttributes" priority="3" />
+      <Item value="currentRtfCharAttributes" priority="4" />
+      <Item value="GeneratStartHtmlString`0" priority="0" />
+      <Item value="checkedObject" priority="5" />
+      <Item value="ItsBackColor" priority="0" />
+      <Item value="ItsBullet" priority="0" />
+      <Item value="ItsColor" priority="0" />
+      <Item value="ItsFont" priority="1" />
+      <Item value="ItsIndent" priority="0" />
+      <Item value="IDictionary&lt;string,string&gt;" priority="0" />
+      <Item value="Dictionary&lt;string,IDictionary&lt;string,string&gt;&gt;" priority="0" />
+      <Item value="_htmlTagsByLocations" priority="0" />
+      <Item value="tagLocation" priority="0" />
+      <Item value="tagString" priority="1" />
+      <Item value="Tag" priority="1" />
+      <Item value="IEnumerator" priority="0" />
+      <Item value="EnumConverter`0" priority="1" />
+      <Item value="enumConverter" priority="0" />
+      <Item value="readonly" priority="4" />
+      <Item value="tagKeys" priority="0" />
+      <Item value="key" priority="4" />
+      <Item value="tagStr" priority="0" />
+      <Item value="endTagIdx" priority="7" />
+      <Item value="nextTagIdx" priority="1" />
+      <Item value="theAlignment" priority="0" />
+      <Item value="theAttribute" priority="8" />
+      <Item value="switch" priority="2" />
+      <Item value="currentAttributeValue" priority="0" />
+      <Item value="ToString`0" priority="0" />
+      <Item value="type" priority="1" />
+      <Item value="value" priority="8" />
+      <Item value="case" priority="4" />
+      <Item value="Colors`0" priority="2" />
+      <Item value="ItsFontColors" priority="1" />
+      <Item value="class" priority="0" />
+      <Item value="theCurrentValue" priority="1" />
+      <Item value="nextValue" priority="0" />
+      <Item value="theCurrentAttribute" priority="0" />
+      <Item value="Dictionary&lt;EnumHtmlTagsWithoutAttributes,string&gt;" priority="0" />
+      <Item value="tagName" priority="2" />
+      <Item value="_itsFontColors" priority="0" />
+      <Item value="Colors" priority="1" />
+      <Item value="colors" priority="3" />
+      <Item value="StringFormat`0" priority="0" />
+      <Item value="ConvertAttributeValueToString`0" priority="0" />
+      <Item value="Enum`0" priority="0" />
+      <Item value="tagTypeName" priority="0" />
+      <Item value="List" priority="0" />
+      <Item value="List&lt;int&gt;" priority="0" />
+      <Item value="keyList" priority="3" />
+      <Item value="startKeyList" priority="5" />
+      <Item value="endKeyList" priority="3" />
+      <Item value="startIdx" priority="1" />
+      <Item value="endIdx" priority="0" />
+      <Item value="HtmlTagsByLocations" priority="4" />
+      <Item value="htmlStr" priority="1" />
+      <Item value="oldKey" priority="1" />
+      <Item value="keyStr" priority="0" />
+      <Item value="offset" priority="0" />
+      <Item value="htmlText" priority="0" />
+      <Item value="content" priority="2" />
+      <Item value="HtmlDocument" priority="0" />
+      <Item value="startKey" priority="0" />
+      <Item value="default" priority="2" />
+      <Item value="columns" priority="0" />
+      <Item value="cellsStr" priority="2" />
+      <Item value="templateStr" priority="2" />
+      <Item value="GetRtfSelectionStartFromTextSelectionStart`0" priority="1" />
+      <Item value="LineStr" priority="1" />
+      <Item value="Parent" priority="0" />
+      <Item value="FormPreviewArticleAndTaksOnBrowser`0" priority="1" />
+      <Item value="htmlContent" priority="2" />
+      <Item value="HtmlContent" priority="0" />
+      <Item value="ReturnHtmlTextCallbackType" priority="1" />
+      <Item value="_funcName" priority="1" />
+      <Item value="textBoxArticleContent" priority="0" />
+      <Item value="rtfText" priority="1" />
+      <Item value="richTextBoxArticleContent" priority="9" />
+      <Item value="Strikeout" priority="0" />
+      <Item value="Point" priority="1" />
+      <Item value="tempIdx" priority="2" />
+      <Item value="len" priority="0" />
+      <Item value="tagBefore" priority="0" />
+      <Item value="tagAfter" priority="0" />
+      <Item value="selectedStart" priority="0" />
+      <Item value="selectedLength" priority="0" />
+      <Item value="Name" priority="2" />
+      <Item value="floating" priority="0" />
+      <Item value="strToInsert" priority="1" />
+      <Item value="imgLeftStr" priority="5" />
+      <Item value="imgRightStr" priority="1" />
+      <Item value="imgStr" priority="3" />
+      <Item value="Contains`0" priority="0" />
+      <Item value="objName" priority="4" />
+      <Item value="Image`0" priority="4" />
+      <Item value="tableStartTag" priority="2" />
+      <Item value="tableEndTag" priority="0" />
+      <Item value="protectedChars" priority="0" />
+      <Item value="tableStart" priority="0" />
+      <Item value="IDropTarget`0" priority="0" />
+      <Item value="tableEnd" priority="1" />
+      <Item value="removeStr" priority="1" />
+      <Item value="comboBoxArticlePhoto" priority="6" />
+      <Item value="fileNamesAdition" priority="0" />
+      <Item value="textBoxPhotoCaption" priority="6" />
+      <Item value="newItem" priority="0" />
+      <Item value="from" priority="23" />
+      <Item value="Db" priority="30" />
+      <Item value="where" priority="30" />
+      <Item value="DataAccess" priority="29" />
+      <Item value="_tblOriginalPhotos" priority="9" />
+      <Item value="in" priority="0" />
+      <Item value="c" priority="60" />
+      <Item value="catId" priority="6" />
+      <Item value="select" priority="24" />
+      <Item value="result" priority="21" />
+      <Item value="IQueryable`0" priority="0" />
+      <Item value="Table_LookupArticleStatus`0" priority="0" />
+      <Item value="Table_LookupCategory`0" priority="1" />
+      <Item value="Table_LookupPhotoType`0" priority="0" />
+      <Item value="Table_LookupReporter`0" priority="1" />
+      <Item value="Table_LookupRole`0" priority="4" />
+      <Item value="Kan_Naim_Main" priority="8" />
+      <Item value="DbLookup`0" priority="8" />
+      <Item value="lookupCategories" priority="0" />
+      <Item value="is" priority="1" />
+      <Item value="catName" priority="2" />
+      <Item value="orderby" priority="10" />
+      <Item value="idResult" priority="1" />
+      <Item value="GetOriginalPhotosByCategoryId`0" priority="0" />
+      <Item value="Table_PhotosArchive`0" priority="3" />
+      <Item value="originalPhotoId" priority="3" />
+      <Item value="photoTypeId" priority="2" />
+      <Item value="descending" priority="8" />
+      <Item value="Table_Taktzirim`0" priority="6" />
+      <Item value="articleId" priority="9" />
+      <Item value="takTypeId" priority="1" />
+      <Item value="scheduleId" priority="0" />
+      <Item value="Table_VideosArchive`0" priority="6" />
+      <Item value="DbTableFilter`0" priority="5" />
+      <Item value="s" priority="1" />
+      <Item value="toSelect" priority="2" />
+      <Item value="userControlTakFillSizeMedium" priority="1" />
+      <Item value="ComboBox`0" priority="10" />
+      <Item value="combo" priority="4" />
+      <Item value="photoName" priority="1" />
+      <Item value="originalPhoto" priority="9" />
+      <Item value="ascending" priority="0" />
+      <Item value="catch" priority="12" />
+      <Item value="userControlTakFillSizeX3" priority="0" />
+      <Item value="tablePhotosArchive" priority="0" />
+      <Item value="types" priority="0" />
+      <Item value="Table_OriginalPhotosArchive`0" priority="5" />
+      <Item value="comboBox" priority="5" />
+      <Item value="IDictionary" priority="0" />
+      <Item value="Dictionary&lt;string,string&gt;" priority="0" />
+      <Item value="comboCollection" priority="2" />
+      <Item value="userControlTakFillSizeX1" priority="1" />
+      <Item value="keyValuePair" priority="0" />
+      <Item value="comboBoxArticleCategory" priority="3" />
+      <Item value="photos" priority="1" />
+      <Item value="tableOriginalPhotosArchive" priority="0" />
+      <Item value="_tblArticle" priority="20" />
+      <Item value="Table_Article" priority="0" />
+      <Item value="finally" priority="0" />
+      <Item value="width" priority="7" />
+      <Item value="height" priority="4" />
+      <Item value="shortName" priority="1" />
+      <Item value="longName" priority="0" />
+      <Item value="email" priority="1" />
+      <Item value="phone" priority="1" />
+      <Item value="comboBoxEditor" priority="2" />
+      <Item value="checkBoxMivzak" priority="1" />
+      <Item value="checkBoxRSS" priority="0" />
+      <Item value="checkBoxDateTime" priority="0" />
+      <Item value="textBoxTakContent" priority="4" />
+      <Item value="checkBoxPublish" priority="0" />
+      <Item value="textBoxArticleSubtitle" priority="0" />
+      <Item value="textBoxArticleTitle" priority="0" />
+      <Item value="listBoxSelectedCategories" priority="0" />
+      <Item value="obj" priority="0" />
+      <Item value="textBoxKeyWords" priority="0" />
+      <Item value="textBoxTags" priority="0" />
+      <Item value="Table_VideosArchive" priority="0" />
+      <Item value="_newRow" priority="8" />
+      <Item value="textBoxVideoAlternateText" priority="0" />
+      <Item value="textBoxVideoCaption" priority="0" />
+      <Item value="textBoxVideoDescription" priority="0" />
+      <Item value="textBoxVideoEmbedUrl" priority="0" />
+      <Item value="DateBoldEventArgs`0" priority="0" />
+      <Item value="DateTime`0" priority="4" />
+      <Item value="TickStyle`0" priority="0" />
+      <Item value="textBoxOtherPhone" priority="1" />
+      <Item value="textBoxMobilePhone" priority="2" />
+      <Item value="textBoxLongName" priority="1" />
+      <Item value="textBoxLastName" priority="2" />
+      <Item value="textBoxFirstName" priority="2" />
+      <Item value="textBoxFax" priority="1" />
+      <Item value="textBoxEmail" priority="1" />
+      <Item value="textBoxAddress" priority="2" />
+      <Item value="textBoxPassword" priority="1" />
+      <Item value="DataClassesKanNaimDataContext`0" priority="5" />
+      <Item value="DataClassesKanNaimDataContext" priority="4" />
+      <Item value="DbType`0" priority="1" />
+      <Item value="Table_User`0" priority="1" />
+      <Item value="userRow" priority="4" />
+      <Item value="LastName" priority="1" />
+      <Item value="Password" priority="0" />
+      <Item value="PhoneNumber" priority="0" />
+      <Item value="RoleId" priority="0" />
+      <Item value="comboBox1" priority="2" />
+      <Item value="UserId" priority="1" />
+      <Item value="UserName" priority="0" />
+      <Item value="textBoxUserName" priority="2" />
+      <Item value="Address" priority="0" />
+      <Item value="Email" priority="0" />
+      <Item value="Fax" priority="0" />
+      <Item value="FirstName" priority="0" />
+      <Item value="MobilePhone" priority="0" />
+      <Item value="OtherPhone" priority="0" />
+      <Item value="PublishNameLong" priority="0" />
+      <Item value="PublishNameShort" priority="0" />
+      <Item value="textBoxShortName" priority="0" />
+      <Item value="Filter`0" priority="19" />
+      <Item value="IQueryable" priority="4" />
+      <Item value="GetUserByUserNameOrPhone`0" priority="0" />
+      <Item value="roleId" priority="0" />
+      <Item value="reporter" priority="1" />
+      <Item value="FormEditUserDetails`0" priority="0" />
+      <Item value="formEditUserDetails" priority="1" />
+      <Item value="FormEditUserDetails" priority="0" />
+      <Item value="user" priority="1" />
+      <Item value="password" priority="1" />
+      <Item value="label2" priority="0" />
+      <Item value="FormRemindPasswordByUserNameOrPhone`0" priority="0" />
+      <Item value="FormRemindPasswordByUserNameOrPhone" priority="0" />
+      <Item value="form1" priority="8" />
+      <Item value="FormManagePreferedLinks`0" priority="1" />
+      <Item value="OpenFileDialog`0" priority="0" />
+      <Item value="openFileDialog" priority="5" />
+      <Item value="OpenFileDialog" priority="0" />
+      <Item value="DefaultExt" priority="0" />
+      <Item value="CheckFileExists" priority="0" />
+      <Item value="Multiselect" priority="0" />
+      <Item value="FormAddNewPreferedLink`0" priority="0" />
+      <Item value="InitialDirectory" priority="0" />
+      <Item value="filename" priority="2" />
+      <Item value="photo" priority="16" />
+      <Item value="textBoxPhotoId" priority="1" />
+      <Item value="photoId" priority="7" />
+      <Item value="listView1" priority="6" />
+      <Item value="FormPreferedLinkArticleSelector" priority="0" />
+      <Item value="ListViewAlignment`0" priority="0" />
+      <Item value="ListViewItemCollection" priority="0" />
+      <Item value="buttonSearchArticle" priority="1" />
+      <Item value="GlobalValiables`0" priority="7" />
+      <Item value="_categoryId" priority="0" />
+      <Item value="itemCollection" priority="3" />
+      <Item value="ListViewItem`0" priority="0" />
+      <Item value="ListViewItem" priority="0" />
+      <Item value="item" priority="4" />
+      <Item value="article" priority="6" />
+      <Item value="listView1_DoubleClick`0" priority="0" />
+      <Item value="e" priority="23" />
+      <Item value="ArticleSelectedCallback`0" priority="0" />
+      <Item value="textBoxArticleId" priority="5" />
+      <Item value="_callbackFunction" priority="0" />
+      <Item value="textBoxUrl" priority="2" />
+      <Item value="textBoxOrderPlace" priority="0" />
+      <Item value="textBoxAlternativeText" priority="3" />
+      <Item value="FormManagePreferedLinks" priority="0" />
+      <Item value="Table_LinksPrefered`0" priority="1" />
+      <Item value="Table_LinksPrefered" priority="0" />
+      <Item value="AltText" priority="1" />
+      <Item value="ArticleId" priority="1" />
+      <Item value="OrderPlace" priority="1" />
+      <Item value="artId" priority="2" />
+      <Item value="orderPlace" priority="1" />
+      <Item value="PhotoId" priority="0" />
+      <Item value="Url" priority="0" />
+      <Item value="link" priority="7" />
+      <Item value="ConStr" priority="0" />
+      <Item value="FormManageIndex`0" priority="0" />
+      <Item value="FormManageIndex" priority="0" />
+      <Item value="fillByIndexTypeToolStrip" priority="0" />
+      <Item value="userControlUploadPhoto1" priority="0" />
+      <Item value="_tablePhotos" priority="0" />
+      <Item value="Table_PhotosArchive" priority="2" />
+      <Item value="Table_OriginalPhotosArchive" priority="0" />
+      <Item value="ucUploadPhoto1" priority="0" />
+      <Item value="textBoxPhotoWidth" priority="3" />
+      <Item value="textBoxPhotoPath" priority="4" />
+      <Item value="textBoxPhotoHeight" priority="3" />
+      <Item value="textBoxPhotoDescription" priority="4" />
+      <Item value="FormAddNewPhotos`0" priority="0" />
+      <Item value="FormAddNewPhotos" priority="0" />
+      <Item value="ShockwaveFlashObjects" priority="0" />
+      <Item value="EventArgs`0" priority="1" />
+      <Item value="callBackFunction" priority="1" />
+      <Item value="_saveVideoCallbackFunctionName" priority="0" />
+      <Item value="SaveVideoCallBackFunction`0" priority="0" />
+      <Item value="userControlUploadVideo1" priority="1" />
+      <Item value="_textBoxVideoAlternateText" priority="4" />
+      <Item value="_textBoxVideoEmbedUrl" priority="4" />
+      <Item value="_textBoxVideoDescription" priority="4" />
+      <Item value="_textBoxVideoCaption" priority="4" />
+      <Item value="ucUploadVideo1" priority="0" />
+      <Item value="_buttonSaveVideoToArchive" priority="0" />
+      <Item value="Form`0" priority="3" />
+      <Item value="Form" priority="0" />
+      <Item value="ListView`0" priority="1" />
+      <Item value="listView" priority="5" />
+      <Item value="ListView" priority="0" />
+      <Item value="Dock" priority="0" />
+      <Item value="Fill" priority="1" />
+      <Item value="Height" priority="1" />
+      <Item value="Width" priority="1" />
+      <Item value="Windows.Forms" priority="0" />
+      <Item value="DbSql" priority="16" />
+      <Item value="item1" priority="0" />
+      <Item value="Visible" priority="0" />
+      <Item value="RightToLeft" priority="4" />
+      <Item value="RightToLeftLayout" priority="2" />
+      <Item value="RightToLeft`0" priority="0" />
+      <Item value="video" priority="13" />
+      <Item value="videoId" priority="2" />
+      <Item value="checkBoxSize80w" priority="1" />
+      <Item value="checkBoxSize100w" priority="0" />
+      <Item value="checkBoxSize165w" priority="1" />
+      <Item value="checkBoxSize208w" priority="1" />
+      <Item value="_buttonSaveClickCallback" priority="0" />
+      <Item value="button15" priority="2" />
+      <Item value="radioButtonSavePhotosToArchive" priority="0" />
+      <Item value="radioButtonSavePhotosLocally" priority="0" />
+      <Item value="CaptionButton`0" priority="0" />
+      <Item value="_comboBoxArticleCategory" priority="5" />
+      <Item value="ComboBox" priority="0" />
+      <Item value="objectCollection" priority="0" />
+      <Item value="categoryName" priority="2" />
+      <Item value="_tablePhotosArchiveTableAdapter" priority="0" />
+      <Item value="table_IndexesTableAdapter" priority="1" />
+      <Item value="DataRow`0" priority="1" />
+      <Item value="row" priority="10" />
+      <Item value="dataGridView1" priority="21" />
+      <Item value="fillByIndexTypeToolStripButton" priority="0" />
+      <Item value="DataGridViewRow" priority="0" />
+      <Item value="DataRowView`0" priority="0" />
+      <Item value="DataGridViewRow`0" priority="0" />
+      <Item value="indexTypeId" priority="0" />
+      <Item value="table_LinksPageBottomTableAdapter" priority="0" />
+      <Item value="returnvalue" priority="0" />
+      <Item value="valueStr" priority="0" />
+      <Item value="Table_LinksPageBottom`0" priority="2" />
+      <Item value="_linkId" priority="1" />
+      <Item value="textBoxURL" priority="2" />
+      <Item value="textBoxOrder" priority="1" />
+      <Item value="textBoxDisplayText" priority="1" />
+      <Item value="isNewLink" priority="0" />
+      <Item value="checkBoxLinkStatus" priority="1" />
+      <Item value="_isNewLink" priority="0" />
+      <Item value="Table_LinksPageBottom" priority="1" />
+      <Item value="SqlDbType`0" priority="0" />
+      <Item value="newLink" priority="2" />
+      <Item value="DispleyText" priority="0" />
+      <Item value="FlagVisible" priority="0" />
+      <Item value="isNull" priority="1" />
+      <Item value="order" priority="3" />
+      <Item value="MaximizeBox" priority="0" />
+      <Item value="MinimizeBox" priority="0" />
+      <Item value="MinimumSize" priority="0" />
+      <Item value="Size" priority="0" />
+      <Item value="form" priority="1" />
+      <Item value="Control" priority="0" />
+      <Item value="userControl" priority="6" />
+      <Item value="UserControlEditBottomPageLink`0" priority="0" />
+      <Item value="PopulateTable`0" priority="0" />
+      <Item value="_videoId" priority="1" />
+      <Item value="_isNewVideo" priority="0" />
+      <Item value="Conversions`0" priority="2" />
+      <Item value="comboBoxDataType" priority="0" />
+      <Item value="ShowForm`0" priority="2" />
+      <Item value="FormArchiveArticles`0" priority="0" />
+      <Item value="FormArchive`0" priority="0" />
+      <Item value="FormArchivePhotos`0" priority="0" />
+      <Item value="FormArchiveVideos`0" priority="0" />
+      <Item value="FormArchiveRSS`0" priority="0" />
+      <Item value="SizeGripStyle" priority="0" />
+      <Item value="Hide" priority="0" />
+      <Item value="queryResult" priority="0" />
+      <Item value="start" priority="0" />
+      <Item value="end" priority="0" />
+      <Item value="parsedOK" priority="0" />
+      <Item value="Table_Taktzirim" priority="1" />
+      <Item value="rows" priority="2" />
+      <Item value="delIdx" priority="0" />
+      <Item value="SingleFormEditArtical" priority="15" />
+      <Item value="_tblPhotos" priority="9" />
+      <Item value="_uploadState" priority="0" />
+      <Item value="SavedOnlineOk" priority="0" />
+      <Item value="_photoPath" priority="0" />
+      <Item value="pictureBoxPreview" priority="0" />
+      <Item value="Bitmap`0" priority="0" />
+      <Item value="PopulateFromArticle`0" priority="0" />
+      <Item value="EventArgs" priority="0" />
+      <Item value="_isNewArticle" priority="2" />
+      <Item value="splitChars" priority="0" />
+      <Item value="now" priority="3" />
+      <Item value="UserControlTakFill`0" priority="1" />
+      <Item value="_ucTakFillCollection" priority="0" />
+      <Item value="userControlTakFill" priority="8" />
+      <Item value="Singleton" priority="5" />
+      <Item value="_ucUploadPhoto1" priority="0" />
+      <Item value="SaveNewPhotosClick`0" priority="0" />
+      <Item value="Math`0" priority="0" />
+      <Item value="CheckBox`0" priority="1" />
+      <Item value="Dictionary&lt;string,CheckBox&gt;" priority="0" />
+      <Item value="checkBoxSize230w" priority="0" />
+      <Item value="checkBoxSize125w" priority="0" />
+      <Item value="SizeSelectCollection" priority="0" />
+      <Item value="checkBox" priority="2" />
+      <Item value="photoSizeAsString" priority="0" />
+      <Item value="splitStrings" priority="0" />
+      <Item value="RemoveEmptyEntries" priority="0" />
+      <Item value="sizes" priority="0" />
+      <Item value="ImageIndexConverter`0" priority="1" />
+      <Item value="imageData" priority="3" />
+      <Item value="IntPtr`0" priority="0" />
+      <Item value="Table_PhotosArchives" priority="0" />
+      <Item value="oldData" priority="0" />
+      <Item value="copyData" priority="1" />
+      <Item value="CssClass" priority="0" />
+      <Item value="Date" priority="0" />
+      <Item value="GalleryId" priority="0" />
+      <Item value="LastArticleId" priority="0" />
+      <Item value="typeId" priority="1" />
+      <Item value="photosByCategory" priority="0" />
+      <Item value="FormEditArtical" priority="1" />
+      <Item value="FileDialogCustomPlacesCollection`0" priority="0" />
+      <Item value="FileDialogCustomPlacesCollection" priority="0" />
+      <Item value="places" priority="1" />
+      <Item value="FileDialogCustomPlace" priority="0" />
+      <Item value="Path" priority="0" />
+      <Item value="place" priority="1" />
+      <Item value="CustomPlaces" priority="0" />
+      <Item value="PopulateArticlePhotosComboBox`0" priority="1" />
+      <Item value="category" priority="1" />
+      <Item value="relatedPhotosArchive" priority="0" />
+      <Item value="uc" priority="4" />
+      <Item value="tak" priority="6" />
+      <Item value="archivePhoto" priority="0" />
+      <Item value="EmbedObjId" priority="0" />
+      <Item value="ScheduleId" priority="0" />
+      <Item value="TakContent" priority="1" />
+      <Item value="ucContent" priority="1" />
+      <Item value="TakTitle" priority="0" />
+      <Item value="ucTakContent1" priority="5" />
+      <Item value="embedObjId" priority="1" />
+      <Item value="_takType" priority="2" />
+      <Item value="comboBoxTakPhoto" priority="0" />
+      <Item value="textBoxTakTitle" priority="4" />
+      <Item value="TakTypeId" priority="1" />
+      <Item value="takType" priority="0" />
+      <Item value="EnvironmentVariableTarget`0" priority="0" />
+      <Item value="tableTaktzirim" priority="4" />
+      <Item value="taktzirim" priority="0" />
+      <Item value="Insert`0" priority="1" />
+      <Item value="newTakId" priority="1" />
+      <Item value="ucTakBroadcastCmd1" priority="0" />
+      <Item value="DurationHours" priority="0" />
+      <Item value="comboBoxTakRecDurationDays" priority="0" />
+      <Item value="hours" priority="5" />
+      <Item value="days" priority="2" />
+      <Item value="isRecursive" priority="0" />
+      <Item value="checkBoxTakRecursive" priority="0" />
+      <Item value="isDaily" priority="0" />
+      <Item value="radioButtonTakRepeatDaily" priority="0" />
+      <Item value="isWeekly" priority="0" />
+      <Item value="radioButtonTakRepeatWeekly" priority="1" />
+      <Item value="isMonthly" priority="0" />
+      <Item value="isYearly" priority="0" />
+      <Item value="radioButtonTakRepeatYearly" priority="0" />
+      <Item value="TakId" priority="0" />
+      <Item value="takId" priority="2" />
+      <Item value="StartDateTime" priority="0" />
+      <Item value="datePickerTakStart" priority="0" />
+      <Item value="broadcast" priority="8" />
+      <Item value="Table_Broadcast`0" priority="1" />
+      <Item value="broadcasts" priority="0" />
+      <Item value="tblArticle" priority="3" />
+      <Item value="_singleton" priority="7" />
+      <Item value="UserControlTakFill" priority="2" />
+      <Item value="RefreshCategoryComboByValue`0" priority="0" />
+      <Item value="buttonReloadCategoryTree_Click`0" priority="0" />
+      <Item value="checkBoxEnableContent" priority="1" />
+      <Item value="contentOK" priority="0" />
+      <Item value="titleOK" priority="0" />
+      <Item value="checkBoxTakPhoto" priority="0" />
+      <Item value="richTextBox" priority="8" />
+      <Item value="RichTextBox" priority="0" />
+      <Item value="_lastRichTextBox" priority="2" />
+      <Item value="PushSlecetedTextState`0" priority="1" />
+      <Item value="FontFamily`0" priority="0" />
+      <Item value="Regular" priority="0" />
+      <Item value="PopSlecetedTextState`0" priority="0" />
+      <Item value="rtfSelectionStart" priority="0" />
+      <Item value="p" priority="7" />
+      <Item value="path" priority="1" />
+      <Item value="tags" priority="0" />
+      <Item value="File`0" priority="0" />
+      <Item value="FileStream`0" priority="1" />
+      <Item value="fileStream" priority="7" />
+      <Item value="OpenOrCreate" priority="0" />
+      <Item value="_richTextBoxArticleContent" priority="0" />
+      <Item value="FileAccess`0" priority="0" />
+      <Item value="Byte" priority="0" />
+      <Item value="chars" priority="2" />
+      <Item value="buffer" priority="5" />
+      <Item value="fileName" priority="0" />
+      <Item value="FileStream" priority="0" />
+      <Item value="htmlFileName" priority="0" />
+      <Item value="Process" priority="0" />
+      <Item value="absPath" priority="1" />
+      <Item value="b" priority="1" />
+      <Item value="tmp" priority="0" />
+      <Item value="browser" priority="0" />
+      <Item value="_textBoxArticleTitle" priority="0" />
+      <Item value="title" priority="0" />
+      <Item value="_maxTitleLength" priority="0" />
+      <Item value="Drawing" priority="0" />
+      <Item value="_maxContentLength" priority="0" />
+      <Item value="TextBoxesLength" priority="0" />
+      <Item value="userControlTreeView1" priority="0" />
+      <Item value="checkBoxSelectCategory" priority="1" />
+      <Item value="cellData" priority="0" />
+      <Item value="toolStripMenuItemDetailView" priority="0" />
+      <Item value="ToolStripMenuItemFilterBroadcast" priority="0" />
+      <Item value="categoryId" priority="0" />
+      <Item value="Table_Article`0" priority="4" />
+      <Item value="originalPhotos" priority="0" />
+      <Item value="delPhotos" priority="0" />
+      <Item value="delRow" priority="1" />
+      <Item value="Delete`0" priority="0" />
+      <Item value="imageId" priority="3" />
+      <Item value="TableOriginalImages`0" priority="0" />
+      <Item value="UserControlEditPhoto`0" priority="0" />
+      <Item value="UserControlUploadPhoto`0" priority="0" />
+      <Item value="ContainerFilterService`0" priority="0" />
+      <Item value="textBoxWidth" priority="0" />
+      <Item value="textBoxHeight" priority="0" />
+      <Item value="textBoxPhotoName" priority="0" />
+      <Item value="textBoxDescription" priority="0" />
+      <Item value="textBoxCaption" priority="0" />
+      <Item value="textBoxCategoryName" priority="0" />
+      <Item value="photosArchive" priority="0" />
+      <Item value="pictureBox1" priority="1" />
+      <Item value="url" priority="1" />
+      <Item value="dateTime" priority="0" />
+      <Item value="_UpdateDate" priority="0" />
+      <Item value="_StartDateTime" priority="0" />
+      <Item value="queryable" priority="0" />
+      <Item value="Queryable`0" priority="0" />
+      <Item value="Timer`0" priority="0" />
+      <Item value="Timer" priority="0" />
+      <Item value="timer" priority="3" />
+      <Item value="DateInterval`0" priority="0" />
+      <Item value="PlaySound`0" priority="4" />
+      <Item value="Thread`0" priority="0" />
+      <Item value="thread" priority="2" />
+      <Item value="Thread" priority="0" />
+      <Item value="buttonRecrdstart" priority="0" />
+      <Item value="fileToPlay" priority="0" />
+      <Item value="FormVbDevices`0" priority="0" />
+      <Item value="buttonRecordStop" priority="0" />
+      <Item value="filename1" priority="1" />
+      <Item value="RecordStart`0" priority="0" />
+      <Item value="filename2" priority="0" />
+      <Item value="filename3" priority="0" />
+      <Item value="EndDateTime" priority="0" />
+      <Item value="startDateTime" priority="1" />
+      <Item value="treeViewTakBroadcastCatSelector" priority="0" />
+      <Item value="node" priority="2" />
+      <Item value="TreeNode`0" priority="0" />
+      <Item value="CategoryId" priority="0" />
+      <Item value="newBroadcast" priority="2" />
+      <Item value="Is`0" priority="0" />
+      <Item value="isNewHigher" priority="0" />
+      <Item value="tn" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HaimDLL.Constats.ConnectionStrings">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@HaimDLL.Constants">
+      <Item value="My10InfoConnectionString" priority="1" />
+      <Item value="WordSeperatorCharactersAsString" priority="2" />
+      <Item value="KanNaimConnectionString" priority="0" />
+      <Item value="RemoteMySqlKanNaimConnectionString" priority="0" />
+      <Item value="MyLocalMsSqlKanNaimConnectionString" priority="0" />
+      <Item value="RtfTagsUntags" priority="0" />
+      <Item value="EnumHtmlTagsWithoutAttributes`0" priority="1" />
+      <Item value="TagKeys" priority="1" />
+      <Item value="EnumHtmlTagsWithAttributes`0" priority="0" />
+      <Item value="EnumHtmlTags`0" priority="7" />
+      <Item value="EnumCssProperties`0" priority="7" />
+      <Item value="EnumHtmlTagsExtension`0" priority="1" />
+      <Item value="HtmlStyleCollection" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="ToCharArray`0" priority="6" />
+      <Item value="Split`0" priority="6" />
+      <Item value="Length" priority="33" />
+      <Item value="Insert`0" priority="9" />
+      <Item value="EndsWith`0" priority="2" />
+      <Item value="StartsWith`0" priority="5" />
+      <Item value="Substring`0" priority="16" />
+      <Item value="Remove`0" priority="1" />
+      <Item value="IndexOf`0" priority="12" />
+      <Item value="Replace`0" priority="8" />
+      <Item value="Contains`0" priority="16" />
+      <Item value="LastIndexOf`0" priority="1" />
+      <Item value="ToString`0" priority="1" />
+      <Item value="TrimEnd`0" priority="0" />
+      <Item value="IndexOfAny`0" priority="0" />
+      <Item value="ToLower`0" priority="0" />
+      <Item value="Single`1" priority="0" />
+      <Item value="Trim`0" priority="20" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.RichTextBox">
+      <Item value="SelectionStart" priority="24" />
+      <Item value="SelectedRtf" priority="9" />
+      <Item value="SelectionLength" priority="20" />
+      <Item value="Rtf" priority="37" />
+      <Item value="Refresh`0" priority="0" />
+      <Item value="SelectedText" priority="6" />
+      <Item value="SelectionFont" priority="11" />
+      <Item value="Font" priority="1" />
+      <Item value="SelectionCharOffset" priority="0" />
+      <Item value="SelectionBackColor" priority="3" />
+      <Item value="SelectionColor" priority="4" />
+      <Item value="SelectionBullet" priority="4" />
+      <Item value="SelectionIndent" priority="3" />
+      <Item value="SelectionAlignment" priority="4" />
+      <Item value="SelectionHangingIndent" priority="0" />
+      <Item value="Text" priority="16" />
+      <Item value="SelectionProtected" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.StringSplitOptions">
+      <Item value="RemoveEmptyEntries" priority="2" />
+      <Item value="None" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.WebBrowser">
+      <Item value="DocumentText" priority="1" />
+      <Item value="Document" priority="2" />
+      <Item value="AllowNavigation" priority="0" />
+      <Item value="Name" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.FormArticleRichTextBoxEdito">
+      <Item value="userControlRichTextBoxEditor1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HaimDLL.UserControlRichTextBoxEditor">
+      <Item value="Text" priority="0" />
+      <Item value="RichTextBox1" priority="8" />
+      <Item value="ConvertRtfTextToHtmlText`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
+      <Item value="Show`0" priority="8" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Exception">
+      <Item value="Message" priority="4" />
+      <Item value="GetType`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@HaimDLL.Messages">
+      <Item value="ExceptionMessage`0" priority="11" />
+      <Item value="OperationFailure`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.HtmlDocument">
+      <Item value="Links" priority="0" />
+      <Item value="GetElementFromPoint`0" priority="0" />
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="Text" priority="110" />
+      <Item value="SelectedText" priority="0" />
+      <Item value="Refresh`0" priority="0" />
+      <Item value="Enabled" priority="5" />
+      <Item value="TextLength" priority="2" />
+      <Item value="Leave" priority="0" />
+      <Item value="BackColor" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Format`0" priority="23" />
+      <Item value="Empty" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.FormArticleRichTextBoxEditor">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ArrayList">
+      <Item value="Add`0" priority="0" />
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.FormPreviewArticleOnWebBrowser">
+      <Item value="webBrowser1" priority="0" />
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToChar`0" priority="0" />
+      <Item value="ToString`0" priority="1" />
+      <Item value="FromBase64CharArray`0" priority="1" />
+      <Item value="ChangeType`0" priority="0" />
+      <Item value="ToByte`0" priority="0" />
+      <Item value="ToBase64String`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Char">
+      <Item value="ToString`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString`0" priority="6" />
+      <Item value="GetType`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Font">
+      <Item value="Bold" priority="7" />
+      <Item value="Italic" priority="7" />
+      <Item value="Underline" priority="7" />
+      <Item value="Clone`0" priority="0" />
+      <Item value="Size" priority="7" />
+      <Item value="Unit" priority="1" />
+      <Item value="Style" priority="0" />
+      <Item value="FontFamily" priority="7" />
+      <Item value="ToHfont`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolStripMenuItem">
+      <Item value="Name" priority="5" />
+      <Item value="Checked" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ObjectModel.Collection`1">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="TryParse`0" priority="5" />
+      <Item value="Parse`0" priority="12" />
+      <Item value="MaxValue" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Type">
+      <Item value="ToString`0" priority="1" />
+      <Item value="Name" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Color">
+      <Item value="FromName`0" priority="0" />
+      <Item value="Black" priority="1" />
+      <Item value="IndianRed" priority="0" />
+      <Item value="Pink" priority="0" />
+      <Item value="White" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.HorizontalAlignment">
+      <Item value="Right" priority="3" />
+      <Item value="Center" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HaimDLL.UserControlRichTextBoxEditor+SelectedRtfAttributes">
+      <Item value="ItsAlignment" priority="6" />
+      <Item value="_itsBackColor" priority="0" />
+      <Item value="ItsBackColor" priority="2" />
+      <Item value="ItsBullet" priority="3" />
+      <Item value="ItsColor" priority="3" />
+      <Item value="ItsFont" priority="0" />
+      <Item value="ItsIndent" priority="4" />
+      <Item value="IsEqual`0" priority="0" />
+      <Item value="_itsAlignment" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@HaimDLL.Constants+EnumHtmlTagsWithoutAttributes">
+      <Item value="Underlined" priority="0" />
+      <Item value="Bold" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@HaimDLL.Constants+EnumHtmlTagsWithAttributes">
+      <Item value="Title" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString`0" priority="16" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HaimDLL.UserControlRichTextBoxEditor+SelectedRtfAttributes+Colors">
+      <Item value="ForeColor" priority="3" />
+      <Item value="BackgroundColor" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@HaimDLL.UserControlRichTextBoxEditor+SelectedRtfAttributes">
+      <Item value="ConvertAttributeValueToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.HorizontalAlignment">
+      <Item value="CompareTo`0" priority="2" />
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@HaimDLL.Constants+EnumHtmlTags">
+      <Item value="Underlined" priority="2" />
+      <Item value="Italic" priority="1" />
+      <Item value="Paragraph" priority="0" />
+      <Item value="SubScript" priority="0" />
+      <Item value="SuperScript" priority="0" />
+      <Item value="Definition" priority="1" />
+      <Item value="UnorderedList" priority="1" />
+      <Item value="OrderedList" priority="0" />
+      <Item value="ListItem" priority="0" />
+      <Item value="Bold" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HaimDLL.Constants+EnumHtmlTags">
+      <Item value="ToString`0" priority="7" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@HaimDLL.Constants+EnumCssProperties">
+      <Item value="FontSize" priority="1" />
+      <Item value="FontColor" priority="3" />
+      <Item value="FontFamily" priority="1" />
+      <Item value="TextAlignment" priority="2" />
+      <Item value="TextDirection" priority="0" />
+      <Item value="BackgroundColor" priority="1" />
+      <Item value="Position" priority="2" />
+      <Item value="FontWeight" priority="1" />
+      <Item value="FontStyle" priority="1" />
+      <Item value="TextDecoration" priority="2" />
+      <Item value="VerticalAlignSuper" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HaimDLL.Constants+EnumCssProperties">
+      <Item value="ToString`0" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@HaimDLL.Constants+EnumHtmlTagsExtension">
+      <Item value="Ancor" priority="0" />
+      <Item value="Image" priority="0" />
+      <Item value="Table" priority="0" />
+      <Item value="TableRow" priority="0" />
+      <Item value="TableData" priority="0" />
+      <Item value="Embed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HaimDLL.Constants+EnumHtmlTagsExtension">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IDictionary`2">
+      <Item value="Keys" priority="7" />
+      <Item value="Count" priority="0" />
+      <Item value="Remove`0" priority="1" />
+      <Item value="ContainsKey`0" priority="0" />
+      <Item value="Add`0" priority="3" />
+      <Item value="Values" priority="8" />
+      <Item value="Clear`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HaimDLL.UserControlRichTextBoxEditor+RtfStyle">
+      <Item value="ItsFont" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Sort`0" priority="1" />
+      <Item value="Add`0" priority="0" />
+      <Item value="Count" priority="4" />
+      <Item value="Remove`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.ICollection`1">
+      <Item value="Count" priority="3" />
+      <Item value="ElementAt`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.FontFamily">
+      <Item value="Name" priority="3" />
+      <Item value="ToString`0" priority="0" />
+      <Item value="GetName`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Color">
+      <Item value="Name" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox">
+      <Item value="Items" priority="14" />
+      <Item value="SelectedText" priority="18" />
+      <Item value="SelectedValue" priority="3" />
+      <Item value="Refresh`0" priority="0" />
+      <Item value="DataSource" priority="4" />
+      <Item value="SelectedIndex" priority="7" />
+      <Item value="SelectedItem" priority="0" />
+      <Item value="ValueMember" priority="0" />
+      <Item value="DisplayMember" priority="0" />
+      <Item value="Text" priority="4" />
+      <Item value="FindString`0" priority="1" />
+      <Item value="ResetText`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox+ObjectCollection">
+      <Item value="Add`0" priority="2" />
+      <Item value="Clear`0" priority="5" />
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.DataClassesEditArticleDataContext">
+      <Item value="Table_PhotosArchives" priority="0" />
+      <Item value="Table_OriginalPhotosArchives" priority="1" />
+      <Item value="Table_LookupCategories" priority="0" />
+      <Item value="Table_Articles" priority="0" />
+      <Item value="SubmitChanges`0" priority="1" />
+      <Item value="Table_VideosArchives" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.Table_PhotosArchive">
+      <Item value="PhotoTypeId" priority="5" />
+      <Item value="OriginalPhotoId" priority="5" />
+      <Item value="Date" priority="0" />
+      <Item value="Id" priority="1" />
+      <Item value="ImageUrl" priority="4" />
+      <Item value="Width" priority="0" />
+      <Item value="Height" priority="0" />
+      <Item value="CssClass" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.Table_OriginalPhotosArchive">
+      <Item value="CategoryId" priority="3" />
+      <Item value="Name" priority="11" />
+      <Item value="Date" priority="0" />
+      <Item value="PhotoId" priority="5" />
+      <Item value="ImageData" priority="1" />
+      <Item value="Height" priority="0" />
+      <Item value="Width" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Kan_Naim_Main.DataAccess.DbLookup">
+      <Item value="GetLookupCategories`0" priority="0" />
+      <Item value="GetLookupPhotoTypes`0" priority="0" />
+      <Item value="GetLookupCategoryIdFromName`0" priority="2" />
+      <Item value="GetLookupReporterIdFromName`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.Table_LookupCategory">
+      <Item value="CatEnglishName" priority="2" />
+      <Item value="CatHebrewName" priority="3" />
+      <Item value="CatId" priority="2" />
+      <Item value="PhotoId" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="Single`1" priority="18" />
+      <Item value="Count`1" priority="8" />
+      <Item value="OrderBy`2" priority="0" />
+      <Item value="First`1" priority="11" />
+      <Item value="FirstOrDefault`1" priority="4" />
+      <Item value="AsQueryable`0" priority="0" />
+      <Item value="AsEnumerable`1" priority="0" />
+      <Item value="OrderByDescending`2" priority="3" />
+      <Item value="Where`1" priority="0" />
+      <Item value="Select`2" priority="0" />
+      <Item value="SingleOrDefault`1" priority="7" />
+      <Item value="ToArray`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.Table_Taktzirim">
+      <Item value="ArticleId" priority="0" />
+      <Item value="ScheduleId" priority="1" />
+      <Item value="TakTypeId" priority="0" />
+      <Item value="PhotoId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.Table_VideosArchive">
+      <Item value="CategoryId" priority="2" />
+      <Item value="Date" priority="1" />
+      <Item value="LastArticleId" priority="0" />
+      <Item value="AlternateText" priority="0" />
+      <Item value="Caption" priority="1" />
+      <Item value="Description" priority="0" />
+      <Item value="EmbedUrl" priority="0" />
+      <Item value="UrlLink" priority="0" />
+      <Item value="CssClass" priority="0" />
+      <Item value="Id" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.Table_Article">
+      <Item value="UpdateDate" priority="1" />
+      <Item value="UpdatedBy" priority="1" />
+      <Item value="ImageId" priority="2" />
+      <Item value="StatusId" priority="0" />
+      <Item value="CreatedBy" priority="0" />
+      <Item value="CountViews" priority="2" />
+      <Item value="CountComments" priority="1" />
+      <Item value="IsPublished" priority="1" />
+      <Item value="CategoryId" priority="7" />
+      <Item value="Title" priority="4" />
+      <Item value="ArticleId" priority="7" />
+      <Item value="ArticleContent" priority="0" />
+      <Item value="EmbedObjId" priority="0" />
+      <Item value="KeysAssociated" priority="2" />
+      <Item value="MetaTags" priority="0" />
+      <Item value="SubTitle" priority="0" />
+      <Item value="KeysLookup" priority="0" />
+      <Item value="CreateDate" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Kan_Naim_Main.DataAccess.DbTableFilter">
+      <Item value="GetOriginalPhotosByCategoryName`0" priority="1" />
+      <Item value="GetOriginalPhotosByPhotoName`0" priority="1" />
+      <Item value="GetPhotosArchiveByOriginalPhotoId`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HaimDLL.UserControlTakFill">
+      <Item value="ucTakContent1" priority="10" />
+      <Item value="ucTakBroadcastCmd1" priority="0" />
+      <Item value="TakType" priority="0" />
+      <Item value="Validate`0" priority="0" />
+      <Item value="IsEnabled`0" priority="1" />
+      <Item value="ValidateValuesBeforeSave`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HaimDLL.UserControlTakContent">
+      <Item value="comboBoxTakPhoto" priority="5" />
+      <Item value="checkBoxTakPhoto" priority="0" />
+      <Item value="_textBoxContent" priority="0" />
+      <Item value="SaveToDatabase`0" priority="1" />
+      <Item value="checkBoxEnableContent" priority="0" />
+      <Item value="textBoxTakContent" priority="0" />
+      <Item value="IsEnabled`0" priority="0" />
+      <Item value="Content" priority="0" />
+      <Item value="MaxContentLength" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.Table_LookupPhotoType">
+      <Item value="PhotoTypeId" priority="2" />
+      <Item value="TypeDescription" priority="1" />
+      <Item value="Width" priority="1" />
+      <Item value="Height" priority="0" />
+      <Item value="MaxSize" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.KeyValuePair`2">
+      <Item value="Value" priority="1" />
+      <Item value="Key" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.Table_LookupArticleStatus">
+      <Item value="StatusId" priority="0" />
+      <Item value="StatusDescription" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.Table_LookupReporter">
+      <Item value="UserId" priority="2" />
+      <Item value="PublishNameShort" priority="2" />
+      <Item value="Email" priority="1" />
+      <Item value="MobilePhone" priority="0" />
+      <Item value="PublishNameLong" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.CheckBox">
+      <Item value="Checked" priority="17" />
+      <Item value="Enabled" priority="1" />
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListBox">
+      <Item value="Items" priority="1" />
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="ToShortDateString`0" priority="2" />
+      <Item value="Ticks" priority="7" />
+      <Item value="Day" priority="0" />
+      <Item value="Month" priority="0" />
+      <Item value="Year" priority="0" />
+      <Item value="AddHours`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Linq.Table`1">
+      <Item value="InsertOnSubmit`0" priority="6" />
+      <Item value="DeleteOnSubmit`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.FormAddNewUser">
+      <Item value="textBoxShortName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.Table_User">
+      <Item value="Address" priority="0" />
+      <Item value="FirstName" priority="0" />
+      <Item value="PhoneNumber" priority="1" />
+      <Item value="UserName" priority="1" />
+      <Item value="UserId" priority="2" />
+      <Item value="RoleId" priority="0" />
+      <Item value="Password" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.DataClassesKanNaimDataContext">
+      <Item value="Table_Users" priority="2" />
+      <Item value="SubmitChanges`0" priority="4" />
+      <Item value="Table_LookupReporters" priority="0" />
+      <Item value="Table_PhotosArchives" priority="5" />
+      <Item value="Table_Articles" priority="4" />
+      <Item value="Table_LinksPrefereds" priority="2" />
+      <Item value="Table_VideosArchives" priority="1" />
+      <Item value="Table_LookupIndexes" priority="0" />
+      <Item value="Table_LinksPageBottoms" priority="0" />
+      <Item value="Table_OriginalPhotosArchives" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.Table_LookupRole">
+      <Item value="RoleId" priority="0" />
+      <Item value="RoleDescription" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Kan_Naim_Main.DataAccess.Filter">
+      <Item value="GetUserByUserNameOrPhone`0" priority="0" />
+      <Item value="GetOriginalPhotosByCategoryId`0" priority="0" />
+      <Item value="GetOriginalPhotosNamesByCategoryId`0" priority="1" />
+      <Item value="GetOriginalPhotosByCategoryName`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.FormEditUserDetails">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Kan_Naim_Main.DataAccess.Lookup">
+      <Item value="GetLookupReporterFromUserId`0" priority="1" />
+      <Item value="GetLookupCategoryIdFromName`0" priority="3" />
+      <Item value="GetLookupIndexCategoryNumberFromCategoryName`0" priority="0" />
+      <Item value="GetLookupCategoryNameFromId`0" priority="0" />
+      <Item value="GetLookupPhotoTypes`0" priority="0" />
+      <Item value="GetLookupPhotoTypeIdFromPhotoWidth`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Label">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.FormRemindPasswordByUserNameOrPhone">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.FormManageBottomPageLinks">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.FormManagePreferedLinks">
+      <Item value="Show`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.OpenFileDialog">
+      <Item value="Filter" priority="0" />
+      <Item value="ShowDialog`0" priority="0" />
+      <Item value="FileName" priority="0" />
+      <Item value="CustomPlaces" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.FormPreferedLinkArticleSelector">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListView">
+      <Item value="Alignment" priority="0" />
+      <Item value="MultiSelect" priority="1" />
+      <Item value="RightToLeftLayout" priority="0" />
+      <Item value="Refresh`0" priority="0" />
+      <Item value="SelectedItems" priority="1" />
+      <Item value="DoubleClick" priority="0" />
+      <Item value="SelectedIndices" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Button">
+      <Item value="Enabled" priority="4" />
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Kan_Naim_Main.GlobalValiables">
+      <Item value="Db" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListView+ListViewItemCollection">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListViewItem">
+      <Item value="SubItems" priority="4" />
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListViewItem+ListViewSubItemCollection">
+      <Item value="Add`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.FormManageTopMenuLinks">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.FormManageIndex">
+      <Item value="Show`0" priority="0" />
+      <Item value="InitializeComponent`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolStrip">
+      <Item value="Text" priority="0" />
+      <Item value="Items" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolStripItemCollection">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolStripTextBox">
+      <Item value="Text" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.FormAddNewPhotos">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HaimDLL.UserControlUploadVideo">
+      <Item value="SetCallbackFunction`0" priority="1" />
+      <Item value="Clear`0" priority="0" />
+      <Item value="PopulateByVideoId`0" priority="0" />
+      <Item value="_textBoxVideoCaption" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Form">
+      <Item value="Container" priority="0" />
+      <Item value="Controls" priority="1" />
+      <Item value="Show`0" priority="1" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.ComponentModel.IContainer">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Control+ControlCollection">
+      <Item value="Add`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@DbSql.Lookup">
+      <Item value="Db" priority="5" />
+      <Item value="GetLookupCategoryNameFromId`0" priority="1" />
+      <Item value="GetLookupCategoryIdFromName`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DbSql.Table_VideosArchive">
+      <Item value="CategoryId" priority="0" />
+      <Item value="Caption" priority="4" />
+      <Item value="Date" priority="0" />
+      <Item value="Description" priority="4" />
+      <Item value="Id" priority="1" />
+      <Item value="EmbedUrl" priority="3" />
+      <Item value="AlternateText" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DbSql.Table_LookupCategory">
+      <Item value="CatId" priority="0" />
+      <Item value="CatHebrewName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.RightToLeft">
+      <Item value="Yes" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListViewItem+ListViewSubItem">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DbSql.DataClassesKanNaimDataContext">
+      <Item value="Table_PhotosArchives" priority="1" />
+      <Item value="Table_OriginalPhotosArchives" priority="2" />
+      <Item value="Table_LinksPageBottoms" priority="0" />
+      <Item value="SubmitChanges`0" priority="2" />
+      <Item value="Table_Taktzirims" priority="2" />
+      <Item value="Table_VideosArchives" priority="0" />
+      <Item value="Table_Broadcasts" priority="0" />
+      <Item value="Table_Articles" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DbSql.Table_PhotosArchive">
+      <Item value="Width" priority="0" />
+      <Item value="PhotoTypeId" priority="0" />
+      <Item value="ImageUrl" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Nullable`1">
+      <Item value="ToString`0" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DbSql.Table_OriginalPhotosArchive">
+      <Item value="PhotoId" priority="7" />
+      <Item value="Height" priority="2" />
+      <Item value="Description" priority="2" />
+      <Item value="Caption" priority="2" />
+      <Item value="Width" priority="1" />
+      <Item value="ImageData" priority="0" />
+      <Item value="Date" priority="2" />
+      <Item value="Name" priority="0" />
+      <Item value="CategoryId" priority="0" />
+      <Item value="DateTicks" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.RadioButton">
+      <Item value="Enabled" priority="1" />
+      <Item value="Checked" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.ComboBox">
+      <Item value="ObjectCollection`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main._10infoDataSetIndexesTableAdapters.Table_IndexesTableAdapter">
+      <Item value="Adapter" priority="2" />
+      <Item value="Insert`0" priority="2" />
+      <Item value="Transaction" priority="0" />
+      <Item value="Container" priority="0" />
+      <Item value="Update`0" priority="1" />
+      <Item value="Delete`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.Table_LookupIndex">
+      <Item value="IndexName" priority="0" />
+      <Item value="Id" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewRow">
+      <Item value="Cells" priority="9" />
+      <Item value="IsNewRow" priority="2" />
+      <Item value="Index" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewCell">
+      <Item value="Value" priority="5" />
+      <Item value="ColumnIndex" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridView">
+      <Item value="CurrentRow" priority="7" />
+      <Item value="RowsAdded" priority="0" />
+      <Item value="DataSource" priority="7" />
+      <Item value="CurrentCell" priority="0" />
+      <Item value="Columns" priority="3" />
+      <Item value="Rows" priority="4" />
+      <Item value="ResetBindings`0" priority="0" />
+      <Item value="Refresh`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.SqlClient.SqlDataAdapter">
+      <Item value="Update`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewCellEventArgs">
+      <Item value="ColumnIndex" priority="3" />
+      <Item value="RowIndex" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewRowCollection">
+      <Item value="GetRowCount`0" priority="0" />
+      <Item value="Count" priority="0" />
+      <Item value="RemoveAt`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolStripButton">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewColumn">
+      <Item value="Name" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewRowsRemovedEventArgs">
+      <Item value="RowIndex" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewRowCancelEventArgs">
+      <Item value="Row" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewRowEventArgs">
+      <Item value="Row" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewRowsAddedEventArgs">
+      <Item value="RowIndex" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main._10infoDataSet">
+      <Item value="Table_LinksPageBottom" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.Table_LinksPageBottom">
+      <Item value="LinkId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@DbSql.Filter">
+      <Item value="GetPageBottomLinkByLinkId`0" priority="1" />
+      <Item value="GetVideoFromId`0" priority="1" />
+      <Item value="GetAllTaktzirim`0" priority="1" />
+      <Item value="GetTaktzirimByTakTypeId`0" priority="0" />
+      <Item value="GetTaktzirimByArticleId`0" priority="1" />
+      <Item value="GetOriginalPhotosByCategoryId`0" priority="0" />
+      <Item value="GetAllArticles`0" priority="0" />
+      <Item value="GetPhotosArchiveByOriginalPhotoId`0" priority="1" />
+      <Item value="GetOriginalPhotoFromId`0" priority="1" />
+      <Item value="GetArticleByArticleId`0" priority="0" />
+      <Item value="GetBroadcastByTakId`0" priority="0" />
+      <Item value="GetBroadcastByTakIdCatId`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DbSql.Table_LinksPageBottom">
+      <Item value="Url" priority="1" />
+      <Item value="OrderPlace" priority="0" />
+      <Item value="AltText" priority="0" />
+      <Item value="DispleyText" priority="0" />
+      <Item value="FlagVisible" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.RightToLeft">
+      <Item value="Yes" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HaimDLL.UserControlEditBottomPageLink">
+      <Item value="Dock" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@HaimDLL.Conversions">
+      <Item value="FromStringToNint`0" priority="0" />
+      <Item value="ByteArrayToImage`0" priority="1" />
+      <Item value="ImageToByteArray`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HaimDLL.UserControlEditPreferedLinks">
+      <Item value="Width" priority="1" />
+      <Item value="Height" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DbSql.Table_Taktzirim">
+      <Item value="TakTypeId" priority="2" />
+      <Item value="ArticleId" priority="1" />
+      <Item value="TakId" priority="2" />
+      <Item value="ScheduleId" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.FormEditArtical">
+      <Item value="_comboBoxArticleCategory" priority="3" />
+      <Item value="_richTextBoxArticleContent" priority="1" />
+      <Item value="_comboBoxEditor" priority="1" />
+      <Item value="ucUploadVideo1" priority="0" />
+      <Item value="_ucUploadPhoto1" priority="1" />
+      <Item value="_checkBoxPublish" priority="0" />
+      <Item value="_textBoxKeyWords" priority="0" />
+      <Item value="_textBoxTags" priority="0" />
+      <Item value="_textBoxArticleTitle" priority="1" />
+      <Item value="_textBoxArticleSubtitle" priority="1" />
+      <Item value="_dateTimePicker21" priority="0" />
+      <Item value="FillComboBoxWithPhotosArchive`0" priority="0" />
+      <Item value="_listBoxSelectedCategories" priority="0" />
+      <Item value="_comboBoxArticlePhoto" priority="2" />
+      <Item value="_comboBoxArticleVideo" priority="0" />
+      <Item value="_ucUploadVideo1" priority="0" />
+      <Item value="_userControlTakFillSizeMedium" priority="0" />
+      <Item value="_userControlTakFillSizeSmall" priority="0" />
+      <Item value="_buttonReloadCategoryTree" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.PictureBox">
+      <Item value="Image" priority="0" />
+      <Item value="ImageLocation" priority="0" />
+      <Item value="Load`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Imaging.ImageFormat">
+      <Item value="Png" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HaimDLL.UserControlUploadPhoto">
+      <Item value="PopulateByOriginalPhotoId`0" priority="0" />
+      <Item value="SetSaveButtonCallbackFunction`0" priority="0" />
+      <Item value="SizeSelectCollection" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Linq.Binary">
+      <Item value="ToArray`0" priority="3" />
+      <Item value="Length" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListBox+ObjectCollection">
+      <Item value="Add`0" priority="0" />
+      <Item value="Clear`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IOrderedQueryable`1">
+      <Item value="First`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Image">
+      <Item value="GetThumbnailImage`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IntPtr">
+      <Item value="Zero" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.FileDialogCustomPlacesCollection">
+      <Item value="Add`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@DbSql.Insert">
+      <Item value="TableTaktzirim`0" priority="0" />
+      <Item value="TableBroadcast`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DateTimePicker">
+      <Item value="Value" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DbSql.Table_Broadcast">
+      <Item value="Id" priority="1" />
+      <Item value="TakId" priority="1" />
+      <Item value="EndDateTime" priority="0" />
+      <Item value="StartDateTime" priority="0" />
+      <Item value="CategoryId" priority="2" />
+      <Item value="TakTypeId" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.FontFamily">
+      <Item value="GenericSansSerif" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Diagnostics.Process">
+      <Item value="StartInfo" priority="4" />
+      <Item value="Kill`0" priority="0" />
+      <Item value="Start`0" priority="0" />
+      <Item value="WaitForExit`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Diagnostics.ProcessStartInfo">
+      <Item value="WorkingDirectory" priority="1" />
+      <Item value="Arguments" priority="1" />
+      <Item value="FileName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Diagnostics.Process">
+      <Item value="Start`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.FileAccess">
+      <Item value="Write" priority="0" />
+      <Item value="Read" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.FileStream">
+      <Item value="Write`0" priority="0" />
+      <Item value="Flush`0" priority="0" />
+      <Item value="Close`0" priority="1" />
+      <Item value="Length" priority="0" />
+      <Item value="Read`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HaimDLL.UserControlTreeView">
+      <Item value="Enabled" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DbSql.Table_Article">
+      <Item value="UpdateDate" priority="1" />
+      <Item value="ArticleId" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@DbSql.Delete">
+      <Item value="TableArticle`0" priority="0" />
+      <Item value="TableOriginalImages`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HaimDLL.UserControlViewImageDetails">
+      <Item value="Parent" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Linq.Queryable">
+      <Item value="ElementAt`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Timer">
+      <Item value="Interval" priority="0" />
+      <Item value="Start`0" priority="1" />
+      <Item value="Tick" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Thread">
+      <Item value="Start`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kan_Naim_Main.FormVbDevices">
+      <Item value="PlaySound`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TreeView">
+      <Item value="Nodes" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TreeNode">
+      <Item value="IsSelected" priority="0" />
+      <Item value="Name" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TreeNodeCollection">
+      <Item value="IndexOf`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:FormEditArtical.Designer.cs" caret="0" fromTop="0" />
+      <File id="697ECEA6-B4D5-430F-8355-977D96DF74C5/f:UserControlTreeView.cs" caret="534" fromTop="16" />
+      <File id="697ECEA6-B4D5-430F-8355-977D96DF74C5/f:UserControlEditPhoto.Designer.cs" caret="377" fromTop="11" />
+      <File id="697ECEA6-B4D5-430F-8355-977D96DF74C5/f:UserControlEditPhoto.cs" caret="89" fromTop="2" />
+      <File id="F83511BE-5507-459A-A809-2A97834A119E/f:Delete.cs" caret="502" fromTop="3" />
+      <File id="697ECEA6-B4D5-430F-8355-977D96DF74C5/f:UserControlViewImageDetails.cs" caret="982" fromTop="25" />
+      <File id="F83511BE-5507-459A-A809-2A97834A119E/f:Lookup.cs" caret="0" fromTop="0" />
+      <File id="697ECEA6-B4D5-430F-8355-977D96DF74C5/f:UserControlManageImages.cs" caret="660" fromTop="18" />
+      <File id="697ECEA6-B4D5-430F-8355-977D96DF74C5/f:UserControlManageArticles.cs" caret="1371" fromTop="36" />
+      <File id="F83511BE-5507-459A-A809-2A97834A119E/f:DataClassesKanNaim.designer.cs" caret="110126" fromTop="7" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:Table_Taktzirim.designer.cs" caret="8" fromTop="0" />
+      <File id="697ECEA6-B4D5-430F-8355-977D96DF74C5/f:UserControlManageArticles.Designer.cs" caret="677" fromTop="20" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:Table_MenuTop.designer.cs" caret="180" fromTop="7" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/d:DataAccess/f:Insert.cs" caret="697" fromTop="20" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:Table_Broadcast.designer.cs" caret="8809" fromTop="38" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:DataClassesKanNaim.designer.cs" caret="499" fromTop="12" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:DataClassesKanNaim.cs" caret="0" fromTop="0" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:DataClassesKanNaimDataContext.designer.cs" caret="72" fromTop="5" />
+      <File id="697ECEA6-B4D5-430F-8355-977D96DF74C5/f:UserControlTakBroadcastCmd.cs" caret="3046" fromTop="37" />
+      <File id="F83511BE-5507-459A-A809-2A97834A119E/f:Filter.cs" caret="6270" fromTop="29" />
+      <File id="697ECEA6-B4D5-430F-8355-977D96DF74C5/f:UserControlTakFill.cs" caret="1057" fromTop="13" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:FormEditArtical.cs" caret="0" fromTop="0" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:FormAdministrator.cs" caret="1197" fromTop="19" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:FormManageIndex.cs" caret="357" fromTop="12" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:Program.cs" caret="434" fromTop="14" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:FormVbDevices.cs" caret="339" fromTop="11" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:FormLogin.cs" caret="570" fromTop="16" />
+      <File id="697ECEA6-B4D5-430F-8355-977D96DF74C5/f:Messages.cs" caret="144" fromTop="0" />
+      <File id="F83511BE-5507-459A-A809-2A97834A119E/f:Insert.cs" caret="0" fromTop="0" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:Form_CategoriesManager.cs" caret="11868" fromTop="11" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:DataClassesKanNaim.designer.cs" caret="499" fromTop="12" />
+      <File id="697ECEA6-B4D5-430F-8355-977D96DF74C5/f:UserControlTakBroadcastCmd.cs" caret="3177" fromTop="25" />
+      <File id="697ECEA6-B4D5-430F-8355-977D96DF74C5/f:UserControlTakBroadcastCmd.cs" caret="1215" fromTop="7" />
+      <File id="697ECEA6-B4D5-430F-8355-977D96DF74C5/f:UserControlTakBroadcastCmd.cs" caret="2039" fromTop="19" />
+      <File id="697ECEA6-B4D5-430F-8355-977D96DF74C5/f:UserControlTakFill.cs" caret="1079" fromTop="12" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:FormEditArtical.cs" caret="59320" fromTop="20" />
+      <File id="F83511BE-5507-459A-A809-2A97834A119E/f:Filter.cs" caret="5934" fromTop="33" />
+      <File id="F83511BE-5507-459A-A809-2A97834A119E/f:Filter.cs" caret="6475" fromTop="25" />
+      <File id="F83511BE-5507-459A-A809-2A97834A119E/f:Filter.cs" caret="6230" fromTop="21" />
+      <File id="697ECEA6-B4D5-430F-8355-977D96DF74C5/f:UserControlTakBroadcastCmd.cs" caret="1606" fromTop="14" />
+      <File id="697ECEA6-B4D5-430F-8355-977D96DF74C5/f:UserControlTakBroadcastCmd.cs" caret="3203" fromTop="32" />
+      <File id="697ECEA6-B4D5-430F-8355-977D96DF74C5/f:UserControlTakBroadcastCmd.cs" caret="2627" fromTop="22" />
+      <File id="F83511BE-5507-459A-A809-2A97834A119E/f:Insert.cs" caret="1401" fromTop="15" />
+      <File id="697ECEA6-B4D5-430F-8355-977D96DF74C5/f:UserControlTakBroadcastCmd.cs" caret="3177" fromTop="32" />
+      <File id="697ECEA6-B4D5-430F-8355-977D96DF74C5/f:UserControlTakBroadcastCmd.cs" caret="3046" fromTop="28" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:Program.cs" caret="13" fromTop="0" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:Program.cs" caret="434" fromTop="14" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:FormAdministrator.cs" caret="1122" fromTop="21" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:FormAdministrator.cs" caret="7172" fromTop="22" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:FormAdministrator.cs" caret="1308" fromTop="10" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:FormEditArtical.cs" caret="1211" fromTop="16" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:FormEditArtical.cs" caret="3138" fromTop="19" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:FormEditArtical.cs" caret="63500" fromTop="14" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:FormEditArtical.cs" caret="63477" fromTop="17" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:Form_CategoriesManager.cs" caret="1317" fromTop="20" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:Form_CategoriesManager.cs" caret="711" fromTop="13" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:Form_CategoriesManager.cs" caret="3845" fromTop="20" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:Form_CategoriesManager.cs" caret="106" fromTop="6" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:Form_CategoriesManager.cs" caret="13" fromTop="0" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:Form_CategoriesManager.cs" caret="11556" fromTop="18" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>D:\Program Files\NUnit 2.5.2\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

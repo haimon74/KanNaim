@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DF94E6FC-D00D-4D01-8DDD-3609A9FEC5A6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shimanni.Trader.Starter</RootNamespace>
+    <AssemblyName>Shimanni.Trader.Starter</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Starter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\3rd Party\KRS\Krs.Ats.IBNet\Krs.Ats.IBNet.csproj">
+      <Project>{98672E16-97B1-4204-86CC-EA0009CA15F4}</Project>
+      <Name>Krs.Ats.IBNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Shimanni.Common.Desktop\Shimanni.Common.Desktop.csproj">
+      <Project>{E8E5727C-4A8B-4359-858B-AA0AF2FCBB06}</Project>
+      <Name>Shimanni.Common.Desktop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Shimanni.Common.Utils\Shimanni.Common.Utils.csproj">
+      <Project>{0CB2E9B6-E811-499C-840C-AE582E8F714D}</Project>
+      <Name>Shimanni.Common.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Shimanni.Common\Shimanni.Common.csproj">
+      <Project>{9BF83B16-1ADE-40FC-8A55-DCFA0FB4D790}</Project>
+      <Name>Shimanni.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shimanni.Trader.BL\Shimanni.Trader.BL.csproj">
+      <Project>{EC058EF7-C3FB-49FD-BD9C-CC6AEA1FED3A}</Project>
+      <Name>Shimanni.Trader.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shimanni.Trader.Common\Shimanni.Trader.Common.csproj">
+      <Project>{B0AEAB93-29E1-4858-BBE4-47E5105DA3C6}</Project>
+      <Name>Shimanni.Trader.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shimanni.Trader.Core\Shimanni.Trader.Core.csproj">
+      <Project>{E41657E1-753A-4A44-86E7-210E36AA9D34}</Project>
+      <Name>Shimanni.Trader.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shimanni.Trader.DataStructure\Shimanni.Trader.DataStructure.csproj">
+      <Project>{90331311-9342-4343-9453-40E80A5296F4}</Project>
+      <Name>Shimanni.Trader.DataStructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shimanni.Trader.UI\Shimanni.Trader.UI.csproj">
+      <Project>{CCEC5704-A361-45DC-A51F-FAF3839E5238}</Project>
+      <Name>Shimanni.Trader.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

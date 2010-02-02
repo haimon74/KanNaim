@@ -34,7 +34,7 @@ namespace HaimDLL
         {
             int returnValue = ucTakContent1.SaveToDatabase(articleId, embedObjId, _takType);
 
-            ucTakBroadcastCmd1.SaveToDatabase(returnValue);
+            ucTakBroadcastCmd1.SaveToDatabase(returnValue, _takType);
 
             return returnValue;
         }

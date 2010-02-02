@@ -36,33 +36,56 @@ namespace HaimDLL
             treeViewTakBroadcastCatSelector.Enabled = isEnabled;
         }
 
-        public int SaveToDatabase(int takId)
+        public bool SaveToDatabase(int takId, int takTypeId)
         {
             int days;
             if (!int.TryParse(comboBoxTakRecDurationDays.Text, out days))
                 days = 0;
-            
+
             int hours;
             if (!int.TryParse(comboBoxTakRecDurationHours.Text, out hours))
                 hours = 0;
-            
+
             hours += 24 * days;
-            
-            var broadcast = new Table_Broadcast
+            DateTime startDateTime = datePickerTakStart.Value;
+
+            var newBroadcast = new Table_Broadcast
             {
-                DurationHours = hours,
                 isRecursive = checkBoxTakRecursive.Checked,
                 isDaily = radioButtonTakRepeatDaily.Checked,
                 isWeekly = radioButtonTakRepeatWeekly.Checked,
                 isMonthly = radioButtonTakRepeatWeekly.Checked,
                 isYearly = radioButtonTakRepeatYearly.Checked,
                 TakId = takId,
-                StartDateTime = datePickerTakStart.Value
+                TakTypeId = takTypeId,
+                StartDateTime = startDateTime,
+                EndDateTime = startDateTime.AddHours(hours)
             };
 
-            broadcast = Insert.TableBroadcast(broadcast);
+            foreach (TreeNode node in treeViewTakBroadcastCatSelector.Nodes)
+            {
+                if (node.IsSelected)
+                {
+                    int catId = Lookup.GetLookupCategoryIdFromName(node.Name);
+                    newBroadcast.CategoryId = catId;
+                    
+                    Table_Broadcast broadcast = Filter.GetBroadcastByTakIdCatId(takId, catId);
+                    
+                    if (broadcast == null)
+                    {
+                        newBroadcast = Insert.TableBroadcast(newBroadcast);
+                    }
+                    else
+                    {
+                        broadcast.TakTypeId = (newBroadcast.TakTypeId > broadcast.TakTypeId)
+                                               ? newBroadcast.TakTypeId
+                                               : broadcast.TakTypeId;
 
-            return (broadcast == null) ? -1 : broadcast.Id;
+                        newBroadcast = Insert.TableBroadcast(broadcast);
+                    }
+                }
+            }
+            return (newBroadcast != null);
         }
     }
 }

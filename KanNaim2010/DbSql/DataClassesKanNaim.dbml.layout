@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 25, 11.125" name="DataClassesKanNaim">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 24.25, 11.125" name="DataClassesKanNaim">
   <DataContextMoniker Name="/DataClassesKanNaimDataContext" />
   <nestedChildShapes>
     <classShape Id="0cf0a0b8-f288-4d5a-9fe7-c7bf512fa6be" absoluteBounds="0.75, 0.625, 2, 1.0961531575520833">
@@ -110,22 +110,22 @@
         <elementListCompartment Id="e1215a49-5573-49c9-88b6-d505d5751f60" absoluteBounds="10.015, 2.21, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="a7c2facc-115f-4d23-a3eb-023ac2e229d4" absoluteBounds="21.625, 0.5, 2, 2.0822371419270831">
-      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_Taktzirim" />
-      <nestedChildShapes>
-        <elementListCompartment Id="0d1c3ba9-27ac-43d1-a471-44d701665318" absoluteBounds="21.64, 0.96, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="970b7fdc-de07-4889-aae7-1c205942f491" absoluteBounds="22.75, 3.75, 2, 2.24658447265625">
-      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_Broadcast" />
-      <nestedChildShapes>
-        <elementListCompartment Id="6b107d61-ad35-48e6-a7ae-d3314b0a21a9" absoluteBounds="22.765, 4.21, 1.9700000000000002, 1.68658447265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="397a1a5b-d047-4721-aad8-de9198cc6e2f" absoluteBounds="0.75, 1.875, 2, 1.4248478190104168">
       <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_LookupTakType" />
       <nestedChildShapes>
         <elementListCompartment Id="8ebadcf7-fed4-4b39-80ce-50509068087b" absoluteBounds="0.76500000000000012, 2.335, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="804aa940-2982-4648-9345-c821ae22610e" absoluteBounds="21.875, 0.625, 2, 2.24658447265625">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_Taktzirim" />
+      <nestedChildShapes>
+        <elementListCompartment Id="491851fc-a21a-4cbf-b807-e951620266a0" absoluteBounds="21.89, 1.085, 1.9700000000000002, 1.68658447265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fa8a80bc-9fb1-4d41-b173-2600ed6d16da" absoluteBounds="22, 3.5, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_Broadcast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab8bf8c2-c5c7-4712-923a-e866baa120af" absoluteBounds="22.015, 3.96, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

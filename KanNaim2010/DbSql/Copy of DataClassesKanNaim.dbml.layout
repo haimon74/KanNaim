@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 25, 11.125" name="DataClassesKanNaim">
+  <DataContextMoniker Name="/DataClassesKanNaimDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0cf0a0b8-f288-4d5a-9fe7-c7bf512fa6be" absoluteBounds="0.75, 0.625, 2, 1.0961531575520833">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_LookupArticleStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bfa75d8d-3c86-40e4-8121-d2e4a7d6fae1" absoluteBounds="0.765, 1.085, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4254694b-dc56-483e-a63c-84ef9cf0e860" absoluteBounds="0.75, 3.5, 2, 1.26050048828125">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_LookupBannerOwner" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fb4c0f55-0710-4707-8686-65d25a825d1d" absoluteBounds="0.76500000000000012, 3.96, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f87b710e-cc2a-46f7-adfa-ca9ee079572b" absoluteBounds="0.75, 5, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_LookupCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="612ca4ce-21eb-4542-b689-c03b29219b6b" absoluteBounds="0.76500000000000012, 5.46, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="89fce11a-5901-4c4f-8b6b-f9b14844b9b7" absoluteBounds="4.25, 1.875, 2, 1.26050048828125">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_LookupIndex" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e1d78268-1fc2-467c-a611-e2e02578be26" absoluteBounds="4.265, 2.335, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="57b8048c-b897-4bcc-af1e-98655c256919" absoluteBounds="4.25, 3.25, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_LookupPhotoType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0fbf9af6-bf9c-4532-978d-1f5fa0ef24b4" absoluteBounds="4.265, 3.71, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ccc88c4f-ac16-4f5f-bb8e-8424218c29b3" absoluteBounds="4.25, 5, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_LookupReporter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5e734c28-6e68-4e7c-ba13-795e4cb23da0" absoluteBounds="4.265, 5.46, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6ffba3f4-4514-4b9f-be9b-aeec251f570a" absoluteBounds="4.25, 0.5, 2, 1.0961531575520833">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_LookupRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="01b4014a-a5b6-463d-9b36-d63c800a92fb" absoluteBounds="4.2650000000000006, 0.96, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b85cc3a0-f74b-44c2-abcf-0edf1ad0ec0f" absoluteBounds="10.125, 4, 2, 2.0822371419270831">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_MenuRightSide" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d60c85a8-61c3-4bb9-a9ff-a7ed53b4b6ce" absoluteBounds="10.14, 4.46, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d4645a71-a2b8-4ecf-9e4c-a213ca7a9087" absoluteBounds="10.25, 6.5, 2, 2.0822371419270831">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_MenuTop" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3344af3a-6d8c-4ca0-a5da-f648178f4764" absoluteBounds="10.265, 6.96, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="905a4608-36ad-4e70-8be2-587453a87e71" absoluteBounds="14.375, 0.75, 2, 2.0822371419270831">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_Mivzakim" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6f6cce2a-bd91-411f-9fae-d7d1a56ede6b" absoluteBounds="14.39, 1.21, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cbeb6830-4f0f-4ed0-b6de-6bf63935bbbe" absoluteBounds="14.5, 3.75, 2, 6.5196150716145826">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_Article" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d4f3bd4b-cb57-4b46-94ce-61d3008f43d4" absoluteBounds="14.515, 4.21, 1.9700000000000002, 5.959615071614583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ea9f2277-6be9-44d3-a71e-2648d9de63d0" absoluteBounds="18.625, 0.75, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_OriginalPhotosArchive" />
+      <nestedChildShapes>
+        <elementListCompartment Id="363368be-8091-492d-bcd7-d827142f3ff7" absoluteBounds="18.64, 1.21, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="360ad1e2-a435-411f-80c5-7ff7c368c2ec" absoluteBounds="18.875, 3.75, 2, 2.73962646484375">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_PhotosArchive" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be0fe56b-1f31-40b3-912b-4fe10e60fd2b" absoluteBounds="18.89, 4.21, 1.9700000000000002, 2.17962646484375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e91fa337-af03-4deb-b13d-b3a04ef64baa" absoluteBounds="22, 6.875, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_RSS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a6da98a9-e48e-404e-9c5f-bb0e6abd8e7a" absoluteBounds="22.015, 7.3350000000000009, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a7905300-7f5a-4d9a-87c7-37aa2e57694e" absoluteBounds="7.125, 0.5, 2, 1.75354248046875">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d9e29969-318f-4edb-8c6c-cab32ad2e6e7" absoluteBounds="7.1400000000000006, 0.96, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2d1e758c-3d65-4171-975c-f4589a32690d" absoluteBounds="19.5, 6.875, 2, 2.73962646484375">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_VideosArchive" />
+      <nestedChildShapes>
+        <elementListCompartment Id="373a1c4a-8b25-48b4-92b0-cd6e7099c919" absoluteBounds="19.515, 7.335, 1.9700000000000002, 2.17962646484375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="202b5a14-2e72-470d-8d1a-bd1bbed041ca" absoluteBounds="10.25, 9, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_LinksPageBottom" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8d03d6a4-d761-47c2-a033-f868eb8578c3" absoluteBounds="10.265, 9.46, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9af6b209-fc10-4aa8-af16-53c06ea2f276" absoluteBounds="10, 1.75, 2, 1.75354248046875">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_LinksPrefered" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e1215a49-5573-49c9-88b6-d505d5751f60" absoluteBounds="10.015, 2.21, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a7c2facc-115f-4d23-a3eb-023ac2e229d4" absoluteBounds="21.625, 0.5, 2, 2.0822371419270831">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_Taktzirim" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0d1c3ba9-27ac-43d1-a471-44d701665318" absoluteBounds="21.64, 0.96, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="970b7fdc-de07-4889-aae7-1c205942f491" absoluteBounds="22.75, 3.75, 2, 2.24658447265625">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_Broadcast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6b107d61-ad35-48e6-a7ae-d3314b0a21a9" absoluteBounds="22.765, 4.21, 1.9700000000000002, 1.68658447265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="397a1a5b-d047-4721-aad8-de9198cc6e2f" absoluteBounds="0.75, 1.875, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_LookupTakType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8ebadcf7-fed4-4b39-80ce-50509068087b" absoluteBounds="0.76500000000000012, 2.335, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

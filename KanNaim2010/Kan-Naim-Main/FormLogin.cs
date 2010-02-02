@@ -67,7 +67,8 @@ namespace Kan_Naim_Main
         {
             ActivateAdminForm();
 
-            var testForm = FormEditArtical.GetFormEditNewArtical("חדשות ישראל  | News", "משה נעים");
+            var testForm = new FormVbDevices();
+            //var testForm = FormEditArtical.GetFormEditNewArtical("חדשות ישראל  | News", "משה נעים");
             //var testForm = new FormArticleRichTextBoxEditor();
             testForm.Show();
 

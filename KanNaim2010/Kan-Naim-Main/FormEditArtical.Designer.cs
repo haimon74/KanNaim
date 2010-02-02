@@ -1123,6 +1123,7 @@ namespace Kan_Naim_Main
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "עריכת כתבה";
             this.Load += new System.EventHandler(this.FormEditArtical_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormEditArtical_FormClosing);
             this._tabControl1.ResumeLayout(false);
             this._tabPageArticle.ResumeLayout(false);
             this._groupBox8.ResumeLayout(false);

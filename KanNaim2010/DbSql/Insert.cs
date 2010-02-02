@@ -37,14 +37,10 @@ namespace DbSql
         public static Table_Broadcast TableBroadcast(Table_Broadcast broadcast)
         {
             Db.Table_Broadcasts.InsertOnSubmit(broadcast);
+            
             Db.SubmitChanges();
-            var broadcasts = Filter.GetBroadcastByTakId(broadcast.TakId);
-
-            if (broadcasts == null)
-                return null;
-
-            return (from c in broadcasts
-                    select c).FirstOrDefault();
+            
+            return Filter.GetBroadcastByTakIdCatId(broadcast.TakId, broadcast.CategoryId);
         }
     }
 }

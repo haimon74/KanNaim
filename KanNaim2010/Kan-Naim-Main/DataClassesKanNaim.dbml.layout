@@ -32,7 +32,7 @@
         <elementListCompartment Id="6510b6fa-615e-4c8e-8441-8d8097732685" absoluteBounds="0.51500000000000012, 8.085, 1.9700000000000002, 2.17962646484375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.5 : 8.975); (3.5 : 8.975)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.5 : 8.975); (3.5 : 8.975)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/DataClassesKanNaimDataContext/Table_PhotosArchive/Table_PhotosArchive_Table_LookupPhotoType" />
       <nodes>
         <classShapeMoniker Id="d4f56813-a486-4fad-8f2b-9a53f57a9192" />
@@ -45,14 +45,14 @@
         <elementListCompartment Id="a6ff1f8b-0aa9-4534-b432-65314b281cc2" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 5.959615071614583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.5 : 1.04807657877604); (3.875 : 1.04807657877604)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.5 : 1.04807657877604); (3.875 : 1.04807657877604)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/DataClassesKanNaimDataContext/Table_Article/Table_Article_Table_LookupArticleStatus" />
       <nodes>
         <classShapeMoniker Id="3082c8bf-c135-4a3c-94bd-6758a42f27cc" />
         <classShapeMoniker Id="7a067369-f4fe-4fd1-bfb6-62981fb8096e" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.5 : 2.725); (3.875 : 2.725)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.5 : 2.725); (3.875 : 2.725)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/DataClassesKanNaimDataContext/Table_Article/Table_Article_Table_LookupCategory" />
       <nodes>
         <classShapeMoniker Id="3082c8bf-c135-4a3c-94bd-6758a42f27cc" />
@@ -73,27 +73,27 @@
         <classShapeMoniker Id="d4f56813-a486-4fad-8f2b-9a53f57a9192" />
       </nodes>
     </associationConnector>
-    <classShape Id="d1f700c6-ab72-4947-ba91-c7c17d0d7e0c" isExpanded="false" absoluteBounds="3.875, 4.75, 2, 0.45">
+    <classShape Id="d1f700c6-ab72-4947-ba91-c7c17d0d7e0c" isExpanded="false" absoluteBounds="4.125, 4.75, 2, 0.45">
       <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_Taktzirim" />
       <nestedChildShapes>
-        <elementListCompartment Id="172e5ede-9160-424f-a891-18c05aa91ca7" absoluteBounds="3.8899999999999997, 5.21, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="172e5ede-9160-424f-a891-18c05aa91ca7" absoluteBounds="4.14, 5.21, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(3.875 : 4.975); (2.5 : 4.975)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(4.125 : 4.975); (2.5 : 4.975)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesKanNaimDataContext/Table_Taktzirim/Table_Taktzirim_Table_Article" />
       <nodes>
         <classShapeMoniker Id="d1f700c6-ab72-4947-ba91-c7c17d0d7e0c" />
         <classShapeMoniker Id="3082c8bf-c135-4a3c-94bd-6758a42f27cc" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(4.875 : 5.2); (4.875 : 8.25178313594154); (2.5 : 8.25178313594154)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.125 : 5.2); (5.125 : 8.25178313594154); (2.5 : 8.25178313594154)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesKanNaimDataContext/Table_Taktzirim/Table_Taktzirim_Table_PhotosArchive" />
       <nodes>
         <classShapeMoniker Id="d1f700c6-ab72-4947-ba91-c7c17d0d7e0c" />
         <classShapeMoniker Id="d4f56813-a486-4fad-8f2b-9a53f57a9192" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(4.875 : 4.75); (4.875 : 3.95)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5 : 4.75); (5 : 3.95)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesKanNaimDataContext/Table_Taktzirim/Table_Taktzirim_Table_VideosArchive" />
       <nodes>
         <classShapeMoniker Id="d1f700c6-ab72-4947-ba91-c7c17d0d7e0c" />
@@ -106,7 +106,7 @@
         <elementListCompartment Id="79f82a67-94b5-414d-9d57-3505fbad71f6" absoluteBounds="3.8899999999999997, 2.21, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(3.875 : 1.975); (2.5 : 1.975)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(3.875 : 1.975); (2.5 : 1.975)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/DataClassesKanNaimDataContext/Table_LookupReporter/Table_LookupReporter_Table_Article" />
       <nodes>
         <classShapeMoniker Id="c129805c-9b11-45bb-ae84-83458b61ba8c" />
@@ -126,7 +126,7 @@
         <classShapeMoniker Id="45b4941d-4c67-4c2c-9b77-02139e61a9fb" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.5 : 2.55); (3.875 : 2.55)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.5 : 2.55); (3.875 : 2.55)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/DataClassesKanNaimDataContext/Table_Article/Table_Article_Table_LookupCategory1" />
       <nodes>
         <classShapeMoniker Id="3082c8bf-c135-4a3c-94bd-6758a42f27cc" />
@@ -209,5 +209,11 @@
         <classShapeMoniker Id="4c4f7744-3b3c-4473-a162-c2a5fd154239" />
       </nodes>
     </associationConnector>
+    <classShape Id="17d8b557-ab48-44ca-ba86-1cfa4628d545" absoluteBounds="7.625, 6.875, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/DataClassesKanNaimDataContext/Table_Broadcast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="37df93bb-7d9f-4125-8521-41bb3f687f0a" absoluteBounds="7.6400000000000006, 7.335, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

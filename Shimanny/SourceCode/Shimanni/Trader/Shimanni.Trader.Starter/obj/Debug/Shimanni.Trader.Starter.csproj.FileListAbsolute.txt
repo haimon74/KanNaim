@@ -1,0 +1,48 @@
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.Starter.exe
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.Starter.pdb
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Krs.Ats.IBNet.dll
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Common.Desktop.dll
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Common.dll
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Common.Utils.dll
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.BL.dll
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.Common.dll
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.Core.dll
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.DataStructure.dll
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.UI.dll
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Common.Desktop.pdb
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.BL.pdb
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Common.pdb
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.Common.pdb
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.DataStructure.pdb
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Common.Utils.pdb
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.UI.pdb
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.Core.pdb
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Krs.Ats.IBNet.pdb
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Krs.Ats.IBNet.xml
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\obj\Debug\ResolveAssemblyReference.cache
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\obj\Debug\Shimanni.Trader.Starter.exe
+C:\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\obj\Debug\Shimanni.Trader.Starter.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\obj\Debug\Shimanni.Trader.Starter.exe
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\obj\Debug\Shimanni.Trader.Starter.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.Starter.exe
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.Starter.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Krs.Ats.IBNet.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Common.Desktop.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Common.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Common.Utils.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.BL.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.Common.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.Core.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.DataStructure.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.UI.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Common.Desktop.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.BL.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Common.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.Common.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.DataStructure.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Common.Utils.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.UI.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Shimanni.Trader.Core.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Krs.Ats.IBNet.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\bin\Debug\Krs.Ats.IBNet.xml
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Trader\Shimanni.Trader.Starter\obj\Debug\ResolveAssemblyReference.cache

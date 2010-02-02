@@ -1,0 +1,5 @@
+<Modules>
+  <Module PersistentId="697ECEA6-B4D5-430F-8355-977D96DF74C5" ModuleId="HaimDLL" />
+  <Module PersistentId="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B" ModuleId="Kan-Naim-Main" />
+  <Module PersistentId="F83511BE-5507-459A-A809-2A97834A119E" ModuleId="DbSql" />
+</Modules>

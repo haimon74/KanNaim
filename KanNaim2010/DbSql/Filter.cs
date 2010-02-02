@@ -170,8 +170,14 @@ namespace DbSql
         {
             return from c in Db.Table_Broadcasts
                    where c.TakId == takId
-                   orderby c.Id descending 
+                   orderby c.StartDateTime descending
                    select c;
+        }
+        public static Table_Broadcast GetBroadcastByTakIdCatId(int takId, int catId)
+        {
+            return (from c in Db.Table_Broadcasts
+                   where ((c.TakId == takId) && (c.CategoryId == catId))
+                   select c).SingleOrDefault();
         }
 
     }

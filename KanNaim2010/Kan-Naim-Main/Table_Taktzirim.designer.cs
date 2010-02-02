@@ -1,11 +1,14 @@
-﻿using System.Data.Linq.Mapping;
+﻿using System;
+using System.ComponentModel;
+using System.Data.Linq.Mapping;
 
 namespace Kan_Naim_Main
 {
     [Table(Name="dbo.Table_Taktzirim")]
     public partial class Table_Taktzirim
     {
-		
+        private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+
         private int _TakId;
 		
         private int _ArticleId;
@@ -21,6 +24,8 @@ namespace Kan_Naim_Main
         private int _EmbedObjId;
 		
         private int _ScheduleId;
+
+        private string _Categories;
 		
         public Table_Taktzirim()
         {
@@ -153,5 +158,47 @@ namespace Kan_Naim_Main
                 }
             }
         }
+
+        [Column(Storage = "_Categories", DbType = "NVarChar(200)")]
+        public string Categories
+        {
+            get
+            {
+                return this._Categories;
+            }
+            set
+            {
+                if ((this._Categories != value))
+                {
+                    this.OnCategoriesChanging(value);
+                    this.SendPropertyChanging();
+                    this._Categories = value;
+                    this.SendPropertyChanged("Categories");
+                    this.OnCategoriesChanged();
+                }
+            }
+        }
+        
+        public event PropertyChangingEventHandler PropertyChanging;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        
+        protected virtual void SendPropertyChanging()
+        {
+            if ((this.PropertyChanging != null))
+            {
+                this.PropertyChanging(this, emptyChangingEventArgs);
+            }
+        }
+
+        protected virtual void SendPropertyChanged(String propertyName)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+        partial void OnCategoriesChanging(string value);
+        partial void OnCategoriesChanged();
     }
 }

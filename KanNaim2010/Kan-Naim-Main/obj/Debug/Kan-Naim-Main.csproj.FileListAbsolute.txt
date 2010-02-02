@@ -177,3 +177,4 @@ D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepos
 D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\Kan-Naim-Main\bin\Debug\nunit.util.dll
 D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\Kan-Naim-Main\bin\Debug\nunit-console-runner.dll
 D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\Kan-Naim-Main\bin\Debug\nunit.core.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\Kan-Naim-Main\obj\Debug\Kan_Naim_Main.FormVbDevices.resources

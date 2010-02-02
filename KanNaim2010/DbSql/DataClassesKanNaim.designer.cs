@@ -72,15 +72,15 @@ namespace DbSql
     partial void InsertTable_LinksPrefered(Table_LinksPrefered instance);
     partial void UpdateTable_LinksPrefered(Table_LinksPrefered instance);
     partial void DeleteTable_LinksPrefered(Table_LinksPrefered instance);
+    partial void InsertTable_LookupTakType(Table_LookupTakType instance);
+    partial void UpdateTable_LookupTakType(Table_LookupTakType instance);
+    partial void DeleteTable_LookupTakType(Table_LookupTakType instance);
     partial void InsertTable_Taktzirim(Table_Taktzirim instance);
     partial void UpdateTable_Taktzirim(Table_Taktzirim instance);
     partial void DeleteTable_Taktzirim(Table_Taktzirim instance);
     partial void InsertTable_Broadcast(Table_Broadcast instance);
     partial void UpdateTable_Broadcast(Table_Broadcast instance);
     partial void DeleteTable_Broadcast(Table_Broadcast instance);
-    partial void InsertTable_LookupTakType(Table_LookupTakType instance);
-    partial void UpdateTable_LookupTakType(Table_LookupTakType instance);
-    partial void DeleteTable_LookupTakType(Table_LookupTakType instance);
     #endregion
 		
 		public DataClassesKanNaimDataContext() : 
@@ -257,6 +257,14 @@ namespace DbSql
 			}
 		}
 		
+		public System.Data.Linq.Table<Table_LookupTakType> Table_LookupTakTypes
+		{
+			get
+			{
+				return this.GetTable<Table_LookupTakType>();
+			}
+		}
+		
 		public System.Data.Linq.Table<Table_Taktzirim> Table_Taktzirims
 		{
 			get
@@ -270,14 +278,6 @@ namespace DbSql
 			get
 			{
 				return this.GetTable<Table_Broadcast>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Table_LookupTakType> Table_LookupTakTypes
-		{
-			get
-			{
-				return this.GetTable<Table_LookupTakType>();
 			}
 		}
 	}
@@ -2072,7 +2072,7 @@ namespace DbSql
 			}
 		}
 		
-		[Column(Storage="_Title", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
+		[Column(Storage="_Title", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Title
 		{
 			get
@@ -2152,14 +2152,6 @@ namespace DbSql
 			}
 		}
 		
-	    public long UpdateTicks
-	    {
-	        get
-	        {
-	            return _UpdateDate.Ticks;
-	        }
-	    }
-
 		[Column(Storage="_CreateDate", DbType="DateTime NOT NULL")]
 		public System.DateTime CreateDate
 		{
@@ -2877,15 +2869,7 @@ namespace DbSql
 				}
 			}
 		}
-
-        public long DateTicks
-        {
-            get
-            {
-                return _Date.Ticks;
-            }
-        }
-
+		
 		[Column(Storage="_Name", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
 		public string Name
 		{
@@ -3814,15 +3798,7 @@ namespace DbSql
 				}
 			}
 		}
-
-        public long DateTicks
-        {
-            get
-            {
-                return _Date.Ticks;
-            }
-        }
-
+		
 		[Column(Storage="_CssClass", DbType="NChar(20)")]
 		public string CssClass
 		{
@@ -4372,6 +4348,140 @@ namespace DbSql
 		}
 	}
 	
+	[Table(Name="dbo.Table_LookupTakTypes")]
+	public partial class Table_LookupTakType : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _Description;
+		
+		private System.Nullable<int> _Width;
+		
+		private System.Nullable<int> _Height;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnDescriptionChanging(string value);
+    partial void OnDescriptionChanged();
+    partial void OnWidthChanging(System.Nullable<int> value);
+    partial void OnWidthChanged();
+    partial void OnHeightChanging(System.Nullable<int> value);
+    partial void OnHeightChanged();
+    #endregion
+		
+		public Table_LookupTakType()
+		{
+			OnCreated();
+		}
+		
+		[Column(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[Column(Storage="_Description", DbType="NChar(30) NOT NULL", CanBeNull=false)]
+		public string Description
+		{
+			get
+			{
+				return this._Description;
+			}
+			set
+			{
+				if ((this._Description != value))
+				{
+					this.OnDescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._Description = value;
+					this.SendPropertyChanged("Description");
+					this.OnDescriptionChanged();
+				}
+			}
+		}
+		
+		[Column(Storage="_Width", DbType="Int")]
+		public System.Nullable<int> Width
+		{
+			get
+			{
+				return this._Width;
+			}
+			set
+			{
+				if ((this._Width != value))
+				{
+					this.OnWidthChanging(value);
+					this.SendPropertyChanging();
+					this._Width = value;
+					this.SendPropertyChanged("Width");
+					this.OnWidthChanged();
+				}
+			}
+		}
+		
+		[Column(Storage="_Height", DbType="Int")]
+		public System.Nullable<int> Height
+		{
+			get
+			{
+				return this._Height;
+			}
+			set
+			{
+				if ((this._Height != value))
+				{
+					this.OnHeightChanging(value);
+					this.SendPropertyChanging();
+					this._Height = value;
+					this.SendPropertyChanged("Height");
+					this.OnHeightChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[Table(Name="dbo.Table_Taktzirim")]
 	public partial class Table_Taktzirim : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -4394,6 +4504,8 @@ namespace DbSql
 		
 		private int _ScheduleId;
 		
+		private string _Categories;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -4414,6 +4526,8 @@ namespace DbSql
     partial void OnEmbedObjIdChanged();
     partial void OnScheduleIdChanging(int value);
     partial void OnScheduleIdChanged();
+    partial void OnCategoriesChanging(string value);
+    partial void OnCategoriesChanged();
     #endregion
 		
 		public Table_Taktzirim()
@@ -4581,6 +4695,26 @@ namespace DbSql
 			}
 		}
 		
+		[Column(Storage="_Categories", DbType="NVarChar(200)")]
+		public string Categories
+		{
+			get
+			{
+				return this._Categories;
+			}
+			set
+			{
+				if ((this._Categories != value))
+				{
+					this.OnCategoriesChanging(value);
+					this.SendPropertyChanging();
+					this._Categories = value;
+					this.SendPropertyChanged("Categories");
+					this.OnCategoriesChanged();
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -4608,8 +4742,6 @@ namespace DbSql
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _Id;
-		
 		private System.DateTime _StartDateTime;
 		
 		private bool _isRecursive;
@@ -4622,16 +4754,18 @@ namespace DbSql
 		
 		private bool _isYearly;
 		
-		private int _DurationHours;
+		private System.DateTime _EndDateTime;
 		
 		private int _TakId;
+		
+		private int _TakTypeId;
+		
+		private int _CategoryId;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
     partial void OnStartDateTimeChanging(System.DateTime value);
     partial void OnStartDateTimeChanged();
     partial void OnisRecursiveChanging(bool value);
@@ -4644,35 +4778,19 @@ namespace DbSql
     partial void OnisMonthlyChanged();
     partial void OnisYearlyChanging(bool value);
     partial void OnisYearlyChanged();
-    partial void OnDurationHoursChanging(int value);
-    partial void OnDurationHoursChanged();
+    partial void OnEndDateTimeChanging(System.DateTime value);
+    partial void OnEndDateTimeChanged();
     partial void OnTakIdChanging(int value);
     partial void OnTakIdChanged();
+    partial void OnTakTypeIdChanging(int value);
+    partial void OnTakTypeIdChanged();
+    partial void OnCategoryIdChanging(int value);
+    partial void OnCategoryIdChanged();
     #endregion
 		
 		public Table_Broadcast()
 		{
 			OnCreated();
-		}
-		
-		[Column(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
-		{
-			get
-			{
-				return this._Id;
-			}
-			set
-			{
-				if ((this._Id != value))
-				{
-					this.OnIdChanging(value);
-					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
-				}
-			}
 		}
 		
 		[Column(Storage="_StartDateTime", DbType="DateTime NOT NULL")]
@@ -4694,15 +4812,7 @@ namespace DbSql
 				}
 			}
 		}
-
-        public long StartTicks
-        {
-            get
-            {
-                return _StartDateTime.Ticks;
-            }
-        }
-
+		
 		[Column(Storage="_isRecursive", DbType="Bit NOT NULL")]
 		public bool isRecursive
 		{
@@ -4803,27 +4913,27 @@ namespace DbSql
 			}
 		}
 		
-		[Column(Storage="_DurationHours", DbType="Int NOT NULL")]
-		public int DurationHours
+		[Column(Storage="_EndDateTime", DbType="DateTime NOT NULL")]
+		public System.DateTime EndDateTime
 		{
 			get
 			{
-				return this._DurationHours;
+				return this._EndDateTime;
 			}
 			set
 			{
-				if ((this._DurationHours != value))
+				if ((this._EndDateTime != value))
 				{
-					this.OnDurationHoursChanging(value);
+					this.OnEndDateTimeChanging(value);
 					this.SendPropertyChanging();
-					this._DurationHours = value;
-					this.SendPropertyChanged("DurationHours");
-					this.OnDurationHoursChanged();
+					this._EndDateTime = value;
+					this.SendPropertyChanged("EndDateTime");
+					this.OnEndDateTimeChanged();
 				}
 			}
 		}
 		
-		[Column(Storage="_TakId", DbType="Int NOT NULL")]
+		[Column(Storage="_TakId", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int TakId
 		{
 			get
@@ -4843,136 +4953,42 @@ namespace DbSql
 			}
 		}
 		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[Table(Name="dbo.Table_LookupTakTypes")]
-	public partial class Table_LookupTakType : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Id;
-		
-		private string _Description;
-		
-		private System.Nullable<int> _Width;
-		
-		private System.Nullable<int> _Height;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void OnDescriptionChanging(string value);
-    partial void OnDescriptionChanged();
-    partial void OnWidthChanging(System.Nullable<int> value);
-    partial void OnWidthChanged();
-    partial void OnHeightChanging(System.Nullable<int> value);
-    partial void OnHeightChanged();
-    #endregion
-		
-		public Table_LookupTakType()
-		{
-			OnCreated();
-		}
-		
-		[Column(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
+		[Column(Storage="_TakTypeId", DbType="Int NOT NULL")]
+		public int TakTypeId
 		{
 			get
 			{
-				return this._Id;
+				return this._TakTypeId;
 			}
 			set
 			{
-				if ((this._Id != value))
+				if ((this._TakTypeId != value))
 				{
-					this.OnIdChanging(value);
+					this.OnTakTypeIdChanging(value);
 					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
+					this._TakTypeId = value;
+					this.SendPropertyChanged("TakTypeId");
+					this.OnTakTypeIdChanged();
 				}
 			}
 		}
 		
-		[Column(Storage="_Description", DbType="NChar(30) NOT NULL", CanBeNull=false)]
-		public string Description
+		[Column(Storage="_CategoryId", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int CategoryId
 		{
 			get
 			{
-				return this._Description;
+				return this._CategoryId;
 			}
 			set
 			{
-				if ((this._Description != value))
+				if ((this._CategoryId != value))
 				{
-					this.OnDescriptionChanging(value);
+					this.OnCategoryIdChanging(value);
 					this.SendPropertyChanging();
-					this._Description = value;
-					this.SendPropertyChanged("Description");
-					this.OnDescriptionChanged();
-				}
-			}
-		}
-		
-		[Column(Storage="_Width", DbType="Int")]
-		public System.Nullable<int> Width
-		{
-			get
-			{
-				return this._Width;
-			}
-			set
-			{
-				if ((this._Width != value))
-				{
-					this.OnWidthChanging(value);
-					this.SendPropertyChanging();
-					this._Width = value;
-					this.SendPropertyChanged("Width");
-					this.OnWidthChanged();
-				}
-			}
-		}
-		
-		[Column(Storage="_Height", DbType="Int")]
-		public System.Nullable<int> Height
-		{
-			get
-			{
-				return this._Height;
-			}
-			set
-			{
-				if ((this._Height != value))
-				{
-					this.OnHeightChanging(value);
-					this.SendPropertyChanging();
-					this._Height = value;
-					this.SendPropertyChanged("Height");
-					this.OnHeightChanged();
+					this._CategoryId = value;
+					this.SendPropertyChanged("CategoryId");
+					this.OnCategoryIdChanged();
 				}
 			}
 		}

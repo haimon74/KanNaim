@@ -1,0 +1,10 @@
+C:\SourceCode\Shimanni\Common\Shimanni.Common.Utils\bin\Debug\Shimanni.Common.Utils.dll
+C:\SourceCode\Shimanni\Common\Shimanni.Common.Utils\bin\Debug\Shimanni.Common.Utils.pdb
+C:\SourceCode\Shimanni\Common\Shimanni.Common.Utils\obj\Debug\ResolveAssemblyReference.cache
+C:\SourceCode\Shimanni\Common\Shimanni.Common.Utils\obj\Debug\Shimanni.Common.Utils.dll
+C:\SourceCode\Shimanni\Common\Shimanni.Common.Utils\obj\Debug\Shimanni.Common.Utils.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Common\Shimanni.Common.Utils\bin\Debug\Shimanni.Common.Utils.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Common\Shimanni.Common.Utils\bin\Debug\Shimanni.Common.Utils.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Common\Shimanni.Common.Utils\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Common\Shimanni.Common.Utils\obj\Debug\Shimanni.Common.Utils.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ShimannyIB\SourceCode\Shimanni\Common\Shimanni.Common.Utils\obj\Debug\Shimanni.Common.Utils.pdb

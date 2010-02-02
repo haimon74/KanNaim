@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Microsoft.VisualBasic.Devices;
 
 namespace HaimDLL
 {
@@ -35,19 +36,29 @@ namespace HaimDLL
             //ExceptionToCaptionCollection["Exception"] = "";
             //ExceptionToCaptionCollection["Exception"] = "";
         }
+
+        private static void MessageSound()
+        {
+            Computer myComputer = new Computer();
+            myComputer.Audio.Play(@"c:\WINDOWS\Media\chimes.wav");
+        }
         public static void ExceptionMessage(Exception ex)
         {
+            MessageSound();
             string caption = (string) ExceptionToCaptionCollection[ex.GetType().ToString()];
             MessageBox.Show(ex.Message, caption);
         }
 
         public static void ExceptionMessage(Exception ex, string caption)
         {
+            MessageSound();
             MessageBox.Show(ex.Message,caption);
         }
 
         public static void ExceptionMessage(Exception ex, string msg, string caption)
         {
+            MessageSound();
+
             if (caption.Length < 5)
                 caption = (string) ExceptionToCaptionCollection[ex.GetType().ToString()];
 
