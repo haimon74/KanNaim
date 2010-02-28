@@ -1,0 +1,227 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPageDemo.master" AutoEventWireup="true" CodeFile="MasterPageContentTemplate.master.cs" Inherits="MasterPageContentTemplate" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
+<table id="table_content_template">
+    <tr id="row1_content_template">
+        <td>
+            <div id="div1_r1_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div2_r1_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div3_r1_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div4_r1_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div5_r1_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder5" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>            
+        </td>
+    </tr>
+    <tr id="row2_content_template">
+        <td>
+            <div id="div1_r2_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder6" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div2_r2_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder7" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div3_r2_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder8" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div4_r2_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder9" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div5_r2_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder10" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>            
+        </td>
+    </tr>
+    <tr id="row3_content_template">
+        <td>
+            <div id="div1_r3_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder11" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div2_r3_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder12" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div3_r3_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder13" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div4_r3_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder14" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div5_r3_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder15" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>            
+        </td>
+    </tr>
+    <tr id="row4_content_template">
+        <td>
+            <div id="div1_r4_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder16" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div2_r4_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder17" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div3_r4_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder18" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div4_r4_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder19" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div5_r4_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder20" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>            
+        </td>
+    </tr>
+    <tr id="row5_content_template">
+        <td>
+            <div id="div1_r5_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder21" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div2_r5_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder22" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div3_r5_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder23" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div4_r5_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder24" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div5_r5_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder25" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>            
+        </td>
+    </tr>
+    <tr id="row6_content_template">
+        <td>
+            <div id="div1_r6_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder26" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div2_r6_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder27" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div3_r6_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder28" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div4_r6_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder29" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div5_r6_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder30" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>            
+        </td>
+    </tr>
+    <tr id="row7_content_template">
+        <td>
+            <div id="div1_r7_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder31" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div2_r7_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder32" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div3_r7_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder33" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div4_r7_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder34" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div5_r7_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder35" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>            
+        </td>
+    </tr>
+    <tr id="row8_content_template">
+        <td>
+            <div id="div1_r8_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder36" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div2_r8_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder37" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div3_r8_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder38" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div4_r8_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder39" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div5_r8_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder40" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>            
+        </td>
+    </tr>
+    <tr id="row9_content_template">
+        <td>
+            <div id="div1_r9_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder41" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div2_r9_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder42" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div3_r9_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder43" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div4_r9_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder44" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="div5_r9_content_template">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder45" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>            
+        </td>
+    </tr>
+    
+</table>
+
+
+</asp:Content>
+

@@ -1,0 +1,60 @@
+﻿body 
+{
+	background-color: transparent; 	font-family: Arial; font-size:small; color: Black; 
+	direction:rtl; text-align:right;  overflow:visible; position:relative; float:none; vertical-align:text-top; 
+	unicode-bidi:normal; word-spacing:normal; z-index:10;	
+}
+
+#Table_MasterTemplate
+{
+	height:auto; width:100%; border-collapse:collapse;
+}
+
+#TableRow_Header
+{
+	height:50px; width:100%; background-color: #3399FF;
+}
+#TableRow_Footer
+{
+	height:50px; width:100%; background-color: #CCFFCC;
+}
+#TableRow_Content
+{
+	height:700px; width:100%; background-color: Transparent;
+}
+#TableData_RightSideMenu
+{
+	width:20%; background-color: #FFFFCC; vertical-align:top;
+}
+#TableData_PageContent
+{
+	width:70%; background-color:Transparent;
+}
+#TableData_LeftSide
+{
+	width:10%; background-color:#FFCCFF;
+}
+
+table
+{
+	margin: 0px 5px 1px 3px;
+}
+td
+{
+	padding: 0 10px 0 10px;
+	text-align: right;
+	margin-right: 80px;
+}
+
+.InputLabel
+{
+	width: 200px;
+}
+.InputContent
+{
+	width: 400px;
+}
+.InputValidation
+{
+	width:100px;
+}
