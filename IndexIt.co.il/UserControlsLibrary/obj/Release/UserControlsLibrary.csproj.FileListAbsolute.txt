@@ -1,0 +1,7 @@
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\IndexIt.co.il\UserControlsLibrary\bin\Release\UserControlsLibrary.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\IndexIt.co.il\UserControlsLibrary\bin\Release\UserControlsLibrary.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\IndexIt.co.il\UserControlsLibrary\bin\Release\DataAccess.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\IndexIt.co.il\UserControlsLibrary\bin\Release\DataAccess.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\IndexIt.co.il\UserControlsLibrary\obj\Release\ResolveAssemblyReference.cache
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\IndexIt.co.il\UserControlsLibrary\obj\Release\UserControlsLibrary.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\IndexIt.co.il\UserControlsLibrary\obj\Release\UserControlsLibrary.pdb

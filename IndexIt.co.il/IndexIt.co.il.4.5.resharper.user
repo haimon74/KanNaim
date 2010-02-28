@@ -1,0 +1,620 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="2304C315-5265-427B-95B4-A234B31EAC2D/d:UserControls/d:StyleManagementForm/f:Copy of InputFontFamily.ascx" caret="655" fromTop="15" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:Copy of IsBoldFontCheckBox.cs" caret="479" fromTop="13" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:Copy of FontFamilyDropDownList.cs" caret="500" fromTop="17" />
+      <File id="d:&amp;/f:InputFontColor.ascx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?UserControls?StyleManagementForm?InputFontColor.ascx" caret="850" fromTop="16" />
+      <File id="2304C315-5265-427B-95B4-A234B31EAC2D/d:UserControls/d:StyleManagementForm/f:InputBackground.ascx.cs" caret="327" fromTop="11" />
+      <File id="2304C315-5265-427B-95B4-A234B31EAC2D/d:CMS/f:StyleManagement.aspx.cs" caret="800" fromTop="24" />
+      <File id="2304C315-5265-427B-95B4-A234B31EAC2D/d:UserControls/d:StyleManagementForm/f:Alignment.ascx.cs" caret="206" fromTop="7" />
+      <File id="d:&amp;/f:InputBackgroundImage.ascx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?UserControls?StyleManagementForm?InputBackgroundImage.ascx" caret="1354" fromTop="8" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:Copy of FontSizeDropDownList.cs" caret="1465" fromTop="27" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:Copy of HorizontalAlignmentDropDownList.cs" caret="848" fromTop="25" />
+      <File id="d:&amp;/f:InputTextDirection.ascx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?UserControls?StyleManagementForm?InputTextDirection.ascx" caret="554" fromTop="11" />
+      <File id="d:&amp;/f:Alignment.ascx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?UserControls?StyleManagementForm?Alignment.ascx" caret="760" fromTop="18" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:Copy of LetterSpacingDropDownList.cs" caret="1363" fromTop="26" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:Copy of FontSizeDropDownList.cs" caret="995" fromTop="28" />
+      <File id="d:&amp;/f:InputBackground.ascx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?UserControls?StyleManagementForm?InputBackground.ascx" caret="929" fromTop="19" />
+      <File id="d:&amp;/f:InputWordSpacing.ascx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?UserControls?InputWordSpacing.ascx" caret="559" fromTop="11" />
+      <File id="d:&amp;/f:InputLetterSpacing.ascx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?UserControls?StyleManagementForm?InputLetterSpacing.ascx" caret="687" fromTop="16" />
+      <File id="d:&amp;/f:InputTextIdentationInPixels.ascx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?UserControls?StyleManagementForm?InputTextIdentationInPixels.ascx" caret="647" fromTop="17" />
+      <File id="2304C315-5265-427B-95B4-A234B31EAC2D/d:UserControls/f:SideMenu.ascx.cs" caret="0" fromTop="0" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:Copy of HorizontalAlignmentDropDownList.cs" caret="1312" fromTop="36" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:Copy of BorderStyleDropDownList.cs" caret="866" fromTop="12" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:Copy of BorderStyleDropDownList.cs" caret="1261" fromTop="33" />
+      <File id="d:&amp;/f:InputNumber.ascx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?UserControls?StyleManagementForm?InputNumber.ascx" caret="704" fromTop="14" />
+      <File id="2304C315-5265-427B-95B4-A234B31EAC2D/d:UserControls/d:StyleManagementForm/f:InputNumber.ascx.cs" caret="2003" fromTop="13" />
+      <File id="d:&amp;/f:InputFontFamily.ascx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?UserControls?StyleManagementForm?InputFontFamily.ascx" caret="674" fromTop="16" />
+      <File id="2304C315-5265-427B-95B4-A234B31EAC2D/d:UserControls/d:StyleManagementForm/f:InputBorderWidth.ascx.cs" caret="82" fromTop="2" />
+      <File id="2304C315-5265-427B-95B4-A234B31EAC2D/d:UserControls/d:StyleManagementForm/f:InputBorderWidth.ascx" caret="649" fromTop="15" />
+      <File id="2304C315-5265-427B-95B4-A234B31EAC2D/d:UserControls/d:StyleManagementForm/f:InputBorderStyle.ascx.cs" caret="82" fromTop="2" />
+      <File id="d:&amp;/f:InputBorderStyle.ascx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?UserControls?StyleManagementForm?InputBorderStyle.ascx" caret="144" fromTop="0" />
+      <File id="d:&amp;/f:StyleManagement.aspx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?CMS?StyleManagement.aspx" caret="6444" fromTop="27" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="2304C315-5265-427B-95B4-A234B31EAC2D/d:UserControls/d:StyleManagementForm/f:InputNumber.ascx.cs" caret="1998" fromTop="29" />
+      <File id="2304C315-5265-427B-95B4-A234B31EAC2D/d:UserControls/d:StyleManagementForm/f:InputNumber.ascx.cs" caret="1504" fromTop="2" />
+      <File id="2304C315-5265-427B-95B4-A234B31EAC2D/d:UserControls/d:StyleManagementForm/f:InputNumber.ascx.cs" caret="1998" fromTop="11" />
+      <File id="d:&amp;/f:InputNumber.ascx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?UserControls?StyleManagementForm?InputNumber.ascx" caret="748" fromTop="15" />
+      <File id="d:&amp;/f:InputNumber.ascx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?UserControls?StyleManagementForm?InputNumber.ascx" caret="704" fromTop="14" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:Copy of HorizontalAlignmentDropDownList.cs" caret="291" fromTop="6" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:Copy of HorizontalAlignmentDropDownList.cs" caret="856" fromTop="24" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:Copy of HorizontalAlignmentDropDownList.cs" caret="1189" fromTop="32" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:Copy of HorizontalAlignmentDropDownList.cs" caret="1312" fromTop="32" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:Copy of BorderStyleDropDownList.cs" caret="291" fromTop="6" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:Copy of BorderStyleDropDownList.cs" caret="1112" fromTop="33" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:Copy of BorderStyleDropDownList.cs" caret="1157" fromTop="34" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:Copy of BorderStyleDropDownList.cs" caret="1289" fromTop="26" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:Copy of BorderStyleDropDownList.cs" caret="273" fromTop="6" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:Copy of BorderStyleDropDownList.cs" caret="1358" fromTop="23" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:Copy of BorderStyleDropDownList.cs" caret="1099" fromTop="17" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:Copy of BorderStyleDropDownList.cs" caret="963" fromTop="14" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:Copy of BorderStyleDropDownList.cs" caret="1261" fromTop="21" />
+      <File id="d:&amp;/f:InputFontFamily.ascx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?UserControls?StyleManagementForm?InputFontFamily.ascx" caret="674" fromTop="16" />
+      <File id="d:&amp;/f:InputBorderStyle.ascx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?UserControls?StyleManagementForm?InputBorderStyle.ascx" caret="676" fromTop="16" />
+      <File id="2304C315-5265-427B-95B4-A234B31EAC2D/d:UserControls/d:StyleManagementForm/f:InputBorderStyle.ascx.cs" caret="13" fromTop="0" />
+      <File id="2304C315-5265-427B-95B4-A234B31EAC2D/d:UserControls/d:StyleManagementForm/f:InputBorderWidth.ascx.cs" caret="87" fromTop="2" />
+      <File id="d:&amp;/f:InputBorderStyle.ascx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?UserControls?StyleManagementForm?InputBorderStyle.ascx" caret="286" fromTop="4" />
+      <File id="2304C315-5265-427B-95B4-A234B31EAC2D/d:UserControls/d:StyleManagementForm/f:InputBorderWidth.ascx" caret="144" fromTop="0" />
+      <File id="d:&amp;/f:StyleManagement.aspx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?CMS?StyleManagement.aspx" caret="1978" fromTop="20" />
+      <File id="d:&amp;/f:StyleManagement.aspx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?CMS?StyleManagement.aspx" caret="6155" fromTop="26" />
+      <File id="d:&amp;/f:StyleManagement.aspx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?CMS?StyleManagement.aspx" caret="6048" fromTop="20" />
+      <File id="d:&amp;/f:InputBorderStyle.ascx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?UserControls?StyleManagementForm?InputBorderStyle.ascx" caret="559" fromTop="10" />
+      <File id="d:&amp;/f:InputBorderStyle.ascx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?UserControls?StyleManagementForm?InputBorderStyle.ascx" caret="144" fromTop="0" />
+      <File id="d:&amp;/f:StyleManagement.aspx/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?WebSites?IndexIt.co.il?CMS?StyleManagement.aspx" caret="6444" fromTop="27" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="UserControl" priority="0" />
+      <Item value="UserControls" priority="0" />
+      <Item value="SideMenu.ascx" priority="0" />
+      <Item value="string" priority="32" />
+      <Item value="private" priority="29" />
+      <Item value="const" priority="1" />
+      <Item value="int" priority="29" />
+      <Item value="IndexItDataClassesDataContext" priority="2" />
+      <Item value="new" priority="24" />
+      <Item value="Linq2Sql" priority="2" />
+      <Item value="public" priority="19" />
+      <Item value="static" priority="13" />
+      <Item value="Table_Menus" priority="18" />
+      <Item value="return" priority="18" />
+      <Item value="from" priority="9" />
+      <Item value="_db" priority="10" />
+      <Item value="where" priority="8" />
+      <Item value="c" priority="14" />
+      <Item value="menuId" priority="8" />
+      <Item value="select" priority="8" />
+      <Item value="IQueryable" priority="9" />
+      <Item value="var" priority="5" />
+      <Item value="DataAccess" priority="14" />
+      <Item value="Select" priority="10" />
+      <Item value="Menu" priority="1" />
+      <Item value="this" priority="11" />
+      <Item value="menuItems" priority="1" />
+      <Item value="if" priority="23" />
+      <Item value="XDocument" priority="1" />
+      <Item value="XmlSiteMapProvider" priority="1" />
+      <Item value="protected" priority="14" />
+      <Item value="void" priority="16" />
+      <Item value="_level" priority="0" />
+      <Item value="_parent" priority="3" />
+      <Item value="MenuId" priority="3" />
+      <Item value="_menuItems" priority="3" />
+      <Item value="foreach" priority="13" />
+      <Item value="GenerateSiteMapLevelFile" priority="1" />
+      <Item value="_levelMenuItems" priority="3" />
+      <Item value="nguid" priority="0" />
+      <Item value="String" priority="7" />
+      <Item value="Parent" priority="0" />
+      <Item value="parentId" priority="4" />
+      <Item value="item" priority="6" />
+      <Item value="null" priority="5" />
+      <Item value="false" priority="15" />
+      <Item value="bool" priority="13" />
+      <Item value="isLeaf" priority="0" />
+      <Item value="nodesContent" priority="1" />
+      <Item value="else" priority="2" />
+      <Item value="true" priority="13" />
+      <Item value="FileStream" priority="1" />
+      <Item value="path" priority="3" />
+      <Item value="FileMode" priority="0" />
+      <Item value="FileAccess" priority="0" />
+      <Item value="FileShare" priority="0" />
+      <Item value="FileOptions" priority="0" />
+      <Item value="fs" priority="1" />
+      <Item value="byte" priority="1" />
+      <Item value="sitemapContent" priority="2" />
+      <Item value="buffer" priority="1" />
+      <Item value="Length" priority="0" />
+      <Item value="File" priority="0" />
+      <Item value="GenerateSiteMapFiles" priority="0" />
+      <Item value="for" priority="0" />
+      <Item value="i" priority="1" />
+      <Item value="title" priority="0" />
+      <Item value="MenuID" priority="6" />
+      <Item value="SideMenu" priority="1" />
+      <Item value="rootId" priority="0" />
+      <Item value="_rootId" priority="0" />
+      <Item value="SiteMapPath1" priority="0" />
+      <Item value="Server" priority="1" />
+      <Item value="using" priority="2" />
+      <Item value="System" priority="0" />
+      <Item value="Web" priority="0" />
+      <Item value="rootPath" priority="0" />
+      <Item value="_siblingPath" priority="4" />
+      <Item value="siblingPath" priority="0" />
+      <Item value="_rootPath" priority="1" />
+      <Item value="_menuId" priority="1" />
+      <Item value="siblingFileName" priority="0" />
+      <Item value="_siblingFileName" priority="0" />
+      <Item value="CreateUserWizard" priority="0" />
+      <Item value="Page" priority="12" />
+      <Item value="Button1_Click" priority="0" />
+      <Item value="LoginView1" priority="4" />
+      <Item value="CreateUserWizard1" priority="0" />
+      <Item value="ChangePassword1" priority="0" />
+      <Item value="Master" priority="0" />
+      <Item value="Request" priority="2" />
+      <Item value="enabled" priority="1" />
+      <Item value="IsPostBack" priority="4" />
+      <Item value="enum" priority="1" />
+      <Item value="ViewEnum" priority="0" />
+      <Item value="MultiView1" priority="0" />
+      <Item value="value" priority="1" />
+      <Item value="class" priority="0" />
+      <Item value="TreeView" priority="11" />
+      <Item value="override" priority="11" />
+      <Item value="SiteMapDataSource" priority="1" />
+      <Item value="SiteMapDataSource1" priority="1" />
+      <Item value="Context" priority="0" />
+      <Item value="DataSourceID" priority="2" />
+      <Item value="_siteMapDataSource1" priority="2" />
+      <Item value="ID" priority="1" />
+      <Item value="Controls" priority="3" />
+      <Item value="Eval" priority="0" />
+      <Item value="SideMenu1" priority="3" />
+      <Item value="DataBind" priority="1" />
+      <Item value="base" priority="1" />
+      <Item value="ImageSet" priority="1" />
+      <Item value="e" priority="0" />
+      <Item value="TreeViewImageSet" priority="0" />
+      <Item value="ParentNodeStyle" priority="0" />
+      <Item value="output" priority="0" />
+      <Item value="_sideMenuId" priority="1" />
+      <Item value="DefaultValue" priority="0" />
+      <Item value="SideMenuId" priority="0" />
+      <Item value="SessionParameter" priority="0" />
+      <Item value="Login" priority="0" />
+      <Item value="ListBox2" priority="0" />
+      <Item value="Session" priority="4" />
+      <Item value="ListBox1" priority="0" />
+      <Item value="Int32" priority="1" />
+      <Item value="ListBox" priority="0" />
+      <Item value="Application" priority="5" />
+      <Item value="Roots" priority="0" />
+      <Item value="Root" priority="0" />
+      <Item value="menus" priority="3" />
+      <Item value="root" priority="9" />
+      <Item value="TreeNodeStyle" priority="0" />
+      <Item value="TreeNode" priority="24" />
+      <Item value="newNode" priority="6" />
+      <Item value="parent" priority="1" />
+      <Item value="node" priority="18" />
+      <Item value="returnValue" priority="2" />
+      <Item value="_root" priority="2" />
+      <Item value="menuIdStr" priority="0" />
+      <Item value="break" priority="0" />
+      <Item value="UserControlsLibrary" priority="1" />
+      <Item value="MenusTreeContainer" priority="1" />
+      <Item value="menusTreeContainer" priority="0" />
+      <Item value="treeView" priority="6" />
+      <Item value="TreeNodeCollection" priority="0" />
+      <Item value="ref" priority="1" />
+      <Item value="TreeViewTest" priority="6" />
+      <Item value="showCheckBoxes" priority="0" />
+      <Item value="expandAll" priority="0" />
+      <Item value="collapseAll" priority="0" />
+      <Item value="treeNode" priority="16" />
+      <Item value="show" priority="1" />
+      <Item value="ShowAllCheckBoxes" priority="0" />
+      <Item value="TreeNodeSelectAction" priority="0" />
+      <Item value="DropDownList1" priority="4" />
+      <Item value="newRoot" priority="1" />
+      <Item value="roots" priority="1" />
+      <Item value="Checked" priority="1" />
+      <Item value="tv" priority="0" />
+      <Item value="NavigateUrl" priority="0" />
+      <Item value="Text" priority="1" />
+      <Item value="ToolTip" priority="2" />
+      <Item value="Expanded" priority="0" />
+      <Item value="ImageUrl" priority="0" />
+      <Item value="ImageToolTip" priority="0" />
+      <Item value="PopulateOnDemand" priority="0" />
+      <Item value="SelectAction" priority="0" />
+      <Item value="Selected" priority="0" />
+      <Item value="Value" priority="0" />
+      <Item value="ShowCheckBox" priority="0" />
+      <Item value="Target" priority="0" />
+      <Item value="returnNode" priority="1" />
+      <Item value="Clone" priority="1" />
+      <Item value="clonedNode" priority="0" />
+      <Item value="Table_LookupMenus" priority="7" />
+      <Item value="TextBoxNewMenuName" priority="2" />
+      <Item value="menusList" priority="0" />
+      <Item value="id" priority="0" />
+      <Item value="name" priority="0" />
+      <Item value="menu" priority="2" />
+      <Item value="rootName" priority="0" />
+      <Item value="MenuDescription" priority="0" />
+      <Item value="Insert" priority="2" />
+      <Item value="newLookup" priority="3" />
+      <Item value="CssClassName" priority="1" />
+      <Item value="DisplayText" priority="1" />
+      <Item value="TextBoxRootName" priority="2" />
+      <Item value="OnClickUrl" priority="1" />
+      <Item value="ParentId" priority="1" />
+      <Item value="newMenu" priority="2" />
+      <Item value="try" priority="1" />
+      <Item value="catch" priority="1" />
+      <Item value="IEnumerable" priority="0" />
+      <Item value="enumerable" priority="1" />
+      <Item value="itemId" priority="1" />
+      <Item value="Delete" priority="2" />
+      <Item value="childNode" priority="1" />
+      <Item value="TextBoxCss" priority="0" />
+      <Item value="TextBoxDisplayText" priority="0" />
+      <Item value="TextBoxUrl" priority="0" />
+      <Item value="TextBoxToolTip" priority="0" />
+      <Item value="checkedIndex" priority="1" />
+      <Item value="object" priority="3" />
+      <Item value="Dictionary" priority="0" />
+      <Item value="args" priority="8" />
+      <Item value="rec" priority="8" />
+      <Item value="Dictionary&lt;string,object&gt;" priority="0" />
+      <Item value="checkedNode" priority="1" />
+      <Item value="checkedMenuRecord" priority="5" />
+      <Item value="Update" priority="1" />
+      <Item value="nextMenuRecord" priority="1" />
+      <Item value="grandParentNode" priority="2" />
+      <Item value="newParentId" priority="1" />
+      <Item value="continue" priority="0" />
+      <Item value="EventArgs" priority="0" />
+      <Item value="ListItem" priority="1" />
+      <Item value="textValue" priority="0" />
+      <Item value="enable" priority="8" />
+      <Item value="Items" priority="0" />
+      <Item value="SelectedIndex" priority="2" />
+      <Item value="FontLanguageEnum" priority="1" />
+      <Item value="language" priority="0" />
+      <Item value="_fontLanguage" priority="0" />
+      <Item value="RadioButtonList2" priority="0" />
+      <Item value="FileUpload1" priority="0" />
+      <Item value="TextBoxBgImageHeight" priority="0" />
+      <Item value="TextBoxBgImageWidth" priority="0" />
+      <Item value="DropDownListBgImageHAlin" priority="0" />
+      <Item value="DropDownListBgImageVAlin" priority="0" />
+      <Item value="ViewState" priority="2" />
+      <Item value="CheckBoxList" priority="0" />
+      <Item value="EnableViewState" priority="0" />
+      <Item value="IsBoldFontCheckBox" priority="0" />
+      <Item value="InputBackgroundImage1" priority="0" />
+      <Item value="PropertyEntry" priority="0" />
+      <Item value="LabelText" priority="1" />
+      <Item value="RangeMax" priority="4" />
+      <Item value="RangeMin" priority="3" />
+      <Item value="property" priority="0" />
+      <Item value="Label1" priority="0" />
+      <Item value="RangeValidator1" priority="6" />
+      <Item value="TextBox1" priority="4" />
+      <Item value="_isFirstClick" priority="1" />
+      <Item value="IsNeverClicked" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@DataAccess.Linq2Sql">
+      <Item value="Db" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:IndexItDataClassesDataContext">
+      <Item value="Table_Menus" priority="6" />
+      <Item value="Table_LookupMenus" priority="3" />
+      <Item value="SubmitChanges" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Table_Menus">
+      <Item value="MenuId" priority="5" />
+      <Item value="ParentId" priority="7" />
+      <Item value="ItemId" priority="9" />
+      <Item value="DisplayText" priority="10" />
+      <Item value="ToolTip" priority="3" />
+      <Item value="OnClickUrl" priority="5" />
+      <Item value="CssClassName" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="DefaultIfEmpty" priority="0" />
+      <Item value="Count" priority="1" />
+      <Item value="ElementAt" priority="0" />
+      <Item value="SingleOrDefault" priority="4" />
+      <Item value="Contains" priority="0" />
+      <Item value="AsEnumerable" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@DataAccess.Select">
+      <Item value="AllMenuItems" priority="0" />
+      <Item value="LookupMenuById" priority="0" />
+      <Item value="LookupMenuByName" priority="0" />
+      <Item value="TableMenuByRootName" priority="0" />
+      <Item value="AllTableLookupMenu" priority="0" />
+      <Item value="TableLookupMenuById" priority="0" />
+      <Item value="TableMenuByMenuId" priority="0" />
+      <Item value="IqTableMenuByItemId" priority="0" />
+      <Item value="TableMenuByItemId" priority="1" />
+      <Item value="TableLookupMenuByName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SideMenu">
+      <Item value="TreeView1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.TreeView">
+      <Item value="DataSource" priority="0" />
+      <Item value="Nodes" priority="16" />
+      <Item value="Enabled" priority="0" />
+      <Item value="Visible" priority="0" />
+      <Item value="RenderContents" priority="0" />
+      <Item value="OnTreeNodeCheckChanged" priority="0" />
+      <Item value="CheckedNodes" priority="0" />
+      <Item value="DataBind" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Format" priority="7" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.FileMode">
+      <Item value="Create" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.FileAccess">
+      <Item value="Write" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.FileShare">
+      <Item value="None" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.FileOptions">
+      <Item value="Asynchronous" priority="0" />
+      <Item value="WriteThrough" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.FileStream">
+      <Item value="Write" priority="0" />
+      <Item value="Close" priority="1" />
+      <Item value="Flush" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Length" priority="1" />
+      <Item value="ToCharArray" priority="1" />
+      <Item value="Trim" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="FromBase64String" priority="0" />
+      <Item value="FromBase64CharArray" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.File">
+      <Item value="Delete" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.SiteMapDataSource">
+      <Item value="Provider" priority="0" />
+      <Item value="SiteMapProvider" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.SiteMapPath">
+      <Item value="Provider" priority="0" />
+      <Item value="SiteMapProvider" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpServerUtility">
+      <Item value="ClearError" priority="0" />
+      <Item value="Transfer" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ContentManagement">
+      <Item value="LoginView1" priority="1" />
+      <Item value="Controls" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.LoginView">
+      <Item value="LoggedInTemplate" priority="1" />
+      <Item value="EnableTheming" priority="0" />
+      <Item value="ViewChanged" priority="0" />
+      <Item value="Init" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.ITemplate">
+      <Item value="InstantiateIn" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.CreateUserWizard">
+      <Item value="Visible" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.ChangePassword">
+      <Item value="Visible" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.Page">
+      <Item value="Parent" priority="0" />
+      <Item value="Controls" priority="0" />
+      <Item value="FindControl" priority="1" />
+      <Item value="DataBind" priority="0" />
+      <Item value="Session" priority="0" />
+      <Item value="StyleSheetTheme" priority="0" />
+      <Item value="Theme" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.Control">
+      <Item value="Controls" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpRequest">
+      <Item value="QueryString" priority="0" />
+      <Item value="RawUrl" priority="0" />
+      <Item value="PhysicalApplicationPath" priority="0" />
+      <Item value="ServerVariables" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="Parse" priority="11" />
+      <Item value="MinValue" priority="1" />
+      <Item value="MaxValue" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.MultiView">
+      <Item value="ActiveViewIndex" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.ControlCollection">
+      <Item value="Add" priority="1" />
+      <Item value="ToString" priority="0" />
+      <Item value="IndexOf" priority="0" />
+      <Item value="GetEnumerator" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ASP.masterpagedemo_master">
+      <Item value="SiteMapDataSource1" priority="0" />
+      <Item value="SideMenu1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ASP.usercontrols_sidemenu_ascx">
+      <Item value="MenuID" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString" priority="12" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UserControlsLibrary.WebControls.SideMenu">
+      <Item value="MenuID" priority="2" />
+      <Item value="DataBind" priority="0" />
+      <Item value="Text" priority="0" />
+      <Item value="Nodes" priority="1" />
+      <Item value="Attributes" priority="0" />
+      <Item value="DataSourceID" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.TreeNodeCollection">
+      <Item value="Count" priority="2" />
+      <Item value="Add" priority="4" />
+      <Item value="Clear" priority="2" />
+      <Item value="AddAt" priority="0" />
+      <Item value="CopyTo" priority="1" />
+      <Item value="RemoveAt" priority="0" />
+      <Item value="IndexOf" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.UserControl">
+      <Item value="OnLoad" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.UI.WebControls.TreeViewImageSet">
+      <Item value="Arrows" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.ListBox">
+      <Item value="DataBind" priority="0" />
+      <Item value="SelectedItem" priority="0" />
+      <Item value="SelectedValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.TreeNode">
+      <Item value="Value" priority="6" />
+      <Item value="ChildNodes" priority="9" />
+      <Item value="Target" priority="1" />
+      <Item value="ToolTip" priority="2" />
+      <Item value="ShowCheckBox" priority="2" />
+      <Item value="ExpandAll" priority="0" />
+      <Item value="Expand" priority="0" />
+      <Item value="CollapseAll" priority="1" />
+      <Item value="SelectAction" priority="1" />
+      <Item value="Checked" priority="0" />
+      <Item value="NavigateUrl" priority="0" />
+      <Item value="Text" priority="0" />
+      <Item value="Expanded" priority="0" />
+      <Item value="ImageUrl" priority="0" />
+      <Item value="ImageToolTip" priority="0" />
+      <Item value="PopulateOnDemand" priority="0" />
+      <Item value="Select" priority="0" />
+      <Item value="Parent" priority="7" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UserControlsLibrary.MenusTreeContainer">
+      <Item value="GetMenuAsTreeView" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.UI.WebControls.TreeNodeSelectAction">
+      <Item value="SelectExpand" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.DropDownList">
+      <Item value="SelectedValue" priority="2" />
+      <Item value="DataBind" priority="1" />
+      <Item value="Enabled" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.TextBox">
+      <Item value="Text" priority="11" />
+      <Item value="Enabled" priority="1" />
+      <Item value="Font" priority="0" />
+      <Item value="BackColor" priority="0" />
+      <Item value="ToolTip" priority="0" />
+      <Item value="OnTextChanged" priority="0" />
+      <Item value="AutoPostBack" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Table_LookupMenus">
+      <Item value="MenuId" priority="2" />
+      <Item value="MenuDescription" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Linq.Table`1">
+      <Item value="InsertOnSubmit" priority="1" />
+      <Item value="DeleteOnSubmit" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@DataAccess.Insert">
+      <Item value="TableLookupMenu" priority="0" />
+      <Item value="TableManus" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@DataAccess.Delete">
+      <Item value="TableLookupMenusByMenuId" priority="0" />
+      <Item value="TableMenusByMenuId" priority="0" />
+      <Item value="TableMenusByItemId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@DataAccess.Update">
+      <Item value="TableMenus" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.Dictionary`2">
+      <Item value="ContainsKey" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UserControlsLibrary.WebControls.FontSizeDropDownList">
+      <Item value="Items" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.ListItemCollection">
+      <Item value="Add" priority="0" />
+      <Item value="IndexOf" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@UserControlsLibrary.WebControls.FontFamilyDropDownList+FontLanguageEnum">
+      <Item value="English" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.RadioButtonList">
+      <Item value="SelectedIndex" priority="0" />
+      <Item value="RepeatDirection" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.FileUpload">
+      <Item value="Enabled" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ASP.usercontrols_stylemanagementform_inputbackgroundimage_ascx">
+      <Item value="EnableTheming" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UserControls_StyleManagementForm_InputBackgroundColor">
+      <Item value="Label1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.Label">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.RangeValidator">
+      <Item value="MinimumValue" priority="2" />
+      <Item value="MaximumValue" priority="2" />
+      <Item value="ToolTip" priority="0" />
+      <Item value="OnInit" priority="0" />
+      <Item value="Parent" priority="0" />
+      <Item value="ErrorMessage" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ASP.usercontrols_stylemanagementform_inputnumber_ascx">
+      <Item value="RangeValidator1" priority="0" />
+      <Item value="RangeMin" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Color">
+      <Item value="Gray" priority="0" />
+      <Item value="Transparent" priority="0" />
+      <Item value="White" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
