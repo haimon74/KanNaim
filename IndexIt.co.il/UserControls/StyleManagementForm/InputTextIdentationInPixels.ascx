@@ -4,7 +4,7 @@
 <%@ Register Assembly="UserControlsLibrary" Namespace="UserControlsLibrary.WebControls"
     TagPrefix="wc" %>
 
-<div id="TextIdentationInPixels" dir="rtl">
+<div id="TextIdentationInPixels"  class="InputDiv">
     <div class="InputLabel">
         <asp:Label ID="Label1" runat="server" Text="הזזה מהתחלת פיסקה"></asp:Label>
     </div>
@@ -13,5 +13,5 @@
     </div>
     <div class="InputValidation">        
     </div>
-    <br />
 </div>
+<br />

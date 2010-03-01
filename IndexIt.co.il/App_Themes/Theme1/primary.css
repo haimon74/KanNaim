@@ -46,15 +46,36 @@ td
 	margin-right: 80px;
 }
 
+.InputDiv
+{
+	direction:rtl; text-align:right; margin: 10px 10px 10px 10px; padding: 5px 5px 5px 5px; clear:both;
+}
+
 .InputLabel
 {
-	width: 200px;
+	width: 120px; float:right;background-color:Transparent;
+	margin: 5px 5px 5px 5px;
 }
 .InputContent
 {
-	width: 400px;
+	width: 200px; float:right;background-color:Transparent;
+	margin: 5px 5px 5px 5px;
 }
 .InputValidation
 {
-	width:100px;
+	width:30px; float:right;background-color:Transparent;
+	margin: 5px 5px 5px 5px; clear:left;
 }
+
+
+
+a:link.demo {background-color:#B2FF99; font-size:medium; color:Blue;  font-style:italic}
+a:visited.demo {background-color:#FFFF85; font-size:small; color:Purple; font-style:italic; font-weight:bold;}
+a:hover.demo {background-color:#FF704D; font-size:large; color:Blue; font-weight:bold;}
+a:active.demo {background-color:#FF704D; font-size:medium; color:Green;} 
+
+
+.watermark{background-color: #DDDDDD;}
+.HebrewText{ text-align:right; direction:rtl;}
+.EnglishText{ text-align:left; direction:ltr;}
+

@@ -60,8 +60,9 @@ public partial class UserControls_StyleManagementForm_InputNumber : System.Web.U
         if (!IsPostBack)
         {
             Label1.Text = LabelText;
-            TextBox1.ToolTip = String.Format("integer range: {0} ~ {1}", RangeMin, RangeMax);
-            RangeValidator1.ToolTip = String.Format("integer range: {0} ~ {1}", RangeMin, RangeMax);
+            TextBox1.ToolTip = String.Format("input integer range: {0} ~ {1}", RangeMin, RangeMax);
+            TextBoxWatermarkExtender1.WatermarkText = String.Format("range: {0} ~ {1}", RangeMin, RangeMax);
+            RangeValidator1.ToolTip = TextBox1.ToolTip;
             RangeValidator1.ErrorMessage = String.Format("input value is not in range: {0} ~ {1}", RangeMin, RangeMax);
             RangeValidator1.MinimumValue = RangeMin;
             RangeValidator1.MaximumValue = RangeMax;

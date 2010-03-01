@@ -4,7 +4,7 @@
 <%@ Register Assembly="UserControlsLibrary" Namespace="UserControlsLibrary.WebControls"
     TagPrefix="wc" %>
 
-<div id="InputFontColor" dir="rtl">
+<div id="InputFontColor"  class="InputDiv">
     <div class="InputLabel">
         <asp:Label ID="Label3" runat="server" Text="צבע פנים"></asp:Label>
     </div>
@@ -13,8 +13,11 @@
         <cc1:ColorPickerExtender ID="TextBoxColor_ColorPickerExtender" runat="server" 
             Enabled="True" TargetControlID="TextBoxColor">
         </cc1:ColorPickerExtender>
+        <cc1:TextBoxWatermarkExtender ID="TextBoxWatermarkExtender1" runat="server" Enabled="true"  
+                TargetControlID="TextBoxColor" WatermarkText="RRGGBB" WatermarkCssClass="watermark">
+        </cc1:TextBoxWatermarkExtender>
     </div>
     <div class="InputValidation">        
     </div>
-    <br />
 </div>
+<br />

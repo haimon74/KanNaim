@@ -10,6 +10,7 @@ namespace UserControlsLibrary.WebControls
         protected override void OnLoad(System.EventArgs e)
         {
             Text = "פונט מודגש";
+            Font.Bold = true;
             EnableViewState = true;
             base.OnLoad(e);
         }

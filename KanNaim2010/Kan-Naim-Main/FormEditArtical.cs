@@ -1139,14 +1139,16 @@ namespace Kan_Naim_Main
             };
             
             var browser = browserAsForm.WebBrowser1;
+
+            browser.Navigate("http://www.haimazar.com/CMS/HtmlEditor.aspx");
             
-            string result = "";
+            //string result = "";
             
-            foreach (var b in buffer)
-            {
-                result = String.Format("{0}{1}",result, Convert.ToChar(b));
-            }
-            browser.DocumentText = result;
+            //foreach (var b in buffer)
+            //{
+            //    result = String.Format("{0}{1}",result, Convert.ToChar(b));
+            //}
+            //browser.DocumentText = result;
             browserAsForm.Show();
         }
 

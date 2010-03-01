@@ -4,7 +4,7 @@
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
 <%@ Register Assembly="UserControlsLibrary" Namespace="UserControlsLibrary.WebControls" TagPrefix="wc" %>
 
-<div id="InputTextDirection" dir="rtl">
+<div id="InputTextDirection"  class="InputDiv">
     <div class="InputLabel">
         <asp:Label ID="Label1" runat="server" Text="כיוון טקסט"></asp:Label>
     </div>

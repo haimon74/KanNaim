@@ -22,4 +22,9 @@ public partial class UserControls_StyleManagementForm_InputBackgroundColor : Sys
         get { return _enable; }
         set { _enable = value; }
     }
+
+    //protected void SetBackgroundColor(object sender, EventArgs e)
+    //{
+    //    TextBoxBackgroundColor.Style.Add("background-color", TextBoxBackgroundColor_ColorPickerExtender.SelectedColor);
+    //}
 }

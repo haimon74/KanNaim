@@ -3,7 +3,7 @@
 
 <%@ Register Assembly="UserControlsLibrary" Namespace="UserControlsLibrary.WebControls" TagPrefix="wc" %>
 
-<div id="InputLetterSpacing" dir="rtl">
+<div id="InputLetterSpacing"  class="InputDiv">
     <div class="InputLabel">
         <asp:Label ID="Label1" runat="server" Text="מרווח בין אותיות"></asp:Label>
     </div>
@@ -13,5 +13,5 @@
     </div>
     <div class="InputValidation">        
     </div>
-    <br />
 </div>
+<br />

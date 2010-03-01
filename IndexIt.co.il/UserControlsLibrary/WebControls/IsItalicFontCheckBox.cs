@@ -10,6 +10,7 @@ namespace UserControlsLibrary.WebControls
         protected override void OnLoad(System.EventArgs e)
         {
             Text = "פונט אלכסוני";
+            Font.Italic = true;
             EnableViewState = true;
             base.OnLoad(e);
         }

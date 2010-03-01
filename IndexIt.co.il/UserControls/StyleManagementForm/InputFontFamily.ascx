@@ -3,7 +3,7 @@
 <%@ Register Assembly="UserControlsLibrary" Namespace="UserControlsLibrary.WebControls"
     TagPrefix="wc" %>
 
-<div id="InputFontFamily" dir="rtl">
+<div id="InputFontFamily"  class="InputDiv">
     <div class="InputLabel">
         <asp:Label ID="Label1" runat="server" Text="סוג גופן"></asp:Label>
     </div>
@@ -13,5 +13,5 @@
     </div>
     <div class="InputValidation">        
     </div>
-    <br />
 </div>
+<br />

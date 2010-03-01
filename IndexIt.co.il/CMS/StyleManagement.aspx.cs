@@ -25,4 +25,8 @@ public partial class CMS_StyleManagement : System.Web.UI.Page
     {
         //InputBackgroundImage1.Enable = enable;
     }
+    protected void ButtonSave_Click(object sender, EventArgs e)
+    {
+        ButtonSave.Text = "clicked";
+    }
 }

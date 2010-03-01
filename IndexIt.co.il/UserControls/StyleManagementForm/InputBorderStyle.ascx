@@ -2,7 +2,7 @@
 
 <%@ Register Assembly="UserControlsLibrary" Namespace="UserControlsLibrary.WebControls" TagPrefix="wc" %>
 
-<div id="InputBorderWidth" dir="rtl">
+<div id="InputBorderWidth"  class="InputDiv">
     <div class="InputLabel">
         <asp:Label ID="Label1" runat="server" Text="עובי גבול"></asp:Label>
     </div>
@@ -12,5 +12,5 @@
     </div>
     <div class="InputValidation">        
     </div>
-    <br />
 </div>
+<br />

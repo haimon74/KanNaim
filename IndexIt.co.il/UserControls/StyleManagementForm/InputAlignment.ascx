@@ -5,24 +5,32 @@
 <%@ Register Assembly="UserControlsLibrary" Namespace="UserControlsLibrary.WebControls"
     TagPrefix="wc" %>
 
-<div id="InputAlignment" dir="rtl">
+<div id="InputAlignmentVertical" class="InputDiv">
     <div class="InputLabel">
-        <asp:Label ID="LabelV" runat="server" Text="יישור ורטיקלי"></asp:Label>
+        <asp:Label ID="LabelV" runat="server" Text="יישור אנכי"></asp:Label>
     </div>
     <div class="InputContent">
         <wc:VerticalAlignmentDropDownList runat="server" ID="DropDownListBgImageVAlign"></wc:VerticalAlignmentDropDownList>
+        <cc1:DropDownExtender ID="DropDownExtender2" TargetControlID="DropDownListBgImageVAlign"  
+             DropArrowBackColor="Transparent" DropArrowWidth="50" HighlightBackColor="Bisque" 
+             HighlightBorderColor="OrangeRed" runat="server" Enabled="true"></cc1:DropDownExtender>
     </div>
     <div class="InputValidation">        
-    </div>
-    <br />
-    
+    </div>    
+</div>
+<br />
+
+<div id="InputAlignmentHorizontal" class="InputDiv">
     <div class="InputLabel">
-        <asp:Label ID="LabelH" runat="server" Text="יישור הוריזונטלי"></asp:Label>
+        <asp:Label ID="LabelH" runat="server" Text="יישור אופקי"></asp:Label>
     </div>
     <div class="InputContent">
         <wc:HorizontalAlignmentDropDownList runat="server" ID="DropDownListBgImageHAlign" ></wc:HorizontalAlignmentDropDownList>  
+        <cc1:DropDownExtender ID="DropDownExtender1" TargetControlID="DropDownListBgImageHAlign"  
+             DropArrowBackColor="Transparent" DropArrowWidth="50" HighlightBackColor="Bisque" 
+             HighlightBorderColor="OrangeRed" runat="server" Enabled="true"></cc1:DropDownExtender>
     </div>
     <div class="InputValidation">        
     </div>
-    <br />
 </div>
+<br />

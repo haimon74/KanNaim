@@ -51,6 +51,8 @@
     <Compile Include="MenusTreeContainer.cs" />
     <Compile Include="WebControls\BorderStyleDropDownList.cs" />
     <Compile Include="WebControls\BorderWidthDropDownList.cs" />
+    <Compile Include="WebControls\RadioButtonHtmlObjectType.cs" />
+    <Compile Include="WebControls\PositionDropDownList.cs" />
     <Compile Include="WebControls\FloatDropDownList.cs" />
     <Compile Include="WebControls\WordSpacingDropDownList.cs" />
     <Compile Include="WebControls\LetterSpacingDropDownList.cs" />

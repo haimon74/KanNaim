@@ -5,3 +5,10 @@ D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\IndexIt.
 D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\IndexIt.co.il\UserControlsLibrary\bin\Debug\DataAccess.pdb
 D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\IndexIt.co.il\UserControlsLibrary\obj\Debug\UserControlsLibrary.dll
 D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\IndexIt.co.il\UserControlsLibrary\obj\Debug\UserControlsLibrary.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\IndexIt.co.il\UserControlsLibrary\bin\Debug\UserControlsLibrary.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\IndexIt.co.il\UserControlsLibrary\bin\Debug\UserControlsLibrary.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\IndexIt.co.il\UserControlsLibrary\bin\Debug\DataAccess.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\IndexIt.co.il\UserControlsLibrary\bin\Debug\DataAccess.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\IndexIt.co.il\UserControlsLibrary\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\IndexIt.co.il\UserControlsLibrary\obj\Debug\UserControlsLibrary.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\IndexIt.co.il\UserControlsLibrary\obj\Debug\UserControlsLibrary.pdb
