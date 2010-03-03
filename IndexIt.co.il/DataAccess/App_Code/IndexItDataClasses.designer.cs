@@ -21,7 +21,7 @@ using System.Reflection;
 
 
 
-[System.Data.Linq.Mapping.DatabaseAttribute(Name="10info")]
+[System.Data.Linq.Mapping.DatabaseAttribute(Name = "inochi74")]
 public partial class IndexItDataClassesDataContext : System.Data.Linq.DataContext
 {
 	
@@ -35,7 +35,8 @@ public partial class IndexItDataClassesDataContext : System.Data.Linq.DataContex
   #endregion
 	
 	public IndexItDataClassesDataContext() : 
-			base(global::System.Configuration.ConfigurationManager.ConnectionStrings["_10infoConnectionString"].ConnectionString, mappingSource)
+			//base(global::System.Configuration.ConfigurationManager.ConnectionStrings["_10infoConnectionString"].ConnectionString, mappingSource)
+      base(global::DataAccess.Properties.Settings.Default.inochi74ConnectionString, mappingSource)
 	{
 		OnCreated();
 	}

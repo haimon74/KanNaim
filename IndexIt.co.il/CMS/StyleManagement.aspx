@@ -42,6 +42,9 @@
     TagName="InputUrl" %>
 <%@ Register Src="~/UserControls/StyleManagementForm/InputRegularExpression.ascx"
     TagPrefix="uc" TagName="InputRegularExpression" %>
+<%@ Register src="~/UserControls/StyleManagementForm/InputImage.ascx" tagname="InputImage" tagprefix="uc11" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div style="width: 600px; height: 600px;">
         <asp:Label ID="Label1" runat="server" Text="בחר סוג אובייקט"></asp:Label>
@@ -57,7 +60,7 @@
         </cc1:ConfirmButtonExtender>
         <asp:ScriptManager ID="ScriptManager1" runat="server">
         </asp:ScriptManager>
-        <cc1:TabContainer ID="TabContainerStyle" runat="server" ActiveTabIndex="0" Width="700px">
+        <cc1:TabContainer ID="TabContainerStyle" runat="server" ActiveTabIndex="4" Width="700px">
             <cc1:TabPanel ID="TabPanelFont" runat="server" HeaderText="Font">
                 <ContentTemplate>
                     <div id="InputFontStyle" style="width: auto; direction: rtl; text-align: right;">
@@ -133,7 +136,7 @@
             <cc1:TabPanel ID="TabPanelImage" runat="server" HeaderText="Image">
                 <ContentTemplate>
                     <div id="InputImage" style="width: auto; direction: rtl; text-align: right;">
-                        <uc:InputImage ID="InputImage2" runat="server" />
+                        <uc11:InputImage ID="InputImage1" runat="server" />        
                     </div>
                 </ContentTemplate>
             </cc1:TabPanel>

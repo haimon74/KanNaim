@@ -1,0 +1,36 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="browser" priority="1" />
+      <Item value="new" priority="0" />
+      <Item value="Uri" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.WebBrowser">
+      <Item value="Url" priority="0" />
+      <Item value="Navigate" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:Form_CategoriesManager.cs" caret="11985" fromTop="17" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:FormEditArtical.cs" caret="54945" fromTop="20" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:FormEditArtical.cs" caret="55180" fromTop="24" />
+      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:FormEditArtical.cs" caret="54945" fromTop="20" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+</Configuration>
