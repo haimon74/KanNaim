@@ -1,0 +1,9 @@
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Provider\bin\Debug\GalleryServerPro.Provider.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Provider\bin\Debug\GalleryServerPro.Provider.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Provider\bin\Debug\GalleryServerPro.Business.Interfaces.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Provider\bin\Debug\GalleryServerPro.Configuration.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Provider\bin\Debug\GalleryServerPro.Configuration.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Provider\bin\Debug\GalleryServerPro.Business.Interfaces.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Provider\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Provider\obj\Debug\GalleryServerPro.Provider.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Provider\obj\Debug\GalleryServerPro.Provider.pdb

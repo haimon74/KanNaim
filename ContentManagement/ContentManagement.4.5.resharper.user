@@ -1,0 +1,488 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:WordSpacingDropDownList.cs" caret="951" fromTop="9" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/d:StyleManagementForm/f:InputOpacity.ascx.cs" caret="269" fromTop="11" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/d:StyleManagementForm/f:InputOpacity.ascx" caret="0" fromTop="0" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:RadioButtonHtmlObjectType.cs" caret="0" fromTop="0" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:SideMenuDataSource.cs" caret="1262" fromTop="32" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/d:StyleManagementForm/f:InputImage.ascx" caret="801" fromTop="11" />
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:BorderWidthDropDownList.cs" caret="1327" fromTop="24" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/d:StyleManagementForm/f:InputBorderWidth.ascx" caret="395" fromTop="6" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/d:StyleManagementForm/f:InputBorderStyle.ascx" caret="394" fromTop="6" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/d:StyleManagementForm/f:InputFontFamily.ascx" caret="0" fromTop="0" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/d:StyleManagementForm/f:InputBackgroundColor.ascx" caret="991" fromTop="14" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/d:StyleManagementForm/f:InputFontColor.ascx" caret="0" fromTop="0" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/d:StyleManagementForm/f:InputAlignment.ascx" caret="0" fromTop="0" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/d:StyleManagementForm/f:InputLeftOrRight.ascx" caret="846" fromTop="19" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/d:StyleManagementForm/f:InputColorPicker.ascx" caret="604" fromTop="11" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/d:StyleManagementForm/f:InputAlignment.ascx.cs" caret="370" fromTop="12" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:App_Themes/d:Theme1/f:primary.css" caret="2328" fromTop="38" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/f:MasterPageAdmin.master" caret="767" fromTop="14" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:CMS/f:StyleManagement.aspx.cs" caret="5599" fromTop="15" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/d:StyleManagementForm/f:InputRoundedBorderStyle.ascx.cs" caret="768" fromTop="24" />
+      <File id="9F263D10-5A2D-41F2-BE30-0D7E94BF10F2/f:Web.config" caret="2192" fromTop="22" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:CMS/f:SlideShowSandbox.aspx.cs" caret="298" fromTop="12" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:CMS/f:StyleManagement.aspx" caret="7622" fromTop="19" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/f:SlideShowControl.ascx.cs" caret="4677" fromTop="29" />
+      <File id="2528E045-5DA5-45BC-9FF9-9741C3DCBE89/f:CustomFloatingBehaviorDesigner.cs" caret="222" fromTop="6" />
+      <File id="9F263D10-5A2D-41F2-BE30-0D7E94BF10F2/f:ServiceSlideShow.asmx.cs" caret="185" fromTop="8" />
+      <File id="B6033CC1-4465-40DB-867A-8DB1680E9E2E/d:App_Code/f:IndexItDataClasses1.designer.cs" caret="3052" fromTop="0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/f:SlideShowControl.ascx.cs" caret="4247" fromTop="22" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:CMS/f:StyleManagement.aspx" caret="4536" fromTop="11" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:CMS/f:StyleManagement.aspx" caret="0" fromTop="0" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:CMS/f:StyleManagement.aspx" caret="7622" fromTop="19" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/f:SlideShowControl.ascx.cs" caret="1650" fromTop="33" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/f:SlideShowControl.ascx.cs" caret="472" fromTop="15" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/f:SlideShowControl.ascx.cs" caret="453" fromTop="15" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/f:SlideShowControl.ascx.cs" caret="3958" fromTop="25" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/f:SlideShowControl.ascx.cs" caret="1873" fromTop="20" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/f:SlideShowControl.ascx.cs" caret="190" fromTop="6" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/f:SlideShowControl.ascx.cs" caret="2976" fromTop="17" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/f:SlideShowControl.ascx.cs" caret="7997" fromTop="34" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/f:SlideShowControl.ascx.cs" caret="3647" fromTop="15" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/f:SlideShowControl.ascx.cs" caret="3154" fromTop="18" />
+      <File id="0442AC35-B5A2-464A-8C85-0AD3DF6A252F/d:Forms/d:UserControls/f:SlideShowControl.ascx.cs" caret="4677" fromTop="29" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:System.Web.HttpContext">
+      <Item value="Request" priority="0" />
+      <Item value="Profile" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpRequest">
+      <Item value="Headers" priority="0" />
+      <Item value="Browser" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Default">
+      <Item value="DateTime" priority="1" />
+      <Item value="now" priority="0" />
+      <Item value="Rows" priority="5" />
+      <Item value="DropDownListRows" priority="2" />
+      <Item value="Columns" priority="5" />
+      <Item value="DropDownListColumns" priority="2" />
+      <Item value="false" priority="6" />
+      <Item value="customUserNameRadioButton" priority="1" />
+      <Item value="customEmailRadioButton" priority="0" />
+      <Item value="customUserIdRadioButton" priority="0" />
+      <Item value="settingsPanel" priority="0" />
+      <Item value="bool" priority="3" />
+      <Item value="ShowUserNameButton" priority="0" />
+      <Item value="CustomUserNameTextBox" priority="1" />
+      <Item value="this" priority="4" />
+      <Item value="ShowTagButton" priority="0" />
+      <Item value="isTag" priority="2" />
+      <Item value="CustomTagTextBox" priority="0" />
+      <Item value="else" priority="1" />
+      <Item value="if" priority="10" />
+      <Item value="null" priority="0" />
+      <Item value="isUserName" priority="0" />
+      <Item value="isEmail" priority="0" />
+      <Item value="isUserId" priority="0" />
+      <Item value="xml" priority="1" />
+      <Item value="FIND_BY_USERNAME" priority="0" />
+      <Item value="FIND_BY_EMAIL" priority="0" />
+      <Item value="PHOTOS_FROM_FLICKR_USER" priority="0" />
+      <Item value="try" priority="0" />
+      <Item value="catch" priority="0" />
+      <Item value="Exception" priority="0" />
+      <Item value="mostInterestingRadioButton" priority="0" />
+      <Item value="Context" priority="0" />
+      <Item value="private" priority="20" />
+      <Item value="string" priority="40" />
+      <Item value="customSetNameRadioButton" priority="0" />
+      <Item value="RootElement" priority="1" />
+      <Item value="const" priority="4" />
+      <Item value="Design" priority="0" />
+      <Item value="Panel" priority="3" />
+      <Item value="Panel1" priority="1" />
+      <Item value="String" priority="7" />
+      <Item value="Enum" priority="0" />
+      <Item value="enum" priority="4" />
+      <Item value="public" priority="25" />
+      <Item value="set" priority="0" />
+      <Item value="return" priority="24" />
+      <Item value="BgImageVAlignSelectedValue" priority="0" />
+      <Item value="DropDownListBgImageVAlign" priority="0" />
+      <Item value="DropDownListBgImageHAlign" priority="1" />
+      <Item value="TextBoxBackgroundColor" priority="0" />
+      <Item value="BorderWidtheDropDownList1" priority="0" />
+      <Item value="BorderStyleDropDownList" priority="0" />
+      <Item value="TextBoxColor" priority="1" />
+      <Item value="Dropthings" priority="0" />
+      <Item value="byte" priority="3" />
+      <Item value="_fileData" priority="1" />
+      <Item value="void" priority="1" />
+      <Item value="object" priority="1" />
+      <Item value="EventArgs" priority="1" />
+      <Item value="FileData" priority="0" />
+      <Item value="e" priority="0" />
+      <Item value="value" priority="2" />
+      <Item value="RadioButtonListLeftRight" priority="0" />
+      <Item value="TextBox" priority="0" />
+      <Item value="Label3" priority="0" />
+      <Item value="InputFontSize1" priority="0" />
+      <Item value="IsBoldFontCheckBox1" priority="0" />
+      <Item value="IsItalicFontCheckBox1" priority="0" />
+      <Item value="InputFontColor1" priority="0" />
+      <Item value="InputBackgroundColor1" priority="0" />
+      <Item value="InputAlignment1" priority="0" />
+      <Item value="InputTextIdentationInPixels1" priority="0" />
+      <Item value="InputTextDirection1" priority="0" />
+      <Item value="InputLetterSpacing1" priority="0" />
+      <Item value="InputWordSpacing1" priority="0" />
+      <Item value="override" priority="1" />
+      <Item value="InputDivPadding" priority="0" />
+      <Item value="InputDivMargin" priority="0" />
+      <Item value="InputDivWidth" priority="0" />
+      <Item value="InputDivHeight" priority="0" />
+      <Item value="InputBorderStyle1" priority="0" />
+      <Item value="InputBorderWidth1" priority="0" />
+      <Item value="InputTopOrBottom1" priority="0" />
+      <Item value="InputLeftOrRight1" priority="0" />
+      <Item value="InputColorPickerVisitedLink" priority="0" />
+      <Item value="InputColorPicker1" priority="0" />
+      <Item value="MapPath" priority="0" />
+      <Item value="InputNumberWidth" priority="0" />
+      <Item value="InputOpacity1" priority="0" />
+      <Item value="InputImage1" priority="1" />
+      <Item value="int" priority="20" />
+      <Item value="opacity" priority="4" />
+      <Item value="fontStyle" priority="0" />
+      <Item value="textStyle" priority="0" />
+      <Item value="positionStyle" priority="0" />
+      <Item value="anchorStyle" priority="0" />
+      <Item value="imageStyle" priority="1" />
+      <Item value="style" priority="0" />
+      <Item value="out" priority="0" />
+      <Item value="isParsed" priority="0" />
+      <Item value="EnableViewState" priority="1" />
+      <Item value="true" priority="3" />
+      <Item value="TextBoxOpacity" priority="0" />
+      <Item value="RadioButtonHtmlObjectType" priority="0" />
+      <Item value="InputColorPickerBorder" priority="0" />
+      <Item value="InputPositionType1" priority="0" />
+      <Item value="roundedCornersStyle" priority="1" />
+      <Item value="Page" priority="1" />
+      <Item value="Request" priority="0" />
+      <Item value="RadioButtonList" priority="0" />
+      <Item value="PanelPreviewSelectedBorder" priority="0" />
+      <Item value="Controls" priority="0" />
+      <Item value="IQueryable" priority="0" />
+      <Item value="iq" priority="1" />
+      <Item value="Control" priority="1" />
+      <Item value="from" priority="0" />
+      <Item value="where" priority="0" />
+      <Item value="c" priority="4" />
+      <Item value="RadioButtonListRoundedBorders" priority="0" />
+      <Item value="foreach" priority="1" />
+      <Item value="control" priority="2" />
+      <Item value="is" priority="0" />
+      <Item value="using" priority="1" />
+      <Item value="name" priority="0" />
+      <Item value="PanelSlidShow" priority="2" />
+      <Item value="TnHeight" priority="2" />
+      <Item value="Margin" priority="2" />
+      <Item value="Padding" priority="0" />
+      <Item value="Border" priority="1" />
+      <Item value="for" priority="2" />
+      <Item value="r" priority="6" />
+      <Item value="new" priority="9" />
+      <Item value="TnWidth" priority="0" />
+      <Item value="newPanel" priority="3" />
+      <Item value="ID" priority="2" />
+      <Item value="BorderWidth" priority="0" />
+      <Item value="BorderColor" priority="0" />
+      <Item value="BorderStyle" priority="1" />
+      <Item value="Attributes" priority="0" />
+      <Item value="IsPostBack" priority="0" />
+      <Item value="Image" priority="3" />
+      <Item value="Width" priority="0" />
+      <Item value="Height" priority="0" />
+      <Item value="image" priority="6" />
+      <Item value="AjaxControlToolkit" priority="0" />
+      <Item value="SlideShowExtender" priority="1" />
+      <Item value="slideShowExtender" priority="1" />
+      <Item value="AutoPlay" priority="0" />
+      <Item value="TargetControlID" priority="0" />
+      <Item value="SlideShowServiceMethod" priority="0" />
+      <Item value="fileNames" priority="2" />
+      <Item value="i" priority="4" />
+      <Item value="GetSlides" priority="1" />
+      <Item value="Slide" priority="2" />
+      <Item value="_allPhotos" priority="3" />
+      <Item value="Length" priority="2" />
+      <Item value="colNum" priority="1" />
+      <Item value="maxCol" priority="1" />
+      <Item value="maxRow" priority="0" />
+      <Item value="returnPhotos" priority="1" />
+      <Item value="rowNum" priority="0" />
+      <Item value="offset" priority="0" />
+      <Item value="tnPerPanel" priority="0" />
+      <Item value="protected" priority="1" />
+      <Item value="BackColor" priority="0" />
+      <Item value="Color" priority="0" />
+      <Item value="ImageButton" priority="0" />
+      <Item value="ServiceSlideShow" priority="2" />
+      <Item value="ScriptService" priority="0" />
+      <Item value="proxy" priority="0" />
+      <Item value="list" priority="1" />
+      <Item value="var" priority="0" />
+      <Item value="result" priority="1" />
+      <Item value="returnValue" priority="0" />
+      <Item value="idx" priority="0" />
+      <Item value="slide" priority="0" />
+      <Item value="as" priority="0" />
+      <Item value="contextKey" priority="1" />
+      <Item value="_noImagesFoundWebLocation" priority="0" />
+      <Item value="File" priority="0" />
+      <Item value="static" priority="2" />
+      <Item value="Path" priority="0" />
+      <Item value="Server" priority="0" />
+      <Item value="ContextKey" priority="2" />
+      <Item value="PathMap" priority="0" />
+      <Item value="StaticContextKey" priority="0" />
+      <Item value="StaticMapPath" priority="1" />
+      <Item value="SlidesPath" priority="0" />
+      <Item value="ScriptManagerProxy1" priority="0" />
+      <Item value="System" priority="0" />
+      <Item value="Web" priority="0" />
+      <Item value="Services" priority="0" />
+      <Item value="StringSplitOptions" priority="0" />
+      <Item value="spliters" priority="0" />
+      <Item value="UseContextKey" priority="0" />
+      <Item value="AsyncPostBackTrigger" priority="7" />
+      <Item value="Interval" priority="0" />
+      <Item value="Label" priority="2" />
+      <Item value="l1" priority="0" />
+      <Item value="Visible" priority="0" />
+      <Item value="base" priority="0" />
+      <Item value="_image" priority="3" />
+      <Item value="s" priority="1" />
+      <Item value="UserControlsLibrary.WebControls" priority="0" />
+      <Item value="LabelToSlideToolTip" priority="1" />
+      <Item value="ref" priority="0" />
+      <Item value="descriptionLabel" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="ToLongDateString" priority="0" />
+      <Item value="ToLongTimeString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.DropDownList">
+      <Item value="SelectedIndex" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@FlickrWidget+PhotoTypeEnum">
+      <Item value="Tag" priority="0" />
+      <Item value="UserName" priority="2" />
+      <Item value="Email" priority="3" />
+      <Item value="UserId" priority="1" />
+      <Item value="MostRecent" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.RadioButton">
+      <Item value="Checked" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.Button">
+      <Item value="Enabled" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.TextBox">
+      <Item value="Text" priority="8" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FlickrWidget">
+      <Item value="PhotoUserName" priority="1" />
+      <Item value="PhotoUserId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Contains" priority="3" />
+      <Item value="StartsWith" priority="0" />
+      <Item value="EndsWith" priority="0" />
+      <Item value="Replace" priority="0" />
+      <Item value="Split" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Profile.ProfileBase">
+      <Item value="UserName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.Panel">
+      <Item value="BackColor" priority="0" />
+      <Item value="Attributes" priority="2" />
+      <Item value="Style" priority="1" />
+      <Item value="Width" priority="2" />
+      <Item value="Controls" priority="4" />
+      <Item value="Height" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Format" priority="7" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UserControlsLibrary.WebControls.VerticalAlignmentDropDownList">
+      <Item value="SelectedValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UserControlsLibrary.WebControls.HorizontalAlignmentDropDownList">
+      <Item value="SelectedValue" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UserControlsLibrary.WebControls.BorderWidthDropDownList">
+      <Item value="SelectedValue" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UserControlsLibrary.WebControls.FontFamilyDropDownList">
+      <Item value="SelectedIndex" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UserControlsLibrary.WebControls.FontSizeDropDownList">
+      <Item value="SelectedValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AjaxControlToolkit.AsyncFileUpload">
+      <Item value="FileBytes" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ASP.forms_usercontrols_stylemanagementform_inputasyncfileupload_inputasyncfileupload_ascx">
+      <Item value="FileBytes" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.RadioButtonList">
+      <Item value="SelectedValue" priority="2" />
+      <Item value="Style" priority="0" />
+      <Item value="SelectedIndex" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UserControlsLibrary.WebControls.LetterSpacingDropDownList">
+      <Item value="SelectedValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.Label">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UserControlsLibrary.WebControls.PositionDropDownList">
+      <Item value="SelectedValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UserControlsLibrary.WebControls.TextDirectionDropDownList">
+      <Item value="SelectedValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ASP.forms_usercontrols_stylemanagementform_inputregularexpression_ascx">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UserControlsLibrary.WebControls.WordSpacingDropDownList">
+      <Item value="SelectedValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UserControlsLibrary.WebControls.IsBoldFontCheckBox">
+      <Item value="Checked" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UserControlsLibrary.WebControls.IsItalicFontCheckBox">
+      <Item value="Checked" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ASP.forms_usercontrols_stylemanagementform_inputfontcolor_ascx">
+      <Item value="SelectedValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ASP.forms_usercontrols_stylemanagementform_inputnumber_ascx">
+      <Item value="TextBox" priority="0" />
+      <Item value="Text" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ASP.forms_usercontrols_stylemanagementform_inputtextdirection_ascx">
+      <Item value="SelectedValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ASP.forms_usercontrols_stylemanagementform_inputbackgroundcolor_ascx">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ASP.forms_usercontrols_stylemanagementform_inputborderstyle_ascx">
+      <Item value="SelectedValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ASP.forms_usercontrols_stylemanagementform_inputborderwidth_ascx">
+      <Item value="SelectedValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ASP.forms_usercontrols_stylemanagementform_inputcolorpicker_ascx">
+      <Item value="Text" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ASP.forms_usercontrols_stylemanagementform_inputopacity_ascx">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ASP.forms_usercontrols_stylemanagementform_inputimage_ascx">
+      <Item value="HorAlign" priority="0" />
+      <Item value="VerAlign" priority="0" />
+      <Item value="Width" priority="0" />
+      <Item value="Height" priority="0" />
+      <Item value="Opacity" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="Parse" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UserControlsLibrary.WebControls.RadioButtonHtmlObjectType">
+      <Item value="SelectedValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ASP.forms_usercontrols_stylemanagementform_inputpositiontype_ascx">
+      <Item value="SelectedValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpBrowserCapabilities">
+      <Item value="Browser" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.ControlCollection">
+      <Item value="IndexOf" priority="0" />
+      <Item value="AsQueryable" priority="0" />
+      <Item value="Add" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ASP.forms_usercontrols_stylemanagementform_inputroundedborderstyle_ascx">
+      <Item value="SelectedStyle" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Forms_UserControls_SlideShowControl">
+      <Item value="PanelSlidShow" priority="2" />
+      <Item value="AutoPlay" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.UI.WebControls.BorderStyle">
+      <Item value="Solid" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.Image">
+      <Item value="Attributes" priority="0" />
+      <Item value="ID" priority="0" />
+      <Item value="ToolTip" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Color">
+      <Item value="Yellow" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AjaxControlToolkit.SlideShowExtender">
+      <Item value="ContextKey" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ServiceSlideShow.ServiceSlideShow">
+      <Item value="GetAllSlides" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="ToArray" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpServerUtility">
+      <Item value="MapPath" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ASP.forms_usercontrols_slideshowcontrol_ascx">
+      <Item value="ContextKey" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.Page">
+      <Item value="Header" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.ScriptManagerProxy">
+      <Item value="Scripts" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.StringSplitOptions">
+      <Item value="RemoveEmptyEntries" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UserControlsLibrary.WebControls.LabelToSlideToolTip">
+      <Item value="ID" priority="0" />
+      <Item value="Attributes" priority="0" />
+      <Item value="UniqueID" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.Control">
+      <Item value="Controls" priority="0" />
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.ImageButton">
+      <Item value="AlternateText" priority="1" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

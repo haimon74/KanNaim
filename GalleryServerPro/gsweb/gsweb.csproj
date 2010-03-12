@@ -1,0 +1,839 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B24DD361-703C-4B51-91F0-9D0DB37AC684}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GalleryServerPro.Web</RootNamespace>
+    <AssemblyName>GalleryServerPro.Web</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRules>-Microsoft.Naming#CA1704</CodeAnalysisRules>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.10920.32880, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ComponentArt.Web.UI, Version=2008.2.1175.3, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\HelixBlue\images\calendar.gif" />
+    <Content Include="App_Themes\HelixBlue\images\left_arrow.gif" />
+    <Content Include="App_Themes\HelixBlue\images\right_arrow.gif" />
+    <Content Include="App_Themes\HelixBlue\images\rotate\arrowtop.gif" />
+    <Content Include="App_Themes\HelixBlue\images\rotate\bottom.gif" />
+    <Content Include="App_Themes\HelixBlue\images\rotate\bottom1.gif" />
+    <Content Include="App_Themes\HelixBlue\images\rotate\left.gif" />
+    <Content Include="App_Themes\HelixBlue\images\rotate\left1.gif" />
+    <Content Include="App_Themes\HelixBlue\images\rotate\right.gif" />
+    <Content Include="App_Themes\HelixBlue\images\rotate\right1.gif" />
+    <Content Include="App_Themes\HelixBlue\images\rotate\top.gif" />
+    <Content Include="App_Themes\HelixBlue\images\rotate\top1.gif" />
+    <Content Include="App_Themes\HelixBlue\styles\styles.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\albums.aspx.cs">
+      <DependentUpon>albums.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\albums.aspx.designer.cs">
+      <DependentUpon>albums.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\backup-restore.aspx.cs">
+      <DependentUpon>backup-restore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\backup-restore.aspx.designer.cs">
+      <DependentUpon>backup-restore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\email.aspx.cs">
+      <DependentUpon>email.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\email.aspx.designer.cs">
+      <DependentUpon>email.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\images.aspx.cs">
+      <DependentUpon>images.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\images.aspx.designer.cs">
+      <DependentUpon>images.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\manageroles.aspx.cs">
+      <DependentUpon>manageroles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\manageroles.aspx.designer.cs">
+      <DependentUpon>manageroles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\manageusers.aspx.cs">
+      <DependentUpon>manageusers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\manageusers.aspx.designer.cs">
+      <DependentUpon>manageusers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\mediaobjects.aspx.cs">
+      <DependentUpon>mediaobjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\mediaobjects.aspx.designer.cs">
+      <DependentUpon>mediaobjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\mimetypes.aspx.cs">
+      <DependentUpon>mimetypes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\mimetypes.aspx.designer.cs">
+      <DependentUpon>mimetypes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\video-audio-other.aspx.cs">
+      <DependentUpon>video-audio-other.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\video-audio-other.aspx.designer.cs">
+      <DependentUpon>video-audio-other.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="anon\recoverpassword.aspx.cs">
+      <DependentUpon>recoverpassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="anon\recoverpassword.aspx.designer.cs">
+      <DependentUpon>recoverpassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GalleryServerPro1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GalleryServerPro.resx</DependentUpon>
+    </Compile>
+    <Compile Include="changepassword.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>changepassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="changepassword.aspx.designer.cs">
+      <DependentUpon>changepassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CodeFiles\Entity\AlbumWebEntity.cs" />
+    <Compile Include="CodeFiles\Entity\MediaObjectWebEntity.cs" />
+    <Compile Include="CodeFiles\Entity\MetadataItemWebEntity.cs" />
+    <Compile Include="CodeFiles\Entity\SynchStatusWebEntity.cs" />
+    <Compile Include="CodeFiles\GlobalEnums.cs" />
+    <Compile Include="CodeFiles\GspPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeFiles\MediaObjectHtmlBuilder.cs" />
+    <Compile Include="CodeFiles\WebController.cs" />
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error\error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error\error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error\error_404.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>error_404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error\error_404.aspx.designer.cs">
+      <DependentUpon>error_404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error\error_cannot_write_to_media_object_dir.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>error_cannot_write_to_media_object_dir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error\error_cannot_write_to_media_object_dir.aspx.designer.cs">
+      <DependentUpon>error_cannot_write_to_media_object_dir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error\error_unauthorized.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>error_unauthorized.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error\error_unauthorized.aspx.designer.cs">
+      <DependentUpon>error_unauthorized.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="handler\getmediaobject.ashx.cs">
+      <DependentUpon>getmediaobject.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\gettreeviewxml.ashx.cs">
+      <DependentUpon>gettreeviewxml.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="installer\default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="installer\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="installer\upgrade.aspx.cs">
+      <DependentUpon>upgrade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="installer\upgrade.aspx.designer.cs">
+      <DependentUpon>upgrade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="master\adminMstr.Master.cs">
+      <DependentUpon>adminMstr.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="master\adminMstr.Master.designer.cs">
+      <DependentUpon>adminMstr.Master</DependentUpon>
+    </Compile>
+    <Compile Include="master\browse.Master.cs">
+      <DependentUpon>browse.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="master\browse.Master.designer.cs">
+      <DependentUpon>browse.Master</DependentUpon>
+    </Compile>
+    <Compile Include="master\global.Master.cs">
+      <DependentUpon>global.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="master\global.Master.designer.cs">
+      <DependentUpon>global.Master</DependentUpon>
+    </Compile>
+    <Compile Include="master\site.master.cs">
+      <DependentUpon>site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="master\site.master.designer.cs">
+      <DependentUpon>site.master</DependentUpon>
+    </Compile>
+    <Compile Include="master\taskMstr.master.cs">
+      <DependentUpon>taskMstr.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="master\taskMstr.master.designer.cs">
+      <DependentUpon>taskMstr.master</DependentUpon>
+    </Compile>
+    <Compile Include="myaccount.aspx.cs">
+      <DependentUpon>myaccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myaccount.aspx.designer.cs">
+      <DependentUpon>myaccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="search.aspx.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="search.aspx.designer.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task\addobjects.aspx.cs">
+      <DependentUpon>addobjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task\addobjects.aspx.designer.cs">
+      <DependentUpon>addobjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task\assignthumbnail.aspx.cs">
+      <DependentUpon>assignthumbnail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task\assignthumbnail.aspx.designer.cs">
+      <DependentUpon>assignthumbnail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task\createalbum.aspx.cs">
+      <DependentUpon>createalbum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task\createalbum.aspx.designer.cs">
+      <DependentUpon>createalbum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task\deletealbum.aspx.cs">
+      <DependentUpon>deletealbum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task\deletealbum.aspx.designer.cs">
+      <DependentUpon>deletealbum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task\deletehires.aspx.cs">
+      <DependentUpon>deletehires.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task\deletehires.aspx.designer.cs">
+      <DependentUpon>deletehires.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task\deleteobjects.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>deleteobjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task\deleteobjects.aspx.designer.cs">
+      <DependentUpon>deleteobjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task\editcaptions.aspx.cs">
+      <DependentUpon>editcaptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task\editcaptions.aspx.designer.cs">
+      <DependentUpon>editcaptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task\rearrange.aspx.cs">
+      <DependentUpon>rearrange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task\rearrange.aspx.designer.cs">
+      <DependentUpon>rearrange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task\rotateimage.aspx.cs">
+      <DependentUpon>rotateimage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task\rotateimage.aspx.designer.cs">
+      <DependentUpon>rotateimage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task\rotateimages.aspx.cs">
+      <DependentUpon>rotateimages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task\rotateimages.aspx.designer.cs">
+      <DependentUpon>rotateimages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task\synchronize.aspx.cs">
+      <DependentUpon>synchronize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task\synchronize.aspx.designer.cs">
+      <DependentUpon>synchronize.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="task\transferobject.aspx.cs">
+      <DependentUpon>transferobject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="task\transferobject.aspx.designer.cs">
+      <DependentUpon>transferobject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\actionmenu.ascx.cs">
+      <DependentUpon>actionmenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\actionmenu.ascx.designer.cs">
+      <DependentUpon>actionmenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\albumedittemplate.ascx.cs">
+      <DependentUpon>albumedittemplate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\albumedittemplate.ascx.designer.cs">
+      <DependentUpon>albumedittemplate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\albumheader.ascx.cs">
+      <DependentUpon>albumheader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\albumheader.ascx.designer.cs">
+      <DependentUpon>albumheader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\albummenu.ascx.cs">
+      <DependentUpon>albummenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\albummenu.ascx.designer.cs">
+      <DependentUpon>albummenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\footer.ascx.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\footer.ascx.designer.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\mediaobjectview.ascx.cs">
+      <DependentUpon>mediaobjectview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\mediaobjectview.ascx.designer.cs">
+      <DependentUpon>mediaobjectview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\passwordrecovery.ascx.cs">
+      <DependentUpon>passwordrecovery.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\passwordrecovery.ascx.designer.cs">
+      <DependentUpon>passwordrecovery.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\popupinfo.ascx.cs">
+      <DependentUpon>popupinfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\popupinfo.ascx.designer.cs">
+      <DependentUpon>popupinfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\thumbnailview.ascx.cs">
+      <DependentUpon>thumbnailview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\thumbnailview.ascx.designer.cs">
+      <DependentUpon>thumbnailview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\albumtreeview.ascx.cs">
+      <DependentUpon>albumtreeview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\albumtreeview.ascx.designer.cs">
+      <DependentUpon>albumtreeview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\usermessage.ascx.cs">
+      <DependentUpon>usermessage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\usermessage.ascx.designer.cs">
+      <DependentUpon>usermessage.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\HelixBlue\images.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\GalleryServerPro.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>GalleryServerPro1.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="master\site.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="default.aspx" />
+    <Content Include="master\taskMstr.master" />
+    <Content Include="uc\albumheader.ascx" />
+    <Content Include="uc\albummenu.ascx" />
+    <Content Include="uc\footer.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TIS.GSP.Business.Interfaces\TIS.GSP.Business.Interfaces.csproj">
+      <Project>{20DFE2A2-2532-4AFE-8B4B-5BE8E3F8492F}</Project>
+      <Name>TIS.GSP.Business.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TIS.GSP.Business\TIS.GSP.Business.csproj">
+      <Project>{CD3EAF7D-B964-4BAF-BE4D-E2844B4C7A33}</Project>
+      <Name>TIS.GSP.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TIS.GSP.Configuration\TIS.GSP.Configuration.csproj">
+      <Project>{4FDA2DD0-EB77-42DB-8683-D1588A940392}</Project>
+      <Name>TIS.GSP.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TIS.GSP.ErrorHandler\TIS.GSP.ErrorHandler.csproj">
+      <Project>{FC3B5E2D-E0AB-47FC-A126-64AA48982947}</Project>
+      <Name>TIS.GSP.ErrorHandler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TIS.GSP.WebControls\TIS.GSP.WebControls.csproj">
+      <Project>{4FA72962-A020-4B7D-8974-08DFEDFC6335}</Project>
+      <Name>TIS.GSP.WebControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TracingTools\TracingTools.vbproj">
+      <Project>{66E43FB8-A7ED-48DA-A9D4-534F3E760A39}</Project>
+      <Name>TracingTools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config\galleryserverpro.config" />
+    <Content Include="Global.asax" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="script\autoclick.js" />
+    <Content Include="script\radiobuttonworkaround.js" />
+    <Content Include="task\addobjects.aspx" />
+    <Content Include="task\createalbum.aspx" />
+    <Content Include="task\deletealbum.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\web.config" />
+    <Content Include="login.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="search.aspx" />
+    <Content Include="task\assignthumbnail.aspx" />
+    <Content Include="task\web.config" />
+    <Content Include="uc\thumbnailview.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\default.aspx" />
+    <Content Include="admin\manageusers.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\componentart\navbar\arrow.gif" />
+    <Content Include="images\componentart\navbar\arrow_expanded.gif" />
+    <Content Include="master\adminMstr.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\manageroles.aspx" />
+    <Content Include="images\componentart\grid\asc.gif" />
+    <Content Include="images\componentart\grid\attachment.gif" />
+    <Content Include="images\componentart\grid\desc.gif" />
+    <Content Include="images\componentart\grid\flag_blue.gif" />
+    <Content Include="images\componentart\grid\flag_green.gif" />
+    <Content Include="images\componentart\grid\flag_none.gif" />
+    <Content Include="images\componentart\grid\flag_red.gif" />
+    <Content Include="images\componentart\grid\grid_headerBg.gif" />
+    <Content Include="images\componentart\grid\group_asc.gif" />
+    <Content Include="images\componentart\grid\group_desc.gif" />
+    <Content Include="images\componentart\grid\header1stCell_bg.gif" />
+    <Content Include="images\componentart\grid\header_activeBg.gif" />
+    <Content Include="images\componentart\grid\header_bg.gif" />
+    <Content Include="images\componentart\grid\header_hoverBg.gif" />
+    <Content Include="images\componentart\grid\header_rowBg.gif" />
+    <Content Include="images\componentart\grid\icon_attachment.gif" />
+    <Content Include="images\componentart\grid\icon_flag.gif" />
+    <Content Include="images\componentart\grid\icon_icon.gif" />
+    <Content Include="images\componentart\grid\icon_priority.gif" />
+    <Content Include="images\componentart\grid\lines\i.gif" />
+    <Content Include="images\componentart\grid\lines\lminus.gif" />
+    <Content Include="images\componentart\grid\lines\lplus.gif" />
+    <Content Include="images\componentart\grid\lines\rminus.gif" />
+    <Content Include="images\componentart\grid\lines\rplus.gif" />
+    <Content Include="images\componentart\grid\lines\tminus.gif" />
+    <Content Include="images\componentart\grid\lines\tplus.gif" />
+    <Content Include="images\componentart\grid\msg_forwarded.gif" />
+    <Content Include="images\componentart\grid\msg_read.gif" />
+    <Content Include="images\componentart\grid\msg_replied.gif" />
+    <Content Include="images\componentart\grid\msg_unread.gif" />
+    <Content Include="images\componentart\grid\pager\first.gif" />
+    <Content Include="images\componentart\grid\pager\last.gif" />
+    <Content Include="images\componentart\grid\pager\next.gif" />
+    <Content Include="images\componentart\grid\pager\prev.gif" />
+    <Content Include="images\componentart\grid\pager\slider_bg.gif" />
+    <Content Include="images\componentart\grid\pager\slider_grip.gif" />
+    <Content Include="images\componentart\grid\priority_high.gif" />
+    <Content Include="images\componentart\grid\priority_low.gif" />
+    <Content Include="images\componentart\grid\reorder.gif" />
+    <Content Include="images\componentart\grid\selector.gif" />
+    <Content Include="images\componentart\grid\spacer.gif" />
+    <Content Include="images\componentart\grid\spinner.gif" />
+    <Content Include="images\componentart\grid\topItem_col.gif" />
+    <Content Include="images\componentart\grid\topItem_exp.gif" />
+    <Content Include="master\browse.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\albums.aspx" />
+    <Content Include="admin\email.aspx" />
+    <Content Include="admin\images.aspx" />
+    <Content Include="admin\mediaobjects.aspx" />
+    <Content Include="admin\mimetypes.aspx" />
+    <Content Include="admin\video-audio-other.aspx" />
+    <Content Include="App_Themes\HelixBlue\images\error_16x16.png" />
+    <Content Include="App_Themes\HelixBlue\images\error_32x32.png" />
+    <Content Include="App_Themes\HelixBlue\images\error_48x48.png" />
+    <Content Include="App_Themes\HelixBlue\images\info_16x16.png" />
+    <Content Include="App_Themes\HelixBlue\images\info_32x32.png" />
+    <Content Include="App_Themes\HelixBlue\images\info_48x48.png" />
+    <Content Include="App_Themes\HelixBlue\images\warning_16x16.png" />
+    <Content Include="App_Themes\HelixBlue\images\warning_32x32.png" />
+    <Content Include="App_Themes\HelixBlue\images\warning_48x48.png" />
+    <Content Include="images\componentart\calendar\btn_calendar.gif" />
+    <Content Include="images\componentart\calendar\cal_nextMonth.gif" />
+    <Content Include="images\componentart\calendar\cal_prevMonth.gif" />
+    <Content Include="images\componentart\callback\spinner.gif" />
+    <Content Include="images\componentart\dialog\close.gif" />
+    <Content Include="images\componentart\dialog\info.png" />
+    <Content Include="images\componentart\dialog\pencil.gif" />
+    <Content Include="images\componentart\menu\addalbum.png" />
+    <Content Include="images\componentart\menu\addobject.png" />
+    <Content Include="images\componentart\menu\break_bg.gif" />
+    <Content Include="images\componentart\menu\copyobjects.png" />
+    <Content Include="images\componentart\menu\copyfolder.png" />
+    <Content Include="images\componentart\menu\delete3.png" />
+    <Content Include="images\componentart\menu\delete.png" />
+    <Content Include="images\componentart\menu\deletealbum.png" />
+    <Content Include="images\componentart\menu\deleteobjects.bmp" />
+    <Content Include="images\componentart\menu\doubledownarrow.png" />
+    <Content Include="images\componentart\menu\editalbuminfo.png" />
+    <Content Include="images\componentart\menu\editcaptions.png" />
+    <Content Include="images\componentart\menu\group_background.gif" />
+    <Content Include="images\componentart\menu\movefolder.png" />
+    <Content Include="images\componentart\menu\moveobjects.png" />
+    <Content Include="images\componentart\menu\rearrange.png" />
+    <Content Include="images\componentart\menu\rotate.png" />
+    <Content Include="images\componentart\menu\sitesettings.png" />
+    <Content Include="images\componentart\menu\synchronize.png" />
+    <Content Include="images\componentart\splitter\splitter_horBg.gif" />
+    <Content Include="images\componentart\tabstrip\csl_end.gif" />
+    <Content Include="images\componentart\tabstrip\csl_nrm.gif" />
+    <Content Include="images\componentart\tabstrip\end_csl.gif" />
+    <Content Include="images\componentart\tabstrip\end_nrm.gif" />
+    <Content Include="images\componentart\tabstrip\end_sel.gif" />
+    <Content Include="images\componentart\tabstrip\icon_hover.gif" />
+    <Content Include="images\componentart\tabstrip\icon_selected.gif" />
+    <Content Include="images\componentart\tabstrip\icon_transparent.gif" />
+    <Content Include="images\componentart\tabstrip\level2_group_bg.gif" />
+    <Content Include="images\componentart\tabstrip\nrm_bg.gif" />
+    <Content Include="images\componentart\tabstrip\nrm_csl.gif" />
+    <Content Include="images\componentart\tabstrip\nrm_end.gif" />
+    <Content Include="images\componentart\tabstrip\nrm_nrm.gif" />
+    <Content Include="images\componentart\tabstrip\nrm_sel.gif" />
+    <Content Include="images\componentart\tabstrip\sel_bg.gif" />
+    <Content Include="images\componentart\tabstrip\sel_end.gif" />
+    <Content Include="images\componentart\tabstrip\sel_nrm.gif" />
+    <Content Include="images\componentart\toolbar\break.gif" />
+    <Content Include="images\componentart\toolbar\copy.png" />
+    <Content Include="images\componentart\toolbar\download.png" />
+    <Content Include="images\componentart\toolbar\hires.png" />
+    <Content Include="images\componentart\toolbar\delete.png" />
+    <Content Include="images\componentart\toolbar\hyperlink.png" />
+    <Content Include="images\componentart\toolbar\info.png" />
+    <Content Include="images\componentart\toolbar\move.png" />
+    <Content Include="images\componentart\toolbar\pause.png" />
+    <Content Include="images\componentart\toolbar\play.png" />
+    <Content Include="images\componentart\toolbar\rotate.png" />
+    <Content Include="images\componentart\treeview\lines\dash.gif" />
+    <Content Include="images\componentart\treeview\lines\dashminus.gif" />
+    <Content Include="images\componentart\treeview\lines\dashplus.gif" />
+    <Content Include="images\componentart\treeview\lines\i.gif" />
+    <Content Include="images\componentart\treeview\lines\l.gif" />
+    <Content Include="images\componentart\treeview\lines\lminus.gif" />
+    <Content Include="images\componentart\treeview\lines\lplus.gif" />
+    <Content Include="images\componentart\treeview\lines\minus.gif" />
+    <Content Include="images\componentart\treeview\lines\noexpand.gif" />
+    <Content Include="images\componentart\treeview\lines\plus.gif" />
+    <Content Include="images\componentart\treeview\lines\r.gif" />
+    <Content Include="images\componentart\treeview\lines\rminus.gif" />
+    <Content Include="images\componentart\treeview\lines\rplus.gif" />
+    <Content Include="images\componentart\treeview\lines\t.gif" />
+    <Content Include="images\componentart\treeview\lines\tminus.gif" />
+    <Content Include="images\componentart\treeview\lines\tplus.gif" />
+    <Content Include="images\error_48x48.png" />
+    <Content Include="installer\default.aspx" />
+    <Content Include="installer\eula.htm">
+    </Content>
+    <Content Include="installer\eula.txt">
+    </Content>
+    <Content Include="images\tis_logo.gif" />
+    <Content Include="master\global.Master" />
+    <Content Include="script\entityobjects.js" />
+    <Content Include="script\simpletimer.js" />
+    <Content Include="task\deletehires.aspx" />
+    <Content Include="task\deleteobjects.aspx" />
+    <Content Include="task\editcaptions.aspx" />
+    <Content Include="task\rotateimage.aspx" />
+    <Content Include="task\rotateimages.aspx" />
+    <Content Include="task\synchronize.aspx" />
+    <Content Include="task\transferobject.aspx" />
+    <Content Include="uc\actionmenu.ascx" />
+    <Content Include="uc\albumedittemplate.ascx" />
+    <Content Include="uc\mediaobjectview.ascx" />
+    <Content Include="uc\usermessage.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\HelixBlue\images\lock_24x24.png" />
+    <Content Include="config\galleryserverpro.config.readme" />
+    <Content Include="App_Themes\HelixBlue\images\synch.gif" />
+    <Content Include="changepassword.aspx" />
+    <Content Include="error\error_404.aspx" />
+    <Content Include="error\error_cannot_write_to_media_object_dir.aspx" />
+    <Content Include="error\error_unauthorized.aspx" />
+    <Content Include="images\componentart\dialog\popup\bottom.gif" />
+    <Content Include="images\componentart\dialog\popup\close.gif" />
+    <Content Include="images\componentart\dialog\popup\top.gif" />
+    <Content Include="installer\sql\InstallGalleryServerProSql2000.sql" />
+    <Content Include="installer\sql\AddSqlLoginSql2005.sql" />
+    <Content Include="installer\sql\AddWinLoginSql2005.sql" />
+    <Content Include="installer\sql\AddSqlLoginSql2000.sql" />
+    <Content Include="installer\sql\AddWinLoginSql2000.sql" />
+    <Content Include="installer\sql\InstallCommon.sql" />
+    <Content Include="installer\sql\InstallGalleryServerProSql2005.sql" />
+    <Content Include="installer\sql\InstallMembership.sql" />
+    <Content Include="installer\sql\InstallProfile.sql" />
+    <Content Include="installer\sql\InstallRoles.sql" />
+    <Content Include="myaccount.aspx" />
+    <Content Include="script\progress.js" />
+    <Content Include="uc\popupinfo.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\HelixBlue\images\left_arrow.png" />
+    <Content Include="App_Themes\HelixBlue\images\right_arrow.png" />
+    <Content Include="handler\gettreeviewxml.ashx" />
+    <Content Include="images\shadow_bl_8x8.png" />
+    <Content Include="images\shadow_tr_8x8.png" />
+    <Content Include="uc\albumtreeview.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="anon\recoverpassword.aspx" />
+    <Content Include="images\shadow_800x800.png" />
+    <Content Include="installer\sql\GS_1.x_to_2_upgrade.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="anon\Web.config" />
+    <Content Include="uc\passwordrecovery.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handler\getmediaobject.ashx" />
+    <Content Include="images\gsplogo.png" />
+    <Content Include="images\gsp_logo_313x75.png" />
+    <EmbeddedResource Include="images\gsp_ftr_logo_170x46.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Browsers\w3cvalidator.browser" />
+    <Content Include="App_Themes\HelixBlue\styles\ca_styles.css" />
+    <Content Include="installer\upgrade.aspx" />
+    <Content Include="script\mediaobjectview.js" />
+    <Content Include="task\rearrange.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assemblies\AjaxControlToolkit.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\backup-restore.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assemblies\Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+    <Content Include="assemblies\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="assemblies\Microsoft.Practices.ObjectBuilder.dll" />
+    <Content Include="images\componentart\upload\horizontal.png" />
+    <Content Include="images\componentart\upload\static.png" />
+    <Content Include="images\componentart\upload\vertical.png" />
+    <Content Include="images\componentart\upload\_add.png" />
+    <Content Include="images\componentart\upload\_browse.png" />
+    <Content Include="images\componentart\upload\_browse-h.png" />
+    <Content Include="images\componentart\upload\_remove.png" />
+    <Content Include="images\componentart\upload\_upload.png" />
+    <Content Include="images\info.gif" />
+    <Content Include="images\spinner.gif" />
+    <Content Include="images\warning.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\HelixBlue\images\go_14x14.png" />
+    <Content Include="App_Themes\HelixBlue\images\green_check_13x12.png" />
+    <Content Include="App_Themes\HelixBlue\images\ok_16x16.png" />
+    <Content Include="App_Themes\HelixBlue\images\ok_26x26.png" />
+    <Content Include="error\error.aspx" />
+    <Content Include="skins\mediaplayer\AudioGray.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Include="skins\mediaplayer\Basic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Include="skins\mediaplayer\Classic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Include="skins\mediaplayer\Console.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Include="skins\mediaplayer\Expression.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Include="skins\mediaplayer\Futuristic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Include="skins\mediaplayer\Professional.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Include="skins\mediaplayer\Simple.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web_sqlserver.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Data\galleryserverpro_data.sqlite" />
+    <Content Include="Web_3.5.config" />
+    <Content Include="script\SilverlightControl.js" />
+    <Content Include="script\SilverlightMedia.js" />
+    <Content Include="Web_sqlserver_3.5.config" />
+    <Content Include="assemblies\ComponentArt.Web.UI.dll" />
+    <Content Include="installer\sql\GS_2.0.2886_to_2.1.3162_upgrade.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="mediaobjects\Samples\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50005</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/dev/gs</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

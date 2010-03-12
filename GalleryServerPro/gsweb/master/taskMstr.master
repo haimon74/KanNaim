@@ -1,0 +1,26 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="taskMstr.master.cs" Inherits="GalleryServerPro.Web.Master.taskMstr"
+	MasterPageFile="~/master/site.master" %>
+
+<%@ MasterType TypeName="GalleryServerPro.Web.Master.site" %>
+<asp:Content ID="ct1" ContentPlaceHolderID="c2" runat="server">
+	<asp:Panel runat="server" CssClass="addleftpadding1">
+		<div style="float: right">
+			<p class="minimargin">
+				<asp:Button ID="btnOkTop" runat="server" Text="<%$ Resources:GalleryServerPro, Default_Task_Ok_Button_Text %>" />
+				<asp:Button ID="btnCancelTop" runat="server" OnClick="btnCancel_Click" CausesValidation="false"
+					Text="<%$ Resources:GalleryServerPro, Default_Task_Cancel_Button_Text %>" ToolTip="<%$ Resources:GalleryServerPro, Default_Task_Cancel_Button_Tooltip %>" />&nbsp;</p>
+		</div>
+		<h1>
+			<asp:Label ID="lblTaskHeader" runat="server" /></h1>
+		<p class="taskBody">
+			<asp:Label ID="lblTaskBody" runat="server" /></p>
+	</asp:Panel>
+	<asp:ContentPlaceHolder ID="c3" runat="server">
+	</asp:ContentPlaceHolder>
+	<div class="rightBottom">
+		<p class="minimargin">
+			<asp:Button ID="btnOkBottom" runat="server" Text="<%$ Resources:GalleryServerPro, Default_Task_Ok_Button_Text %>" />
+			<asp:Button ID="btnCancelBottom" runat="server" OnClick="btnCancel_Click" CausesValidation="false"
+				Text="<%$ Resources:GalleryServerPro, Default_Task_Cancel_Button_Text %>" ToolTip="<%$ Resources:GalleryServerPro, Default_Task_Cancel_Button_Tooltip %>" />&nbsp;</p>
+	</div>
+</asp:Content>

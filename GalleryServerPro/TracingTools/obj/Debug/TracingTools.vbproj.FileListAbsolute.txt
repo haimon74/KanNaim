@@ -1,0 +1,7 @@
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TracingTools\bin\TechInfoSystems.TracingTools.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TracingTools\bin\TechInfoSystems.TracingTools.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TracingTools\bin\TechInfoSystems.xml
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TracingTools\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TracingTools\obj\Debug\TechInfoSystems.TracingTools.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TracingTools\obj\Debug\TechInfoSystems.xml
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TracingTools\obj\Debug\TechInfoSystems.TracingTools.pdb

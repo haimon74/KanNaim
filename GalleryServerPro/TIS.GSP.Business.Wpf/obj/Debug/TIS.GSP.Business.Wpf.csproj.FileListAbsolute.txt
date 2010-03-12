@@ -1,0 +1,9 @@
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\gsweb\bin\GalleryServerPro.Business.Wpf.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\gsweb\bin\GalleryServerPro.Business.Wpf.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Business.Wpf\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Business.Wpf\obj\Debug\GalleryServerPro.Business.Wpf.Properties.Resources.resources
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Business.Wpf\obj\Debug\TIS.GSP.Business.Wpf.csproj.GenerateResource.Cache
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Business.Wpf\obj\Debug\GalleryServerPro.Business.Wpf.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Business.Wpf\obj\Debug\GalleryServerPro.Business.Wpf.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\Website\bin\GalleryServerPro.Business.Wpf.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\Website\bin\GalleryServerPro.Business.Wpf.pdb

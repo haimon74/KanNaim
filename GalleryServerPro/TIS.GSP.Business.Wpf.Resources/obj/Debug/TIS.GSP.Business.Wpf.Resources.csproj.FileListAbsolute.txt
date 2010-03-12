@@ -1,0 +1,12 @@
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\gsweb\bin\GalleryServerPro.Business.Wpf.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\gsweb\bin\GalleryServerPro.Business.Wpf.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\gsweb\bin\nl\GalleryServerPro.Business.Wpf.resources.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Business.Wpf.Resources\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Business.Wpf.Resources\obj\Debug\GalleryServerPro.Business.Wpf.Properties.Resources.nl.resources
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Business.Wpf.Resources\obj\Debug\TIS.GSP.Business.Wpf.Resources.csproj.GenerateResource.Cache
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Business.Wpf.Resources\obj\Debug\nl\GalleryServerPro.Business.Wpf.resources.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Business.Wpf.Resources\obj\Debug\GalleryServerPro.Business.Wpf.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Business.Wpf.Resources\obj\Debug\GalleryServerPro.Business.Wpf.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\Website\bin\GalleryServerPro.Business.Wpf.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\Website\bin\GalleryServerPro.Business.Wpf.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\Website\bin\nl\GalleryServerPro.Business.Wpf.resources.dll

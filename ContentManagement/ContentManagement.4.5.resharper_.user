@@ -1,0 +1,60 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Data/f:FileSets_Production.xml" caret="0" fromTop="0" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:WidgetService.cs" caret="0" fromTop="0" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:WebServiceBase.cs" caret="500" fromTop="18" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:UserProfile.cs" caret="0" fromTop="0" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:ScriptDeferFilter.cs" caret="0" fromTop="0" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:RssItem.cs" caret="0" fromTop="0" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:ProxyAsync.cs" caret="44" fromTop="3" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:Proxy.cs" caret="0" fromTop="0" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:PhotoInfo.cs" caret="0" fromTop="0" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:PageService.cs" caret="0" fromTop="0" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:LinkButtonWithLayout.cs" caret="0" fromTop="0" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:IWidget.cs" caret="0" fromTop="0" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:ImageButtonWithLayout.cs" caret="0" fromTop="0" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:CombineScripts.cs" caret="61" fromTop="2" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:ActionValidator.cs" caret="0" fromTop="0" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:BasePage.cs" caret="2502" fromTop="35" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Data/f:FileSets.xml" caret="478" fromTop="10" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:StaticContentFilter.cs" caret="72" fromTop="4" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/f:web.config" caret="0" fromTop="0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:Proxy.cs" caret="466" fromTop="27" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:ProxyAsync.cs" caret="614" fromTop="24" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:WidgetService.cs" caret="0" fromTop="0" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:StaticContentFilter.cs" caret="32" fromTop="1" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:StaticContentFilter.cs" caret="833" fromTop="0" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:ScriptDeferFilter.cs" caret="0" fromTop="0" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:RssItem.cs" caret="0" fromTop="0" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:Proxy.cs" caret="208" fromTop="12" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:Proxy.cs" caret="0" fromTop="0" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:PhotoInfo.cs" caret="0" fromTop="0" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:PageService.cs" caret="119" fromTop="7" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:PageService.cs" caret="0" fromTop="0" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:LinkButtonWithLayout.cs" caret="0" fromTop="0" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:IWidget.cs" caret="393" fromTop="1" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:IWidget.cs" caret="0" fromTop="0" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:ImageButtonWithLayout.cs" caret="138" fromTop="15" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:ImageButtonWithLayout.cs" caret="0" fromTop="0" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:CombineScripts.cs" caret="61" fromTop="2" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Code/f:StaticContentFilter.cs" caret="1499" fromTop="12" />
+      <File id="824F7B49-A03D-467E-BDDD-927688F60EF1/d:App_Data/f:FileSets.xml" caret="39" fromTop="0" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+</Configuration>

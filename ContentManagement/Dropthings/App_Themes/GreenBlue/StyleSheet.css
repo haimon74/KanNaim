@@ -1,0 +1,196 @@
+﻿body,td,a,p,.h,h1,h2,h3,div,form{font-family:tahoma, arial,sans-serif; padding:0px; margin:0px;}
+body { background: #E5ECFF none repeat scroll 0%; color: #393733; padding: 0pt 20px; text-align: center; font-size: 8pt }
+a { text-decoration: none }
+a:link, a:visited, a:active { color: green; }
+a:hover { color:Red; text-decoration: underline }
+
+
+#container { margin: 0pt auto; text-align: left; max-width: 1200px }
+
+#header { background:#205020; color:#D2DCF3; margin-bottom:7px; width:100%; }
+
+/* header text */
+#header h1 { font-size: 14pt; float: left; height: 30px; padding: 10px; line-height: 30px } 
+#header h1 a { color: #D2DCF3; } 
+
+/* login/logout/signup panel */
+#login_panel { text-align:right; font-size: 10pt; float: right; margin: 10px 10px 0 0 ; padding: 5px;  }
+#login_panel a { color: #D2DCF3 }
+
+/* The search bar that has google and live search boxes */
+#search_bar { background:#B2DD80; width:100%; padding: 5px 0px 5px 0px; clear:both; overflow: auto; width: 100% }
+	#search_bar_wrapper { margin: 5px }
+	#google_search { float: left; margin-right: 20px;  }
+		#google_search img { float: left; margin-right: 5px; }
+		#google_search input { float: left; margin-right: 5px }
+		#google_search input#query { width: 200px }
+		
+	#live_search { float: left; margin-right: 20px; }
+		#live_search .livesearch_logo { float: left; margin-right: 5px }
+		#WLSearchBoxDiv { float: left; }
+
+#header_message { clear:both; height:30px; background:#90B566 url(message_corners.gif) no-repeat scroll bottom left; clear:both; overflow:hidden; width:100%; line-height: 20px; font-size: 8pt; text-align: center  }
+#header_message_wrapper { padding: 5px; background:url(message_corners.gif) no-repeat scroll bottom right; color: #115511 }
+#header_message a { color: #ddffdd }
+
+#contents { background:#FFFFFF /*url(content_corners.gif) no-repeat scroll top left*/;  }
+	#contents_wrapper { background:transparent /*url(content_corners.gif) no-repeat scroll top right*/;  min-height:400px; height:auto !important; height:400px; } 
+
+#tab_container { height: 30px; margin-left: 20px }
+
+#widget_area { overflow: auto; width: 100%; }
+#widget_area_wrapper { padding-left: 15px; }
+
+/* tab common styles */
+ul.tabs { list-style-type: none; margin: 0px; padding: 0px; }
+li.tab { float: left; margin: 0px 10px 0px 0px; height: 30px; }
+li.tab div.tab_wrapper { padding: 5px 20px 5px 15px; }
+li.tab a { font-size: 10pt; margin: 5px 5px 0px 50x; }
+li.tab span { font-size: 10pt; margin: 5px 5px 0px 50x; font-weight: bold; color: dimgray}
+
+/* active tab */
+li.activetab { padding-left: 5px; background:white url(content_corners.gif) no-repeat scroll top left } 
+li.activetab div.tab_wrapper { background:transparent url(content_corners.gif) no-repeat scroll top right;  }
+li.activetab a { color: green; font-weight: bold}
+
+/* inactive tab */
+li.inactivetab { padding-left: 5px; background:#C6DFE9 url(inactivetab_corners.gif) no-repeat scroll top left } 
+li.inactivetab div.tab_wrapper { background:transparent url(inactivetab_corners.gif) no-repeat scroll top right; }
+li.inactivetab a { color: green; }
+
+/* new tab */
+li.newtab { float: left; padding-top: 10px}
+
+	
+#Progress { position:absolute; left: 100%; margin-left: -50px; top: 130px; }
+#HelpDiv { position:absolute; top:0; left: 100%; margin-left: -320px; height: 300px; width: 300px; display:none; background-color: White; border: solid 1px dimgray; padding: 10px; z-index: 60000 }
+.helpContent { height: 280px; overflow: auto; }
+
+#footer { background:url(footer.gif) no-repeat scroll top left; clear:both; min-height:180px; height: auto !important; height:180px; text-align:left; padding-left: 15px }
+	#footer_wrapper { background: url(footer.gif) no-repeat scroll top right; padding-left:10px; padding-top:25px; }
+
+	#footer_wrapper { font-size: 8pt; line-height: 170% }
+	#counter { position: absolute; left: 100%; margin-left: -125px; margin-top: -86px}
+
+	.copyright { color: dimgray; }
+	.invitation { color: dimgray; }
+	.license { color: dimgray; }
+	
+
+#body {  }
+
+.pushdown { clear:both; height: 0px !important; visibility:hidden; line-height: 0px !important; overflow: hidden !important }
+
+#onpage_menu { background:#FFFFFF url(content_corners.gif) no-repeat scroll top left; }
+	#onpage_menu_wrapper { background:transparent url(content_corners.gif) no-repeat scroll top right; overflow: auto; width: 100%; }
+		#onpage_menu_bar { padding: 5px; margin: 5px 15px 10px 15px; height:auto !important; min-height: 15px; height: 15px; border-bottom: solid 1px #EFEFEF;}
+			.onpage_menu_bar_hover { -moz-opacity:1;opacity:1; }
+			
+			#onpage_menu_bar { padding: 5px; margin: 5px 15px 0px 15px; height:auto !important; min-height: 15px; height: 15px; border-bottom: solid 1px #EFEFEF; }
+			.onpage_menu_action { float: left; margin-right: 20px; }
+			#ChangePageTitleLinkButton { float: right }
+			
+		#onpage_menu_panels { padding: 0px 15px 10px 15px }
+			.onpage_menu_panel { padding: 8px; clear:both; height: 120px; background:#B2DD80; }
+				.onpage_menu_panel_column { float: left; min-height: 40px; height: auto !important; height: 40px; width: 30%; margin-right: 15px }
+					.onpage_menu_panel_column h1 { font-size: 12pt; color: black; font-weight: bold; padding-bottom: 5px; border-bottom: solid 1px black; margin-bottom: 15px}
+					.onpage_menu_panel_column p { padding: 5px; font-size: 10pt; }
+
+.widget_holder { min-height: 400px; height:auto !important; height: 400px; }
+.widget { /*position: relative; left: 0px; top: 0px; */ margin-bottom:20px;background-color:white; border: solid 1px #EFEFEF; padding: 0px }
+.widget_hover { border: solid 1px #999999; padding: 0px }
+.widget_header { cursor:move; background-color: #EEF0EE; padding: 5px; margin-bottom: 5px; } /*#B2DD80*/ 
+.widget_header_table { width:100%; border:none}
+.widget_title { width:90%; padding-left:2px;font-weight:bold;padding-right:5px; }
+.widget_title a { overflow:hidden;height:1.2em; color: green; text-decoration:none; font-size:10pt; }
+.widget_collapse, .widget_expand, .widget_close { display:inline; }
+.widget_dropcue { border: dashed 2px gray; display:none; margin-bottom:20px; }
+
+.widget_edit {width:10%; white-space:nowrap;text-align:right; padding: 2px 2px 0 0}
+.widget_edit a {color:green;text-decoration:none;}
+.widget_edit a:hover {color:red;}
+
+.widget_button {padding: 2px 2px 0 0; vertical-align:top;}
+.widget_min {background-image:url('min_blue.gif');}
+a.widget_min:hover {background-image:url('min_blue_highlight.gif');}
+.widget_max {background-image:url('max_blue.gif');}
+a.widget_max:hover {background-image:url('max_blue_highlight.gif');}
+.widget_close {background-image:url('x_blue.gif');}
+a.widget_close:hover {background-image:url('x_blue_highlight.gif');}
+.widget_box {display:block;margin-top: 2px;overflow:hidden;width:12px;height:12px;cursor:hand;cursor:pointer;}
+
+.widget_body { margin: 5px; }
+
+.column { width:33%;vertical-align:top; }
+.table_fixed {table-layout:fixed; clear:both}
+.column_divider { height: 400px; }
+.dashboard_body { width: 100%; height: 500px; background-color: lightgrey; }
+
+.handleText
+{
+	width:16px;
+	height:16px;
+	background-image:url(HandleGrip.png);
+	overflow:hidden;
+	cursor:se-resize;
+}
+
+#AddContentUpdatePanel { clear:both; }
+	.add_stuff_toggle { position: absolute; font-weight: bold; font-size: 12pt; position: relative; top: -25px; left: 80%; }
+
+.widget_showcase { }
+.addcontent_message { font-weight: bold; float: left; }
+.addcontent_navigation { float: right; font-weight: bold }
+
+#WidgetDataList { clear: both; margin-top: 20px }
+
+.smalltext, .smalltext a { font-size: 90%; }
+
+.feed_item_link
+{
+	line-height: 120%;	
+	clear:both;
+	display:block;	
+	margin-bottom: 5px;
+	font-size: 9pt;
+}
+
+#DeleteConfirmPopup 
+{ 
+	display:none; 
+	z-index: 60000; 
+	position: absolute; 
+	left: 50%; 
+	top: 50%; 
+	margin-left: -150; 
+	margin-top: -60; 
+	width: 300px; 
+	height: 120px; 
+	border: solid 4px black; 
+	padding: 10px;
+	background: white url('warning.jpg') no-repeat 10px 10px; 
+	text-align: center 
+}
+#DeleteConfirmPopup h1 { margin-left: 30px; font-size: 120% }
+#DeleteConfirmPopup p { margin-top: 10px; margin-bottom: 10px; clear: both }
+
+
+#DeletePageConfirmPopup 
+{ 
+	display:none; 
+	z-index: 60000; 
+	position: absolute; 
+	left: 50%; 
+	top: 50%; 
+	margin-left: -150; 
+	margin-top: -60; 
+	width: 300px; 
+	height: 120px; 
+	border: solid 4px black; 
+	padding: 10px;
+	background: white url('warning.jpg') no-repeat 10px 10px; 
+	text-align: center 
+}
+#DeletePageConfirmPopup h1 { margin-left: 30px; font-size: 120% }
+#DeletePageConfirmPopup p { margin-top: 10px; margin-bottom: 10px; clear: both }
+

@@ -1,0 +1,189 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CD3EAF7D-B964-4BAF-BE4D-E2844B4C7A33}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GalleryServerPro.Business</RootNamespace>
+    <AssemblyName>GalleryServerPro.Business</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GalleryServerPro.ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.RegularExpressions" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Album.cs" />
+    <Compile Include="AlbumDeleteBehavior.cs" />
+    <Compile Include="AlbumSaveBehavior.cs" />
+    <Compile Include="AppSetting.cs" />
+    <Compile Include="Audio.cs" />
+    <Compile Include="BackupFile.cs" />
+    <Compile Include="ExternalThumbnailCreator.cs" />
+    <Compile Include="Declarations.cs" />
+    <Compile Include="ExternalMediaObject.cs" />
+    <Compile Include="Gallery.cs" />
+    <Compile Include="GalleryServerRoleCollection.cs" />
+    <Compile Include="DisplayObject.cs" />
+    <Compile Include="Factory.cs" />
+    <Compile Include="Fraction.cs" />
+    <Compile Include="GalleryObjectCollection.cs" />
+    <Compile Include="GalleryObjectMetadataItemCollection.cs" />
+    <Compile Include="GalleryServerRole.cs" />
+    <Compile Include="GenericMediaObject.cs" />
+    <Compile Include="GenericThumbnailCreator.cs" />
+    <Compile Include="GlobalConstants.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="HelperFunctions.cs" />
+    <Compile Include="HtmlValidator.cs" />
+    <Compile Include="Image.cs" />
+    <Compile Include="ImageHelper.cs" />
+    <Compile Include="ImageOptimizedCreator.cs" />
+    <Compile Include="GalleryObjectMetadataItem.cs" />
+    <Compile Include="ImageOriginalCreator.cs" />
+    <Compile Include="IntegerCollection.cs" />
+    <Compile Include="MediaObjectDeleteBehavior.cs" />
+    <Compile Include="MediaObjectHashKeys.cs" />
+    <Compile Include="MediaObjectMetadataExtractor.cs" />
+    <Compile Include="MediaObjectSaveBehavior.cs" />
+    <Compile Include="GalleryObject.cs" />
+    <Compile Include="ImageThumbnailCreator.cs" />
+    <Compile Include="MetadataItem.cs" />
+    <Compile Include="MimeType.cs" />
+    <Compile Include="NullObjects\NullDisplayObject.cs" />
+    <Compile Include="NullObjects\NullDisplayObjectCreator.cs" />
+    <Compile Include="NullObjects\NullGalleryObject.cs" />
+    <Compile Include="NullObjects\NullMimeType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityManager.cs" />
+    <Compile Include="SynchronizationManager.cs" />
+    <Compile Include="SynchronizationStatus.cs" />
+    <Compile Include="Video.cs" />
+    <Compile Include="Watermark.cs" />
+    <Compile Include="ZipUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TIS.GSP.Business.Interfaces\TIS.GSP.Business.Interfaces.csproj">
+      <Project>{20DFE2A2-2532-4AFE-8B4B-5BE8E3F8492F}</Project>
+      <Name>TIS.GSP.Business.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TIS.GSP.Configuration\TIS.GSP.Configuration.csproj">
+      <Project>{4FDA2DD0-EB77-42DB-8683-D1588A940392}</Project>
+      <Name>TIS.GSP.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TIS.GSP.ErrorHandler\TIS.GSP.ErrorHandler.csproj">
+      <Project>{FC3B5E2D-E0AB-47FC-A126-64AA48982947}</Project>
+      <Name>TIS.GSP.ErrorHandler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TIS.GSP.Provider\TIS.GSP.Provider.csproj">
+      <Project>{5C79A39E-6B63-42F2-B4F6-D69576DF7F5C}</Project>
+      <Name>TIS.GSP.Provider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TracingTools\TracingTools.vbproj">
+      <Project>{66E43FB8-A7ED-48DA-A9D4-534F3E760A39}</Project>
+      <Name>TracingTools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagrams\ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagrams\GalleryObjectMetadata.cd" />
+    <None Include="Resources\GenericThumbnailImage_Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenericThumbnailImage_Doc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenericThumbnailImage_PowerPoint.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenericThumbnailImage_Excel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenericThumbnailImage_PDF.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenericThumbnailImage_Audio.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenericThumbnailImage_Video.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenericThumbnailImage_Unknown.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assemblies\GalleryServerPro.ICSharpCode.SharpZipLib.dll" />
+    <Content Include="assemblies\Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+    <Content Include="assemblies\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <None Include="Resources\GSP_Logo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,9 @@
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\gsweb\bin\GalleryServerPro.Data.SqlServer.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\gsweb\bin\GalleryServerPro.Data.SqlServer.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Data.SqlServer\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Data.SqlServer\obj\Debug\GalleryServerPro.Data.SqlServer.Properties.Resources.resources
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Data.SqlServer\obj\Debug\TIS.GSP.Data.SqlServer.csproj.GenerateResource.Cache
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Data.SqlServer\obj\Debug\GalleryServerPro.Data.SqlServer.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.Data.SqlServer\obj\Debug\GalleryServerPro.Data.SqlServer.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\Website\bin\GalleryServerPro.Data.SqlServer.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\Website\bin\GalleryServerPro.Data.SqlServer.pdb

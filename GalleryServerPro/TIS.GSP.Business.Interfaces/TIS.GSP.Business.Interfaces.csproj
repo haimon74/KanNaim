@@ -1,0 +1,94 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{20DFE2A2-2532-4AFE-8B4B-5BE8E3F8492F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GalleryServerPro.Business.Interfaces</RootNamespace>
+    <AssemblyName>GalleryServerPro.Business.Interfaces</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SignAssembly>false</SignAssembly>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IHtmlValidator.cs" />
+    <Compile Include="IAppError.cs" />
+    <Compile Include="IBackupFile.cs" />
+    <Compile Include="IGallery.cs" />
+    <Compile Include="IGalleryServerRoleCollection.cs" />
+    <Compile Include="IGalleryObjectMetadataItemCollection.cs" />
+    <Compile Include="GlobalEnums.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="IAlbum.cs" />
+    <Compile Include="IDataProvider.cs" />
+    <Compile Include="IDeleteBehavior.cs" />
+    <Compile Include="IDisplayObject.cs" />
+    <Compile Include="IDisplayObjectCreator.cs" />
+    <Compile Include="IGalleryObject.cs" />
+    <Compile Include="IGalleryObjectCollection.cs" />
+    <Compile Include="IGalleryObjectMetadataItem.cs" />
+    <Compile Include="IGalleryServerRole.cs" />
+    <Compile Include="IIntegerCollection.cs" />
+    <Compile Include="IMimeType.cs" />
+    <Compile Include="IAppErrorCollection.cs" />
+    <Compile Include="ISaveBehavior.cs" />
+    <Compile Include="ISynchronizationStatus.cs" />
+    <Compile Include="IMediaObjectHtmlBuilder.cs" />
+    <Compile Include="MediaObjectType.cs" />
+    <Compile Include="MetadataEnums.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

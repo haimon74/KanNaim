@@ -1,0 +1,197 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+TechInfoSystems.TracingTools
+</name>
+</assembly>
+<members>
+<member name="P:TechInfoSystems.TracingTools.Tools.SkipEventArgs">
+	<summary>
+ Gets / sets a value indicating whether to not record any information about event arguments. If false, 
+ Reflection is used to query the EventArgs variable for those methods that pass it as a parameter.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:TechInfoSystems.TracingTools.Tools.SkipArguments">
+	<summary>
+ Gets / sets a value indicating whether to not record any information about method arguments. If false,
+ Reflection is used to query the calling method for certain trace issues.
+ </summary>
+	<value></value>
+	<returns></returns>
+</member><member name="P:TechInfoSystems.TracingTools.Tools.TraceLevel">
+	<summary>
+ Gets / sets the TraceLevel to use.
+ </summary>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.ClearListeners">
+	<summary>
+ Remove all attached listeners.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.AddListener(System.Diagnostics.TraceListener)">
+	<summary>
+ Add the specified listener.
+ </summary>
+	<param name="traceListener">A TraceListener to add.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.RemoveListener(System.Diagnostics.TraceListener)">
+	<summary>
+ Removes the specified listener.
+ </summary>
+	<param name="tracelistener">A TraceListener to remove.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.HasListeners">
+	<summary>
+ Returns a value indicating whether there are currently any attached listeners.
+ </summary>
+	<returns>Returns a value indicating whether there are currently any attached listeners.</returns>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.ObjectIsNotNull(System.String,System.Object)">
+	<summary>
+ Verifies that the specified object is not null. Default trace level is Error.
+ </summary>
+	<param name="objectName">The name of the object to test.</param>
+	<param name="obj">The object to test for null.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.ObjectIsNotNull(System.String,System.Diagnostics.TraceLevel,System.Object)">
+	<summary>
+ Verifies that the specified object is not null. Default trace level is Error.
+ </summary>
+	<param name="objectName">The name of the object to test.</param>
+	<param name="traceLevel">The TraceLevel to use for this trace issue.</param>
+	<param name="obj">The object to test for null.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.IntLessThan(System.String,System.Int32,System.Int32)">
+	<summary>
+ Verifies that the specified value is less than the specified maximum. Default trace level is Error.
+ </summary>
+	<param name="intName">The name of the integer to test.</param>
+	<param name="intValue">The integer to compare with the maximum value specified by the HighBound parameter.</param>
+	<param name="HighBound">The maximum allowed value of the val parameter.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.IntLessThan(System.String,System.Diagnostics.TraceLevel,System.Int32,System.Int32)">
+	<summary>
+ Verifies that the specified value is less than the specified maximum. Default trace level is Error.
+ </summary>
+	<param name="intName">The name of the integer to test.</param>
+	<param name="traceLevel">The TraceLevel to use for this trace issue.</param>
+	<param name="intValue">The integer to compare with the maximum value specified by the HighBound parameter.</param>
+	<param name="HighBound">The maximum allowed value of the val parameter.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.IntGreaterThan(System.String,System.Int32,System.Int32)">
+	<summary>
+ Verifies that the specified value is greater than the specified minimum. Default trace level is Error.
+ </summary>
+	<param name="intName">The name of the integer to test.</param>
+	<param name="intValue">The integer to compare with the maximum value specified by the LowBound parameter.</param>
+	<param name="LowBound">The minimum allowed value of the val parameter.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.IntGreaterThan(System.String,System.Diagnostics.TraceLevel,System.Int32,System.Int32)">
+	<summary>
+ Verifies that the specified value is greater than the specified minimum. Default trace level is Error.
+ </summary>
+	<param name="intName">The name of the integer to test.</param>
+	<param name="traceLevel">The TraceLevel to use for this trace issue.</param>
+	<param name="intValue">The integer to compare with the maximum value specified by the LowBound parameter.</param>
+	<param name="LowBound">The minimum allowed value of the val parameter.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.IntInRange(System.String,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Verifies that the specified value is between the range specified by the lowBound and highBound parameters.
+ The value is considered to "pass" if it matches one of the parameters (i.e. the range is inclusive of the
+ parameters.) Default trace level is Error.
+ </summary>
+	<param name="intName">The name of the integer to test.</param>
+	<param name="intValue">The integer to compare with the lowBound and highBound parameters.</param>
+	<param name="lowBound">The minimum allowed value of the val parameter.</param>
+	<param name="highBound">The maximum allowed value of the val parameter.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.IntInRange(System.String,System.Diagnostics.TraceLevel,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Verifies that the specified value is between the range specified by the lowBound and highBound parameters.
+ The value is considered to "pass" if it matches one of the parameters (i.e. the range is inclusive of the
+ parameters.) Default trace level is Error.
+ </summary>
+	<param name="intName">The name of the integer to test.</param>
+	<param name="traceLevel">The TraceLevel to use for this trace issue.</param>
+	<param name="intValue">The integer to compare with the lowBound and highBound parameters.</param>
+	<param name="lowBound">The minimum allowed value of the val parameter.</param>
+	<param name="highBound">The maximum allowed value of the val parameter.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.StringRequired(System.String,System.String)">
+	<summary>
+ Verifies that the specified string is not null or empty. Default trace level is Error.
+ </summary>
+	<param name="stringName">The name of the string to test.</param>
+	<param name="stringValue">The reference to the string to test.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.StringRequired(System.String,System.Diagnostics.TraceLevel,System.String)">
+	<summary>
+ Verifies that the specified string is not null or empty. Default trace level is Error.
+ </summary>
+	<param name="stringName">The name of the string to test.</param>
+	<param name="traceLevel">The TraceLevel to use for this message.</param>
+	<param name="stringValue">The reference to the string to test.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.StartingEvent(System.Object,System.EventArgs)">
+	<summary>
+ Records a trace message indicating the beginning of an event. Default trace level is Info.
+ </summary>
+	<param name="sender">The object that caused the event.</param>
+	<param name="e">An EventArgs that contains the event data.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.StartingEvent(System.Object,System.EventArgs,System.Diagnostics.TraceLevel)">
+	<summary>
+ Records a trace message indicating the beginning of an event. Default trace level is Info.
+ </summary>
+	<param name="sender">The object that caused the event.</param>
+	<param name="e">An EventArgs that contains the event data.</param>
+	<param name="traceLevel">The TraceLevel to use for this message.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.StartingMethod(System.Object[])">
+	<summary>
+ Records a trace message indicating the beginning of a method. Default trace level is Info.
+ </summary>
+	<param name="params">Zero or more objects representing the parameters of the method.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.StartingMethod(System.Diagnostics.TraceLevel,System.Object[])">
+	<summary>
+ Records a trace message indicating the beginning of a method. Default trace level is Info.
+ </summary>
+	<param name="traceLevel">The TraceLevel to use for this message.</param>
+	<param name="params">Zero or more objects representing the parameters of the method.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.InCondition(System.String)">
+	<summary>
+ Records a trace message indicating the current execution point is within a conditional (e.g. if..else). Default trace level is Verbose.
+ </summary>
+	<param name="description">A description of the conditional of the current execution point.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.InCondition(System.String,System.Diagnostics.TraceLevel)">
+	<summary>
+ Records a trace message indicating the current execution point is within a conditional (e.g. if..else). Default trace level is Verbose.
+ </summary>
+	<param name="description">A description of the conditional of the current execution point.</param>
+	<param name="traceLevel">The TraceLevel to use for this message.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.InFor(System.Int32)">
+	<summary>
+ Records a trace message indicating the current execution point is within a for loop (e.g. for, foreach). Default trace level is Verbose.
+ </summary>
+	<param name="val">The current iteration within the for loop.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.InFor(System.Int32,System.Diagnostics.TraceLevel)">
+	<summary>
+ Records a trace message indicating the current execution point is within a for loop (e.g. for, foreach). Default trace level is Verbose.
+ </summary>
+	<param name="val">The current iteration within the for loop.</param>
+	<param name="traceLevel">The TraceLevel to use for this message.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.InFor(System.String,System.Int32)">
+	<summary>
+ Records a trace message indicating the current execution point is within a for loop (e.g. for, foreach). Default trace level is Verbose.
+ </summary>
+	<param name="description">The description of the for loop.</param>
+	<param name="val">The current iteration within the for loop.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.InFor(System.String,System.Int32,System.Diagnostics.TraceLevel)">
+	<summary>
+ Records a trace message indicating the current execution point is within a for loop (e.g. for, foreach). Default trace level is Verbose.
+ </summary>
+	<param name="description">The description of the for loop.</param>
+	<param name="val">The current iteration within the for loop.</param>
+	<param name="traceLevel">The TraceLevel to use for this message.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.MarkSpot(System.String)">
+	<summary>
+ Records a general-purpose trace message with the desired description. Default trace level is Verbose.
+ </summary>
+	<param name="description">A string describing the current execution point.</param>
+</member><member name="M:TechInfoSystems.TracingTools.Tools.MarkSpot(System.String,System.Diagnostics.TraceLevel)">
+	<summary>
+ Records a general-purpose trace message with the desired description. Default trace level is Verbose.
+ </summary>
+	<param name="description">A string describing the current execution point.</param>
+	<param name="traceLevel">The TraceLevel to use for this message.</param>
+</member>
+</members>
+</doc>

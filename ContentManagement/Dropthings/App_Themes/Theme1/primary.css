@@ -1,0 +1,95 @@
+﻿body 
+{
+	background-color: transparent; 	font-family: Arial; font-size:small; color: Black; 
+	direction:rtl; text-align:right;  overflow:visible; position:relative; float:none; vertical-align:text-top; 
+	unicode-bidi:normal; word-spacing:normal; z-index:10;	
+}
+
+#Table_MasterTemplate
+{
+	height:auto; width:100%; border-collapse:collapse;
+}
+
+#TableRow_Header
+{
+	height:50px; width:100%; background-color: #3399FF;
+}
+#TableRow_Footer
+{
+	height:50px; width:100%; background-color: #CCFFCC;
+}
+#TableRow_Content
+{
+	height:700px; width:100%; background-color: Transparent;
+}
+#TableData_RightSideMenu
+{
+	width:20%; background-color: #FFFFCC; vertical-align:top;
+}
+#TableData_PageContent
+{
+	width:70%; background-color:Transparent;
+}
+#TableData_LeftSide
+{
+	width:10%; background-color:#FFCCFF;
+}
+
+table
+{
+	margin: 0px 5px 1px 3px;
+}
+td
+{
+	padding: 0 10px 0 10px;
+	text-align: right;
+	margin-right: 80px;
+}
+
+.InputDiv
+{
+	direction:rtl; text-align:right; margin: 10px 10px 10px 10px; padding: 5px 5px 5px 5px; clear:both;
+}
+
+.InputLabel
+{
+	width: 120px; float:right;background-color:Transparent;
+	margin: 5px 5px 5px 5px;
+}
+.InputContent
+{
+	width: 200px; float:right;background-color:Transparent;
+	margin: 5px 5px 5px 5px;
+}
+.InputValidation
+{
+	width:30px; float:right;background-color:Transparent;
+	margin: 5px 5px 5px 5px; clear:left;
+}
+.InputLongEnglishContent
+{
+	width: 400px; float:right;background-color:Transparent;direction:ltr; text-align:left;
+	margin: 5px 5px 5px 5px;
+}
+.InputLongHebrewContent
+{
+	width: 400px; float:right;background-color:Transparent;direction:rtl; text-align:right;
+	margin: 5px 5px 5px 5px; 
+}
+.InputErrorMessage
+{
+	width:400px; float:right;background-color:Transparent;
+	margin: 5px 5px 5px 5px; clear:left;
+}
+
+
+a:link.demo {background-color:#B2FF99; font-size:medium; color:Blue;  font-style:italic}
+a:visited.demo {background-color:#FFFF85; font-size:small; color:Purple; font-style:italic; font-weight:bold;}
+a:hover.demo {background-color:#FF704D; font-size:large; color:Blue; font-weight:bold;}
+a:active.demo {background-color:#FF704D; font-size:medium; color:Green;} 
+
+
+.watermark{background-color: #DDDDDD;}
+.HebrewText{ text-align:right; direction:rtl;}
+.EnglishText{ text-align:left; direction:ltr;}
+

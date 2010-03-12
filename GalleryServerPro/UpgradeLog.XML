@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="TIS.GSP">
+</Property><Property Name="Solution File" Value="D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.sln">
+</Property><Property Name="Date" Value="Thursday, March 11, 2010">
+</Property><Property Name="Time" Value="8:08 AM">
+</Property></Properties><Event ErrorLevel="0" Project="TIS.GSP.Business" Source="TIS.GSP.Business\TIS.GSP.Business.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="TIS.GSP.Business" Source="TIS.GSP.Business\TIS.GSP.Business.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="TIS.GSP.Configuration" Source="TIS.GSP.Configuration\TIS.GSP.Configuration.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="TIS.GSP.Configuration" Source="TIS.GSP.Configuration\TIS.GSP.Configuration.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="TIS.GSP.Provider" Source="TIS.GSP.Provider\TIS.GSP.Provider.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="TIS.GSP.Provider" Source="TIS.GSP.Provider\TIS.GSP.Provider.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="TIS.GSP.ErrorHandler" Source="TIS.GSP.ErrorHandler\TIS.GSP.ErrorHandler.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="TIS.GSP.ErrorHandler" Source="TIS.GSP.ErrorHandler\TIS.GSP.ErrorHandler.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="TIS.GSP.Business.Interfaces" Source="TIS.GSP.Business.Interfaces\TIS.GSP.Business.Interfaces.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="TIS.GSP.Business.Interfaces" Source="TIS.GSP.Business.Interfaces\TIS.GSP.Business.Interfaces.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="gsweb" Source="gsweb\gsweb.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="gsweb" Source="gsweb\gsweb.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="TIS.GSP.Business.Wpf" Source="TIS.GSP.Business.Wpf\TIS.GSP.Business.Wpf.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="TIS.GSP.Business.Wpf" Source="TIS.GSP.Business.Wpf\TIS.GSP.Business.Wpf.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="TIS.GSP.WebControls" Source="TIS.GSP.WebControls\TIS.GSP.WebControls.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="TIS.GSP.WebControls" Source="TIS.GSP.WebControls\TIS.GSP.WebControls.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="TracingTools" Source="TracingTools\TracingTools.vbproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="TracingTools" Source="TracingTools\TracingTools.vbproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="TIS.GSP.Data.SQLite" Source="TIS.GSP.Data.SQLite\TIS.GSP.Data.SQLite.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="TIS.GSP.Data.SQLite" Source="TIS.GSP.Data.SQLite\TIS.GSP.Data.SQLite.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="TIS.GSP.Data.SqlServer" Source="TIS.GSP.Data.SqlServer\TIS.GSP.Data.SqlServer.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="TIS.GSP.Data.SqlServer" Source="TIS.GSP.Data.SqlServer\TIS.GSP.Data.SqlServer.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="TIS.GSP.Business.Resources" Source="TIS.GSP.Business.Resources\TIS.GSP.Business.Resources.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="TIS.GSP.Business.Resources" Source="TIS.GSP.Business.Resources\TIS.GSP.Business.Resources.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="TIS.GSP.Business.Wpf.Resources" Source="TIS.GSP.Business.Wpf.Resources\TIS.GSP.Business.Wpf.Resources.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="TIS.GSP.Business.Wpf.Resources" Source="TIS.GSP.Business.Wpf.Resources\TIS.GSP.Business.Wpf.Resources.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="" Source="TIS.GSP.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="TIS.GSP.sln" Description="Converted">
+</Event></UpgradeLog>

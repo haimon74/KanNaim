@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{07565317-4B14-47E4-9ACF-7FBB2B2966F2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UserControlsLibrary</RootNamespace>
+    <AssemblyName>UserControlsLibrary</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MenusTreeContainer.cs" />
+    <Compile Include="WebControls\BorderStyleDropDownList.cs" />
+    <Compile Include="WebControls\BorderWidthDropDownList.cs" />
+    <Compile Include="WebControls\LabelToSlideToolTip.cs" />
+    <Compile Include="WebControls\RadioButtonHtmlObjectType.cs" />
+    <Compile Include="WebControls\PositionDropDownList.cs" />
+    <Compile Include="WebControls\FloatDropDownList.cs" />
+    <Compile Include="WebControls\WordSpacingDropDownList.cs" />
+    <Compile Include="WebControls\LetterSpacingDropDownList.cs" />
+    <Compile Include="WebControls\TextDirectionDropDownList.cs" />
+    <Compile Include="WebControls\IsItalicFontCheckBox.cs" />
+    <Compile Include="WebControls\IsBoldFontCheckBox.cs" />
+    <Compile Include="WebControls\VerticalAlignmentDropDownList.cs" />
+    <Compile Include="WebControls\HorizontalAlignmentDropDownList.cs" />
+    <Compile Include="WebControls\FontFamilyDropDownList.cs" />
+    <Compile Include="WebControls\FontSizeDropDownList.cs" />
+    <Compile Include="WebControls\ListBoxInt32.cs" />
+    <Compile Include="WebControls\SessionLogin.cs" />
+    <Compile Include="WebControls\SideTreeMenu.cs" />
+    <Compile Include="WebControls\SideMenuDataSource.cs" />
+    <Compile Include="XmlSiteMapGenerator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{B6033CC1-4465-40DB-867A-8DB1680E9E2E}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Abstracts\" />
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

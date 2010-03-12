@@ -1,0 +1,6 @@
+<%@ Master Language="C#" AutoEventWireup="true" Codebehind="browse.master.cs" Inherits="GalleryServerPro.Web.Master.browse"
+	MasterPageFile="~/master/site.master" %>
+<%@ MasterType TypeName="GalleryServerPro.Web.Master.site" %>
+<asp:Content ID="ct2" ContentPlaceHolderID="c2" runat="server">
+	<asp:ContentPlaceHolder ID="c3" runat="server" />
+</asp:Content>

@@ -1,0 +1,13 @@
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.ErrorHandler\bin\Debug\GalleryServerPro.ErrorHandler.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.ErrorHandler\bin\Debug\GalleryServerPro.ErrorHandler.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.ErrorHandler\bin\Debug\GalleryServerPro.Business.Interfaces.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.ErrorHandler\bin\Debug\GalleryServerPro.Configuration.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.ErrorHandler\bin\Debug\GalleryServerPro.Business.Interfaces.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.ErrorHandler\bin\Debug\GalleryServerPro.Configuration.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.ErrorHandler\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.ErrorHandler\obj\Debug\GalleryServerPro.ErrorHandler.Properties.Resources.resources
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.ErrorHandler\obj\Debug\TIS.GSP.ErrorHandler.csproj.GenerateResource.Cache
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.ErrorHandler\obj\Debug\GalleryServerPro.ErrorHandler.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.ErrorHandler\obj\Debug\GalleryServerPro.ErrorHandler.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.ErrorHandler\bin\Debug\GalleryServerPro.Provider.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GalleryServerPro\TIS.GSP.ErrorHandler\bin\Debug\GalleryServerPro.Provider.pdb

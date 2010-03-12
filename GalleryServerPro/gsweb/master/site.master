@@ -1,0 +1,59 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="site.master.cs" Inherits="GalleryServerPro.Web.Master.site" MasterPageFile="~/master/global.master" %>
+
+<%@ MasterType TypeName="GalleryServerPro.Web.Master.global" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%@ Register Src="../uc/footer.ascx" TagName="footer" TagPrefix="uc1" %>
+<%@ Register Src="../uc/albummenu.ascx" TagName="albummenu" TagPrefix="uc1" %>
+<asp:Content ID="ct1" ContentPlaceHolderID="c1" runat="server">
+	<div id="wrapper">
+		<div id="header">
+			<asp:Panel ID="pnlheaderloginandsearch" runat="server" CssClass="headerloginandsearch">
+				<asp:LoginView ID="LoginView1" runat="server" EnableViewState="false">
+					<LoggedInTemplate>
+						<asp:Panel ID="Panel1" runat="server" CssClass="loggedonview" EnableViewState="false">
+							<asp:LoginName ID="LoginName1" runat="server" EnableViewState="false" FormatString="<%$ Resources:GalleryServerPro, Master_Site_Logged_On_Msg %>" />
+							<asp:LoginStatus ID="LoginStatus1" runat="server" EnableViewState="false" OnLoggedOut="LoginStatus1_LoggedOut" LoginText="<%$ Resources:GalleryServerPro, Master_Site_Login_Text %>"
+								LogoutText="<%$ Resources:GalleryServerPro, Master_Site_Logout_Text %>" />
+							&nbsp;<asp:HyperLink runat="server" NavigateUrl="~/myaccount.aspx" Text="<%$ Resources:GalleryServerPro, Master_Site_My_Account_Link_Text%>"
+								CssClass="fs" />
+						</asp:Panel>
+					</LoggedInTemplate>
+					<AnonymousTemplate>
+						<asp:Login ID="Login1" runat="server" RememberMeSet="true" DisplayRememberMe="False" Orientation="Horizontal" LabelStyle-CssClass="fss" TextBoxStyle-CssClass="loginwidth"
+							TextLayout="TextOnTop" TitleText="" LoginButtonType="Button" LoginButtonStyle-CssClass="loginbutton" EnableViewState="False"
+							OnLoginError="Login1_LoginError" OnLoggedIn="Login1_LoggedIn" FailureText="<%$ Resources:GalleryServerPro, Master_Site_Login_Failure_Text %>"
+							LoginButtonText="<%$ Resources:GalleryServerPro, Master_Site_Login_Button_Text %>" PasswordLabelText="<%$ Resources:GalleryServerPro, Master_Site_Password_Label_Text %>"
+							PasswordRequiredErrorMessage="<%$ Resources:GalleryServerPro, Master_Site_Password_Required_Error_Msg %>" RememberMeText="<%$ Resources:GalleryServerPro, Master_Site_Remember_Me_Text %>"
+							UserNameLabelText="<%$ Resources:GalleryServerPro, Master_Site_UserName_Label_Text %>" UserNameRequiredErrorMessage="<%$ Resources:GalleryServerPro, Master_Site_UserName_Required_Error_Msg %>">
+						</asp:Login>
+					</AnonymousTemplate>
+				</asp:LoginView>
+				<asp:Panel ID="pnlSearch" runat="server" DefaultButton="btnSearch" CssClass="search">
+					<p>
+						<asp:TextBox ID="txtSearch" runat="server" CssClass="searchbox" />
+						<asp:Button ID="btnSearch" runat="server" CausesValidation="false" 
+              CssClass="searchbutton" Text="<%$ Resources:GalleryServerPro, Master_Site_Search_Button_Text%>"
+							ToolTip="<%$ Resources:GalleryServerPro, Master_Site_Search_Button_Tooltip%>" 
+              onclick="btnSearch_Click" /></p>
+				</asp:Panel>
+			</asp:Panel>
+			<cc1:TextBoxWatermarkExtender ID="TextBoxWatermarkExtender1" runat="server" TargetControlID="txtSearch" WatermarkCssClass="searchboxwatermark searchbox"
+				WatermarkText="<%$ Resources:GalleryServerPro, Master_Site_Search_Watermark_Text%>">
+			</cc1:TextBoxWatermarkExtender>
+			<p class="bannertext" runat="server">
+				<asp:PlaceHolder ID="phHeaderTitle" runat="server" EnableViewState="false" />
+			</p>
+		</div>
+		<uc1:albummenu ID="Albummenu1" runat="server" />
+		<asp:ContentPlaceHolder ID="c1" runat="server" />
+		<div id="content" runat="server" class="content">
+			<noscript>
+				<p class="msgwarning">
+					<asp:Literal ID="litNoScript" runat="server" Text="<%$ Resources:GalleryServerPro, Msg_NoScriptDefaultText%>" EnableViewState="false" /></p>
+			</noscript>
+			<asp:ContentPlaceHolder ID="c2" runat="server">
+			</asp:ContentPlaceHolder>
+			<uc1:footer ID="Footer1" runat="server" />
+		</div>
+	</div>
+</asp:Content>

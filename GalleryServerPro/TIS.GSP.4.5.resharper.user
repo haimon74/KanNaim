@@ -1,0 +1,59 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="FC3B5E2D-E0AB-47FC-A126-64AA48982947/f:AppErrorCollection.cs" caret="428" fromTop="12" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/f:default.aspx.cs" caret="0" fromTop="0" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/f:web_sqlserver_2.0.config" caret="2311" fromTop="18" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/f:web.config" caret="14687" fromTop="23" />
+      <File id="9D9BA288-5BD8-469B-8807-E82BB9F5E406/f:SqlUpgrade_2_1_3162_to_2_3_3421_SqlServer2005.sql" caret="2199" fromTop="14" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/f:web_3.5.config" caret="10095" fromTop="20" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/d:gs/d:pages/f:install.ascx" caret="626" fromTop="9" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/d:gs/d:config/f:galleryserverpro.config" caret="45565" fromTop="16" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/d:App_GlobalResources/f:GalleryServerPro.resx" caret="20472" fromTop="16" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/d:CodeFiles/f:GalleryPage.cs" caret="0" fromTop="0" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/d:App_GlobalResources/f:GalleryServerPro1.designer.cs" caret="1369" fromTop="29" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/f:default.aspx" caret="683" fromTop="15" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/f:web.config" caret="14687" fromTop="7" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/f:web.config" caret="14687" fromTop="27" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/f:web.config" caret="14687" fromTop="18" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/f:web.config" caret="14687" fromTop="23" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/f:web.config" caret="14687" fromTop="21" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/f:web.config" caret="14687" fromTop="26" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/f:web.config" caret="14687" fromTop="19" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/f:web.config" caret="14687" fromTop="32" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/f:default.aspx" caret="484" fromTop="8" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/f:web.config" caret="14687" fromTop="19" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/d:gs/d:config/f:galleryserverpro.config" caret="302" fromTop="10" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/d:gs/d:config/f:galleryserverpro.config" caret="4" fromTop="0" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/d:gs/d:config/f:galleryserverpro.config" caret="45526" fromTop="19" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/f:default.aspx" caret="703" fromTop="18" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/d:gs/d:pages/f:install.ascx" caret="545" fromTop="5" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/d:gs/d:pages/f:install.ascx" caret="39776" fromTop="9" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/d:gs/d:pages/f:install.ascx" caret="626" fromTop="9" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/d:gs/d:config/f:galleryserverpro.config" caret="45565" fromTop="16" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/d:App_GlobalResources/f:GalleryServerPro.resx" caret="20594" fromTop="19" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/d:App_GlobalResources/f:GalleryServerPro.resx" caret="566573" fromTop="16" />
+      <File id="A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D/d:App_GlobalResources/f:GalleryServerPro1.designer.cs" caret="566542" fromTop="12088" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="SqlClient" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

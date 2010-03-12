@@ -1,0 +1,76 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="adminMstr.Master.cs" Inherits="GalleryServerPro.Web.Master.adminMstr"
+	MasterPageFile="~/master/site.master" %>
+
+<%@ MasterType TypeName="GalleryServerPro.Web.Master.site" %>
+<%@ Register Assembly="ComponentArt.Web.UI" Namespace="ComponentArt.Web.UI" TagPrefix="ComponentArt" %>
+<asp:Content ID="ct1" ContentPlaceHolderID="c1" runat="server">
+	<div id="navigation">
+		<ComponentArt:NavBar ID="nbAdminMenu" runat="server" Height="500px" Width="200px"
+			ExpandSinglePath="false" ImagesBaseUrl="~/images/componentart/navbar/" CssClass="nb0NavBar"
+			DefaultItemLookId="TopItemLook" DefaultSelectedItemLookId="Level2SelectedItemLook">
+			<ItemLooks>
+				<ComponentArt:ItemLook LookId="TopItemLook" CssClass="nb0TopItem" HoverCssClass="nb0TopItemHover"
+					ActiveCssClass="nb0TopItemActive" RightIconUrl="arrow.gif" ExpandedRightIconUrl="arrow_expanded.gif" />
+				<ComponentArt:ItemLook LookId="Level2ItemLook" CssClass="nb0Level2Item" HoverCssClass="nb0Level2ItemHover" />
+				<ComponentArt:ItemLook LookId="Level2SelectedItemLook" CssClass="nb0Level2ItemSelected"
+					HoverCssClass="nb0Level2ItemSelected" />
+			</ItemLooks>
+			<Items>
+				<ComponentArt:NavBarItem runat="server" Text="<%$ Resources:GalleryServerPro, Admin_Site_Settings_Hdr_Text %>" SubGroupCssClass="nb0Level2Group"
+					DefaultSubItemLookId="Level2ItemLook" SelectedLookId="TopItemLook" Expanded="true" Selectable="false">
+					<ComponentArt:NavBarItem runat="server" Text="<%$ Resources:GalleryServerPro, Admin_Site_Settings_General_Link_Text %>" NavigateUrl="default.aspx">
+					</ComponentArt:NavBarItem>
+					<ComponentArt:NavBarItem runat="server" Text="<%$ Resources:GalleryServerPro, Admin_Site_Settings_Email_Link_Text %>" NavigateUrl="email.aspx">
+					</ComponentArt:NavBarItem>
+					<ComponentArt:NavBarItem runat="server" Text="<%$ Resources:GalleryServerPro, Admin_Site_Settings_Backup_Restore_Link_Text %>" NavigateUrl="backup-restore.aspx">
+					</ComponentArt:NavBarItem>
+				</ComponentArt:NavBarItem>
+				<ComponentArt:NavBarItem runat="server" Text="<%$ Resources:GalleryServerPro, Admin_Membership_Hdr_Text %>" SubGroupCssClass="nb0Level2Group"
+					DefaultSubItemLookId="Level2ItemLook" SelectedLookId="TopItemLook" Expanded="true" Selectable="false">
+					<ComponentArt:NavBarItem runat="server" Text="<%$ Resources:GalleryServerPro, Admin_Membership_Manage_Roles_Link_Text %>" NavigateUrl="manageroles.aspx">
+					</ComponentArt:NavBarItem>
+					<ComponentArt:NavBarItem runat="server" Text="<%$ Resources:GalleryServerPro, Admin_Membership_Manage_Users_Link_Text %>" NavigateUrl="manageusers.aspx">
+					</ComponentArt:NavBarItem>
+				</ComponentArt:NavBarItem>
+				<ComponentArt:NavBarItem ID="NavBarItem1" runat="server" Text="<%$ Resources:GalleryServerPro, Admin_Albums_Hdr_Text %>" SubGroupCssClass="nb0Level2Group"
+					DefaultSubItemLookId="Level2ItemLook" SelectedLookId="TopItemLook" Expanded="true" Selectable="false">
+					<ComponentArt:NavBarItem ID="NavBarItem2" runat="server" Text="<%$ Resources:GalleryServerPro, Admin_Albums_General_Link_Text %>" NavigateUrl="albums.aspx">
+					</ComponentArt:NavBarItem>
+				</ComponentArt:NavBarItem>
+				<ComponentArt:NavBarItem runat="server" Text="<%$ Resources:GalleryServerPro, Admin_Media_Objects_Hdr_Text %>" SubGroupCssClass="nb0Level2Group"
+					DefaultSubItemLookId="Level2ItemLook" SelectedLookId="TopItemLook" Expanded="true" Selectable="false">
+					<ComponentArt:NavBarItem runat="server" Text="<%$ Resources:GalleryServerPro, Admin_Media_Objects_General_Link_Text %>" NavigateUrl="mediaobjects.aspx">
+					</ComponentArt:NavBarItem>
+					<ComponentArt:NavBarItem runat="server" Text="<%$ Resources:GalleryServerPro, Admin_Media_Objects_Types_Link_Text %>" NavigateUrl="mimetypes.aspx">
+					</ComponentArt:NavBarItem>
+					<ComponentArt:NavBarItem runat="server" Text="<%$ Resources:GalleryServerPro, Admin_Media_Objects_Types_Images_Text %>" NavigateUrl="images.aspx">
+					</ComponentArt:NavBarItem>
+					<ComponentArt:NavBarItem runat="server" Text="<%$ Resources:GalleryServerPro, Admin_Media_Objects_Video_Audio_Other_Link_Text %>" NavigateUrl="video-audio-other.aspx">
+					</ComponentArt:NavBarItem>
+				</ComponentArt:NavBarItem>
+			</Items>
+		</ComponentArt:NavBar>
+	</div>
+</asp:Content>
+<asp:Content ID="ct2" ContentPlaceHolderID="c2" runat="server">
+	<h1 class="admin">
+		<asp:Literal ID="litPageHeader" runat="server" Text="<%$ Resources:GalleryServerPro, Admin_Header %>" />
+	</h1>
+	<div style="float: right">
+		<p class="minimargin">
+			<asp:Button ID="btnOkTop" runat="server" Text="<%$ Resources:GalleryServerPro, Default_Task_Ok_Button_Text %>"
+				TabIndex="1" AccessKey="O" />
+			<asp:Button ID="btnCancelTop" runat="server" OnClick="btnCancel_Click" CausesValidation="false"
+				Text="<%$ Resources:GalleryServerPro, Default_Task_Cancel_Button_Text %>" ToolTip="<%$ Resources:GalleryServerPro, Default_Task_Cancel_Button_Tooltip %>" />&nbsp;</p>
+	</div>
+	<h2 class="admin">
+		<asp:Label ID="lblAdminPageHeader" runat="server" />
+	</h2>
+	<asp:ContentPlaceHolder ID="c3" runat="server" />
+	<asp:Panel ID="OkCancelContainer" runat="server" CssClass="rightBottom">
+		<p class="minimargin">
+			<asp:Button ID="btnOkBottom" runat="server" Text="<%$ Resources:GalleryServerPro, Default_Task_Ok_Button_Text %>" />
+			<asp:Button ID="btnCancelBottom" runat="server" OnClick="btnCancel_Click" CausesValidation="false"
+				Text="<%$ Resources:GalleryServerPro, Default_Task_Cancel_Button_Text %>" ToolTip="<%$ Resources:GalleryServerPro, Default_Task_Cancel_Button_Tooltip %>" />&nbsp;</p>
+	</asp:Panel>
+</asp:Content>

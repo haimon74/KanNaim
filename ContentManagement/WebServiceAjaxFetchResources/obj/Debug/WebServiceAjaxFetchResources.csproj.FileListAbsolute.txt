@@ -1,0 +1,14 @@
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ContentManagement\WebServiceAjaxFetchResources\bin\WebServiceAjaxFetchResources.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ContentManagement\WebServiceAjaxFetchResources\bin\WebServiceAjaxFetchResources.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ContentManagement\WebServiceAjaxFetchResources\bin\AjaxControlToolkit.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ContentManagement\WebServiceAjaxFetchResources\bin\AjaxControlToolkit.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ContentManagement\WebServiceAjaxFetchResources\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ContentManagement\WebServiceAjaxFetchResources\obj\Debug\WebServiceAjaxFetchResources.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\ContentManagement\WebServiceAjaxFetchResources\obj\Debug\WebServiceAjaxFetchResources.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\ContentManagement\WebServiceAjaxFetchResources\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\ContentManagement\WebServiceAjaxFetchResources\obj\Debug\WebServiceAjaxFetchResources.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\ContentManagement\WebServiceAjaxFetchResources\bin\WebServiceAjaxFetchResources.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\ContentManagement\WebServiceAjaxFetchResources\bin\WebServiceAjaxFetchResources.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\ContentManagement\WebServiceAjaxFetchResources\bin\AjaxControlToolkit.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\ContentManagement\WebServiceAjaxFetchResources\bin\AjaxControlToolkit.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\ContentManagement\WebServiceAjaxFetchResources\obj\Debug\WebServiceAjaxFetchResources.dll

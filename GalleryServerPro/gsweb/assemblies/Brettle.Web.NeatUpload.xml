@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>/home/brettle/src/neatupload/exported/NeatUpload-1.2.19/bin/Debug/Brettle.Web.NeatUpload</name>
+    </assembly>
+    <members>
+        <member name="T:Brettle.Web.NeatUpload.UploadHttpModule">
+            <summary>
+            Limits the size of incoming HTTP requests and allows <see cref="T:Brettle.Web.NeatUpload.ProgressBar" /> to monitor the progress of
+            upload requests associated with <see cref="T:Brettle.Web.NeatUpload.InputFile" /> controls.</summary>
+            <remarks>
+            To use this module, add it to the <see href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpgenref/html/gngrfhttpmodulessection.asp">
+            httpModules section</see> of your Web.config like this:
+            <example><code escaped="true"><configuration><system.web><httpModules><add name="UploadHttpModule" type="Brettle.Web.NeatUpload.UploadHttpModule, Brettle.Web.NeatUpload" /></httpModules></system.web></configuration></code></example></remarks>
+        </member>
+        <member name="M:Brettle.Web.NeatUpload.UploadHttpModule.WaitForUploadToComplete">
+            <summary>
+            Waits for the current upload request to finish.</summary>
+            <remarks>
+                <para>
+            If the UploadHttpModule is being used for the current request, this method will not return until the
+            module has received and processed the entire request.  If the UploadHttpModule is not being used for
+            the current request, this method will return immediately.  Note: the UploadHttpModule is only used if
+            it has been added in the httpModules section of the Web.config, the neatUpload section's
+            useHttpModule attribute is "true" for the page being requested (which is the default), and the
+            request has a content type of multipart/form-data.</para>
+            </remarks>
+        </member>
+        <member name="T:Brettle.Web.NeatUpload.InputFile">
+            <summary>
+            File upload control that can be used with the <see cref="T:Brettle.Web.NeatUpload.UploadHttpModule" /> and <see cref="T:Brettle.Web.NeatUpload.ProgressBar" />.
+            </summary>
+            <remarks>
+            On post back, you can use <see cref="P:Brettle.Web.NeatUpload.InputFile.HasFile" /> to determine whether a file has been uploaded and use
+            <see cref="P:Brettle.Web.NeatUpload.InputFile.FileName" />, <see cref="P:Brettle.Web.NeatUpload.InputFile.ContentType" />, <see cref="P:Brettle.Web.NeatUpload.InputFile.ContentLength" />, <see cref="P:Brettle.Web.NeatUpload.InputFile.FileContent" />
+            to access the file's name, MIME type, length, and contents.  If you want to save the file for use after
+            the current request, use the <see cref="M:Brettle.Web.NeatUpload.InputFile.MoveTo(System.String,Brettle.Web.NeatUpload.MoveToOptions)" /> method.
+            This control will function even if the <see cref="T:Brettle.Web.NeatUpload.UploadHttpModule" /> is not being used.  In that case,
+            its methods/properties act on the file in the standard ASP.NET <see cref="P:System.Web.HttpRequest.Files" /> collection.
+            </remarks>
+        </member>
+        <member name="E:Brettle.Web.NeatUpload.InputFile.FileUploaded">
+            <summary>
+            Fired when a file is uploaded to this control.</summary>
+        </member>
+        <member name="P:Brettle.Web.NeatUpload.InputFile.File">
+            <summary>
+            The <see cref="T:Brettle.Web.NeatUpload.UploadedFile" /> corresponding to the file uploaded to this control. </summary>
+            <remarks>
+            Derived classes can use this to access the <see cref="T:Brettle.Web.NeatUpload.UploadedFile" /> object that was created by the
+            UploadStorageProvider.</remarks>
+        </member>
+        <member name="P:Brettle.Web.NeatUpload.InputFile.HasFile">
+            <summary>
+            Whether a file was uploaded using this control. </summary>
+            <remarks>
+            HasFile is true if a file was uploaded during the last postback, otherwise false.</remarks>
+        </member>
+        <member name="P:Brettle.Web.NeatUpload.InputFile.FileName">
+            <summary>
+            Client-side name of the uploaded file. </summary>
+            <remarks>
+            FileName is the name (not the full path) of the uploaded file on the user's machine if a file was
+            uploaded during the last postback, otherwise it is null.</remarks>
+        </member>
+        <member name="P:Brettle.Web.NeatUpload.InputFile.ValidationFileName">
+            <summary>
+            Client-side name of the uploaded file for validation purposes. </summary>
+            <remarks>
+            ValidationFileName is the same as <see cref="P:Brettle.Web.NeatUpload.InputFile.FileName" /> if a file was uploaded during the last postback.
+            However, if no file was uploaded, ValidationFileName is String.Empty while FileName is null.</remarks>
+        </member>
+        <member name="P:Brettle.Web.NeatUpload.InputFile.ContentType">
+            <summary>
+            Browser-specified MIME type of the uploaded file. </summary>
+            <remarks>
+            ContentType is browser-specified MIME type of the uploaded file if a file was
+            uploaded during the last postback, otherwise it is null.  Note that different browsers determine
+            the MIME type differently.  They might use the file's extension, the first few bytes of the file, or
+            something else entirely to determine the MIME type.</remarks>
+        </member>
+        <member name="P:Brettle.Web.NeatUpload.InputFile.ContentLength">
+            <summary>
+            Number of bytes in the uploaded file. </summary>
+            <remarks>
+            Number of bytes in the uploaded file if a file was uploaded during the last postback,
+            otherwise 0.</remarks>
+        </member>
+        <member name="P:Brettle.Web.NeatUpload.InputFile.FileContent">
+            <summary>
+            A readable <see cref="T:System.IO.Stream" /> on the uploaded file. </summary>
+            <remarks>
+            A readable <see cref="T:System.IO.Stream" /> on the uploaded file if a file was uploaded during the last postback,
+            otherwise null.  Note that the <see cref="T:System.IO.Stream" /> is opened when this property is first accessed and
+            that stream becomes the permanent value of this property.  If you use this
+            property and don't either close the stream or call <see cref="M:Brettle.Web.NeatUpload.InputFile.MoveTo(System.String,Brettle.Web.NeatUpload.MoveToOptions)" /> before the request ends you
+            may get an exception when NeatUpload tries to delete the underlying temporary storage at the end of the
+            request.
+            </remarks>
+        </member>
+        <member name="M:Brettle.Web.NeatUpload.InputFile.MoveTo(System.String,Brettle.Web.NeatUpload.MoveToOptions)">
+            <summary>
+            Moves an uploaded file to a permanent location.</summary>
+            <param name="path">the permanent location to move the uploaded file to.</param>
+            <param name="opts">options associated with moving the file (e.g.
+            <see cref="F:Brettle.Web.NeatUpload.MoveToOptions.Overwrite">MoveToOptions.Overwrite</see> or
+            <see cref="F:Brettle.Web.NeatUpload.MoveToOptions.None">MoveToOptions.None</see></param>
+            <remarks>
+                <para>
+            The default <see cref="T:Brettle.Web.NeatUpload.UploadStorageProvider" /> (a <see cref="T:Brettle.Web.NeatUpload.FilesystemUploadStorageProvider" />)
+            temporarily stores uploaded files on disk.  If you don't call MoveTo() in response to the postback, the temporary file will be
+            automatically deleted.</para>
+                <para>
+            The <paramref name="path" /> you pass to MoveTo() is the filesystem path where you want the uploaded file
+            to be permanently moved.  If you want any existing file at that path to be overwritten, pass
+            <see cref="F:Brettle.Web.NeatUpload.MoveToOptions.Overwrite">MoveToOptions.Overwrite</see> as the <paramref name="opts" />
+            parameter.  Otherwise, pass <see cref="F:Brettle.Web.NeatUpload.MoveToOptions.None">MoveToOptions.None</see>.
+            Only the last call to MoveTo() in response to a particular postback will determine the uploaded file's
+            permanent location.</para>
+                <para>
+            If you are using a non-default <see cref="T:Brettle.Web.NeatUpload.UploadStorageProvider" />, it might interpret
+            <paramref name="path" /> differently.  For example, it might use it as the primary key to identify a row
+            in a database table.  A non-default <see cref="T:Brettle.Web.NeatUpload.UploadStorageProvider" /> might also allow other options
+            by accepting a subclass of <see cref="T:Brettle.Web.NeatUpload.MoveToOptions" /> for the <paramref name="opts" /> parameter.</para>
+            </remarks>
+        </member>
+        <member name="M:Brettle.Web.NeatUpload.InputFile.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Called by ASP.NET so that controls can find and process their post back data</summary>
+            <returns>the true if a file was uploaded with this control</returns>
+        </member>
+        <member name="M:Brettle.Web.NeatUpload.InputFile.RaisePostDataChangedEvent">
+            <summary>
+            Called by ASP.NET if <see cref="M:Brettle.Web.NeatUpload.InputFile.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" /> returns true (i.e. if a file was uploaded to this
+            control).  Fires the <see cref="E:Brettle.Web.NeatUpload.InputFile.FileUploaded" /> event.</summary>
+        </member>
+        <member name="T:Brettle.Web.NeatUpload.ProgressBar">
+            <summary>
+            Displays progress and status of an upload.</summary>
+            <remarks>
+            For the progress bar to be displayed, the <see cref="T:Brettle.Web.NeatUpload.UploadHttpModule" /> must be in use.
+            For the progress display to be started, the form being submitted must include an <see cref="T:Brettle.Web.NeatUpload.InputFile" />
+            control that is not empty.  Use the <see cref="P:Brettle.Web.NeatUpload.ProgressBar.Inline" /> property to control how the progress bar is
+            displayed.  Use the <see cref="P:Brettle.Web.NeatUpload.ProgressBar.NonUploadButtons" /> property (or the <see cref="M:Brettle.Web.NeatUpload.ProgressBar.AddNonUploadButton(System.Web.UI.Control)" /> method)
+            to specify any buttons which should not cause files to be uploaded and should not start the progress
+            display (e.g. "Cancel" buttons).
+            </remarks>
+        </member>
+        <member name="P:Brettle.Web.NeatUpload.ProgressBar.Inline">
+            <summary>
+            Whether to display the progress bar inline or as a pop-up.  Under Opera, this property will always
+            return false, even if you set it to true.  Popup progress bars are automatically used under Opera
+            because Opera doesn't refresh the iframe used to display inline progress bars.</summary>
+        </member>
+        <member name="P:Brettle.Web.NeatUpload.ProgressBar.NonUploadButtons">
+            <summary>
+            Space-separated list of the IDs of controls which should not upload files and start the progress
+            display. </summary>
+            <remarks>
+            When a user clicks on a non-upload control, Javascript clears all <see cref="T:Brettle.Web.NeatUpload.InputFile" /> controls.
+            As a result, the progress display does not start and no files are uploaded when the form is submitted.
+            If no triggers are listed in <see cref="P:Brettle.Web.NeatUpload.ProgressBar.Triggers" /> or added via <see cref="M:Brettle.Web.NeatUpload.ProgressBar.AddTrigger(System.Web.UI.Control)" /> then any control
+            other than those listed in <see cref="P:Brettle.Web.NeatUpload.ProgressBar.NonUploadButtons" /> or added via <see cref="M:Brettle.Web.NeatUpload.ProgressBar.AddNonUploadButton(System.Web.UI.Control)" />
+            will be considered a trigger and will upload files and start the progress display.  If you do specify
+            one or more triggers, then all links and submit buttons <i>other</i> than those triggers will be considered
+            non-upload controls (in addition to any controls listed in <see cref="P:Brettle.Web.NeatUpload.ProgressBar.NonUploadButtons" /> or added via
+            <see cref="M:Brettle.Web.NeatUpload.ProgressBar.AddNonUploadButton(System.Web.UI.Control)" />).  This means that in most cases you can simply specify one or more
+            triggers and not worry about specifying non-upload controls unless you have controls other than links and
+            submit buttons that cause the form to submit.</remarks>
+        </member>
+        <member name="P:Brettle.Web.NeatUpload.ProgressBar.Triggers">
+            <summary>
+            Space-separated list of the IDs of controls which should upload files and start the progress
+            display. </summary>
+            <remarks>
+            If no triggers are listed in <see cref="P:Brettle.Web.NeatUpload.ProgressBar.Triggers" /> or added via <see cref="M:Brettle.Web.NeatUpload.ProgressBar.AddTrigger(System.Web.UI.Control)" /> then whenever
+            the form is submitted with any files selected the progress display will start.  If you do specify
+            one or more triggers, then any form submissions initiated via any other controls that you didn't specify
+            as triggers will <i>not</i> include any files and will <i>not</i> start the progress display.</remarks>
+        </member>
+        <member name="P:Brettle.Web.NeatUpload.ProgressBar.Url">
+            <summary>
+            URL of an aspx page that displays the upload progress.</summary>
+            <remarks>
+            The specified page should inherits from the <see cref="T:Brettle.Web.NeatUpload.Progress" /> code behind class.
+            You may use an absolute or relative URL that refers to a page in the same web application.  If the URL
+            starts with "~", the "~" will be replaced with the web application root as returned by
+            <see cref="P:System.Web.HttpRequest.ApplicationPath" />.  By default, "~/NeatUpload/Progress.aspx" will be used.</remarks>
+        </member>
+        <member name="M:Brettle.Web.NeatUpload.ProgressBar.AddTrigger(System.Web.UI.Control)">
+            <summary>
+            Adds a control (typically a button) to a list trigger controls.</summary>
+            <param name="control">the control to add to the list</param>
+            <remarks>
+            See the <see cref="P:Brettle.Web.NeatUpload.ProgressBar.Triggers" /> property for information on what triggers are.  This method is
+            primarily for situations where the see cref="Triggers"/&gt; property can't be used because the ID of the
+            trigger control is not known until runtime (e.g. for
+            controls in Repeaters).  Controls added via this method are maintained in a separate list from those
+            listed in the <see cref="P:Brettle.Web.NeatUpload.ProgressBar.Triggers" /> property, and said list is not maintained as part of this
+            control's <see cref="P:Brettle.Web.NeatUpload.ProgressBar.ViewState" />.  That means that if you use this method, you will need to call it
+            for each request, not just non-postback requests.  Also, you can use both this method and the
+            <see cref="P:Brettle.Web.NeatUpload.ProgressBar.Triggers" /> property for the same control.
+            </remarks>
+        </member>
+        <member name="M:Brettle.Web.NeatUpload.ProgressBar.AddNonUploadButton(System.Web.UI.Control)">
+            <summary>
+            Adds a control (typically a button) to a list non-upload controls.</summary>
+            <param name="control">the control to add to the list</param>
+            <remarks>
+            See the <see cref="P:Brettle.Web.NeatUpload.ProgressBar.NonUploadButtons" /> property for information on what non-upload buttons are.
+            This method is primarily for situations where the see cref="NonUploadButtons"/&gt; property can't be used
+            because the ID of the non-upload control is not known until runtime (e.g. for
+            controls in Repeaters).  Controls added via this method are maintained in a separate list from those
+            listed in the <see cref="P:Brettle.Web.NeatUpload.ProgressBar.NonUploadButtons" /> property, and said list is not maintained as part of this
+            control's <see cref="P:Brettle.Web.NeatUpload.ProgressBar.ViewState" />.  That means that if you use this method, you will need to call it
+            for each request, not just non-postback requests.  Also, you can use both this method and the
+            <see cref="P:Brettle.Web.NeatUpload.ProgressBar.NonUploadButtons" /> property for the same control.
+            </remarks>
+        </member>
+        <member name="T:Brettle.Web.NeatUpload.DetailsControl">
+            <summary>
+            Abstract base class for controls which are dynamically filled with upload progress/status information using
+            data-binding expressions.</summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:Brettle.Web.NeatUpload.DetailsControl.UseHtml4">
+            <summary>
+            Whether to display the control using HtmlTextWriter even on downlevel browsers.</summary>
+        </member>
+        <member name="T:Brettle.Web.NeatUpload.DetailsDiv">
+            <summary>
+            A div that is dynamically filled with upload progress/status information using data-binding expressions.</summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="T:Brettle.Web.NeatUpload.DetailsSpan">
+            <summary>
+            A span that is dynamically filled with upload progress/status information using data-binding expressions.</summary>
+            <remarks>
+            </remarks>
+        </member>
+    </members>
+</doc>

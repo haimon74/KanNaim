@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="IndexItDataClasses">
+  <DataContextMoniker Name="/IndexItDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="102101af-02e9-4e99-b185-b562157f309c" absoluteBounds="4.5, 1.375, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/IndexItDataClassesDataContext/Table_Menus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b7caccb4-f143-4d04-a1fa-beec630434ad" absoluteBounds="4.515, 1.835, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bea90ff0-a4cb-4946-a243-042b555f8e61" absoluteBounds="2, 1.75, 2, 1.0961531575520833">
+      <DataClassMoniker Name="/IndexItDataClassesDataContext/Table_LookupMenus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1adfb81a-5428-453c-b335-539039ca150f" absoluteBounds="2.015, 2.21, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4 : 2.29807657877604); (4.5 : 2.29807657877604)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/IndexItDataClassesDataContext/Table_LookupMenus/Table_LookupMenus_Table_Menus" />
+      <nodes>
+        <classShapeMoniker Id="bea90ff0-a4cb-4946-a243-042b555f8e61" />
+        <classShapeMoniker Id="102101af-02e9-4e99-b185-b562157f309c" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

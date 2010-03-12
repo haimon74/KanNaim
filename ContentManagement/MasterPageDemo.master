@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageDemo.master.cs" Inherits="MasterPageDemo" %>
+
+<%@ Register Assembly="UserControlsLibrary" Namespace="UserControlsLibrary.WebControls"
+    TagPrefix="wc" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<%@ Register TagPrefix="uc" TagName="SideMenu" Src="~/UserControls/SideMenu.ascx" %>
+<%@ Register TagPrefix="uc" TagName="SiteMap" Src="~/UserControls/SiteMap.ascx" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Styles/primary.css" rel="stylesheet" type="text/css" />    
+</head>
+<body>
+    <form id="Form1" runat="server">    
+        <table id="Table_MasterTemplate">
+            <tr id="TableRow_Header">
+                <td colspan="3">
+                    <uc:SiteMap ID="SiteMap1" runat="server"  MenuID="1" />
+                </td>
+            </tr>
+            <tr  id="TableRow_Content">
+                <td id="TableData_RightSideMenu">
+                    <uc:SideMenu ID="UcSideMenu" runat="server" MenuID="1">
+                    </uc:SideMenu>
+                </td>
+                <td id="TableData_PageContent">
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>                
+                </td>
+                <td id="TableData_LeftSide"></td>
+            </tr>
+            <tr id="TableRow_Footer">
+                <td colspan="3">
+                </td>
+            </tr>
+        </table>                  
+    </form>
+</body>
+</html>

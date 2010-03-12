@@ -1,0 +1,2 @@
+<asp:Image runat="server" SkinId="Previous" ImageUrl="images/left_arrow.gif" Width="32px" Height="24px" />
+<asp:Image runat="server" SkinId="Next" ImageUrl="images/right_arrow.gif" Width="32px" Height="24px" />

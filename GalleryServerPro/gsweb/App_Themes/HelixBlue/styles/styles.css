@@ -1,0 +1,298 @@
+/* Tag styles */
+html, body, form, div, ol, ul { margin: 0; padding: 0; }
+body { font: 0.9em Verdana, Arial, Helvetica, sans-serif; background-color: #f5f5f5; color: #000; }
+
+p { margin: 0 0 0.4em 0; padding: 0.4em 0 0 0; }
+hr { margin: 3px 0; padding: 0; color: #369; }
+img { border: none; }
+
+h1 { margin: 0 0 1em 0; font-size: 1.4em; font-weight: bold; color: #369; }
+h2 { margin: .5em 0; padding: .25em; background-color: #C7D5E3; font-size: 1.2em; font-weight: bold; }
+h3 { margin: .5em 0; padding: 0; color: #369; font-size: 1.2em; font-weight: bold; }
+h6 { margin: 0; font-size: 1.1em; font-weight: bold; }
+
+h1.admin { margin: 0; padding: .25em; color: #1c3853; background-color: #C7D5E3; font-size: 1.4em; font-weight: bold; }
+h2.admin { margin: .5em 0; padding: .25em; color:#800; background-color:Transparent; font-size: 1.35em; font-weight: bold; }
+
+a { text-decoration: underline; }
+a:link { color: #369; }
+a:visited { color: #369; }
+a:hover { color: #FF9966; }
+a:active { color: #f90; }
+
+/* General classes used site-wide */
+.fsss { font-size: 0.7em; }
+.fss { font-size: 0.8em; }
+.fs { font-size: 0.9em; }
+.fl { font-size: 1.1em; }
+.fll { font-size: 1.2em; }
+.flll { font-size: 1.3em; }
+.fllll { font-size: 1.4em; }
+.bold { font-weight: bold; }
+.em { font-style: oblique; }
+.underline { text-decoration: underline; }
+.minimargin { margin: 2px 0; }
+.nomargin { margin: 0; }
+.nopadding { padding: 0; }
+.topcaption { margin: 0.4em 0 0 0; /* Reverse the margins of normal p */ }
+.collapse { margin: 0; padding: 0; }
+.msgsuccess { font-weight: bold; color: #063; }
+.msgfailure { font-weight: bold; color: #c03; }
+.msgfriendly { color: #063; }
+.msgwarning { color: #c03; }
+.msgattention { color: #800; }
+.msgdark { color: #1C3853; }
+.textcol { width: 40em; }
+.friendly { color: #063; }
+.indent { margin-left: 1em; }
+.hide { visibility: hidden; }
+.show { visibility: visible; }
+.visible { display: block; }
+.invisible { display: none; }
+.nowrap { white-space: nowrap; }
+.textcenter { text-align: center; }
+.disabledtext {color:#808080;}
+
+.dummy { }
+.indent1 { margin-left: 5px; }
+.addtopmargin1 { margin-top: 0.2em; }
+.addtopmargin2 { margin-top: 0.4em; }
+.addtopmargin3 { margin-top: 0.6em; }
+.addtopmargin4 { margin-top: 0.8em; }
+.addtopmargin5 { margin-top: 1em; }
+
+.addleftmargin1 { margin-left: 0.2em; }
+.addleftmargin2 { margin-left: 0.4em; }
+.addleftmargin3 { margin-left: 0.6em; }
+.addleftmargin4 { margin-left: 0.8em; }
+.addleftmargin5 { margin-left: 1em; }
+
+.addmargin1 { margin: 0.2em; }
+.addmargin2 { margin: 0.4em; }
+.addmargin3 { margin: 0.6em; }
+.addmargin4 { margin: 0.8em; }
+.addmargin5 { margin: 1em; }
+
+.addpadding1 { padding: 0.2em; }
+.addpadding2 { padding: 0.4em; }
+.addpadding3 { padding: 0.6em; }
+.addpadding4 { padding: 0.8em; }
+.addpadding5 { padding: 1em; }
+
+.addtoppadding1 { padding-top: 0.2em; }
+.addtoppadding2 { padding-top: 0.4em; }
+.addtoppadding3 { padding-top: 0.6em; }
+.addtoppadding4 { padding-top: 0.8em; }
+.addtoppadding5 { padding-top: 1em; }
+
+.addleftpadding1 { padding-left: 0.2em; }
+.addleftpadding2 { padding-left: 0.4em; }
+.addleftpadding3 { padding-left: 0.6em; }
+.addleftpadding4 { padding-left: 0.8em; }
+.addleftpadding5 { padding-left: 1em; }
+.addleftpadding6 { padding-left: 1.2em; }
+
+.addrightpadding1 { padding-right: 0.2em; }
+.addrightpadding2 { padding-right: 0.4em; }
+.addrightpadding3 { padding-right: 0.6em; }
+.addrightpadding4 { padding-right: 0.8em; }
+.addrightpadding5 { padding-right: 1em; }
+
+.rightBottom { text-align: right; padding-right: 0.4em; padding-bottom: 0.2em; }
+.rightBottomAbsolute { position: absolute; top: auto; right: 0.4em; bottom: 0.4em; left: auto; text-align: right; }
+table.userGeneralInfoTable .userComment { width: 400px; height: 50px; font: 0.9em Verdana, Arial, Helvetica, sans-serif; }
+table.userGeneralInfoTable .userEmail { width: 400px; }
+
+input.textbox { width: 400px; }
+textarea.textarea1 { width: 400px; height: 50px; font: 0.9em Verdana, Arial, Helvetica, sans-serif; }
+textarea.textarea2 { width: 400px; height: 200px; font: 0.9em Verdana, Arial, Helvetica, sans-serif; }
+table.standardTable td { padding: 0.5em 0.5em 0.5em 0; vertical-align: top; }
+table.standardTable td table td { padding: 0; }
+table.standardTable td.col1 { text-align: right; }
+
+.validatorCalloutHighlight { background-color: #fffacd; }
+
+/* ------------------------ 
+	Structural styles 
+--------------------------- */
+#wrapper { }
+#header { position: relative; background-color: #369; height: 5.2em; }
+#navigation { color: #000; width: 200px; height: 250px; float: left; margin: 0; padding: 0; }
+.content { min-height: 400px; clear: left; }
+.indentedContent { margin-left: 200px; min-height: 400px; }
+#footer { position: relative; text-align: center; clear: both; font-size: 60%; }
+#footer hr { visibility: hidden; }
+#footer div { margin: 20px auto 0 auto; }
+#footer .ver { position:absolute; top:80px;left:0;right:0;bottom:0;}
+
+/* Styles for specific controls / places */
+
+/* wwErrorDisplay formatting */
+.wwErrorSuccess { border: solid 2px #006400; background-color: #fff8dc; padding-left: 3pt; padding-right: 10pt; }
+.wwErrorFailure { border: solid 2px darkred; background-color: #fff8dc; padding-left: 3pt; padding-right: 10pt; }
+.wwErrorFailure li { margin-top: 0.5em; }
+
+/* usermessage.ascx */
+.um0ContainerCss { border: 1px solid black; background-color: #C7D5E3; width: 90%;min-height: 52px;  }
+.um0HeaderDetailWithImageCss { margin-left: 75px; }
+.um0HeaderDetailWithoutImageCss { }
+.um0HeaderCss { font-size: 1.5em; color: #800; padding: 0.2em; }
+.um0DetailCss { font-size: 1.2em; padding: 0.2em; }
+
+.um1DetailCss { font-size: 0.8em; padding: 0.2em; }
+
+/* Header section on site master page */
+div#header p, div#header span, div#header td, div#header a, div#header a:link, div#header a:visited { color: White; }
+div#header a:hover { color: #FF9966; }
+div#header p.bannertext { font: italic 3em 'Monotype Corsiva' , 'Bookman Old Style' ,Arial,Sans-Serif; min-height: 1.2em; color: #f5f5f5; margin: 0; padding: 0 0 5px 0; }
+div#header p.bannertext a { text-decoration: none; }
+div#header div.headerloginandsearch { position: absolute; top: auto; right: 0.3em; bottom: 0; left: auto; }
+div#header div.headerloginandsearch input {}
+div#header div.headerloginandsearch input.loginwidth { width: 8em;border:1px solid #808080; }
+div#header div.headerloginandsearch div.loggedonview { text-align: right; padding-right: 0.3em;margin-bottom:0.4em; }
+div#header div.headerloginandsearch div.loggedonview span { display: inline-block; margin-right: 1em; }
+div#header div.headerloginandsearch div.search { text-align: right; margin-right: 0.2em; }
+div#header div.headerloginandsearch div.search p { margin:0 0 0.1em 0;padding:0;}
+div#header div.headerloginandsearch input.loginbutton { display: block; width: 4em; text-align: center; }
+div#header div.headerloginandsearch div.search input.searchbutton { width: 4em; }
+div#header div.headerloginandsearch div.search input.searchbox { width: 16.8em; padding-left: 0.2em; margin-right: 0.5em;border:1px solid #808080; }
+.searchboxwatermark { color: #808080; }
+
+div#wrapper div.albumMenuContainer { margin: 0; padding: 0; border: 0; border-bottom: #369 1px solid; background-color: #ecf1f6; }
+div#wrapper div.albumMenuContainer div.albumMenu { padding: 5px 0 5px 2px; }
+div#wrapper div.albumMenuContainer div.indented { margin-left: 90px; }
+
+/* default.aspx */
+.um2ContainerCss { margin: 2px;border: 1px solid black; background-color: #C7D5E3; width:500px;min-height: 52px; }
+.um2HeaderCss { font-size: 1.5em; color: #800; padding: 0.2em; }
+.um2DetailCss { font-size: 1.1em; padding: 0.2em; }
+
+/* albumheader.ascx */
+.albumHeaderReadOnly { margin: 0; padding-left: 0.1em; border-bottom: #369 2px solid; }
+.albumHeaderEditableContentOff { padding: 1px 1px 0px 1px; border-bottom: #369 2px solid; }
+.albumHeaderEditableContentOn { background-color: #EFEFEF; border: 1px dashed #999999; padding-bottom: 1px; }
+.albumHeaderStats { float: right; }
+
+/* mediaobjectview.ascx */
+div#divMoView .navleft:hover, .navright:hover { background-color: #A2B9D1; }
+div#divMoView .permalinkContainer { background-color: #B5C7DA; border: 1px solid #369; padding: 0.2em; }
+div#divMoView .editableContentOff { padding: 1px; min-height: 50px; }
+div#divMoView .editableContentOn { background-color: #EFEFEF; border: 1px dashed #999999; min-height: 50px; }
+div#divMoView .moContainer { width: 100%;}
+div#divMoView div#mediaObjectInfoContainer { float: right;}
+div#divMoView .mediaObjectTitle { margin: 0 0 0.4em 0; padding: 0; }
+.mediaObjectTitleTextArea { position:absolute;top:5px;bottom:30px;right:5px;left:5px;width:auto;height:auto; }
+
+/* Image drop shadow for thumbnails and compressed images (http://www.positioniseverything.net/articles/dropshadows.html) */
+html>body .op1 { background: url(../../../images/shadow_tr_8x8.png) right top no-repeat;float:left;display:inline; } 
+html>body .op2 {background: url(../../../images/shadow_bl_8x8.png) left bottom no-repeat;padding-top: 8px;padding-left: 8px;}
+html>body .sb {background: url(../../../images/shadow_800x800.png) bottom right;}
+html>body .ib {position: relative;left: -8px;top: -8px;border:1px solid #a9a9a9;}
+div#divMoView .sb img {border: 15px solid #fff;vertical-align: bottom;}
+
+/* Additional drop shadow specs for thumbnails. */
+div.thmb .op0, div.thmb2 .op0 { margin:10px auto;display:block; }
+div.thmb .sb img, div.thmb2 .sb img {border: 5px solid #fff;vertical-align: bottom;}
+
+.okCancelContainer { position: absolute; top: auto; right: 0.3em; bottom: 0.3em; left: auto; }
+
+div.content div#divOkCancel { border-bottom: #369 2px solid; width: auto; text-align: right; }
+div.content p.taskBody { padding: 0 0 0.3em 0; width: 60%; border-bottom: #369 1px solid; }
+
+#options { float: right; background: #C7D5E3; margin: 5px 0 0 5px; border: 1px solid #369; }
+#options #opt_title { font-size: 16px; font-weight: bolder; background: #336699; color: White; text-align: left; }
+#options td { font-size: 11px; }
+#options td h6 { font: normal normal bold 1em/1.1em Verdana, Arial, Helvetica, sans-serif; padding: 0.3em 0 0 0; border-top: #369 1px solid; }
+#options ul { list-style: none; margin: 0; padding: 0; border: 0; }
+#options li a { width: 14em; display: block; margin: 0; padding: 3px 0 3px 10px; color: #369; text-decoration: none; font-weight: bold; }
+#options li a:hover, #options li a:active { color: #172E46; background-color: #A2B9D1; }
+
+/* rearrange.aspx */
+div.snapDock { float: left;margin: 5px; }
+div.snapDock:hover { cursor:move; }
+div.thmb2 { font-size: 0.9em;text-align: center; background-color: white; border: 1px solid; border-color: #AAA #444 #444 #AAA;  } /* must come before .album def */
+div.scrollBox { position: fixed; top: 0; left: 0; width: 100%; height: 20px;line-height:20px;font-size:80%;color:#369; background-color: #DAE3EC;text-align:center;z-index: 9999999; }
+div#divScrollDown { bottom: 0;top:auto; }
+
+/* Thumbnail View */
+div.thmb { float: left; font-size: 0.9em; padding: 0 0 0 0; margin: 5px 5px; text-align: center; background-color: white; border: 1px solid; border-color: #AAA #444 #444 #AAA; }
+div.thmb p.albumtitle, div.thmb2 p.albumtitle { margin: 0; padding: 0; background-color: #369; color: #fff;border-bottom:1px solid #444; }
+div.album { background-color: #DAE3EC; }
+
+/* editcaption.aspx */
+textarea.textareaEditCaption { width: 160px; height: 100px; }
+
+/* rotateimages.aspx */
+div.thmbRotate { float: left; padding: 0; margin: 5px 5px; text-align: center; }
+div.thmbRotate table { margin: 0 auto; }
+div.thmbRotate td { text-align: center; }
+/* IE 5 hack to center links */
+div.thmbRotate td a { display: block; border: 1px solid #336699; }
+div.thmbRotate td a.hor { width: 42px; height: 17px; margin: auto; }
+div.thmbRotate td a.vert { width: 17px; height: 42px; }
+div.thmbRotate td a:hover { background-color: #C7D5E3; }
+div.thmbRotate img { display: block; margin: 0; padding: 0; border: 1px solid; border-color: #444 #AAA #AAA #444; }
+div.thmbRotate img.rotate { display: inline; }
+
+/* login.aspx */
+.login { background-color: #EFF3FB; color: #333333; border: 1px solid #B5C7DE; width: 300px; margin: 2em auto 0 auto; }
+.login tr { height: 2em; }
+.loginTitle { background-color: #336699; font-weight: bold; font-size: 1.2em; color: White; }
+.invalidLoginMsg { border: solid 2px darkred; background-color: #fff8dc;color: #c03; width: 300px; margin: 2em auto 0 auto;padding:0.5em;text-align:center;}
+
+/* recoverpassword.aspx */
+.pwdrecover { width:400px;background-color: #EFF3FB; color: #333333; border: 1px solid #B5C7DE; margin: 2em auto 0 auto;text-align:center; }
+.pwdrecover tr { height: 2em; }
+.pwdrecoverTitle { background-color: #336699; font-weight: bold; font-size: 1.2em; color: White;padding:.5em; }
+.pwdRecoverRetrieve { padding:.5em; }
+.um3ContainerCss { border: 1px solid black; background-color: #C7D5E3; width: 400px;margin:3em auto 0 auto; }
+
+/* changepassword.aspx */
+.changepwd { background-color: #EFF3FB; color: #333333; border: 1px solid #B5C7DE; margin: 2em auto 0 auto; }
+.changepwd tr { height: 2em; }
+.changepwdTitle { background-color: #336699; font-weight: bold; font-size: 1.2em; color: White; }
+
+/* Site Admin - General page (admin/default.aspx) */
+div#verContainer {padding:0.2em;border: 1px solid #369;width:500px;background-color:#ECF1F6;}
+div#verContainer .verHdr {font-size: 1.2em;font-weight:bold;}
+
+/* Site Admin - Backup/Restore page (admin/backup-restore.aspx) */
+table#restoreFileContainer {border: 1px solid #1C3853;background-color:#ECF1F6; border-collapse:separate;}
+table#restoreFileContainer tr.tableSummaryRow { color: #000;background-color:#A2B9D1; }
+table#restoreFileContainer tr.tableHeaderRow { font-weight: bold; color: #1C3853;background-color:#C7D5E3; vertical-align:bottom; }
+table#restoreFileContainer td { padding:0.2em; }
+table#restoreFileContainer .topBorder { border-top: 1px solid #1C3853; }
+table#restoreFileContainer .bottomBorder { border-bottom: 1px solid #1C3853; }
+table#restoreFileContainer td.numRecords { text-align: center; }
+
+/* manageroles.aspx */
+.roleNameReadOnly { color: Green; }
+.editRoleDialogContent { padding: 0.2em; position: relative; height: 430px; overflow: auto; }
+
+/* manageusers.aspx */
+.userNameReadOnly { color: Green; }
+
+.editUserDialogContent { padding: 0.2em; position: relative; height: 430px; overflow: auto; }
+.addUserDialogContent { padding: 0.2em; height: 430px; overflow: auto; }
+
+table.newUserWizStep1Table td { padding: 0.5em 0.5em 0.5em 0; vertical-align: top; }
+table.newUserWizStep1Table td input { width: 200px; }
+
+.um1ContainerCss { border: 1px solid black; background-color: #C7D5E3; width: 97%; height: 100px; overflow: auto; }
+.um1HeaderCss { font-size: 1.2em; color: #800; padding: 0.2em; }
+.um1DetailCss { font-size: 0.9em; padding: 0.2em; }
+
+/* Installer/default.aspx */
+div#wizInstall { margin: 25px auto auto auto; width: 650px; height: 625px; border: 3px solid #369; }
+div#wizInstall div#wizHdr { height: 75px; background-color: #ECF1F6;border-bottom:1px solid #369;position:relative; }
+div#wizInstall div#wizHdr h1 { font-size:2em;margin:0;padding:0;color:#369;position: absolute; top: auto; left: 0.4em; bottom: 0.4em; right: auto; }
+div#wizInstall div#wizCtnt { height: 440px;overflow:auto; background-color:#ECECD9;padding:1em; }
+div#wizInstall div#wizCtnt h2 { margin:0 0 1em 0;padding:0;background-color:Transparent; }
+div#wizInstall div#wizFtr { width: 100%; height: 79px; background-color: #ECF1F6; position: relative;border-top:1px solid #369; }
+
+.treenode a:link { color: #000; }
+.treenode a:visited { color: #000; }
+.treeviewselectednode { background-color: #369; }
+.treeviewselectednode a:link { color: #f5f5f5; }
+.treeviewselectednode a:visited { color: #f5f5f5; }
+.treenodehover a:hover { background-color: #C7D5E3; }

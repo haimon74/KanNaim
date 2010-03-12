@@ -1,0 +1,816 @@
+	-------------------------------------------------------------
+	Documentation for galleryserverpro.config configuration file
+	
+	This file contains documentation for the configuration settings in the galleryserverpro.config
+	configuration file. The config file is linked by web.config and will automatically cause the 
+	application to restart when it is modified, including modifications done through the UI.
+	
+	galleryserverpro.config contains three config sections:
+	core - Contains general site-wide settings.
+	galleryObject - Contains settings for the gallery objects stored within Gallery Server Pro.
+		Includes HTML templates for various types of media objects, browser-specific mapping, and
+		settings for specifying which MIME types are managed by Gallery Server.
+	dataStore - Contains information specific to the data store, such as length specifications for
+		text fields in tables.
+	dataProvider - Contains information about the data store used by Gallery Server Pro.
+	
+	Note: These comments are in this file rather than galleryserverpro.config because the 
+	.NET 2.0 Configuration API strips out all comments and reformats the file when it is modified.
+	-------------------------------------------------------------
+		
+	-------------------------------------------------------------
+	Gallery Server Pro core configuration properties
+	-------------------------------------------------------------
+	
+	Overview:
+		This section stores configuration information for core Gallery Server properties.
+	
+	mediaObjectPath (default = "gs\mediaobjects"):
+		The path to a directory containing the media objects. The path may be relative to the root of the web application
+		(e.g. \gs\mediaobjects), a full path to a local resource (e.g. C:\mymedia), or a UNC path to a local or network
+		resource (e.g. \\mynas\media). Mapped drives present a security risk and are not supported. The initial and 
+		trailing slashes are	optional. For relative paths, the directory separator character can be either a forward 
+		or backward slash.
+		Reference:
+		How to access network files from IIS applications (http://support.microsoft.com/kb/207671/EN-US/)
+		Using Mapped Drives with IIS (http://support.microsoft.com/?id=257174)
+	
+	mediaObjectPathIsReadOnly (default = "false"):
+		Specifies that the directory containing the media objects should never be written to by Gallery Server Pro. 
+		This is useful when configuring the gallery to expose an existing media library and the administrator will not
+		add, move, or copy objects using the Gallery Server Pro UI. Objects can be added or removed to the gallery 
+		only by the synchronize function. Functions that do not require modifying the original files are still 
+		available, such as editing captions and summaries, rearranging items, and the security system. Configuring 
+		a read-only gallery requires setting the thumbnail and optimized paths to a different directory, disabling 
+		user albums (enableUserAlbum), and disabling the album title / directory name synchronization setting
+		(synchAlbumTitleAndDirectoryName).
+ 
+	galleryId (default = "1"):
+		The value that uniquely identifies the gallery for this website. Each web application is associated with a 
+		single gallery.
+	 
+	pageHeaderText (default = "My Media Gallery"):
+		The header text that appears at the top of each web page.
+	 
+	pageHeaderTextUrl (default = "~/"):
+		The URL the user will be directed to when she clicks the page header text. Optional. If not 
+		present, no link will be rendered. Examples: "http://www.mysite.com", "/" (the root of the web site),
+		"~/" (the top level album).
+		
+	showLogin (default = "true"):
+		Indicates whether to show the login controls at the top right of each page. When false, no login controls
+		are shown, but the user can navigate directly to the login page to log on.
+	
+	showSearch (default = "true"):
+		Indicates whether to show the search box at the top right of each page.
+	
+	showErrorDetails (default = "false"):
+		Indicates whether to show the full details of any unhandled exception that occurs within the gallery. This can reveal
+		secure information to the user, so it should only be used for debugging purposes. When false, a generic error 
+		message is given to the user. This setting has no effect when enableExceptionHandler="false".
+	
+	enableExceptionHandler (default = "true"):
+		Indicates whether to use Gallery Server Pro's internal exception handling mechanism. When true, unhandled exceptions
+		are transferred to a custom error page and, if showErrorDetails="true", details about the error are displayed to the
+		user. When false, the error is recorded and the exception is rethrown, allowing application-level error handling to
+		handle it. This may include code in global.asax. The customErrors element in web.config may be used to manage error
+		handling when this setting is false (the customErrors setting is ignored when this value is true).
+
+	defaultAlbumDirectoryNameLength (default = "25"):
+		The maximum length of the directory name when a user creates an album. By default, a directory name is the same as the
+		album's title, but are truncated when the title is longer than the value specified here.
+		
+	synchAlbumTitleAndDirectoryName (default = "true"):
+		Indicates whether to update the directory name corresponding to an album when the album's title is changed. When 
+		true, modifying the title of an album causes the directory name to change to the same value. If the 
+		title is longer than the value specified in defaultAlbumDirectoryNameLength, the directory name is truncated. You 
+		may want to set this to false if you have a directory structure that you do not want Gallery Server Pro to alter. 
+		Note that even if this setting is false, directories will still be moved or copied when the user moves or copies
+		an album. Also, Gallery Server Pro always modifies the directory name when it is necessary to 
+		make it unique within a parent directory. For example, this may happen if you give two sibling albums the same title 
+		or you move/copy an album into a directory containing another album with the same name.
+	 
+	emptyAlbumThumbnailBackgroundColor (default = "#369"):
+		The color used for the background of the GIF image generated by Gallery Server when creating a default
+		thumbnail image for a newly created album or an album without any objects. The color can be specified as
+		hex (e.g. #336699), RGB (e.g. 127,55,95), or one of the System.Color.KnownColor enum values (e.g. Maroon).
+	
+	emptyAlbumThumbnailText (default = "Empty"):
+		The default text written on the GIF image generated by Gallery Server when creating a default thumbnail image 
+		for a newly created album or an album without any objects. The GIF is 
+		dynamically generated by the application when it is needed and is never actually stored on the hard drive.
+	
+	emptyAlbumThumbnailFontName (default = "Arial"):
+		The font used for text written on the GIF image generated by Gallery Server when creating a default
+		thumbnail image for a newly created album or an album without any objects. The font must be installed on 
+		the web server. If the font is not installed, a generic sans serif font will be substituted.
+	 
+	emptyAlbumThumbnailFontSize (default = "12"):
+		The size, in pixels, of the font used for text written on the GIF image generated by Gallery Server when 
+		creating a default thumbnail image for a newly created album or an album without any objects. 
+	
+	emptyAlbumThumbnailFontColor (default = "White"):
+		The color of the text specified in property EmptyAlbumThumbnailText. The color can be specified as
+		hex (e.g. #336699), RGB (e.g. 127,55,95), or one of the System.Color.KnownColor enum values (e.g. Maroon).
+	
+	emptyAlbumThumbnailWidthToHeightRatio (default = "1.33"):
+		The ratio of the width to height of the default thumbnail image for an album that does not have a thumbnail
+		image specified. The length of the longest side of the image is set by the MaxThumbnailLength property, and the
+		length of the remaining side is calculated using this ratio. A ratio or more than 1.00 results in the width
+		being greater than the height (landscape), while a ratio less than 1.00 results in the width being less
+		than the height (portrait). Example: If MaxThumbnailLength = 115 and EmptyAlbumThumbnailWidthToHeightRatio = 1.50,
+		the width of the default thumbnail image is 115 and the height is 77 (115 / 1.50).
+	 
+	maxAlbumThumbnailTitleDisplayLength (default = "25"):
+		Maximum # of characters to display when showing the title of an album in a thumbnail view.
+	 
+	maxMediaObjectThumbnailTitleDisplayLength (default = "20"):
+		Maximum # of characters to display when showing the title of a media object in a thumbnail view.
+	
+	allowHtmlInTitlesAndCaptions (default = "true")
+		Indicates whether to allow limited HTML tags and attributes in the titles and captions for albums and media objects.
+		When true, the HTML tags specified in allowedHtmlTags and the attributes in allowedHtmlAttributes are allowed. 
+		Invalid tags are automatically removed from user input. This setting does not affect how javascript is treated; 
+		refer to allowUserEnteredJavascript. If this value is changed from true to false, existing objects will not be 
+		immediately purged of all HTML tags. Instead, individual titles and captions are stripped of HTML as each 
+		object is edited and saved by the user.
+
+	allowUserEnteredJavascript (default = "false")
+		Indicates whether javascript is allowed in user-entered text such as titles, captions, and external media 
+		objects. When false, script tags and the string "javascript:" is automatically removed from all user input.
+		WARNING: Enabling this option makes the gallery vulnerable to a cross site scripting attack by any user with 
+		permission to edit captions or upload external media objects.
+	
+	allowedHtmlTags
+		A comma-delimited list of HTML tags that may be present in titles and captions of albums and media objects.
+		The attributes that are allowed are specified in allowedHtmlAttributes. Applies only when 
+		allowHtmlInTitlesAndCaptions is true. Ex: p,a,div,span,...
+	
+	allowedHtmlAttributes
+		A comma-delimited list of attributes that HTML tags are allowed to have. These attributes, when combined with the
+		HTML tags in allowedHtmlTags, define the HTML that is allowed in titles and captions of 
+		albums and media objects. Applies only when allowHtmlInTitlesAndCaptions is true. Ex: href,class,style,...
+		
+	allowCopyingReadOnlyObjects (default = "false")
+		Indicates whether to allow the copying of objects a user has only view permissions for.
+	
+	allowManageOwnAccount (default = "true")
+		Indicates whether a user is allowed to manage their own account.
+	
+	allowDeleteOwnAccount (default = "true")
+		Indicates whether a user is allowed to delete their own account.
+		
+	mediaObjectTransitionType (default = "Fade")
+		Specifies the visual transition effect to use when moving from one media object to another. This value maps to the 
+		enumeration GalleryServerPro.Business.MediaObjectTransitionType, and must be one of the following values:
+		None, Fade.
+			
+	mediaObjectTransitionDuration (default = ".3")
+		The duration of the transition effect, in seconds, when navigating between media objects. This 
+		setting has no effect when mediaObjectTransitionType = "None".
+			
+	slideshowInterval (default = "3000")
+		The delay, in milleseconds, between images during a slide show.
+	 
+	mediaObjectDownloadBufferSize (default = "32768"):
+		The size of each block of bytes when transferring files to streams and vice versa. This property was originally
+		created to specify the buffer size for downloading a media object to the client, but it is now used for all
+		file/stream copy operations.
+	 
+	maxRequestLengthKB (default = "10000"):
+		The maximum size of an HTTP request. Used primarily to restrict the size of file uploads through the 
+		web interface. Used in the same way that .NET-defined maxRequestLength is used in web.config. However, 
+		it is stored  here and handled through custom code to provide a friendlier error message than is provided 
+		by specifying the value in web.config.
+	 
+	encryptMediaObjectUrlOnClient (default = "true"):
+		Indicates whether security-sensitive portions of the URL to the media object are encrypted when it is sent 
+		to the client browser. Valid values are "true" and "false". When false, the URL to the media object is sent
+		in plain text, such as "handler/getmediaobject.ashx?moid=34&aid=8&mo=C%3A%5Cgs%5Cmypics%5Cbirthday.jpeg&mtc=1&dt=1"
+		These URLs can be seen by viewing the source of the HTML page. From this URL one can determine the album ID 
+		for this media object is 8, (aid=8), the file path to the media object on the server is 
+		C:\gs\mypics\birthday.jpeg, and the requested image is a thumbnail (dt=1, where 1 is the value of the 
+		GalleryServerPro.Business.DisplayObjectType enumeration for a thumbnail). For enhanced security, set 
+		encryptMediaObjectUrlOnClient to true, which uses Triple DES encryption to encrypt the query string.
+		It is recommended to set this to true except when you are	troubleshooting and it is useful to see the 
+		file name and path in the HTML source. The Triple DES algorithm uses the secret key specified in the 
+		EncryptionKey property.
+	 
+	encryptionKey (default = "Phoenix 13drycity minnea"):
+		The secret key used for the Triple DES algorithm. Applicable when encryptMediaObjectUrlOnClient = true.
+		The string must be 24 characters in length and be sufficiently strong so that it cannot be easily cracked.
+		An exception is thrown by the .NET Framework if the key is considered weak. The installation wizard 
+		updates this setting with a unique encryption key each time it is run.
+	 
+	allowUnspecifiedMimeTypes (default = "false"):
+		Indicates whether Gallery Server Pro is allowed to manage file types not explicitly specified in the mimeTypes configuration
+		section. When false, any file with an extension not listed in the mimeTypes section is rejected. When true,
+		Gallery Server Pro accepts all file types regardless of their file extension.
+	
+	imageTypesStandardBrowsersCanDisplay (default = ".jpg,.jpeg,.gif,.png" )
+		A comma separated list of file extensions indicating types of images that a standard browser can display. When
+		the user requests an original image (high resolution), the original is sent to the browser in an <img> HTML tag
+		if its extension is one of those listed here. If not, the user is presented with a message containing instructions
+		for downloading the image file. Typically this setting should not be changed.
+	
+	silverlightFileTypes (default = ".mp3,.wma,.wmv,.asf,.asx" )
+		A comma-delimited list of file extensions, including the period, indicating types of files that are supported by
+		Microsoft Silverlight and that the user wishes to be rendered using Silverlight. This setting is used to determine
+		whether to send the Silverlight javascript files to the browser. Note that this setting is used in combination with
+		the HTML template. That is, rendering objects in Silverlight requires that the HTML template specify Silverlight and
+		the file type associated with that template be included in this setting. If Silverlight is not used, a slight 
+		performance enhancement can be achieved by setting this value to an empty string. Ex: .mp3,.wma,.wmv,.asf,.asx
+	 
+	allowAnonymousHiResViewing (default = "true")
+		Specifies whether anonymous users are allowed to view the original, high resolution versions of images. When no
+		compressed (optimized) version of an image exists, the user is allowed to view the original, regardless of this
+		setting, since it is assumed that the original was not large enough to trigger the creation of a compressed
+		version. This setting has no effect on non-image media objects or for logged on users. This setting overrides
+		the thumbnailClickShowsOriginal setting. That is, if allowAnonymousHiResViewing is disabled ("false") and
+		thumbnailClickShowsOriginal is enabled ("true"), the user is shown the compressed version rather than the original.
+	 
+	enableImageMetadata (default = "true") 
+		Specifies whether Gallery Server Pro extracts and displays metadata from image files. The metadata is displayed
+		next to the optimized version of images when the View metadata toolbar icon is invoked. If the attribute
+		enableWpfMetadataExtraction is true, then additional metadata such as title, keywords, and rating is extracted.
+	
+	enableWpfMetadataExtraction (default = "true")
+		Specifies whether metadata is extracted from image files using Windows Presentation Foundation (WPF) classes
+		in .NET Framework 3.0. The WPF classes allow additional metadata to be extracted beyond those allowed by the
+		.NET Framework 2.0, such as title, keywords, and rating. This attribute has no effect unless the following
+		requirements are met: The attribute enableImageMetadata = "true"; .NET Framework 3.0 is installed on the web
+		server; the web application is running in Full Trust. The WPF classes have exhibited some reliability issues
+		during development, most notably causing the IIS worker process (w3wp.exe) to increase in memory usage and 
+		eventually crash during uploads and synchronizations. For this reason you may want to disable this feature
+		until a .NET Framework service pack or future version provides better performance.
+		
+	enableMediaObjectDownload (default = "true")
+		Specifies whether Gallery Server Pro renders user interface objects to allow a user to download the file for a media 
+		object. Typically, this setting is used to control whether a download button is displayed in the toolbar that
+		appears above a media object. Note that setting this value to false does not prevent a user from downloading a
+		media object, since a user already has access to the media object if he or she can view it in the browser. To
+		prevent certain users from viewing media objects (and thus downloading them), use private albums, disable
+		anonymous viewing, or configure security to prevent users from viewing the objects.
+		
+	enableMediaObjectZIPDownload (default = "true")
+		Specifies whether users are allowed to download multiple media objects in a ZIP file.
+		
+	enablePermalink (defaultValue = "true")
+		Specifies whether Gallery Server Pro renders user interface objects to provide the user with a hyperlink that
+		links directly to the visible media object. This is convenient because AJAX callbacks are used as the user navigates
+		the media objects in an album and the url in the browser's address bar is not updated for each media object.
+		When true, a show permalink button is displayed in the toolbar that appears above a media object.
+
+	enableSlideShow (defaultValue = "true")
+		Specifies whether slide show functionality is enabled. When true, a start/pause slideshow button is displayed in the 
+		toolbar that appears above a media object. The length of time each image is shown before automatically moving
+		to the next one is controlled by the SlideshowInterval setting. Note that only images are shown during a slide
+		show; other objects such as videos, audio files, and documents are skipped.
+
+	maxThumbnailLength (default = "125"):
+		The length (in pixels) of the longest edge of a thumbnail image.  This value is used when a thumbnail image 
+		is created. The length of the shorter side is calculated automatically based on the aspect ratio of the image.
+	 
+	thumbnailImageJpegQuality (default = "70"):
+		The quality level that thumbnail images are stored at (0 - 100).
+	 
+	thumbnailClickShowsOriginal (default = "False"):
+		Specifies whether the original image is displayed when the user clicks the thumbnail of an image.
+		If unchecked, the optimized image is shown instead. Not applicable for non-image media objects.
+		If allowAnonymousHiResViewing="false", the original image is never shown to anonymous users, even
+		if this setting is enabled.
+	 
+	thumbnailWidthBuffer (default = "30"):
+		The length (in pixels) that is added to the width of the each thumbnail image. A larger number creates 
+		more horizontal padding between the image and the border of the thumbnail container.
+	 
+	thumbnailHeightBuffer (default = "60"):
+		The length (in pixels) that is added to the height of the each thumbnail image. A larger number creates 
+		more vertical padding between the image and the border of the thumbnail container.
+	 
+	thumbnailFileNamePrefix (default = "zThumb_"):
+		The string that is prepended to the thumbnail file name for each media object. For example, if an image named
+		puppy.jpg is added, and this setting is "zThumb_", the thumbnail image will be named "zThumb_puppy.jpg".
+		NOTE: Any file named "zThumb_puppy.jpg" that already exists will be overwritten, so it is important to 
+		choose a value that, when prepended to media object file names, will not conflict with existing media objects.
+			
+	thumbnailPath (default=""):
+		The path to a directory where Gallery Server should store	the thumbnail images of media objects. If no path 
+		is specified, the directory containing the original media object is used to store the thumbnail image. 
+		The path may be relative to the root of the web application (e.g. \gs\mediaobjects), a full path to a local 
+		resource (e.g. C:\mymedia), or a UNC path to a local or network resource (e.g. \\mynas\media). Mapped 
+		drives present a security risk and are not supported. The initial and trailing slashes are	optional. 
+		For relative paths, the directory separator character can be either a forward or backward slash.
+	 
+	maxOptimizedLength (default = "640"):
+		The length (in pixels) of the longest edge of an optimized image.  This value is used when an optimzed 
+		image is created. The length of the shorter side is calculated automatically based on the aspect ratio 
+		of the image. Not applicable for non-image media objects.
+	 
+	optimizedImageJpegQuality (default = "70"):
+		The quality level that optimized JPG pictures are created with. This is a number from 1 - 100, with 1 
+		being the worst quality and 100 being the best quality. Not applicable for non-image media objects.
+	 
+	optimizedImageTriggerSizeKB (default = "50"):
+		The size (in KB) above which an image is compressed to create an optimized version.
+		Not applicable for non-image media objects.
+	 
+	optimizedFileNamePrefix (default = "zOpt_"):
+		The string that is prepended to the optimized file name for images. This setting is only used for image
+		media objects where an optimized image file is created. For example, if an image named
+		puppy.jpg is added, and this setting is "zOpt_", the optimized image will be named "zOpt_puppy.jpg".
+		NOTE: Any file named "zOpt_puppy.jpg" that already exists will be overwritten, so it is important to 
+		choose a value that, when prepended to media object file names, will not conflict with existing media objects.
+ 			
+	optimizedPath (default=""):
+		The path to a directory where Gallery Server should store	the optimized images of media objects. If no path 
+		is specified, the directory containing the original media object is used to store the thumbnail image. 
+		The path may be relative to the root of the web application (e.g. \gs\mediaobjects), a full path to a local 
+		resource (e.g. C:\mymedia), or a UNC path to a local or network resource (e.g. \\mynas\media). Mapped 
+		drives present a security risk and are not supported. The initial and trailing slashes are	optional. 
+		For relative paths, the directory separator character can be either a forward or backward slash.
+		Not applicable for non-image media objects.
+
+	originalImageJpegQuality (default = "95"):
+		The quality level that original JPG pictures are saved at. This is only used when the original is 
+		modified by the user, such as rotation. Not applicable for non-image media objects.
+		
+	discardOriginalImageDuringImport (default = "false")
+		Specifies whether to discard the original image when it is added to the gallery. This option, when enabled, 
+		helps reduce disk space usage. This option applies only to images, and only when they are added through an 
+		upload or by synchronizing. Changing this setting does not affect existing media objects. When false, 
+		users still have the option to discard the original image on the Add Objects page by unchecking the 
+		corresponding checkbox.
+		
+	applyWatermark (default = "false")
+		Specifies whether to apply a watermark to optimized and original images. If true, the text in the watermarkText
+		property is applied to images, and the image specified in watermarkImagePath is overlayed on the image. If
+		watermarkText is empty, or if watermarkImagePath is empty or does not refer to a valid image, that watermark
+		is not applied. If applyWatermarkToThumbnails = true, then the watermark is also applied to thumbnails.
+	 
+	applyWatermarkToThumbnails (default = "false")
+		Specifies whether to apply the text and/or image watermark to thumbnail images. This property is ignored if 
+		applyWatermark = false.
+
+	watermarkText (default = "")
+		Specifies the text to apply to images in the gallery. The text is applied in a single line.
+		 
+	watermarkTextFontName (default = "Verdana")
+		The font used for the watermark text. If the font is not installed on the web server, a generic sans serif font will 
+		be substituted.
+		
+	watermarkTextFontSize (default = "12")
+		Gets or sets the height, in pixels, of the watermark text. This value is ignored if the property
+		watermarkTextWidthPercent is non-zero. Valid values are 0 - 10000.
+		
+	watermarkTextWidthPercent (default = "50")
+		Gets or sets the percent of the overall width of the recipient image that should be covered with the
+		watermark text. The size of the text is automatically scaled up or down to achieve the desired width. For example,
+		a value of 50 means the text is 50% as wide as the recipient image. Valid values are 0 - 100. The text is never
+		rendered in a font smaller than 6 pixels, so in cases of long text it may stretch wider than the percentage
+		specified in this setting.
+		A value of 0 turns off this feature and causes the text size to be determined by the watermarkTextFontSize property.
+		
+	watermarkTextColor (default = "Black")
+		Specifies the color of the watermark text. The color can be specified as hex (e.g. #336699), RGB (e.g. 127,55,95),
+		or one of the System.Color.KnownColor enum values (e.g. Maroon).
+			
+	watermarkTextOpacityPercent (default = "30")
+		The opacity of the watermark text. This is a value from 0 to 100, with 0 being invisible and 100 being solid, 
+		with no transparency.
+		
+	watermarkTextLocation (default = "BottomCenter")
+		Gets or sets the location for the watermark text on the recipient image. This value maps to the 
+		enumeration System.Drawing.ContentAlignment, and must be one of the following nine values:
+		TopLeft, TopCenter, TopRight, MiddleLeft, MiddleCenter, MiddleRight, BottomLeft, BottomCenter, BottomRight.
+					
+	watermarkImagePath (default = "")
+		Gets or sets the full or relative path to a watermark image to be applied to the recipient image. The image
+		must be in a format that allows it to be instantiated in a System.Drawing.Bitmap object. Relative paths
+		are relative to the root of the web application. The directory separator character can be either a 
+		forward or backward slash, and, for relative paths, the initial slash is optional. The following are
+		all valid: "/images/mywatermark.jpg", "images/mywatermark.jpg", "\images\mywatermark.jpg", 
+		"images\mywatermark.jpg", "C:\images\mywatermark.jpg"
+	 
+	watermarkImageWidthPercent (default ="75")
+		Gets or sets the percent of the overall width of the recipient image that should be covered with the
+		watermark image. The size of the image is automatically scaled to achieve the desired width. For example,
+		a value of 50 means the watermark image is 50% as wide as the recipient image. Valid values are 0 - 100.
+		A value of 0 turns off this feature and causes the image to be rendered its actual size.
+		
+	watermarkImageOpacityPercent (default = "100")
+		Gets or sets the opacity of the watermark image. Valid values are 0 - 100, with 0 being completely
+		transparent and 100 completely opaque.
+		
+	watermarkImageLocation (default = "Center")
+		Gets or sets the location for the watermark image on the recipient image. This value maps to the 
+		enumeration System.Drawing.ContentAlignment, and must be one of the following nine values:
+		TopLeft, TopCenter, TopRight, MiddleLeft, MiddleCenter, MiddleRight, BottomLeft, BottomCenter, BottomRight.
+	
+	sendEmailOnError (default = "true"):
+		Specifies whether the Gallery Server Pro administrator (specified in EmailToName/EmailToAddress)
+		is sent a report when a web site error occurs.  A valid SMTP server must be specified if this
+		is set to true (attribute SmtpServer).
+ 
+	emailFromName (default = "Gallery Server Admin"):
+		The name associated with the EmailFromAddress email address. Emails sent from Gallery Server 
+		will appear to be sent from this person.
+	 
+	emailFromAddress (default = "yourname@yourisp.com"):
+		The email address associated with the EmailFromName attribute. Emails sent from Gallery Server 
+		will appear to be sent from this email address.
+	 
+	emailToName (default = "Gallery Server Pro Administrator"):
+		The name associated with the EmailToAddress email address. Emails sent from Gallery Server 
+		will be sent to this person. Note that the email address is set in the attribute EmailToAddress.
+	 
+	emailToAddress (default = "admin@yourisp.com"):
+		The email address associated with the EmailToName attribute. Emails sent from Gallery Server 
+		will be sent to this email address. Note that the name associated with this address is set in
+		the attribute EmailToName.
+	 
+	smtpServer (default = ""):
+		Specifies the IP address or name of the SMTP server used to send emails. (Examples: 127.0.0.1, 
+		Godzilla, mail.yourisp.com) This value will override the SMTP server setting that may be in the 
+		system.net mailSettings section of the web.config file (either explicitly or inherited from a 
+		parent web.config file). Leave this setting blank to use the value in web.config or if you are 
+		not using the email functionality.
+	 
+	smtpServerPort (default = ""):
+		Specifies the SMTP server port number used to send emails. This value will override the SMTP 
+		server port setting that may be in the system.net mailSettings section of the web.config file 
+		(either explicitly or inherited from a parent web.config file). Leave this setting blank to 
+		use the value in web.config or if you are not using the email functionality. Defaults to 25 
+		if not specified here or in web.config.
+	
+	sendEmailUsingSsl (default = "false"):
+		Specifies whether e-mail functionality uses Secure Sockets Layer (SSL) to encrypt the connection.
+		 
+	autoStartMediaObject (default = "true"):
+		Indicates whether a video, audio or other dynamic object will automatically start playing in the user's browser.
+	 
+	defaultVideoPlayerWidth (default = "640"):
+		Indicates the default width, in pixels, of the browser object that plays a video file. Typically 
+		this refers to the <object> tag that contains the video, resulting in syntax similar to this:
+		<object style="width:640px;height:480px;" ... >
+	 
+	defaultVideoPlayerHeight (default = "480"):
+		Indicates the default height, in pixels, of the browser object that plays a video file. Typically 
+		this refers to the <object> tag that contains the video, resulting in syntax similar to this:
+		<object style="width:640px;height:480px;" ... >
+	 
+	defaultAudioPlayerWidth (default = "300"):
+		Indicates the default width, in pixels, of the browser object that plays an audio file. Typically 
+		this refers to the <object> tag that contains the audio file, resulting in syntax similar to this:
+		<object style="width:300px;height:200px;" ... >
+	 
+	defaultAudioPlayerHeight (default = "200"):
+		Indicates the default height, in pixels, of the browser object that plays an audio file. Typically 
+		this refers to the <object> tag that contains the audio file, resulting in syntax similar to this:
+		<object style="width:300px;height:200px;" ... >
+	 
+	defaultGenericObjectWidth (default = "640"):
+		Indicates the default width, in pixels, of the browser object that displays a generic media object.
+		A generic media object is defined as any media object that is not an image,	audio, or video file. This
+		includes Shockwave Flash, Adobe Reader, text files, Word documents and others. The value specified here
+		is sent to the browser as the width for the object element containing this media object, resulting in syntax 
+		similar to this: <object style="width:640px;height:480px;" ... > This setting applies only to objects 
+		rendered within the browser, such as Shockwave Flash. Objects sent to the browser via a download
+		link, such as text files, PDF files, and Word documents, ignore this setting.
+		
+	defaultGenericObjectHeight (default = "480"):
+		Indicates the default height, in pixels, of the browser object that displays a generic media object.
+		A generic media object is defined as any media object that is not an image,	audio, or video file. This
+		includes Shockwave Flash, Adobe Reader, text files, Word documents and others. The value specified here
+		is sent to the browser as the width for the object element containing this media object, resulting in syntax 
+		similar to this: <object style="width:640px;height:480px;" ... > This setting applies only to objects 
+		rendered within the browser, such as Shockwave Flash. Objects sent to the browser via a download
+		link, such as text files, PDF files, and Word documents, ignore this setting.
+ 
+ maxUploadSize (default = "2097151"):
+		Indicates the maximum size, in kilobytes, of the files that can be uploaded.
+		Use this setting to keep users from uploading very large files and to help guard against Denial of 
+		Service (DOS) attacks. A value of zero (0) indicates there is no restriction on upload size (unlimited).
+		This value applies to the content length of the entire upload request, not just the file. For example, if
+		this value is 1024 KB and the user attempts to upload two 800 KB images, the request will fail because
+		the total content length is larger than 1024 KB. This setting is not used during synchronization.
+		
+allowAddLocalContent (default = "true")
+		Indicates whether a user can upload a physical file to the gallery, such as an image or video file stored
+		on a local hard drive. The user must also be authenticated and a member of a role with AllowAddMediaObject 
+		or AllowAdministerSite permission. This setting is not used during synchronization.
+
+allowAddExternalContent (default = "true")
+		Indicates whether a user can add a link to external content, such as a YouTube video, to the gallery. 
+		The user must also be authenticated and a member of a role with AllowAddMediaObject 
+		or AllowAdministerSite permission. This setting is not used during synchronization.
+		
+allowAnonymousBrowsing (default = "true")
+		Indicates whether users can view galleries without logging in. When false, users are redirected to a login
+		page when any album is requested. Private albums are never shown to anonymous users, even when this 
+		property is true.
+		
+pageSize (default = "50")
+		Indicates the number of objects to display at a time. For example, if an album has more than this number of
+		gallery objects, paging controls appear to assist the user in navigating to them. A value of zero disables the 
+		paging feature, allowing all objects to be displayed.
+		
+pagerLocation (default = "TopAndBottom")
+		Gets or sets the location for the pager used to navigate large collections of objects. This value maps to the 
+		enumeration GalleryServerPro.Business.PagerPosition, and must be one of the following values:
+		Top, Bottom, TopAndBottom. This value is ignored when paging is disabled (PageSize = 0).
+
+maxNumberErrorItems (default = "200")
+		Indicates the maximum number of error objects to persist to the data store. When the number of errors exceeds this
+		value, the oldest item is purged to make room for the new item. A value of zero means no limit is enforced.
+
+enableSelfRegistration (default = "false")
+		Indicates whether anonymous users are allowed to create accounts.
+
+requireEmailValidationForSelfRegisteredUser (default = "true")
+		Indicates whether e-mail verification is required when a user registers an account. When true, the account is 
+		initially disabled and an email is sent to the user with a verification link. When clicked, user is approved 
+		and logged on, unless requireApprovalForSelfRegisteredUser is enabled, in which case an administrator
+		must approve the account before the user can log on. Setting this to true reduces spam activity and guarantees that 
+		a valid e-mail address is associated with the user. When the setting is false, an e-mail address is not required 
+		and the user account is immediately created. This setting is ignored when enableSelfRegistration=false.
+
+requireApprovalForSelfRegisteredUser (default = "false")
+		Indicates whether an administrator must approve newly created accounts before the user can log on. When true, 
+		the account is disabled until it is approved by an administrator. When a user registers an account, an e-mail
+		is sent to each user specified in usersToNotifyWhenAccountIsCreated. Only users belonging to a
+		role with AllowAdministerSite permission can approve a user. If requireEmailValidationForSelfRegisteredUser
+		is enabled, the e-mail requesting administrator approval is not sent until the user verifies the e-mail address.
+		This setting is ignored when enableSelfRegistration=false.
+
+useEmailForAccountName (default = "false")
+		Indicates whether account names are primarily e-mail addresses. When true, certain forms, such as the self registration
+		wizard, assume e-mail addresses are used as account names. For example, when this value is false, the self registration
+		wizard includes fields for both an account name and an e-mail address, but when true it only requests an e-mail address.
+		This setting is ignored when enableSelfRegistration=false.
+
+defaultRolesForSelfRegisteredUser (default = "")
+		A comma-delimited list of roles to assign when a user registers a new account. This setting is ignored when 
+		enableSelfRegistration=false and when an account is created by an administrator. Ex: "ReadOnly,NoWatermark"
+
+usersToNotifyWhenAccountIsCreated (default = "")
+		A comma-delimited list of account names of users to receive an e-mail notification when an account is created.
+		When requireEmailValidationForSelfRegisteredUser is enabled, the e-mail is not sent until the
+		user verifies the e-mail address.
+		Ex: "Admin, Billybob". Applies whether an account is self-created or created by an administrator.
+
+enableUserAlbum (default = "false")
+		Indicates whether each user is assigned owner to a unique album. The title of the album is based on the 
+		template in the userAlbumNameTemplate property. The album is created when the account is created or
+		if the album does not exist when the user logs on. It is created in the album specified in the 
+		userAlbumParentAlbumId property.
+
+userAlbumParentAlbumId
+		Specifies the ID of the album containing user albums. This setting is ignored when enableUserAlbum is false.
+		This property may have a value of zero (0) when user albums are disabled.
+
+userAlbumNameTemplate (default = "{UserName}'s album")
+		Specifies the template to use for naming the album that is created for new users. Applies only when 
+		enableUserAlbum is true. The placeholder string {UserName}, if present, is replaced by the account name.
+
+userAlbumSummaryTemplate
+		Specifies the template to use for the album summary of a newly created user album. Applies only when 
+		enableUserAlbum is true. No placeholder strings are supported.
+
+redirectToUserAlbumAfterLogin (default = "true")
+		Indicates whether to redirect the user to his or her album after logging in. If set to false, the current page is
+		re-loaded or, if there isn't a page, the user is shown the top level album for which the user has view access. This 
+		setting is ignored when EnableUserAlbum is false.
+
+jQueryScriptPath (default = "")
+		The absolute or relative path to the jQuery script file. Relative paths can be relative to the root of the web site
+		(e.g. /mysites/mygallery/gs/script/jquery-1.3.2.min.js) or relative to the directory containing the Gallery Server 
+		Pro user controls and other resources (e.g. /script/jquery-1.3.2.min.js). It is NOT VALID to specify a path 
+		relative to the root of the web application. For relative paths the initial slash is	optional and the directory 
+		separator character can be either a forward or backward slash. Absolute paths should be a full URI 
+		(e.g. http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js). It is not valid to specify a UNC path, 
+		mapped drive path, or path to the local file system (e.g. "C:\scripts\jquery.js").
+
+membershipProviderName (default = "")
+		The name of the Membership provider for the gallery users. Optional. When not specified, the default provider specified
+		in web.config is used.
+		
+roleProviderName (default = "")
+		The name of the Role provider for the gallery users. Optional. When not specified, the default provider specified
+		in web.config is used.
+		
+productKey (default = "")
+		Specifies the product key for this installation of Gallery Server Pro.
+		
+
+	-------------------------------------------------------------
+	Gallery Server Pro galleryObject configuration properties
+	-------------------------------------------------------------
+		
+		Overview:
+			This section stores configuration information about the gallery objects stored within Gallery Server Pro.
+			Valid attributes: none. Valid child elements: mediaObjects, mimeTypes.
+		
+		mediaObjects:
+			This is a collection of mediaObject elements. Valid attributes: none. Valid child elements: mediaObject.
+				 
+		mediaObject:
+			This is an element that contains information about how Gallery Server Pro should handle specific types of 
+			media objects. Each mediaObject is uniquely identified by the mimeType attribute. If a mimeType is specified 
+			more than once within the mediaObjects collection, only	the first element is used (subsequent ones are 
+			ignored). An asterisk (*) can be
+			used to represent all subtypes within a type (e.g. "video/*" matches all video objects). However, if another 
+			mediaObject element contains a more specific value, such as "video/quicktime", that element will override
+			"video/*". The mimeType attribute must match one of the type attributes specified in the mimeType element
+			(unless the mimeType attribute has an asterisk). Valid attributes: mimeType. Valid child elements: browsers.
+				 
+		browsers:
+			This is a collection of browser elements. The collection must contain one browser element with id="default". 
+			It can optionally contain additional browser elements. Valid attributes: none. Valid child elements: browser.
+				 
+		browser:
+			This is an element that contains information about how the media object should be rendered when the
+			client is using this browser. It is uniquely identified by the id attribute, which must match the internal 
+			identifier of a browser as specified in the .Net Framework's browser definition file. See
+			http://msdn.microsoft.com/msdnmag/issues/06/10/ExtremeASPNET/fig05.gif for a hierarchical list of ids
+			recognized by .Net Framework 2.0. If an id is specified more than once within the browsers collection, only
+			the first element is used (subsequent ones are ignored). The htmlOutput attribute contains the HTML to be 
+			rendered to the client when the client is using this particular browser and is viewing the type of media 
+			object contained in the parent element. Valid attributes: id, htmlOutput. Valid child elements: none.
+				 
+			If the client's browser matches multiple browser elements (e.g. "ie" and "default"), the most specific 
+			browser element is preferred (in this example "ie"). Thus you can specify a browser element with id="default"
+			containing the default HTML for a particular type of media object. Create additional browser elements to handle
+			individual browsers as desired.
+			
+			Browser recognition:
+			Gallery Server Pro recognizes client browsers using the .browser files located in the machine-wide 
+			%SYSTEM%\Microsoft.NET\Framework\v2.0.50727\Config\Browsers directory. You may modify these or add new 
+			.browser files in the local App_Browsers directory of your application. If you modify, add, or delete the
+			browser id values in a .browser file, you may use the updated values here. In other words, the id values
+			here are not hard-coded within Gallery Server Pro, but instead are dynamically linked to the .browser files.
+				 
+			Replacement parameters:
+			Specify dynamic values, such as the url to the media object, using replacement parameters. These are identified
+			by opening and closing brackets, and are replaced with the actual value before being sent to the client's
+			browser. Here is a list of valid replacement parameters:
+			{CssClass} - A valid cascading style sheet class. The business logic determines which classes, if any,
+			 are inserted into this parameter. Example value: "gsp_msgsuccess", "gsp_msgsuccess gsp_addleftmargin5"
+			{MimeType} - The mime type of the media object. Example value: "video/quicktime", "image/jpeg"
+			{MediaObjectUrl} - The url to the media object. Example value: "handler/getmediaobject.ashx?moid=34&aid=8&mo=C%3A%5Cgs%5Cmypics%5Cbirthday.jpeg&mtc=1&dt=1&isp=false"
+			{MediaObjectAbsoluteUrlNoHandler} - An url that points directly to the media object and bypasses the HTTP handler. 
+			  Example value: /gallery/videos/birthdayvideo.wmv. The handler provides security checking and watermarking, so 
+			  only use this parameter when necessary. For example, perhaps a video plug-in does not work unless the file is 
+			  directly referenced. IMPORTANT: This parameter requires that the media objects directory be within the Gallery 
+			  Server Pro web application directory. By default, media objects are stored in the mediaobjects directory within 
+			  the application, so this requirement is satisfied unless you change it. If this requirement is not met, use the 
+			  {MediaObjectRelativeUrlNoHandler} parameter.
+			{MediaObjectRelativeUrlNoHandler} - Provides an url that is relative to the media objects directory and which points 
+			  directly to the media object. Example value: /videos/birthdayvideo.wmv). This parameter bypasses the HTTP handler 
+			  that normally streams media objects to the browser. The handler provides security checking and watermarking, so 
+			  only use this parameter when necessary. For example, perhaps a video plug-in does not work unless the file is 
+			  directly referenced. Typically this parameter is used instead of {MediaObjectAbsoluteUrlNoHandler} when the media 
+			  objects directory is outside of the web application. If the user wants to allow direct access to the media 
+			  objects using this parameter, she must first configure the media objects directory as a virtual directory in IIS. 
+			  Then the path to this virtual directory must be manually entered into one or more HTML templates in 
+			  galleryserverpro.config, so that it prepends the relative url returned from this method.
+				Example: If the media objects directory has been set to D:\media and a virtual directory named gallery has been 
+				configured in IIS that is accessible via http://yoursite.com/gallery, then you can configure the HTML template 
+				like this:
+				htmlOutput="&lt;a href=&quot;http://yoursite.com/gallery{MediaObjectRelativeUrlNoHandler}&quot;&gt;Click to open&lt;/a&gt;"
+			{Width} - The width, in pixels, of the media object. Example value: 640, 480
+			{Height} - The height, in pixels, of the media object. Example value: 640, 480
+			{Title} - The title of the media object. May include HTML tags. 
+				 Example value: Kayla 'sledding' down the <a href="http://www.bighill.com">hill</a>
+			{TitleNoHtml} - The title of the media object with HTML tags removed and apostrophes and quotation marks are 
+				 replaced with &quot; and &apos;. Example value: "Kayla sledding down the hill"
+			{AutoStartMediaObjectText} - Indicates whether to automatically start a video or audio object on the client.
+				This value comes  from the galleryServerPro/core/autoStartMediaObject configuration element. Rendered as the 
+				text "true" or "false".
+			{AutoStartMediaObjectInt} - Indicates whether to automatically start a video or audio object on the client. 
+				This value comes from the galleryServerPro/core/autoStartMediaObject configuration element. Rendered as 
+				the value "1" (true) or "0" (false).
+						
+		mimeTypes:
+			This is a collection of mimeType elements. Gallery Server Pro does not allow adding any file type not 
+			listed here. Valid attributes: none. Valid child elements: mimeType.
+				 
+		mimeType:
+			This is an element that provides mapping information between a file extension and its associated mime type.
+			Each mimeType is uniquely identified by the fileExtension and browserId attributes. If the combination of
+			fileExtension and browserId values are specified more than once within the mimeTypes collection, only
+			the first element is used (subsequent ones are ignored). Each fileExtension may 
+			be listed more than once, but there must always be one entry where browserId = "default", and it must be
+			listed prior to any other elements with the same fileExtension. The type attribute may be used 
+			multiple times (e.g. "image/jpeg" is used for both .jpg and .jpeg extensions).
+				 
+			The type attribute holds the MIME type of the file extension. The browserMimeType attribute holds the 
+			MIME type that should be sent to the browser. If the browserMimeType attribute is omitted, the MIME type 
+			specified in the type attribute is used instead. Use the browserMimeType attribute for certain types of
+			objects where the browser does not understand the standard MIME type.
+				 
+			Example: Imagine we want Gallery Server to play *.wav files in the browser. They have a MIME type of 
+			audio/wav. But most (all?) browsers do not understand this value, so HTML like this does 
+			not work:
+				 <object type='audio/wav' .... </object>
+			Instead, browsers require this:
+				 <object type='application/x-mplayer2' .... </object>
+			Therefore, we need to specify the .wav mime type like this:
+				 <mimeType fileExtension=".wav" type="audio/wav" browserId="default" browserMimeType="application/x-mplayer2" allowAddToGallery="true />
+
+			What if the above solution worked for most browsers, but IE 5.0 required "application/x-mplayer"? Add an
+			additional mimeType element specifying the new value for the IE 5.0 browser:
+				 <mimeType fileExtension=".wav" type="audio/wav" browserId="ie50" browserMimeType="application/x-mplayer" />
+			
+			IMPORTANT: The MIME type for browserId="default" must ALWAYS appear before more specific browser IDs (if
+			there are any). An exception will occur if a non-default value is encountered before the default value
+			for a particular file extension .
+				 
+			The browserId attribute must be a valid browser specified in the .NET Framework's .browser files. See
+			the documentation above regarding the browser element for more information.
+				 
+			Valid attributes: fileExtension, type, browserId, browserMimeType. Valid child elements: none.
+
+			Configuration option: Set up an HTML output for a MIME type like text/plain that includes javascript to redirect
+			the user directly to the text file. Example: If the following is added to the <mediaobjects> element, when the 
+			user clicks the thumbnail image for a media object whose MIME type is "text/plain" as configured in the <mimeTypes> 
+			section, the browser opens the document (assuming the browser is capable of opening plain text documents).
+			
+			<mediaObject mimeType="text/plain">
+				<browsers>
+					<browser id="default" htmlOutput="
+&lt;script type='text/javascript'&gt; window.location='{MediaObjectUrl}'; &lt;/script&gt;">
+					</browser>
+				</browsers>
+			</mediaObject>
+			
+	-------------------------------------------------------------
+	Gallery Server Pro dataStore configuration properties
+	-------------------------------------------------------------
+		
+		Overview:
+			This section stores configuration information about the data store. For example, if a SQL Server database
+			is being used, these values are used by Gallery Server to set up the Command objects that communicate with
+			the database.
+				
+		albumTitleLength (default = "200"):
+			The maximum allowed string length for an album title.
+		 
+		albumDirectoryNameLength (default = "25"):
+			The maximum length for a directory name in the media objects library. Each directory name matches the title
+			of the matching album, with the following exceptions: (1) Characters that are not valid for directory names
+			are removed, and (2) the name is shortened (if necessary) to the maximum length specified here.
+		 
+		albumSummaryLength (default = "1500"):
+			The maximum allowed string length for an album summary.
+	 
+		mediaObjectTitleLength (default = "1000"):
+			The maximum allowed string length for a media object title (caption).
+
+		mediaObjectFileNameLength (default = "255"):
+			The maximum length allowed for a media object file name. This must be the smaller of the restrictions set 
+			by the operating system and the corresponding data types in the data store (ThumbnailFileName,
+			OptimizedFileName, OriginalFileName).
+
+		mediaObjectHashKeyLength (default = "47"):
+			The maximum length of the hash key generated for each media object. Gallery Server generates 47-character
+			hash keys, so this value must be greater than or equal to 47.
+				 
+		mediaObjectExternalHtmlSourceLength (default = "1000"):
+			The maximum allowed string length for a media object's external HTML source data.
+				 
+		mediaObjectExternalTypeLength (default = "15"):
+			The maximum allowed string length for a media object's external type.  This value maps to the 
+			enumeration GalleryServerPro.Business.MimeTypeCategory, and must be one of the following five values:
+			NotSet, Other, Image, Video, Audio.
+
+		mediaObjectMetadataDescriptionLength (default = "100"):
+			The maximum allowed string length for a meta data description.
+				 
+		mediaObjectMetadataValueLength (default = "2000"):
+			The maximum allowed string length for a meta data value.
+				 
+		roleNameLength (default = "256"):
+			The maximum allowed string length for a role name.
+
+
+	-------------------------------------------------------------
+	Gallery Server Pro dataProvider configuration properties
+	-------------------------------------------------------------
+		
+		Overview:
+			This section stores configuration information about the data provider used by Gallery Server. It looks similar
+			to this:
+			
+				<dataProvider defaultProvider="SqlDataProvider">
+					<providers>
+						<add name="SqlDataProvider" type="GalleryServerPro.Data.SqlDataProvider, GalleryServerPro.Data" />
+					</providers>
+				</dataProvider>
+
+			This example specifies the data provider is a class called SqlDataProvider in the GalleryServerPro.Data
+			namespace, which is in a DLL named GalleryServerPro.Data.dll. You may specify any provider
+			that uses GalleryServerPro.Provider.DataProvider as its base class (which in turn inherits the .NET class
+			System.Configuration.Provider.ProviderBase and implements the custom interface 
+			GalleryServerPro.Provider.Interfaces.IDataProvider). At this time the only
+			provider available is SqlDataProvider, which uses SQL Server as the data store.

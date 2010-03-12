@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageAdmin.master.cs" Inherits="MasterPageDemo" %>
+
+<%@ Register Assembly="UserControlsLibrary" Namespace="UserControlsLibrary.WebControls"
+    TagPrefix="wc" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"-->
+
+<%@ Register TagPrefix="uc" TagName="SideMenu" Src="~//Forms//UserControls//SideMenu.ascx" %>
+<%@ Register TagPrefix="uc" TagName="SiteMap" Src="~//Forms//UserControls//SiteMap.ascx" %>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~//App_Themes//Theme1//primary.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+</style>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+    <form id="Form1" runat="server">    
+        <table id="Table_MasterTemplate">
+            <tr id="TableRow_Header">
+                <td colspan="3">
+                    <uc:SiteMap ID="SiteMap1" runat="server"  MenuID="4" />                    
+                </td>
+            </tr>
+            <tr  id="TableRow_Content">
+                <td id="TableData_RightSideMenu">
+                    <uc:SideMenu ID="UcSideMenu" runat="server" MenuID="4">
+                    </uc:SideMenu>
+                </td>
+                <td id="TableData_PageContent">
+                
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>                
+                </td>
+                <td id="TableData_LeftSide"></td>
+            </tr>
+            <tr id="TableRow_Footer">
+                <td colspan="3">
+                </td>
+            </tr>
+        </table>                  
+    </form>
+</body>
+</html>

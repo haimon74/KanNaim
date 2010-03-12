@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" > 
+ 	<siteMapNode title="תפריט ניהול"> 
+		<siteMapNode  title="תפריטים" description="ניהול תוכן תפריטים" url="cms/MenusManagement.aspx"/> 
+		<siteMapNode  title="טקסט" description="ניהול תוכן טקסטואלי" url="TextManagement.aspx"/> 
+		<siteMapNode  title="תמונות" description="ניהול ספריית תמונות" url="PhotosManagement.aspx"/> 
+		<siteMapNode  title="תבניות" description="ניהול תבניות לעמודים" url="TemplatesManagement.aspx"/> 
+		<siteMapNode  title="עמודים" description="ניהול תוכן עמודים" url="PagesManagement.aspx"/> 
+		<siteMapNode  title="עיצובי CSS" description="ניהול עיצובים לאובייקטים של HTML" url="StylesManagement.aspx"/> 
+		<siteMapNode  title="וידאו" description="ניהול ספריית וידאו" url="VideosManagement.aspx"/> 
+		<siteMapNode  title="קישורים" description="ניהול רשימת קישורים" url="LinksManagement.aspx"/> 
+	</siteMapNode> 
+</siteMap> 

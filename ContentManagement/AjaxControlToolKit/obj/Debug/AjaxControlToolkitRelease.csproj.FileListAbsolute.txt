@@ -1,0 +1,8 @@
+c:\Users\swalther\Projects\AspNetAjax\Releases\Development\AjaxControlToolkit\bin\Debug\AjaxControlToolkit.dll
+c:\Users\swalther\Projects\AspNetAjax\Releases\Development\AjaxControlToolkit\bin\Debug\AjaxControlToolkit.pdb
+c:\Users\swalther\Projects\AspNetAjax\Releases\Development\AjaxControlToolkit\obj\Debug\ResolveAssemblyReference.cache
+c:\Users\swalther\Projects\AspNetAjax\Releases\Development\AjaxControlToolkit\obj\Debug\AjaxControlToolkit.Properties.Resources.resources
+c:\Users\swalther\Projects\AspNetAjax\Releases\Development\AjaxControlToolkit\obj\Debug\AjaxControlToolkit.ScriptResources.ScriptResources.resources
+c:\Users\swalther\Projects\AspNetAjax\Releases\Development\AjaxControlToolkit\obj\Debug\AjaxControlToolkitRelease.csproj.GenerateResource.Cache
+c:\Users\swalther\Projects\AspNetAjax\Releases\Development\AjaxControlToolkit\obj\Debug\AjaxControlToolkit.dll
+c:\Users\swalther\Projects\AspNetAjax\Releases\Development\AjaxControlToolkit\obj\Debug\AjaxControlToolkit.pdb

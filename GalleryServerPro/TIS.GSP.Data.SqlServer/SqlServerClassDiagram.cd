@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GalleryServerPro.Provider.DataProvider">
+    <Position X="6" Y="1.5" Width="3.75" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GalleryServerPro.Data.SqlServer.SqlDataProvider">
+    <Position X="1.5" Y="1.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AgAAAgAAAAAFECACgUAQIAAAAACAAQAAAIQAAIBAAAg=</HashCode>
+      <FileName>SqlServer\SqlDataProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServerPro.Data.SqlServer.Synchronize">
+    <Position X="10" Y="3" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAABIAAAAAAAAAAAAAABCAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SqlServer\Synchronize.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServerPro.Data.SqlServer.DataUtility">
+    <Position X="10" Y="1.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SqlServer\DataUtility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServerPro.Data.SqlServer.Application">
+    <Position X="10" Y="5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAIAAQAA=</HashCode>
+      <FileName>SqlServer\Application.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServerPro.Data.SqlServer.Role">
+    <Position X="9.25" Y="7" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAIAAACAAAQgQQAAEAAEAAAEAAQCAAAEAAUACAAA=</HashCode>
+      <FileName>SqlServer\Role.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServerPro.Data.SqlServer.MediaObject">
+    <Position X="5.25" Y="7" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIgAAAABAAEABQAAIQQgAAEEEAAEAAAAAQAAiAA=</HashCode>
+      <FileName>SqlServer\MediaObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServerPro.Data.SqlServer.Album">
+    <Position X="1.5" Y="7" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>ABAAAICAAAAAAIAAAAAIAAAAAREAABQTAAAAQEAAAAA=</HashCode>
+      <FileName>SqlServer\Album.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

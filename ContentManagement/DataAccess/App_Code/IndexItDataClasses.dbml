@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="inochi74" Class="IndexItDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=inochi74.db.4809140.hostedresource.com;Initial Catalog=inochi74;Persist Security Info=True;User ID=inochi74" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="inochi74ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Table_Menus" Member="Table_Menus">
+    <Type Name="Table_Menus">
+      <Column Name="MenuId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ItemId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParentId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayText" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ToolTip" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="OnClickUrl" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="CssClassName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Table_LookupMenus_Table_Menus" Member="Table_LookupMenus" ThisKey="MenuId" OtherKey="MenuId" Type="Table_LookupMenus" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_LookupMenus" Member="Table_LookupMenus">
+    <Type Name="Table_LookupMenus">
+      <Column Name="MenuId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MenuDescription" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="Table_LookupMenus_Table_Menus" Member="Table_Menus" ThisKey="MenuId" OtherKey="MenuId" Type="Table_Menus" />
+    </Type>
+  </Table>
+</Database>

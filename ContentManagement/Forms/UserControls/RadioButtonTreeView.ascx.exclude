@@ -1,0 +1,72 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="RadioButtonTreeView.ascx.cs" Inherits="UserControls_RadioButtonTreeView" %>
+<%@ Register Assembly="UserControlsLibrary" Namespace="UserControlsLibrary.WebControls"
+    TagPrefix="wc" %>
+<link href="../Styles/primary.css" rel="stylesheet" type="text/css" />
+
+<table>
+<tr>
+    <td>
+        <wc:ListBoxInt32 ID="ListBox1" runat="server" DataSourceID="LinqDataSource1" 
+            DataTextField="DisplayText" DataValueField="ItemId" Height="319px" 
+            Width="141px" onselectedindexchanged="ListBox1_SelectedIndexChanged" 
+            IntValue="-1"></wc:ListBoxInt32>
+        <asp:LinqDataSource ID="LinqDataSource1" runat="server" 
+            ContextTypeName="DataAccess.App_Code.IndexItDataClassesDataContext" 
+            Select="new (ItemId, ParentId, DisplayText)" TableName="Table_Menus" 
+            Where="MenuId == @MenuId &amp;&amp; ParentId == @ParentId">
+            <WhereParameters>
+                <asp:Parameter DefaultValue="1" Name="MenuId" Type="Int32" />
+                <asp:Parameter DefaultValue="-1" Name="ParentId" Type="Int32" />
+            </WhereParameters>
+        </asp:LinqDataSource>
+    </td>
+    <td>
+        <wc:ListBoxInt32 ID="ListBox2" runat="server" DataSourceID="LinqDataSource2" IntValue="<%# Eval("ParentId")%>"
+            DataTextField="DisplayText" DataValueField="ItemId" Height="319px" 
+            Width="141px" onselectedindexchanged="ListBox2_SelectedIndexChanged"></wc:ListBoxInt32>
+        <asp:LinqDataSource ID="LinqDataSource2" runat="server" 
+            ContextTypeName="DataAccess.App_Code.IndexItDataClassesDataContext" 
+            Select="new (ItemId, ParentId, DisplayText)" TableName="Table_Menus" 
+            Where="MenuId == @MenuId &amp;&amp; ParentId == @ParentId">
+            <WhereParameters>
+                <asp:Parameter DefaultValue="1" Name="MenuId" Type="Int32" />
+                <asp:FormParameter FormField="ListBox1.IntValue" Name="ParentId" 
+                    Type="Int32" />
+            </WhereParameters>
+        </asp:LinqDataSource>
+    </td>
+    <td>
+        <wc:ListBoxInt32 ID="ListBox3" runat="server" DataSourceID="LinqDataSource3" IntValue="<%# Eval("ParentId")%>"
+            DataTextField="DisplayText" DataValueField="ItemId" Height="319px" 
+            Width="141px" onselectedindexchanged="ListBox3_SelectedIndexChanged"></wc:ListBoxInt32>
+        <asp:LinqDataSource ID="LinqDataSource3" runat="server" 
+            ContextTypeName="DataAccess.App_Code.IndexItDataClassesDataContext" 
+            Select="new (ItemId, ParentId, DisplayText)" TableName="Table_Menus" 
+            Where="MenuId == @MenuId &amp;&amp; ParentId == @ParentId1">
+            <WhereParameters>
+                <asp:Parameter DefaultValue="1" Name="MenuId" Type="Int32" />
+                <asp:SessionParameter Name="ParentId1" FormField="ListBox2.IntValue"
+                    Type="Int32" />
+            </WhereParameters>
+        </asp:LinqDataSource>
+    </td>
+    <td>
+        <wc:ListBoxInt32 ID="ListBox4" runat="server" DataSourceID="LinqDataSource4" IntValue="<%# Eval("ParentId")%>"
+            DataTextField="DisplayText" DataValueField="ItemId" Height="319px" Width="141px"></wc:ListBoxInt32>
+        <asp:LinqDataSource ID="LinqDataSource4" runat="server" 
+            ContextTypeName="DataAccess.App_Code.IndexItDataClassesDataContext" 
+            Select="new (ItemId, ParentId, DisplayText)" TableName="Table_Menus" 
+            Where="MenuId == @MenuId &amp;&amp; ParentId == @ParentId1">
+            <WhereParameters>
+                <asp:ControlParameter ControlID="ListBox3" Name="ParentId" 
+                    PropertyName="SelectedValue" Type="Int32" />
+                <asp:SessionParameter Name="ParentId1" FormField="ListBox3.IntValue"
+                    Type="Int32" />
+            </WhereParameters>
+        </asp:LinqDataSource>
+    </td>
+    
+</tr>
+</table>
+
+
