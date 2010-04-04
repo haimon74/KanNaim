@@ -12,22 +12,157 @@
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
       <Item value="browser" priority="1" />
-      <Item value="new" priority="0" />
+      <Item value="new" priority="5" />
       <Item value="Uri" priority="0" />
+      <Item value="private" priority="8" />
+      <Item value="Logger" priority="0" />
+      <Item value="Messages" priority="1" />
+      <Item value="static" priority="5" />
+      <Item value="string" priority="10" />
+      <Item value="public" priority="3" />
+      <Item value="try" priority="0" />
+      <Item value="return" priority="4" />
+      <Item value="true" priority="2" />
+      <Item value="catch" priority="0" />
+      <Item value="false" priority="0" />
+      <Item value="delegate" priority="0" />
+      <Item value="TryCatchDelegate" priority="1" />
+      <Item value="func" priority="0" />
+      <Item value="object" priority="2" />
+      <Item value="bool" priority="2" />
+      <Item value="String" priority="0" />
+      <Item value="DateTime" priority="0" />
+      <Item value="enum" priority="0" />
+      <Item value="Exception" priority="3" />
+      <Item value="exception" priority="6" />
+      <Item value="out" priority="0" />
+      <Item value="recursiveMsg" priority="2" />
+      <Item value="const" priority="0" />
+      <Item value="Write" priority="0" />
+      <Item value="content" priority="0" />
+      <Item value="null" priority="0" />
+      <Item value="output" priority="0" />
+      <Item value="while" priority="0" />
+      <Item value="GetRecursiveMessage" priority="0" />
+      <Item value="input" priority="2" />
+      <Item value="if" priority="0" />
+      <Item value="else" priority="0" />
+      <Item value="msg" priority="8" />
+      <Item value="void" priority="1" />
+      <Item value="args" priority="0" />
+      <Item value="FileStream" priority="0" />
+      <Item value="_path" priority="0" />
+      <Item value="FileMode" priority="0" />
+      <Item value="FileAccess" priority="0" />
+      <Item value="FileShare" priority="0" />
+      <Item value="FileOptions" priority="0" />
+      <Item value="fs" priority="2" />
+      <Item value="FileWriter" priority="0" />
+      <Item value="StreamWriter" priority="1" />
+      <Item value="wr" priority="0" />
+      <Item value="Form" priority="0" />
+      <Item value="form" priority="0" />
+      <Item value="title" priority="0" />
+      <Item value="int" priority="0" />
+      <Item value="MessageBoxOptions" priority="0" />
+      <Item value="ShowMessage" priority="0" />
+      <Item value="Options" priority="0" />
+      <Item value="msgType" priority="0" />
+      <Item value="using" priority="0" />
+      <Item value="ExtendedMessages" priority="0" />
+      <Item value="WinLogger" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.WebBrowser">
       <Item value="Url" priority="0" />
       <Item value="Navigate" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Format" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Exception">
+      <Item value="Message" priority="1" />
+      <Item value="Source" priority="0" />
+      <Item value="InnerException" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.FileMode">
+      <Item value="Append" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.FileAccess">
+      <Item value="Write" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.FileShare">
+      <Item value="None" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.FileOptions">
+      <Item value="WriteThrough" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.FileStream">
+      <Item value="Write" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.StreamWriter">
+      <Item value="Write" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBoxButtons">
+      <Item value="OKCancel" priority="0" />
+      <Item value="YesNoCancel" priority="0" />
+      <Item value="OK" priority="0" />
+      <Item value="RetryCancel" priority="0" />
+      <Item value="AbortRetryIgnore" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBoxIcon">
+      <Item value="Information" priority="0" />
+      <Item value="Warning" priority="1" />
+      <Item value="Question" priority="1" />
+      <Item value="Error" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBoxDefaultButton">
+      <Item value="Button1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@WinLogger.Messages">
+      <Item value="Write" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
   <RecentFiles>
     <RecentFiles>
       <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:Form_CategoriesManager.cs" caret="11985" fromTop="17" />
       <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:FormEditArtical.cs" caret="54945" fromTop="20" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="13" fromTop="0" />
+      <File id="0F4CB90B-762A-4DE1-8E9E-12525A829D16/f:Class1.cs" caret="54" fromTop="3" />
     </RecentFiles>
     <RecentEdits>
-      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:FormEditArtical.cs" caret="55180" fromTop="24" />
-      <File id="9FFE042E-F0A3-42AA-AAAE-ECF5E3FCD63B/f:FormEditArtical.cs" caret="54945" fromTop="20" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="1464" fromTop="25" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="1442" fromTop="25" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="1460" fromTop="25" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="1021" fromTop="13" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="1420" fromTop="22" />
+      <File id="0F4CB90B-762A-4DE1-8E9E-12525A829D16/f:Class1.cs" caret="1654" fromTop="21" />
+      <File id="0F4CB90B-762A-4DE1-8E9E-12525A829D16/f:Class1.cs" caret="1322" fromTop="10" />
+      <File id="0F4CB90B-762A-4DE1-8E9E-12525A829D16/f:Class1.cs" caret="1504" fromTop="14" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="460" fromTop="16" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="2737" fromTop="19" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="3239" fromTop="13" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="1683" fromTop="15" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="1767" fromTop="17" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="2266" fromTop="13" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="2464" fromTop="18" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="2881" fromTop="17" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="3079" fromTop="22" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="3717" fromTop="24" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="4243" fromTop="35" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="4809" fromTop="23" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="5329" fromTop="22" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="5787" fromTop="20" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="5634" fromTop="15" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="5180" fromTop="14" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="4719" fromTop="16" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="4094" fromTop="15" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="3627" fromTop="17" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="80" fromTop="3" />
+      <File id="C978B8CA-0EA0-4B50-9696-C99647119EDA/f:Class1.cs" caret="13" fromTop="0" />
+      <File id="0F4CB90B-762A-4DE1-8E9E-12525A829D16/f:Class1.cs" caret="13" fromTop="0" />
     </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>

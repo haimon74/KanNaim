@@ -37,6 +37,9 @@
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -51,6 +54,8 @@
     <Compile Include="MenusTreeContainer.cs" />
     <Compile Include="WebControls\BorderStyleDropDownList.cs" />
     <Compile Include="WebControls\BorderWidthDropDownList.cs" />
+    <Compile Include="WebControls\CheckablePanel.cs" />
+    <Compile Include="WebControls\EnableControlCheckBox.cs" />
     <Compile Include="WebControls\RadioButtonHtmlObjectType.cs" />
     <Compile Include="WebControls\PositionDropDownList.cs" />
     <Compile Include="WebControls\FloatDropDownList.cs" />

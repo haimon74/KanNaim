@@ -31,10 +31,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.30930.15713, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AjaxControlToolKit\bin\Debug\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
@@ -52,6 +57,8 @@
     <Compile Include="WebControls\BorderStyleDropDownList.cs" />
     <Compile Include="WebControls\BorderWidthDropDownList.cs" />
     <Compile Include="WebControls\LabelToSlideToolTip.cs" />
+    <Compile Include="WebControls\HoverMenuList.cs" />
+    <Compile Include="WebControls\PollOptionsSandbox.cs" />
     <Compile Include="WebControls\RadioButtonHtmlObjectType.cs" />
     <Compile Include="WebControls\PositionDropDownList.cs" />
     <Compile Include="WebControls\FloatDropDownList.cs" />
@@ -68,6 +75,33 @@
     <Compile Include="WebControls\SessionLogin.cs" />
     <Compile Include="WebControls\SideTreeMenu.cs" />
     <Compile Include="WebControls\SideMenuDataSource.cs" />
+    <Compile Include="WinControls\CustomDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinControls\CustomDataGridView.Designer.cs">
+      <DependentUpon>CustomDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinControls\CustomDataGridViewDesigner.cs" />
+    <Compile Include="WinControls\FormRtlLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinControls\FormRtlLayout.Designer.cs">
+      <DependentUpon>FormRtlLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinControls\IdDataGridViewColumn.cs" />
+    <Compile Include="WinControls\NameDataGridViewColumn.cs" />
+    <Compile Include="WinControls\SimpleDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinControls\SimpleDataGridViewCellStyle.cs" />
+    <Compile Include="WinControls\SimpleDataGridViewColumn.cs" />
+    <Compile Include="WinControls\SimpleDataGridViewTextBoxCell.cs" />
+    <Compile Include="WinControls\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WinControls\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="XmlSiteMapGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -76,6 +110,20 @@
       <Project>{B6033CC1-4465-40DB-867A-8DB1680E9E2E}</Project>
       <Name>DataAccess</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinControls\CustomDataGridView.he-IL.resx">
+      <DependentUpon>CustomDataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinControls\CustomDataGridView.resx">
+      <DependentUpon>CustomDataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinControls\FormRtlLayout.he-IL.resx">
+      <DependentUpon>FormRtlLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinControls\FormRtlLayout.resx">
+      <DependentUpon>FormRtlLayout.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstracts\" />

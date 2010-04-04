@@ -1,0 +1,10 @@
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\WinLogger\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\WinLogger\bin\Debug\WinLogger.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\WinLogger\bin\Debug\WinLogger.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\WinLogger\obj\Debug\WinLogger.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\WinLogger\obj\Debug\WinLogger.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\WinLogger\bin\Debug\WinLogger.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\WinLogger\bin\Debug\WinLogger.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\WinLogger\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\WinLogger\obj\Debug\WinLogger.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\WinLogger\obj\Debug\WinLogger.pdb

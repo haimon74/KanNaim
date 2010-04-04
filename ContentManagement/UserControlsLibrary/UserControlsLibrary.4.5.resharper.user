@@ -1,0 +1,137 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="ListBox" priority="2" />
+      <Item value="_listBox" priority="0" />
+      <Item value="new" priority="5" />
+      <Item value="Panel" priority="2" />
+      <Item value="string" priority="2" />
+      <Item value="protected" priority="0" />
+      <Item value="void" priority="0" />
+      <Item value="HoverMenuPanel" priority="1" />
+      <Item value="private" priority="9" />
+      <Item value="Button" priority="18" />
+      <Item value="using" priority="1" />
+      <Item value="AjaxControlToolkit" priority="1" />
+      <Item value="HoverMenuExtender" priority="1" />
+      <Item value="foreach" priority="3" />
+      <Item value="item" priority="11" />
+      <Item value="HoverPanel" priority="4" />
+      <Item value="MenuItemCss" priority="0" />
+      <Item value="MarkHoverScriptName" priority="0" />
+      <Item value="CancelHoverScriptName" priority="0" />
+      <Item value="if" priority="3" />
+      <Item value="is" priority="3" />
+      <Item value="as" priority="2" />
+      <Item value="btn" priority="2" />
+      <Item value="var" priority="0" />
+      <Item value="PanelItemCss" priority="0" />
+      <Item value="System" priority="0" />
+      <Item value="Web" priority="0" />
+      <Item value="List" priority="0" />
+      <Item value="_menuItems" priority="0" />
+      <Item value="List&lt;Button&gt;" priority="0" />
+      <Item value="newItem" priority="4" />
+      <Item value="object" priority="0" />
+      <Item value="ListItem" priority="0" />
+      <Item value="ICollection" priority="1" />
+      <Item value="this" priority="0" />
+      <Item value="Items" priority="0" />
+      <Item value="CollectionConverter" priority="0" />
+      <Item value="null" priority="1" />
+      <Item value="for" priority="0" />
+      <Item value="panel" priority="2" />
+      <Item value="public" priority="1" />
+      <Item value="class" priority="0" />
+      <Item value="IContainer" priority="0" />
+      <Item value="obj" priority="0" />
+      <Item value="ArrayList" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.Button">
+      <Item value="CssClass" priority="1" />
+      <Item value="Attributes" priority="1" />
+      <Item value="Text" priority="1" />
+      <Item value="ToolTip" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UserControlsLibrary.WebControls.HoverMenuPanel">
+      <Item value="Items" priority="1" />
+      <Item value="PanelItems" priority="1" />
+      <Item value="Controls" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.AttributeCollection">
+      <Item value="Add" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add" priority="0" />
+      <Item value="Clear" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.ListItem">
+      <Item value="Value" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.ControlCollection">
+      <Item value="Add" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.ListItemCollection">
+      <Item value="Clear" priority="0" />
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.UI.PersistenceMode">
+      <Item value="InnerProperty" priority="0" />
+      <Item value="Attribute" priority="0" />
+      <Item value="InnerDefaultProperty" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="07565317-4B14-47E4-9ACF-7FBB2B2966F2/d:WebControls/f:IsBoldFontCheckBox.cs" caret="120" fromTop="3" />
+      <File id="d:&amp;/f:PollOptionsSandbox.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?PollOptionsSandbox.cs" caret="286" fromTop="3" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="5156" fromTop="0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="5974" fromTop="189" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="4849" fromTop="149" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="4917" fromTop="145" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="6995" fromTop="37" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="5340" fromTop="160" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="5284" fromTop="163" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="7936" fromTop="37" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="5681" fromTop="0" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="5659" fromTop="18" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="4959" fromTop="151" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="8767" fromTop="25" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="6811" fromTop="32" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="7456" fromTop="52" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="7369" fromTop="49" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="8403" fromTop="37" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="7981" fromTop="21" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="8228" fromTop="28" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="7575" fromTop="9" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="6530" fromTop="39" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="6642" fromTop="43" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="6879" fromTop="51" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="6744" fromTop="46" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="142" fromTop="2" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="139" fromTop="5" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="4775" fromTop="150" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="7063" fromTop="12" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="7209" fromTop="16" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="7684" fromTop="21" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="8117" fromTop="31" />
+      <File id="d:&amp;/f:ListButtonItem.cs/l:D!?Documents and Settings?Haim?My Documents?Visual Studio 2008?Projects?GitRepositories?ContentManagement?UserControlsLibrary?WebControls?ListButtonItem.cs" caret="5156" fromTop="15" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+</Configuration>

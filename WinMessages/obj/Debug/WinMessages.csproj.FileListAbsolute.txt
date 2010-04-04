@@ -1,0 +1,14 @@
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\WinMessages\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\WinMessages\bin\Debug\WinMessages.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\WinMessages\bin\Debug\WinMessages.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\WinMessages\obj\Debug\WinMessages.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\WinMessages\obj\Debug\WinMessages.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\WinMessages\bin\Debug\WinLogger.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\KanNaim2010\WinMessages\bin\Debug\WinLogger.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\WinMessages\bin\Debug\WinMessages.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\WinMessages\bin\Debug\WinMessages.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\WinMessages\bin\Debug\WinLogger.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\WinMessages\bin\Debug\WinLogger.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\WinMessages\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\WinMessages\obj\Debug\WinMessages.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\WinMessages\obj\Debug\WinMessages.pdb

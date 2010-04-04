@@ -107,6 +107,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassGlobals.cs" />
+    <Compile Include="DataAccess\DataSet\dsLookup.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLookup.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataAccess\Filter.cs" />
     <Compile Include="DataAccess\Insert.cs" />
     <Compile Include="DataAccess\Lookup.cs" />
@@ -290,6 +295,17 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="app.config" />
+    <None Include="DataAccess\DataSet\dsLookup.xsc">
+      <DependentUpon>dsLookup.xsd</DependentUpon>
+    </None>
+    <None Include="DataAccess\DataSet\dsLookup.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsLookup.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataAccess\DataSet\dsLookup.xss">
+      <DependentUpon>dsLookup.xsd</DependentUpon>
+    </None>
     <None Include="DataClassesKanNaim.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DataClassesKanNaim.designer.cs</LastGenOutput>
@@ -389,6 +405,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sandbox.resx">
+      <DependentUpon>Sandbox.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -569,6 +588,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Sandbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sandbox.Designer.cs">
+      <DependentUpon>Sandbox.cs</DependentUpon>
     </Compile>
     <Compile Include="Table_Article.designer.cs" />
     <Compile Include="Table_Broadcast.designer.cs" />
@@ -895,6 +920,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\ContentManagement\UserControlsLibrary\UserControlsLibrary.csproj">
+      <Project>{07565317-4B14-47E4-9ACF-7FBB2B2966F2}</Project>
+      <Name>UserControlsLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HaimDLL\HaimDLL.csproj">
       <Project>{697ECEA6-B4D5-430F-8355-977D96DF74C5}</Project>
       <Name>HaimDLL</Name>

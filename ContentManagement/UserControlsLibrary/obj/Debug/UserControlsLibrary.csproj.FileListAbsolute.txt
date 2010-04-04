@@ -26,3 +26,12 @@ D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepos
 D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\ContentManagement\UserControlsLibrary\obj\Debug\ResolveAssemblyReference.cache
 D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\ContentManagement\UserControlsLibrary\obj\Debug\UserControlsLibrary.dll
 D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\ContentManagement\UserControlsLibrary\obj\Debug\UserControlsLibrary.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\ContentManagement\UserControlsLibrary\bin\Debug\AjaxControlToolkit.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\ContentManagement\UserControlsLibrary\bin\Debug\AjaxControlToolkit.pdb
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\ContentManagement\UserControlsLibrary\obj\Debug\UserControlsLibrary.WinControls.CustomDataGridView.resources
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\ContentManagement\UserControlsLibrary\obj\Debug\UserControlsLibrary.csproj.GenerateResource.Cache
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\ContentManagement\UserControlsLibrary\bin\Debug\he-IL\UserControlsLibrary.resources.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\ContentManagement\UserControlsLibrary\obj\Debug\UserControlsLibrary.WinControls.FormRtlLayout.resources
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\ContentManagement\UserControlsLibrary\obj\Debug\UserControlsLibrary.WinControls.FormRtlLayout.he-IL.resources
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\ContentManagement\UserControlsLibrary\obj\Debug\he-IL\UserControlsLibrary.resources.dll
+D:\Documents and Settings\Haim\My Documents\Visual Studio 2008\Projects\GitRepositories\ContentManagement\UserControlsLibrary\obj\Debug\UserControlsLibrary.WinControls.CustomDataGridView.he-IL.resources

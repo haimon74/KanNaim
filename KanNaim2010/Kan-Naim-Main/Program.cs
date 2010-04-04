@@ -13,7 +13,8 @@ namespace Kan_Naim_Main
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormAdministrator());
+            //Application.Run(new FormAdministrator());
+            Application.Run(new Sandbox());
         }
     }
 }
